@@ -101,7 +101,7 @@ module Jekyll
       self.content << "<thead><tr><th></th>"
       self.content << "<th>RFC?</th>"
       impls_sorted.each do |impl_name, impl|
-        self.content << "<th>#{impl['name']}</th>"
+        self.content << "<th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>"
       end
       self.content << '</tr></thead>'
       
