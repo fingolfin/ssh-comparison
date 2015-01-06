@@ -41,7 +41,7 @@
          - hostbased
          - none
 
-- rfc: 4419
+- rfc: 4256
   protocols:
     userauth:
          - keyboard-interactive

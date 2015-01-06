@@ -9,7 +9,8 @@ latest-release:
 client: yes
 server: yes
 references:
-    - https://support.ssh.com/manuals/server-admin/64/ssh-server-config.htm
+    - https://support.ssh.com/manuals/server-admin/64/ssh-server-config.html
+    - https://support.ssh.com/manuals/server-admin/64/server-auth-supported-methods.html
 protocols:
     cipher:
         - 3des-cbc
@@ -81,6 +82,14 @@ protocols:
         - hmac-md5
         - hmac-md5-96
         - none
-    #userauth:
-    # TODO: fill this in
-
+    userauth:
+        - password
+        - publickey
+        - hostbased
+        - keyboard-interactive
+        #- PAM               # through keyboard-interactive / Unix only
+        #- RSA SecurID       # through keyboard-interactive
+        #- RADIUS            # through keyboard-interactive
+        #- LAM               # through keyboard-interactive / AIX only
+        - gssapi-with-mic
+        - gssapi
