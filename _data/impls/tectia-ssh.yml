@@ -82,3 +82,5 @@ protocols:
         - hmac-md5-96
         - none
     #userauth:
+    # TODO: fill this in
+

@@ -19,6 +19,7 @@ protocols:
         - none
     compression:
         - zlib
+        - zlib@openssh.com  # added in 1.4.3
         - none
     hostkey:
         - ssh-rsa
@@ -38,6 +39,6 @@ protocols:
     userauth:
         - none
         - password
-        - public-key
+        - publickey
         - hostbased
         - keyboard-interactive

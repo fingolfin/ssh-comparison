@@ -12,8 +12,13 @@ protocols:
         - aes128-ctr
         - aes256-ctr
     compression:
+        - none
     hostkey:
+        - ssh-ed25519
+        - ecdsa-sha2-nistp256
     kex:
+        - curve25519-sha256@libssh.org
+        - ecdh-sha2-nistp256
     mac:
         - chacha20-poly1305@openssh.com
         - hmac-sha2-256

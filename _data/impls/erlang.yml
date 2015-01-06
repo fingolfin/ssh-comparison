@@ -25,3 +25,7 @@ protocols:
         - hmac-sha2-256
         - hmac-sha1
     userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - none

@@ -39,7 +39,7 @@ protocols:
     userauth:
         - none
         - password
-        - public-key
+        - publickey
         - hostbased
         - keyboard-interactive
         - gssapi-with-mic

@@ -43,6 +43,6 @@ protocols:
         #   but Sun's JCE has not allowed to use such a long key.
     userauth:
         - password
-        - publickey (RSA, DSA)
+        - publickey
         - keyboard-interactive
         - gssapi-with-mic
