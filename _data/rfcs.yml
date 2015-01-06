@@ -72,7 +72,34 @@
 - rfc: 4345
   protocols:
     cipher:
+        - arcfour128
         - arcfour256
+
+- rfc: 4432
+  protocols:
+    kex:
+        - rsa1024-sha1
+        - rsa2048-sha256
+
+- rfc: 4462
+  protocols:
+    kex:
+        - gss-group1-sha1-*
+        - gss-group14-sha1-*
+        - gss-gex-sha1-*
+        - gss-*
+        - "null"
+    userauth:
+        - gssapi-with-mic
+        - gssapi-keyex
+        - gssapi
+        - external-keyx
+
+- rfc: 5647  # see also rfc 5116
+  protocols:
+    kex:
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_GCM
 
 - rfc: 5656
   protocols:
@@ -86,6 +113,14 @@
         - ecdh-sha2-nistp521    # REQUIRED
         - ecmqv-sha2        # FIXME: nothing supports this?!?
 
+
+- rfc: 6187
+  protocols:
+    hostkey:
+        - x509v3-ssh-dss
+        - x509v3-ssh-rsa
+        - x509v3-rsa2048-sha256
+        - x509v3-ecdsa-sha2-*
 
 - rfc: 6668
   protocols:
