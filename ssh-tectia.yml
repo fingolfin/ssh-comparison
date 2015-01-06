@@ -1,0 +1,84 @@
+# FIXME: This file may be mixing up multiple products by SSH.com
+#
+name: SSH Tectia Server
+homepage: http://foobar.quux
+source-repository: http://foobar.quux/foobar.git
+latest-release:
+    version: 6.4
+    #date: 1900-01-01
+client: unknown
+server: yes
+references:
+    - https://support.ssh.com/manuals/server-admin/64/ssh-server-config.htm
+protocols:
+    cipher:
+        - 3des-cbc
+        - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - arcfour
+        - blowfish-cbc
+        - twofish-cbc
+        - twofish128-cbc
+        - twofish192-cbc
+        - twofish256-cbc
+        - crypticore128@ssh.com
+        - seed-cbc@ssh.com
+        - none
+    compression:
+        - none
+        - zlib
+    hostkey:
+        - ssh-dss
+        - ssh-dss-sha224@ssh.com
+        - ssh-dss-sha256@ssh.com
+        - ssh-dss-sha384@ssh.com
+        - ssh-dss-sha512@ssh.com
+        - ssh-rsa
+        - ssh-rsa-sha224@ssh.com
+        - ssh-rsa-sha256@ssh.com
+        - ssh-rsa-sha384@ssh.com
+        - ssh-rsa-sha512@ssh.com
+        - x509v3-sign-dss
+        - x509v3-sign-dss-sha224@ssh.com
+        - x509v3-sign-dss-sha256@ssh.com
+        - x509v3-sign-dss-sha384@ssh.com
+        - x509v3-sign-dss-sha512@ssh.com
+        - x509v3-sign-rsa
+        - x509v3-sign-rsa-sha224@ssh.com
+        - x509v3-sign-rsa-sha256@ssh.com
+        - x509v3-sign-rsa-sha384@ssh.com
+        - x509v3-sign-rsa-sha512@ssh.com
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha224@ssh.com
+        - diffie-hellman-group14-sha256@ssh.com
+        - diffie-hellman-group15-sha256@ssh.com
+        - diffie-hellman-group15-sha384@ssh.com
+        - diffie-hellman-group16-sha384@ssh.com
+        - diffie-hellman-group16-sha512@ssh.com
+        - diffie-hellman-group18-sha512@ssh.com
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha224@ssh.com
+        - diffie-hellman-group-exchange-sha384@ssh.com
+        - diffie-hellman-group-exchange-sha512@ssh.com.
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-sha2-256
+        - hmac-sha256-2@ssh.com
+        - hmac-sha224@ssh.com
+        - hmac-sha256@ssh.com
+        - hmac-sha384@ssh.com
+        - hmac-sha2-512
+        - hmac-sha512@ssh.com
+        - crypticore-mac@ssh.com
+        - hmac-md5
+        - hmac-md5-96
+        - none
+    userauth:

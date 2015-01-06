@@ -1,0 +1,45 @@
+name: libssh
+homepage: http://www.libssh.org/
+source-repository: http://git.libssh.org/projects/libssh.git
+references:
+    - http://api.libssh.org/stable/
+latest-release:
+    version: 0.6.4
+    date: 2014-12-14
+client: yes
+server: yes
+protocols:
+    cipher:
+        - aes256-ctr
+        - aes192-ctr
+        - aes128-ctr
+        - aes256-cbc
+        - rijndael-cbc@lysator.liu.se
+        - aes192-cbc
+        - aes128-cbc
+        - 3des-cbc
+        - des-cbc-ssh1
+        - blowfish-cbc
+        - none
+    compression:
+        - zlib
+        - zlib@openssh.com
+        - none
+    hostkey:
+        - ecdsa-sha2-nistp256
+        - ssh-dss
+        - ssh-rsa
+    kex:
+        - ecdh-sha2-nistp256
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+    mac:
+        - hmac-sha1
+        - none
+    userauth:
+        - none
+        - password
+        - public-key
+        - hostbased
+        - keyboard-interactive
+        - gssapi-with-mic

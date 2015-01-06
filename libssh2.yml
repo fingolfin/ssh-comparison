@@ -1,0 +1,43 @@
+name: libssh2
+homepage: http://www.libssh2.org/
+source-repository: git://git.libssh2.org/libssh2.git
+latest-release:
+    version: 1.4.3
+    date: 2012-11-27
+client: yes
+server: no
+protocols:
+    cipher:
+        - aes256-cbc
+        - rijndael-cbc@lysator.liu.se
+        - aes192-cbc
+        - aes128-cbc
+        - 3des-cbc
+        - blowfish-cbc
+        - cast128-cbc
+        - arcfour
+        - none
+    compression:
+        - zlib
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-ripemd160
+        - hmac-ripemd160@openssh.com
+        - none
+    userauth:
+        - none
+        - password
+        - public-key
+        - hostbased
+        - keyboard-interactive

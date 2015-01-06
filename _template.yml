@@ -1,0 +1,16 @@
+name: NAME
+homepage: http://foobar.quux
+source-repository: http://foobar.quux/foobar.git
+latest-release:
+    version: X.Y
+    date: 1900-01-01
+client: unknown
+server: unknown
+protocols:
+    cipher:
+    compression:
+        - none
+    hostkey:
+    kex:
+    mac:
+    userauth:

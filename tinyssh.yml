@@ -1,0 +1,20 @@
+name: TinySSH
+homepage: http://tinyssh.org/
+source-repository: https://github.com/janmojzis/tinyssh
+latest-release:
+    #version: X.Y
+    date: 2015-01-01
+client: unknown
+server: unknown
+protocols:
+    cipher:
+        - chacha20-poly1305@openssh.com
+        - aes128-ctr
+        - aes256-ctr
+    compression:
+    hostkey:
+    kex:
+    mac:
+        - chacha20-poly1305@openssh.com
+        - hmac-sha2-256
+    userauth:

@@ -1,0 +1,54 @@
+name: PuTTY
+homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
+source-repository: git://git.tartarus.org/simon/putty.git
+latest-release:
+    version: 0.64
+    date: 2014-11-06
+client: yes
+server: no
+protocols:
+    cipher:
+        - 3des-cbc
+        - 3des-ctr
+        - des-cbc
+        - des-cbc@ssh.com
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
+        - rijndael-cbc@lysator.liu.se
+        - arcfour128
+        - arcfour256
+        - blowfish-cbc
+        - blowfish-ctr
+    compression:
+        - zlib
+        - zlib@openssh.com
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
+    mac:
+        - hmac-md5
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-sha2-256
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - gssapi-with-mic
+        - none
