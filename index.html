@@ -4,20 +4,18 @@ layout: default
 
 <div class="home">
 
-  <h1 class="page-heading">Posts</h1>
+  <h1 class="page-heading">Implementations</h1>
+  
+  The following implementations are currently covered:
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+<ul>
+{% for impl_hash in site.data.impls %}
+  <li>
+    <a href="impls/{{ impl_hash[0] }}.html">{{ impl_hash[1].name }}</a>
+  </li>
+{% endfor %}
+</ul>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
+<a href='comparison.html'>Visit the comparison page.</a>
 
 </div>

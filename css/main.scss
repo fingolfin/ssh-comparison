@@ -50,3 +50,23 @@ $on-laptop:        800px;
         "layout",
         "syntax-highlighting"
 ;
+
+
+.impl-comparison {
+    border-collapse: collapse;
+}
+
+.impl-comparison th { padding: 5px 10px 5px 10px; white-space: nowrap; }
+.impl-comparison td { padding: 0px 10px 0px 10px; white-space: nowrap; }
+
+.yes .no .unknown { text-align: center; }
+
+// via http://paletton.com/
+tr:nth-child(odd) td.yes { background-color: #7A9F35; }
+tr:nth-child(even) td.yes { background-color: #A5C663; }
+
+tr:nth-child(odd) td.no { background-color: #AA3939; }
+tr:nth-child(even) td.no { background-color: #D46A6A; }
+
+tr:nth-child(odd) td.unknown { background-color: red; }
+tr:nth-child(even) td.unknown { background-color: lighten(red, 20%); }

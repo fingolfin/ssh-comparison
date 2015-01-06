@@ -1,0 +1,27 @@
+name: Erlang ssh library
+homepage: http://foobar.quux
+source-repository: http://foobar.quux/foobar.git
+latest-release:
+    version: 3.1
+    date: 1900-01-01
+client: unknown
+server: unknown
+protocols:
+    cipher:
+        - aes128-ctr
+        - aes128-cbc
+        - 3des-cbc
+    compression:
+        - zlib
+        - zlib@openssh.com
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group-exchange-sha1
+    mac:
+        - hmac-sha2-256
+        - hmac-sha1
+    userauth:

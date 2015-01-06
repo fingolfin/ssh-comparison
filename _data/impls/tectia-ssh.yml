@@ -1,12 +1,12 @@
 # FIXME: This file may be mixing up multiple products by SSH.com
-#
-name: SSH Tectia Server
-homepage: http://foobar.quux
-source-repository: http://foobar.quux/foobar.git
+# Formerly known as just "SSH" or "ssh.com"
+name: Tectia SSH
+homepage: http://www.ssh.com/products/tectia-ssh
+source-repository: none
 latest-release:
     version: 6.4
     #date: 1900-01-01
-client: unknown
+client: yes
 server: yes
 references:
     - https://support.ssh.com/manuals/server-admin/64/ssh-server-config.htm
@@ -81,4 +81,4 @@ protocols:
         - hmac-md5
         - hmac-md5-96
         - none
-    userauth:
+    #userauth:

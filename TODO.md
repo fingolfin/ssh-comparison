@@ -9,6 +9,13 @@
 * record more features? e.g. SCP/SFTP support, ...
 * mention SSH v1 support (I guess not supporting it could be counted as a 
   feature these days... or at least it is important that one can disable it)
+* Add a subpage for each implementation which lists all details for that
+  particular information on one quick glance. This makes it easier to
+  verify whether the information for that implementation is accurate.
+* Allow alternative sorting of the tables?
+* Allow restricting comparisons to a subset of implementations and protocols
+* In the comparison tables, display how many impls per proto / protos per implicit=false
+  there are.
 
 For the table with the protocol specifications:
 * record for each protocol where it is described (RFC, etc.),

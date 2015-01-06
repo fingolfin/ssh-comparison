@@ -1,4 +1,4 @@
-- rfc: 4250, 4252, 4523
+- rfc: 4250 # and 4252, 4523
   protocols:
     cipher:
         - 3des-cbc      # REQUIRED
@@ -76,7 +76,7 @@
 
 - rfc: 5656
   protocols:
-    cipher:
+    hostkey:
         - ecdsa-sha2-nistp256   # REQUIRED
         - ecdsa-sha2-nistp384   # REQUIRED
         - ecdsa-sha2-nistp521   # REQUIRED
