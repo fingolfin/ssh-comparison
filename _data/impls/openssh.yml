@@ -8,21 +8,22 @@ client: yes
 server: yes
 protocols:
     cipher:
-        - 3des-cbc
-        - aes128-cbc
-        - aes192-cbc
-        - aes256-cbc
+        - chacha20-poly1305@openssh.com # since 6.5
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
-        - aes128-gcm@openssh.com
-        - aes256-gcm@openssh.com
-        - arcfour
-        - arcfour128
-        - arcfour256
-        - blowfish-cbc
-        - cast128-cbc
-        - chacha20-poly1305@openssh.com
+        - aes128-gcm@openssh.com        # since 6.2
+        - aes256-gcm@openssh.com        # since 6.2
+        - aes128-cbc                    # disabled by default in 6.7
+        - aes192-cbc                    # disabled by default in 6.7
+        - aes256-cbc                    # disabled by default in 6.7
+        - rijndael-cbc@lysator.liu.se   # disabled by default in 6.7
+        - 3des-cbc                      # disabled by default in 6.7
+        - arcfour                       # disabled by default in 6.7
+        - arcfour128                    # disabled by default in 6.7
+        - arcfour256                    # disabled by default in 6.7
+        - blowfish-cbc                  # disabled by default in 6.7
+        - cast128-cbc                   # disabled by default in 6.7
     compression:
         - zlib
         - zlib@openssh.com
@@ -71,9 +72,10 @@ protocols:
         - umac-64-etm@openssh.com
         - umac-128-etm@openssh.com
     userauth:
+        - publickey
+        - password
+        - keyboard-interactive
         - gssapi-with-mic
         - hostbased
-        - publickey
-        - keyboard-interactive
-        - password
         - none
+

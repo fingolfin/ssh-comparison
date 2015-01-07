@@ -12,6 +12,9 @@ protocols:
         - rijndael-cbc@lysator.liu.se
         - aes192-cbc
         - aes128-cbc
+        #- aes256-ctr   # not documented, but present in codebase? uses OpenSSL impl?
+        #- aes192-ctr   # not documented, but present in codebase? uses OpenSSL impl?
+        #- aes128-ctr   # not documented, but present in codebase? uses OpenSSL impl?
         - 3des-cbc
         - blowfish-cbc
         - cast128-cbc

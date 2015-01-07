@@ -14,7 +14,6 @@ protocols:
         - aes192-ctr
         - aes128-ctr
         - aes256-cbc
-        - rijndael-cbc@lysator.liu.se
         - aes192-cbc
         - aes128-cbc
         - 3des-cbc
