@@ -1,0 +1,14 @@
+name: RFC 4462
+url: https://tools.ietf.org/html/rfc4462
+protocols:
+    kex:
+        - gss-group1-sha1-*
+        - gss-group14-sha1-*
+        - gss-gex-sha1-*
+        - gss-*
+        - "null"
+    userauth:
+        - gssapi-with-mic
+        - gssapi-keyex
+        - gssapi
+        - external-keyx

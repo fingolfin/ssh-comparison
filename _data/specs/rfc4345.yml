@@ -1,0 +1,6 @@
+name: RFC 4345
+url: https://tools.ietf.org/html/rfc4345
+protocols:
+    cipher:
+        - arcfour128
+        - arcfour256

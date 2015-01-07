@@ -36,7 +36,7 @@ module Jekyll
       @name = "comparison.html"
       self.process(@name)       # splits @name into @ext and @basename
 
-      rfcs = site.data['rfcs']
+      specs = site.data['specs']
       impls = site.data['impls']
 
       self.content = ""
@@ -46,12 +46,12 @@ module Jekyll
       site.data['proto_classes'].each do |proto_class, proto_class_desc|
         proto_info = {}
 
-        rfcs.each do |rfc|
-          next unless rfc['protocols'].has_key?(proto_class)
-          list = rfc['protocols'][proto_class]
+        specs.each do |spec_id, spec|
+          next unless spec['protocols'].has_key?(proto_class)
+          list = spec['protocols'][proto_class]
           list.each do |proto_name|
-            p = proto_info.fetch(proto_name, {"rfc" => nil, "impls" => {}})
-            p['rfc'] = rfc['rfc']
+            p = proto_info.fetch(proto_name, {"spec" => nil, "impls" => {}})
+            p['spec'] = spec
             proto_info[proto_name] = p
           end
         end
@@ -61,7 +61,7 @@ module Jekyll
           list = impl['protocols'][proto_class]
           next if list.nil?
           list.each do |proto_name|
-            p = proto_info.fetch(proto_name, {"rfc" => nil, "impls" => {}})
+            p = proto_info.fetch(proto_name, {"spec" => nil, "impls" => {}})
             p['impls'][impl_name] = true
             proto_info[proto_name] = p
           end
@@ -69,7 +69,7 @@ module Jekyll
 
         self.content << "<h3 class='post-header'>#{proto_class_desc}</h3>\n"
         self.content << "<div class='post-content'>\n"
-        output_table(proto_class, proto_info, rfcs, impls)
+        output_table(proto_class, proto_info, specs, impls)
         self.content << "</div>\n"
       end
 
@@ -80,7 +80,7 @@ module Jekyll
        }
     end
 
-    def output_table(proto_class, proto_info, rfcs, impls)
+    def output_table(proto_class, proto_info, specs, impls)
       table_id = "cmp-table-#{proto_class}"
       self.content << "<table id='#{table_id}' class='impl-comparison' class='tablesorter'>"
 
@@ -89,7 +89,7 @@ module Jekyll
 
       # Table head
       self.content << "<thead><tr><th>id</th>"
-      self.content << "<th>RFC?</th>"
+      self.content << "<th>Specification</th>"
       impls_sorted.each do |impl_name, impl|
         self.content << "<th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>"
       end
@@ -102,9 +102,10 @@ module Jekyll
         self.content << "<tr>"
         self.content << "<td>#{proto_name}</td>"
 
-        # link to RFC, if any
-        if proto_desc.has_key?('rfc')
-          self.content << "<td><a href='https://tools.ietf.org/html/rfc#{proto_desc['rfc']}'>#{proto_desc['rfc']}</a></td>"
+        # link to specification, if any
+        spec = proto_desc.fetch('spec', nil)
+        unless spec.nil?
+          self.content << "<td><a href='#{spec['url']}'>#{spec['name']}</a></td>"
         else
           self.content << "<td></td>"
         end

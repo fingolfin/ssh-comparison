@@ -1,0 +1,5 @@
+name: RFC 4256
+url: https://tools.ietf.org/html/rfc4256
+protocols:
+    userauth:
+         - keyboard-interactive

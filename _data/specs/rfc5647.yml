@@ -1,0 +1,6 @@
+name: RFC 5647
+url: https://tools.ietf.org/html/rfc5647
+protocols:
+    cipher:
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_GCM

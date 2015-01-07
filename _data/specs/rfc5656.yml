@@ -1,0 +1,12 @@
+name: RFC 5656
+url: https://tools.ietf.org/html/rfc5656
+protocols:
+    hostkey:
+        - ecdsa-sha2-nistp256   # REQUIRED
+        - ecdsa-sha2-nistp384   # REQUIRED
+        - ecdsa-sha2-nistp521   # REQUIRED
+    kex:
+        - ecdh-sha2-nistp256    # REQUIRED
+        - ecdh-sha2-nistp384    # REQUIRED
+        - ecdh-sha2-nistp521    # REQUIRED
+        - ecmqv-sha2        # FIXME: nothing supports this?!?

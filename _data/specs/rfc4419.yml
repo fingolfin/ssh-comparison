@@ -1,0 +1,6 @@
+name: RFC 4419
+url: https://tools.ietf.org/html/rfc4419
+protocols:
+    kex:
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group-exchange-sha256
