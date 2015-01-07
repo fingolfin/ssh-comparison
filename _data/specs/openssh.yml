@@ -1,0 +1,39 @@
+name: OpenSSH
+url: http://www.openssh.com/specs.html
+# http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
+# http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
+# http://www.openssh.com/txt/draft-miller-secsh-umac-01.txt
+# http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
+#
+protocols:
+    cipher:
+        - aes128-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
+        - aes256-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
+        - chacha20-poly1305@openssh.com     # openssh/PROTOCOL.chacha20poly1305
+    compression:
+        - zlib@openssh.com     # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
+    hostkey:
+        #- ssh-ed25519-cert-v01@openssh.com             # Undocumented? openssh/myproposal.h
+        - ssh-rsa-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
+        - ssh-dss-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com      # openssh/PROTOCOL
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com      # openssh/PROTOCOL
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com      # openssh/PROTOCOL
+        - ssh-rsa-cert-v00@openssh.com                  # openssh/PROTOCOL
+        - ssh-dss-cert-v00@openssh.com                  # openssh/PROTOCOL.agent
+        #- ssh-dsa-cert-v00@openssh.com     # mentioned in openssh/PROTOCOL but not implemented
+    mac:
+        - umac-64@openssh.com               # openssh/PROTOCOL
+        - umac-128@openssh.com
+        #- hmac-ripemd160@openssh.com       # Undocumented? openssh/myproposal.h
+        #- hmac-ripemd160                   # Undocumented? openssh/myproposal.h
+        # ETM modes of existing macs:
+        - hmac-md5-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - umac-64-etm@openssh.com
+        - umac-128-etm@openssh.com
+        - hmac-ripemd160-etm@openssh.com

@@ -1,0 +1,5 @@
+name: libssh
+url: http://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
+protocols:
+    kex:
+        - curve25519-sha256@libssh.org
