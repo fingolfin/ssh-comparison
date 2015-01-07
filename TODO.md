@@ -26,3 +26,22 @@ For the table with the protocol specifications:
 Add more implementations! Some lists:
 * https://en.wikipedia.org/wiki/Comparison_of_SSH_clients
 * https://en.wikipedia.org/wiki/Comparison_of_SSH_servers
+
+
+* Record additional information on various protocols somewhere. E.g.:
+
+  aes128-gcm@openssh.com, aes256-gcm@openssh.com:
+  see http://www.openssh.com/txt/release-6.2:
+  "[...] uses an identical packet format to the
+   AES-GCM mode specified in RFC 5647, but uses simpler and different
+   selection rules during key exchange."
+
+* Indeed, perhaps add more pages on various specs and protocols with
+  additional information on each?
+
+* Record for OpenSSH on which common platforms it is shipped
+  in which version(s) by default (say: recent versions of Ubuntu,
+  Mac OS X, Fedora, etc.)
+
+* Distinguish clients and servers in comparison; perhaps offer
+  separate comparison pages for clients, servers, and combined...?
