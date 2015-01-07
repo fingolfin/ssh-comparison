@@ -81,13 +81,14 @@ module Jekyll
     end
 
     def output_table(proto_class, proto_info, rfcs, impls)
-      self.content << "<table class='impl-comparison'>"
+      table_id = "cmp-table-#{proto_class}"
+      self.content << "<table id='#{table_id}' class='impl-comparison' class='tablesorter'>"
 
       impls_sorted = impls.sort_by {|k,v| v["name"].downcase}
       protos_sorted = proto_info.sort_by {|k,v| k}
 
       # Table head
-      self.content << "<thead><tr><th></th>"
+      self.content << "<thead><tr><th>id</th>"
       self.content << "<th>RFC?</th>"
       impls_sorted.each do |impl_name, impl|
         self.content << "<th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>"
