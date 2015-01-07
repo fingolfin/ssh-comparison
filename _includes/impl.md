@@ -7,32 +7,10 @@
 
 ## Supported protocols
 
-### Ciphers
-  {% for x in page.impl.protocols.cipher %}
+{% for proto_class in site.data.proto_classes %}
+{% assign proto_class_id = proto_class[0] %}
+### {{ proto_class[1] }}
+  {% for x in page.impl.protocols[proto_class_id] %}
   * {{ x }}
   {% endfor %}
-
-### Compression
-  {% for x in page.impl.protocols.compression %}
-  * {{ x }}
-  {% endfor %}
-
-### Hostkey
-  {% for x in page.impl.protocols.hostkey %}
-  * {{ x }}
-  {% endfor %}
-
-### Key exchange
-  {% for x in page.impl.protocols.kex %}
-  * {{ x }}
-  {% endfor %}
-
-### MAC
-  {% for x in page.impl.protocols.mac %}
-  * {{ x }}
-  {% endfor %}
-
-### Userauth
-  {% for x in page.impl.protocols.userauth %}
-  * {{ x }}
-  {% endfor %}
+{% endfor %}

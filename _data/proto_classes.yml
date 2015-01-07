@@ -1,0 +1,19 @@
+cipher: "Ciphers"
+compression: "Compression formats"
+hostkey: "Hostkey formats"
+kex: "Key exchange protocols"
+mac: "Message authentication codes (MACs)"
+userauth: "User authentication methods"
+
+#- name: cipher 
+#  desc: "Ciphers"
+#- name: compression 
+#  desc: "Compression formats"
+#- name: hostkey 
+#  desc: "Hostkey formats"
+#- name: kex 
+#  desc: "Key exchange protocols"
+#- name: mac 
+#  desc: "Message authentication codes (MACs)"
+#- name: userauth 
+#  desc: "User authentication methods"

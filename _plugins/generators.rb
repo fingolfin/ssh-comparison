@@ -36,52 +36,41 @@ module Jekyll
       @name = "comparison.html"
       self.process(@name)       # splits @name into @ext and @basename
 
-      # Create tables of all known protocols
-      
-      
-      
-      # Merge list of known protocols
-      protocols = {
-        'cipher' => {},
-        'compression' => {},
-        'hostkey' => {},
-        'kex' => {},
-        'mac' => {},
-        'userauth' => {},
-      }
-
       rfcs = site.data['rfcs']
-      rfcs.each do |rfc|
-        rfc['protocols'].each do |proto_class, list|
-          list.each do |proto_name|
-            p = protocols[proto_class].fetch(proto_name, {"rfc" => nil, "impls" => {}})
-            p['rfc'] = rfc['rfc']
-            protocols[proto_class][proto_name] = p
-          end
-        end
-      end
-
       impls = site.data['impls']
-      
-      impls.each do |impl_name, impl|
-        impl['protocols'].each do |proto_class, list|
-          unless list.nil?
-            list.each do |proto_name|
-              p = protocols[proto_class].fetch(proto_name, {"rfc" => nil, "impls" => {}})
-              p['impls'][impl_name] = true
-              protocols[proto_class][proto_name] = p
-            end
+
+      self.content = ""
+
+      # Create tables of all known protocols
+      protocols = {}
+      site.data['proto_classes'].each do |proto_class, proto_class_desc|
+        proto_info = {}
+
+        rfcs.each do |rfc|
+          next unless rfc['protocols'].has_key?(proto_class)
+          list = rfc['protocols'][proto_class]
+          list.each do |proto_name|
+            p = proto_info.fetch(proto_name, {"rfc" => nil, "impls" => {}})
+            p['rfc'] = rfc['rfc']
+            proto_info[proto_name] = p
           end
         end
-      end
-      
-      self.content = ""
-      
-      protocols.each do |proto_class, proto_list|
-        self.content << "<h3>#{proto_class}</h3>\n"
-        output_table(proto_class, proto_list, rfcs, impls)
-        self.content << "<p> </p>\n"
-        self.content << "<hr>\n"
+
+        impls.each do |impl_name, impl|
+          next unless impl['protocols'].has_key?(proto_class)
+          list = impl['protocols'][proto_class]
+          next if list.nil?
+          list.each do |proto_name|
+            p = proto_info.fetch(proto_name, {"rfc" => nil, "impls" => {}})
+            p['impls'][impl_name] = true
+            proto_info[proto_name] = p
+          end
+        end
+
+        self.content << "<h3 class='post-header'>#{proto_class_desc}</h3>\n"
+        self.content << "<div class='post-content'>\n"
+        output_table(proto_class, proto_info, rfcs, impls)
+        self.content << "</div>\n"
       end
 
       self.data = {
@@ -90,12 +79,12 @@ module Jekyll
            'generated' => true,
        }
     end
-    
-    def output_table(proto_class, proto_list, rfcs, impls)
+
+    def output_table(proto_class, proto_info, rfcs, impls)
       self.content << "<table class='impl-comparison'>"
 
       impls_sorted = impls.sort_by {|k,v| v["name"].downcase}
-      protos_sorted = proto_list.sort_by {|k,v| k}
+      protos_sorted = proto_info.sort_by {|k,v| k}
 
       # Table head
       self.content << "<thead><tr><th></th>"
@@ -104,10 +93,10 @@ module Jekyll
         self.content << "<th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>"
       end
       self.content << '</tr></thead>'
-      
+
       # Body
       self.content << "<tbody>"
-      
+
       protos_sorted.each do |proto_name, proto_desc|
         self.content << "<tr>"
         self.content << "<td>#{proto_name}</td>"
@@ -118,7 +107,7 @@ module Jekyll
         else
           self.content << "<td></td>"
         end
-        
+
         # TODO: iterate over impls_sorted
         impls_sorted.each do |impl_name, impl|
           if proto_desc['impls'].has_key?(impl_name)
