@@ -1,5 +1,5 @@
 # Site settings
-title: SSH implementation comparision
+title: SSH implementation comparison
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A technical comparison of various SSH implementations (clients, servers and
