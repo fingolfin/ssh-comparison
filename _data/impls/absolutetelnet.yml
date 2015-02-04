@@ -15,8 +15,8 @@ protocols:
         - aes256-cbc
         - 3des-cbc
         - 3des-ctr
-        - twofish128-cbc	        	# disabled by default in 9.84
-        - twofish256-cbc		        # disabled by default in 9.84
+        - twofish128-cbc                # disabled by default in 9.84
+        - twofish256-cbc                # disabled by default in 9.84
         - arcfour                       # disabled by default in 9.84
         - arcfour128                    # disabled by default in 9.84
         - arcfour256                    # disabled by default in 9.84
@@ -35,10 +35,10 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group-exchange-sha256
     mac:
-        - hmac-md5		            	# disabled by default in 9.84
-        - hmac-md5-96			        # disabled by default in 9.84
+        - hmac-md5                      # disabled by default in 9.84
+        - hmac-md5-96                   # disabled by default in 9.84
         - hmac-sha1
-        - hmac-sha1-96			        # disabled by default in 9.84
+        - hmac-sha1-96                  # disabled by default in 9.84
         - hmac-sha2-256
         - hmac-sha2-512
     userauth:
