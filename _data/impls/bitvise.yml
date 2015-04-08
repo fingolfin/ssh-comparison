@@ -1,0 +1,93 @@
+# sources:
+#   https://fogbugz.bitvise.com/default.asp?WinSSHD.1.9608.9
+#   https://fogbugz.bitvise.com/default.asp?WinSSHD.1.19367.4
+name: Bitvise SSH
+#also known as: Bitvise SSH Server + Client; formerly: WinSSHD + Tunnelier
+homepage: https://www.bitvise.com/
+#source-repository: http://foobar.quux/foobar.git
+# 
+# http://www.bitvise.com/ssh-client-version-history
+#   Bitvise SSH Client 6.22:    [ 31 January 2015 ]
+# http://www.bitvise.com/ssh-server-version-history
+#   Bitvise SSH Server 6.23:    [ 3 February 2015 ]
+latest-release:
+    version: X.Y
+    date: 1900-01-01
+client: yes
+server: yes
+protocols:
+    cipher:
+        - aes256-ctr
+        - aes256-cbc
+        - aes196-ctr
+        - aes196-cbc
+        - aes128-ctr
+        - aes128-cbc
+        - 3des-ctr
+        - 3des-cbc
+    compression:
+        - none
+        - zlib
+    hostkey:   # the following is a guess, based on what FlowSsh supports
+        - ecdsa-sha2-1.3.132.0.10   # SEC 2 prime curve secp256k1? Not listed in RFC 5656
+        - ecdsa-sha2-nistp521
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp256
+        - ssh-rsa
+        - ssh-dsa
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-gex-sha1
+        - gss-group1-sha1     # with Kerberos 5
+        - gss-gex-sha1        # with Kerberos 5
+    mac:    # FIXME: the following may be out-of-date; guess based on FlowSsh?
+        - hmac-sha1
+        - hmac-md5
+        - hmac-sha1-96
+        - hmac-md5-96
+    userauth:   # the following is a guess, based on what FlowSsh supports
+        - publickey
+        - password
+        - keyboard-interactive
+        - none
+
+
+#WinSSHD 4:
+#Key exchange:
+#diffie-hellman-group1-sha1
+#diffie-hellman-group14-sha1
+#diffie-hellman-gex-sha1
+#gss-group1-sha1 (with Kerberos 5)
+#gss-gex-sha1 (with Kerberos 5)
+#
+#Encryption:
+#aes256-cbc
+#twofish256-cbc
+#aes128-cbc
+#twofish128-cbc
+#blowfish-cbc
+#3des-cbc
+#arcfour-cbc
+#cast128-cbc
+#
+#MAC:
+#hmac-sha1
+#hmac-md5
+#hmac-sha1-96
+#hmac-md5-96
+#
+#Compression:
+#zlib
+#
+# WinSSHD 5:
+#WinSSHD 5 will have less encryption algorithms but more encryption modes. Here is the list:
+#
+#aes256-ctr
+#aes256-cbc
+#aes196-ctr
+#aes196-cbc
+#aes128-ctr
+#aes128-cbc
+#3des-ctr
+#3des-cbc
