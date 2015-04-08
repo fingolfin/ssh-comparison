@@ -82,44 +82,45 @@ module Jekyll
 
     def output_table(proto_class, proto_info, specs, impls)
       table_id = "cmp-table-#{proto_class}"
-      self.content << "<table id='#{table_id}' class='impl-comparison' class='tablesorter'>"
+      self.content << "<table id='#{table_id}' class='impl-comparison' class='tablesorter'>\n"
 
       impls_sorted = impls.sort_by {|k,v| v["name"].downcase}
       protos_sorted = proto_info.sort_by {|k,v| k}
 
       # Table head
-      self.content << "<thead><tr><th>id</th>"
-      self.content << "<th>Specification</th>"
+      self.content << "<thead><tr><th>id</th>\n"
+      self.content << "  <th>Specification</th>\n"
       impls_sorted.each do |impl_name, impl|
-        self.content << "<th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>"
+        self.content << "  <th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>\n"
       end
-      self.content << '</tr></thead>'
+      self.content << "</tr></thead>\n"
 
       # Body
-      self.content << "<tbody>"
+      self.content << "<tbody>\n"
 
       protos_sorted.each do |proto_name, proto_desc|
-        self.content << "<tr>"
-        self.content << "<td>#{proto_name}</td>"
+        self.content << "<tr>\n"
+        self.content << "  <td>#{proto_name}</td>\n"
 
         # link to specification, if any
         spec = proto_desc.fetch('spec', nil)
         unless spec.nil?
-          self.content << "<td><a href='#{spec['url']}'>#{spec['name']}</a></td>"
+          self.content << "  <td><a href='#{spec['url']}'>#{spec['name']}</a></td>\n"
         else
-          self.content << "<td></td>"
+          self.content << "  <td></td>\n"
         end
 
         # TODO: iterate over impls_sorted
         impls_sorted.each do |impl_name, impl|
           if proto_desc['impls'].has_key?(impl_name)
-            self.content << "<td class='yes'>Yes</td>"
+            self.content << "  <td class='yes'>Yes</td>"
           else
-            self.content << "<td class='no'>No</td>"
+            self.content << "  <td class='no'>No</td>  "
           end
+          self.content << "  <!-- #{impl_name} -->\n"
         end
 
-        self.content << "</tr>"
+        self.content << "</tr>\n"
       end
 
 #    <td>hmac1</td>
@@ -128,8 +129,8 @@ module Jekyll
 #    <td class='yes'>Yes</td>
 #       self.content = <<-EOS
       #self.content << "</tr>"
-      self.content << "</tbody>"
-      self.content << "</table>"
+      self.content << "</tbody>\n"
+      self.content << "</table>\n"
 
     end
   end
