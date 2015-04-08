@@ -1,0 +1,48 @@
+name: Paramiko
+homepage: http://www.paramiko.org/
+source-repository: https://github.com/paramiko/paramiko
+latest-release:
+    version: 1.15.2
+    date: 2014-12-19
+client: yes
+server: yes
+library: yes
+#platforms
+#
+protocols:
+    cipher:
+        - aes128-ctr
+        - aes256-ctr
+        - blowfish-cbc
+        - aes128-cbc
+        - aes256-cbc
+        - 3des-cbc
+        - arcfour128
+        - arcfour256
+    compression:
+        - zlib@openssh.com
+        - zlib
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+        - ecdsa-sha2-nistp256
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+        - gss-group1-sha1-*   # toWM5Slw5Ew8Mqkay+al2g==
+        - gss-group14-sha1-*  # toWM5Slw5Ew8Mqkay+al2g==
+        - gss-gex-sha1-*      # toWM5Slw5Ew8Mqkay+al2g==
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-md5
+        - hmac-md5-96
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - gssapi-with-mic
+        - gssapi-keyex
+        - none
