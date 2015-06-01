@@ -99,4 +99,4 @@ protocols:
         - cryptocard
         - keyboard-interactive
         - hostbased
-        - gssapi-with-mic"
+        - gssapi-with-mic
