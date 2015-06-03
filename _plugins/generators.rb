@@ -82,16 +82,16 @@ module Jekyll
 
     def output_table(proto_class, proto_info, specs, impls)
       table_id = "cmp-table-#{proto_class}"
-      self.content << "<table id='#{table_id}' class='impl-comparison' class='tablesorter'>\n"
+      self.content << "<table id='#{table_id}' class='impl-comparison tablesorter table-header-rotated'>\n"
 
       impls_sorted = impls.sort_by {|k,v| v["name"].downcase}
       protos_sorted = proto_info.sort_by {|k,v| k}
 
       # Table head
       self.content << "<thead><tr><th>id</th>\n"
-      self.content << "  <th>Specification</th>\n"
+      self.content << "  <th class='rotate'><div><span>Specification</span></div></th>\n"
       impls_sorted.each do |impl_name, impl|
-        self.content << "  <th><a href='impls/#{impl_name}.html'>#{impl['name']}</a></th>\n"
+        self.content << "  <th class='rotate'><div><span><a href='impls/#{impl_name}.html'>#{impl['name']}</a></span></div></th>\n"
       end
       self.content << "</tr></thead>\n"
 
