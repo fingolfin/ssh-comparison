@@ -1,6 +1,6 @@
 name: SSH.NET
 homepage: https://sshnet.codeplex.com/
-#source-repository: http://foobar.quux/foobar.git
+source-repository: https://sshnet.svn.codeplex.com/svn
 latest-release:
     version: 2014.4.6-beta2
     date: 2014-11-22
