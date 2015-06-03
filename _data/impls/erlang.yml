@@ -1,6 +1,6 @@
 name: Erlang ssh library
-homepage: http://foobar.quux
-source-repository: http://foobar.quux/foobar.git
+homepage: http://www.erlang.org/doc/man/ssh.html
+source-repository: https://github.com/erlang/otp
 latest-release:
     version: 3.1
     date: 1900-01-01
