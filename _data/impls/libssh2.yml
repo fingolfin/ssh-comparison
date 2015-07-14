@@ -1,11 +1,19 @@
+# TODO: UPDATE to 1.6
 name: libssh2
 homepage: http://www.libssh2.org/
 source-repository: git://git.libssh2.org/libssh2.git
+license: "[BSD style](http://www.libssh2.org/license.html)"
 latest-release:
     version: 1.4.3
     date: 2012-11-27
+changelog: http://www.libssh2.org/changes.html
 client: yes
 server: no
+library: client
+remarks: |
+    * C library for clients.
+    * Not to be confused with the unrelated [libssh](/impls/libssh.html)
+
 protocols:
     cipher:
         - aes256-cbc

@@ -1,15 +1,19 @@
 # Bitvise FlowSshC/Cpp/Net
+# TODO: update to 5.34
 name: FlowSsh
 homepage: https://www.bitvise.com/flowssh
-#source-repository: http://foobar.quux/foobar.git
+license: Commercial
 latest-release:
     version: 5.27
     date: 2014-11-04
+changelog: https://www.bitvise.com/flowssh-version-history
 client: yes
 server: no
-library: yes
-# Documentation: https://www.bitvise.com/fsd-index
-# The following is based on the FlowSshC.h header file
+library: client
+remarks: |
+    * Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
+    * 2015-07-10: The information provided here is based on the FlowSshC.h header file,
+      as well as the [FlowSsh documentation](https://www.bitvise.com/fsd-index).
 protocols:
     cipher:
         - aes256-ctr

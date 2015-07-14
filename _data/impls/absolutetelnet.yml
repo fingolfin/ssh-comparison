@@ -1,10 +1,17 @@
 name: AbsoluteTelnet
 homepage: https://celestialsoftware.net/
+#license: TODO
 latest-release:
     version: 9.84
     date: 2015-02-03
 client: yes
 server: no
+library: no
+remarks: |
+    * Windows client.
+    * [Wikipedia](https://en.wikipedia.org/wiki/AbsoluteTelnet)
+
+# X11 forwarding, Port forwarding, sftp client, telnet client
 protocols:
     cipher:
         - aes128-ctr

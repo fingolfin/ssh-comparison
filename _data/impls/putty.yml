@@ -1,11 +1,17 @@
 name: PuTTY
 homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git
+#license: TODO
 latest-release:
     version: 0.64
     date: 2014-11-06
+#changelog: TODO
 client: yes
 server: no
+remarks: |
+    * Windows client
+    * [Wikipedia](https://en.wikipedia.org/wiki/PuTTY)
+
 protocols:
     cipher:
         - 3des-cbc

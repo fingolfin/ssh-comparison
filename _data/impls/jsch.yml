@@ -1,11 +1,17 @@
 name: JSch
 homepage: http://www.jcraft.com/jsch/
-source-repository: http://git.jcraft.com/jsch.git/
+#source-repository: http://git.jcraft.com/jsch.git/
+license: "[BSD style](http://www.jcraft.com/jsch/LICENSE.txt)"
 latest-release:
     version: 0.1.51
     date: 2014-03-18
+changelog: http://www.jcraft.com/jsch/ChangeLog
 client: true
 server: unknown
+remarks: |
+    * Pure Java implementation.
+    * 2015-07-10: There is a [git repository](http://git.jcraft.com/jsch.git)
+    but it contains only a single commit with an outdated version.
 protocols:
     cipher:
         - blowfish-cbc

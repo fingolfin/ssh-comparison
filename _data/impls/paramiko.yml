@@ -1,14 +1,20 @@
 name: Paramiko
 homepage: http://www.paramiko.org/
 source-repository: https://github.com/paramiko/paramiko
+license: LGPL-2.1
 latest-release:
     version: 1.15.2
     date: 2014-12-19
+changelog: http://www.paramiko.org/changelog.html
 client: yes
 server: yes
-library: yes
+library: both
 #platforms
 #
+remarks: |
+    * [Python](https://www.python.org/) library.
+    * Built on [PyCrypto](http://pycrypto.org/), a Python C extension for low level cryptography.
+
 protocols:
     cipher:
         - aes128-ctr

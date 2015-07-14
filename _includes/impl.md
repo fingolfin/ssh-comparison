@@ -2,8 +2,11 @@
 
 * Homepage: [{{ page.impl.homepage }}]({{ page.impl.homepage }})
 * Latest release: {{ page.impl.latest-release.version }} ({{ page.impl.latest-release.date }})
+{% if page.impl.changelog %}* Version history: [{{ page.impl.changelog }}]({{ page.impl.changelog }}) {% endif %}
+{% if page.impl.license %}* License: {{ page.impl.license }}{% endif %}
 * Client: {{ page.impl.client }}
 * Server: {{ page.impl.server }}
+
 {% if page.impl.remarks %}
 ### Remarks
 {{ page.impl.remarks }}

@@ -1,11 +1,15 @@
 name: NAME
 homepage: http://foobar.quux
 source-repository: http://foobar.quux/foobar.git
+license: NAME
 latest-release:
     version: X.Y
     date: 1900-01-01
+changelog: URL
 client: unknown
 server: unknown
+remarks: |
+    TODO
 protocols:
     cipher:
     compression:

@@ -1,11 +1,19 @@
 name: Dropbear
 homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
 source-repository: https://secure.ucc.asn.au/hg/dropbear/
+license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE)"
 latest-release:
-    version: 2014.66
-    date: 2014-10-23
+    version: 2015.67
+    date: 2015-01-28
+changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
+library: no
+remarks: |
+    * Server and client for POSIX-based platforms.
+    * [Wikipedia](https://en.wikipedia.org/wiki/Dropbear_%28software%29)
+
+# X11 forwarding, and authentication-agent forwarding, ...
 protocols:
     cipher:
         - aes128-ctr

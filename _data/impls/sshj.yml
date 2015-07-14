@@ -1,0 +1,47 @@
+name: SSHJ
+homepage: https://github.com/iterate-ch/sshj
+source-repository: https://github.com/iterate-ch/sshj
+license: APL-2.0
+latest-release:
+    version: 0.12.0
+    date: 2015-04-14
+#changelog: URL
+client: no
+server: no
+library: client
+remarks: |
+    * Pure Java implementation.
+protocols:
+    cipher:
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - aes128-cbc 
+        - aes192-cbc 
+        - aes256-cbc 
+        - blowfish-cbc
+        - 3des-cbc
+    compression:
+        - zlib
+        - zlib@openssh.com
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+    mac:
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-sha2-256
+        - hmac-sha2-512
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - gssapi-with-mic
+        - hostbased
+        - none

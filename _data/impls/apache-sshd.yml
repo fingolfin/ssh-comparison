@@ -1,11 +1,18 @@
 name: Apache SSHD
 homepage: http://mina.apache.org/sshd-project/
 source-repository: http://git-wip-us.apache.org/repos/asf/mina-sshd.git
+license: APL-2.0
 latest-release:
-    version: 0.13.0
-    date: unknown
+    version: 0.14.0
+    date: 2015-03-10
 client: yes
 server: yes
+library: both
+remarks: |
+    * Pure Java implementation.
+    * 2015-07-10: Does not seem to provide an overview of changes in new releases? But at least there was a
+      [release announcment for 0.14.0](http://www.mail-archive.com/users@mina.apache.org/msg05959.html).
+
 protocols:
     cipher:
         - aes128-ctr

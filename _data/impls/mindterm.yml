@@ -3,16 +3,22 @@ homepage: http://www.cryptzone.com/products/mindterm/
 # http://www.cryptzone.com/downloadcenter/mindterm
 # http://download.cryptzone.com/files/Mindterm_API_Documentation/index.html
 source-repository: closed
+license: Commercial
 latest-release:
     version: 4.1.5
     date: 2014-04-01
+#changelog: TODO
 client: yes
 server: no
-references:
-    - name: MindTerm Datasheet
-      url: http://www.cryptzone.com/pdfs/Cryptzone_Datasheet_MindTerm_EN.pdf
-    - name: MindTerm 2.0 User's Guide
-      url: https://www.astro.umd.edu/resources/internal/ssh/MindTerm_User.pdf
+remarks: |
+    * Pure Java implementation.
+    * 2015-07-10:  The information provided here is mostly based on the
+      [MindTerm Datasheet](http://www.cryptzone.com/pdfs/Cryptzone_Datasheet_MindTerm_EN.pdf)
+      as well as the
+      [MindTerm 2.0 User's Guide](https://www.astro.umd.edu/resources/internal/ssh/MindTerm_User.pdf).
+      But since MindTerm is at version 4.x now, there may be inaccuracies!
+
+# SOCKS, 
 protocols:
     cipher:
         - 3des-cbc

@@ -1,11 +1,16 @@
 name: TinySSH
 homepage: http://tinyssh.org/
 source-repository: https://github.com/janmojzis/tinyssh
+license: "[Public domain](http://tinyssh.org/LICENCE)"
 latest-release:
     #version: X.Y
-    date: 2015-01-01
-client: unknown
-server: unknown
+    date: 2015-05-01
+#changelog: TODO
+client: no
+server: yes
+remarks: |
+    * Minimalistic SSH implementation, still in alpha stage.
+
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com

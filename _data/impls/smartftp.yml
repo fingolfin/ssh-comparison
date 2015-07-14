@@ -1,10 +1,16 @@
 name: SmartFTP
 homepage: https://www.smartftp.com/
+license: Commercial
 latest-release:
     version: 6.0.2146
     date: 2015-05-28
+changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
+remarks: |
+    * Windows client.
+    * Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, OneDrive, SSH, Terminal client.
+    * [Details on its SSH support](https://www.smartftp.com/client/features/ssh).
 protocols:
     cipher:
         - aes128-gcm@openssh.com

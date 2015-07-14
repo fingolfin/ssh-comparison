@@ -1,11 +1,20 @@
 name: lsh
 homepage: http://www.lysator.liu.se/~nisse/lsh/
 source-repository: http://git.lysator.liu.se/lsh
+license: GPL
 latest-release:
     version: 2.1
     date: 2013-06-26
+# FIXME: The following ChangeLog does not mention 2.1; it mentions 2.9
+# but that is an experimental version OLDER than 2.1
+#changelog: https://git.lysator.liu.se/lsh/lsh/blob/master/NEWS
 client: yes
 server: yes
+remarks: |
+    * [Wikipedia](https://en.wikipedia.org/wiki/Lsh)
+    * 2015-07-10: The version history mentions an experimental 2.9, but does NOT mention the
+      actual release 2.1, which is newer than the experimental 2.9 release.
+
 protocols:
     cipher:
         - 3des-cbc

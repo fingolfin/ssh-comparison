@@ -1,0 +1,62 @@
+name: vSSH HD Lite
+homepage: http://www.velestar.com/
+#source-repository: http://foobar.quux/foobar.git
+#license: TODO
+latest-release:
+    version: 1.9
+    date: 2015-04-02
+#changelog: TODO
+client: yes
+server: no
+#platforms:
+#    - iphone
+#    - ipad
+# seems they also have versions for Android and Windows Phone, and also Mac OS X?
+# Homepage is oddly outdated: last news item is from Nov 2014, 
+#
+# TODO: add app store links?!
+remarks: |
+    * Mobile client for Apple iOS (iPhone and iPad).
+    * There are four version for iOS sold via the Apple app store:
+        [vSSH Lite](https://itunes.apple.com/us/app/vssh-lite/id535055496?mt=8),
+        [vSSH](https://itunes.apple.com/us/app/vssh/id527244258?mt=8),
+        [vSSH HD Lite](https://itunes.apple.com/us/app/vssh-hd-lite/id535056241?mt=8),
+        [vSSH HD](https://itunes.apple.com/us/app/vssh-hd/id530136764?mt=8).
+
+    * Android: http://www.velestar.com/Pages/VSSHAndroidPage.aspx
+        [Google Play](https://play.google.com/store/apps/details?id=com.velestar.vssh)
+
+    * 2015-07-10: Version 1.9 for iOS identifies itself on the wire as `SSH-2.0-vSSH_2.0`. Custom SSH implementation?
+protocols:
+    cipher:
+        - aes256-ctr
+        - aes256-cbc
+        - rijndael-cbc@lysator.liu.se
+        - aes192-ctr
+        - aes192-cbc
+        - aes128-ctr
+        - aes128-cbc
+        - blowfish-ctr
+        - blowfish-cbc
+        - 3des-ctr
+        - 3des-cbc
+        - arcfour256
+        - arcfour128
+    compression:
+        - none
+        - zlib
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+        - rsa2048-sha256
+        - rsa1024-sha1
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-md5
+    userauth:
