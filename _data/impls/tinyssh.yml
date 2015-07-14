@@ -25,7 +25,7 @@ protocols:
         - curve25519-sha256@libssh.org
         - ecdh-sha2-nistp256
     mac:
-        - chacha20-poly1305@openssh.com
+        #- chacha20-poly1305@openssh.com    # not an actual allowed MAC value, but implied by the choice of cipher
         - hmac-sha2-256
     userauth:
         - publickey
