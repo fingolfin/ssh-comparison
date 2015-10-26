@@ -1,12 +1,10 @@
-# TODO: update to 4.0, 2015-06-24 , OTP 18.0 -- changed license to APLv2
 name: Erlang ssh library
 homepage: http://www.erlang.org/doc/man/ssh.html
 source-repository: https://github.com/erlang/otp
-license: "[Erlang Public License](http://www.erlang.org/EPLICENSE)"
-#license: TODO
+license: APL-2.0
 latest-release:
-    version: 3.1 (OTP 17.4)
-    date: 2014-12-10
+    version: 4.1.2 (OTP 18.1.2)
+    date: 2015-10-16
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -14,7 +12,7 @@ library: both
 remarks: |
     * Server and client implementation (and library) for the 
       [Erlang](http://www.erlang.org/) programming language.
-
+    * Uses OpenSSL crypto library
 #  SFTP Client + Server, ....
 protocols:
     cipher:
@@ -29,10 +27,16 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
-        - diffie-hellman-group1-sha1
-        - diffie-hellman-group-exchange-sha1
+       - ecdh-sha2-nistp256
+       - ecdh-sha2-nistp384
+       - ecdh-sha2-nistp521
+       - diffie-hellman-group-exchange-sha256
+       - diffie-hellman-group-exchange-sha1
+       - diffie-hellman-group14-sha1
+       - diffie-hellman-group1-sha1
     mac:
         - hmac-sha2-256
+        - hmac-sha2-512
         - hmac-sha1
     userauth:
         - publickey
