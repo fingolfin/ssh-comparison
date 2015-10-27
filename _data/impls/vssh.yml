@@ -59,4 +59,5 @@ protocols:
         - hmac-sha1
         - hmac-sha1-96
         - hmac-md5
-    userauth:
+#    userauth:
+#        - unknown

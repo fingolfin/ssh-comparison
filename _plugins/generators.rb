@@ -56,6 +56,8 @@ module Jekyll
           end
         end
 
+        # Record for each implementation which protocols its supports
+        # in this protocol class
         impls.each do |impl_name, impl|
           next unless impl['protocols'].has_key?(proto_class)
           list = impl['protocols'][proto_class]
@@ -64,6 +66,15 @@ module Jekyll
             p = proto_info.fetch(proto_name, {"spec" => nil, "impls" => {}})
             p['impls'][impl_name] = true
             proto_info[proto_name] = p
+          end
+        end
+
+        # For implementations for which we have no information about this
+        # protocol class, record the support as "unknown"
+        impls.each do |impl_name, impl|
+          next if impl['protocols'].has_key?(proto_class)
+          proto_info.each do |proto_name, proto_desc|
+            proto_desc['impls'][impl_name] = "unknown"
           end
         end
 
@@ -113,7 +124,11 @@ module Jekyll
         # TODO: iterate over impls_sorted
         impls_sorted.each do |impl_name, impl|
           if proto_desc['impls'].has_key?(impl_name)
-            self.content << "  <td class='yes'>Yes</td>"
+            if proto_desc['impls'][impl_name] == "unknown"
+              self.content << "  <td class='unknown'>?</td>"
+            else
+              self.content << "  <td class='yes'>Yes</td>"
+            end
           else
             self.content << "  <td class='no'>No</td>  "
           end

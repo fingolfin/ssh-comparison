@@ -55,4 +55,3 @@ protocols:
         - gssapi-with-mic
         - hostbased
         - none
-

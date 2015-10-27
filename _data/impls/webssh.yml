@@ -49,4 +49,5 @@ protocols:
         - hmac-md5
         - hmac-ripemd160
         - none
-    userauth:
+#    userauth:
+#        - unknown

@@ -64,4 +64,5 @@ protocols:
         - hmac-md5-96
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
-    userauth:
+#    userauth:
+#        - unknown

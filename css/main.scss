@@ -68,8 +68,8 @@ tr:nth-child(even) td.yes { background-color: #A5C663; }
 tr:nth-child(odd) td.no { background-color: #AA3939; }
 tr:nth-child(even) td.no { background-color: #D46A6A; }
 
-tr:nth-child(odd) td.unknown { background-color: red; }
-tr:nth-child(even) td.unknown { background-color: lighten(red, 20%); }
+tr:nth-child(odd) td.unknown { background-color: darken(yellow, 10%); }
+tr:nth-child(even) td.unknown { background-color: darken(yellow, 5%); }
 
 
 // The following is closely based on
