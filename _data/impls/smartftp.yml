@@ -22,7 +22,6 @@ protocols:
         - aes192-cbc
         - aes256-cbc
         - 3des-cbc
-        - arcfour                       # disabled by default
     compression:
         - zlib
         - zlib@openssh.com
