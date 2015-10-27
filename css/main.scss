@@ -135,3 +135,13 @@ tr:nth-child(even) td.unknown { background-color: darken(yellow, 5%); }
   text-align: left;
   // white-space: nowrap; /*whether to display in one line or not*/
 }
+
+#impl-list { border-collapse: collapse; }
+
+#impl-list table, th, td {
+background-color: #F2F2F2;
+padding: 0.2em 0.4em;
+ border: 1px solid #AAA;
+ text-align: left;
+ vertical-align: middle;
+ }
