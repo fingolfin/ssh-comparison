@@ -3,8 +3,8 @@ homepage: http://www.paramiko.org/
 source-repository: https://github.com/paramiko/paramiko
 license: LGPL-2.1
 latest-release:
-    version: 1.15.2
-    date: 2014-12-19
+    version: 1.15.3
+    date: 2015-10-02
 changelog: http://www.paramiko.org/changelog.html
 client: yes
 server: yes
