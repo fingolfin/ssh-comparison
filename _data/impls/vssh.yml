@@ -1,7 +1,7 @@
 name: vSSH HD Lite
 homepage: http://www.velestar.com/
 #source-repository: http://foobar.quux/foobar.git
-#license: TODO
+license: Proprietary
 latest-release:
     version: 1.9
     date: 2015-04-02

@@ -2,7 +2,7 @@
 name: Prompt
 homepage: https://www.panic.com/prompt/
 #source-repository: http://foobar.quux/foobar.git
-license: Commercial
+license: Proprietary
 latest-release:
     version: 2.1.1
     date: 2015-03-26

@@ -1,6 +1,6 @@
 name: AbsoluteTelnet
 homepage: https://celestialsoftware.net/
-#license: TODO
+license: Proprietary
 latest-release:
     version: 9.84
     date: 2015-02-03

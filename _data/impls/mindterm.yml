@@ -3,7 +3,7 @@ homepage: http://www.cryptzone.com/products/mindterm/
 # http://www.cryptzone.com/downloadcenter/mindterm
 # http://download.cryptzone.com/files/Mindterm_API_Documentation/index.html
 source-repository: closed
-license: Commercial
+license: Proprietary
 latest-release:
     version: 4.1.5
     date: 2014-04-01
