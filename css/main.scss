@@ -138,10 +138,10 @@ tr:nth-child(even) td.unknown { background-color: darken(yellow, 5%); }
 
 #impl-list { border-collapse: collapse; }
 
-#impl-list table, th, td {
-background-color: #F2F2F2;
-padding: 0.2em 0.4em;
- border: 1px solid #AAA;
- text-align: left;
- vertical-align: middle;
- }
+#impl-list, #impl-list td, #impl-list th {
+  background-color: #F2F2F2;
+  padding: 0.2em 0.4em;
+  border: 1px solid #AAA;
+  text-align: left;
+  vertical-align: middle;
+}
