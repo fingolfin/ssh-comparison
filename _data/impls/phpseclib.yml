@@ -1,11 +1,10 @@
-# TODO: update to  0.3.10
 name: phpseclib
 homepage: http://phpseclib.sourceforge.net/
 source-repository: https://github.com/phpseclib/phpseclib
 license: "[MIT style](https://github.com/phpseclib/phpseclib/blob/master/LICENSE)"
 latest-release:
-    version: 0.3.10
-    date: 2015-02-04
+    version: 1.0.0
+    date: 2015-08-02
 changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
 client: unknown
 server: unknown
@@ -15,8 +14,8 @@ remarks: |
 
 protocols:
     cipher:
-        - arcfour128                    
-        - arcfour256                    
+        - arcfour256
+        - arcfour128
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
@@ -42,12 +41,14 @@ protocols:
     kex:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group-exchange-sha256
     mac:
-        - hmac-md5
-        - hmac-md5-96
-        - hmac-sha1
-        - hmac-sha1-96
         - hmac-sha2-256
+        - hmac-sha1-96
+        - hmac-sha1
+        - hmac-md5-96
+        - hmac-md5
     userauth:
         - keyboard-interactive
         - publickey
