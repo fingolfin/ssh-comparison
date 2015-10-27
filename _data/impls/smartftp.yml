@@ -30,7 +30,6 @@ protocols:
     hostkey:
         - ssh-rsa
         - ssh-dss
-        - ssh-dss-sha256@ssh.com
         - ssh-rsa-sha256@ssh.com
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
