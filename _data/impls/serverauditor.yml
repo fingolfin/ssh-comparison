@@ -1,10 +1,9 @@
 name: Serverauditor
 homepage: https://serverauditor.com/
-#source-repository: http://foobar.quux/foobar.git
 license: Proprietary
 latest-release:
-    version: 2.0.0
-    date: 2015-05-13
+    version: 2.2.1
+    date: 2015-09-17
 #changelog: TODO
 client: yes
 server: no

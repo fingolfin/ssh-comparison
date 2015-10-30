@@ -2,8 +2,8 @@ name: WebSSH
 homepage: https://www.webssh.net
 license: Proprietary
 latest-release:
-    version: 8.3.2
-    date: 2015-04-09
+    version: 11.0
+    date: 2015-10-21
 #changelog: TODO
 client: yes
 server: no
