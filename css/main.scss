@@ -59,6 +59,11 @@ $on-laptop:        800px;
 .impl-comparison th { padding: 5px 10px 5px 10px; white-space: nowrap; }
 .impl-comparison td { padding: 0px 10px 0px 10px; white-space: nowrap; }
 
+.impl-comparison td:nth-child(1) {
+  //font-weight: bold;
+  text-align: left;
+}
+
 .yes .no .unknown { text-align: center; }
 
 // via http://paletton.com/
@@ -79,16 +84,11 @@ tr:nth-child(even) td.unknown { background-color: darken(yellow, 5%); }
   width: auto;
 }
 
-.table-header-rotated td{
-  width: 40px;
-/*
-  border-top: 1px solid #dddddd;
-  border-left: 1px solid #dddddd;
-  border-right: 1px solid #dddddd;
-*/
-  vertical-align: middle;
-  text-align: center;
-}
+// .table-header-rotated td {
+//   width: 40px;
+//   vertical-align: middle;
+//   text-align: center;
+// }
 
 .table-header-rotated th.rotate{
   height: 120px;
