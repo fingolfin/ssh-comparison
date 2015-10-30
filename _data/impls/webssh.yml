@@ -49,5 +49,7 @@ protocols:
         - hmac-md5
         - hmac-ripemd160
         - none
-#    userauth:
-#        - unknown
+    userauth:
+        - keyboard-interactive
+        - publickey
+        - password
