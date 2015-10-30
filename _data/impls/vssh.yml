@@ -16,13 +16,13 @@ server: no
 # TODO: add app store links?!
 remarks: |
     * Mobile client for Apple iOS (iPhone and iPad).
-    * There are four version for iOS sold via the Apple app store:
-        [vSSH Lite](https://itunes.apple.com/us/app/vssh-lite/id535055496?mt=8),
-        [vSSH](https://itunes.apple.com/us/app/vssh/id527244258?mt=8),
-        [vSSH HD Lite](https://itunes.apple.com/us/app/vssh-hd-lite/id535056241?mt=8),
-        [vSSH HD](https://itunes.apple.com/us/app/vssh-hd/id530136764?mt=8).
+    * There are four versions for iOS available via the Apple app store:
+        [vSSH Lite](https://itunes.apple.com/us/app/id535055496),
+        [vSSH](https://itunes.apple.com/us/app/id527244258),
+        [vSSH HD Lite](https://itunes.apple.com/us/app/id535056241),
+        [vSSH HD](https://itunes.apple.com/us/app/id530136764).
 
-    * Android: http://www.velestar.com/Pages/VSSHAndroidPage.aspx
+    * Android:
         [Google Play](https://play.google.com/store/apps/details?id=com.velestar.vssh)
 
     * 2015-07-10: Version 1.9 for iOS identifies itself on the wire as `SSH-2.0-vSSH_2.0`.

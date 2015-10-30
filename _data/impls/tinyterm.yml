@@ -1,6 +1,5 @@
-name: TinyTERM Lite for iOS
-homepage: http://www.censoft.com/products/tinyterm-plus/
-# http://www.censoft.com/products/tinyterm-plus/tinyterm-plus-android.php
+name: TinyTERM for iOS
+homepage: http://www.censoft.com/products/mobile/
 license: Proprietary
 latest-release:
     version: 3.1.0
@@ -13,10 +12,19 @@ server: no
 #    - ipad
 # They also have clients for OS X, Windows, Android, Web, Linux, UNIX, ...
 # supports many terminal types, and protocols beyond SSH
-# Three variants: Lite (free), Plus, Enterprise AS, 
+# The android clients have a different version, so I am not linking them here
 remarks: |
     * There are multiple versions of this, for different platform: Windows, Android, Linux, iOS, Mac OS X, ...
-      This report is currently based on `TinyTERM Lite for iOS`
+    * This report is currently based on `TinyTERM Lite for iOS`
+    * There are three versions for iOS available via the Apple app store:
+        * [TinyTERM Lite](https://itunes.apple.com/us/app/id893250564)
+        * [TinyTERM Enterprise AS](https://itunes.apple.com/us/app/id893366373)
+        * [TinyTERM Plus](https://itunes.apple.com/us/app/id912491717)
+    * Google Play has at least two versions (but their version numbers differ
+       from the iOS versions; the Android version has not yet been tested by me)
+        * [TinyTERM Lite](https://play.google.com/store/apps/details?id=com.censoft.TinyTERM.Lite)
+        * [TinyTERM Plus](https://play.google.com/store/apps/details?id=com.censoft.TinyTERM.Plus)
+
     * 2015-07-10: Version 2.1.5 for iOS identifies itself on the wire as `SSH-2.0-libssh-0.5.5`, so likely based on [libssh](/impls/libssh.html).
     * 2015-10-30: Version 3.1.0 for iOS identifies itself on the wire as `SSH-2.0-libssh-0.7.0`, so likely based on [libssh](/impls/libssh.html).
 

@@ -11,10 +11,9 @@ server: no
 #    - iphone
 #    - ipad
 #
-# https://itunes.apple.com/us/app/prompt-2/id917437289?mt=8&uo=4&at=11l4BV
 remarks: |
     * iOS client for Apple iPhone and iPad.
-    * Available at the [Apple App Store](https://itunes.apple.com/us/app/prompt-2/id917437289?mt=8&uo=4&at=11l4BV)
+    * Available at the [Apple App Store](https://itunes.apple.com/us/app/id917437289)
     * 2015-07-10: Version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`, so likely based on [OpenSSH](/impls/openssh.html).
 protocols:
     cipher:

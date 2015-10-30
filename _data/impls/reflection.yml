@@ -28,7 +28,7 @@ server: no
 remarks: |
     * Mobile client for Android and iOS.
     * Available at
-        [Apple App Store](https://itunes.apple.com/us/app/reflection-for-unix/id920472514?mt=8),
+        [Apple App Store](https://itunes.apple.com/us/app/id920472514),
         [Google Play](https://play.google.com/store/apps/details?id=rTablet.Android&hl=en).
     * They also offer clients and servers for Unix and Windows, under the name Reflection for Secure IT
       (formerly known as F-Secure SSH). These should be covered by a separate entry.
