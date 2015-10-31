@@ -1,0 +1,39 @@
+# SSH-2.0-1.0.00
+# waits for server to send KEX packet
+name: Mocca Telnet for iOS
+# I tested "Mocca Telnet Lite"
+homepage: http://www.mochasoft.dk/iphone_telnet.htm
+#source-repository: http://foobar.quux/foobar.git
+license: Proprietary
+latest-release:
+    version: 3.0
+    date: 2015-10-23
+#changelog: TODO
+client: true
+server: false
+#platforms:
+#    - iphone
+#    - ipad
+remarks: |
+    * Multi-platform client, with versions for Android, iOS, and more.
+    * The tests here were done with "Mocca Telnet Lite" on an iPhone
+    * Available on Apple app store:
+      * [Mocha Telnet](https://itunes.apple.com/us/app/id286892932)
+      * [Telnet Lite](https://itunes.apple.com/us/app/id286893976)
+    
+    * 2015-07-10: Version 2.7 for iOS identifies itself on the wire as `SSH-2.0-1.0.00`.
+
+# TODO: add more versions 
+protocols:
+    cipher:
+        - 3des-cbc
+    compression:
+        - none
+    hostkey:
+        - ssh-dss
+    kex:
+        - diffie-hellman-group1-sha1
+    mac:
+        - hmac-sha1
+#    userauth:
+#        - unknown
