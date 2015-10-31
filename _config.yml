@@ -11,3 +11,5 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 
 # Build settings
 markdown: kramdown
+
+exclude: [ssh-detect.py]
