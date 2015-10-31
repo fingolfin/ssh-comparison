@@ -27,7 +27,7 @@ remarks: |
 
     * 2015-07-10: Version 1.9 for iOS identifies itself on the wire as `SSH-2.0-vSSH_2.0`.
     * 2015-10-30: Version 1.11 for iOS identifies itself on the wire as `SSH-2.0-vSSH_1.9`.
-    * Version 1.11 is based on PuTTY 0.65
+    * Version 1.11 is based on [PuTTY](/impls/putty.html) 0.65
 protocols:
     cipher:
         - aes256-ctr
