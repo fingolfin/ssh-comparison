@@ -65,4 +65,3 @@ protocols:
         - password
         - hostbased
         - keyboard-interactive
-        - gssapi

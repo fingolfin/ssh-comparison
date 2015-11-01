@@ -91,9 +91,8 @@ protocols:
         - publickey
         - hostbased
         - keyboard-interactive
+        - gssapi-with-mic
         #- PAM               # through keyboard-interactive / Unix only
         #- RSA SecurID       # through keyboard-interactive
         #- RADIUS            # through keyboard-interactive
         #- LAM               # through keyboard-interactive / AIX only
-        - gssapi-with-mic
-        - gssapi

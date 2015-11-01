@@ -5,10 +5,11 @@ protocols:
         - gss-group1-sha1-*
         - gss-group14-sha1-*
         - gss-gex-sha1-*
-        - gss-*
+        #- gss-*            # reserved
+    hostkey:
         - "null"
     userauth:
         - gssapi-with-mic
         - gssapi-keyex
-        - gssapi
-        - external-keyx
+        #- gssapi           # unused, from earlier version of the spec
+        #- external-keyx    # unused, from earlier version of the spec

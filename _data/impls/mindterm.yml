@@ -94,15 +94,15 @@ protocols:
         - hmac-sha256-2@ssh.com
         - hmac-sha512@ssh.com
     userauth:
-        - rhosts
         - publickey
         - password
-        - rhostsrsa
-        - tis
-        - kerberos
-        - kerbtgt
-        - securid
-        - cryptocard
         - keyboard-interactive
         - hostbased
         - gssapi-with-mic
+        #- rhosts           # ???
+        #- rhostsrsa        # ???
+        #- tis              # keyboard-interactive sub-method?
+        #- kerberos         # ???
+        #- kerbtgt          # ???
+        #- securid          # keyboard-interactive sub-method?
+        #- cryptocard       # keyboard-interactive sub-method?
