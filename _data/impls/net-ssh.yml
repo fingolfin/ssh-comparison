@@ -3,10 +3,8 @@ homepage: http://net-ssh.github.io/net-ssh//
 source-repository: https://github.com/net-ssh/net-ssh
 license: "[MIT style](https://github.com/net-ssh/net-ssh/blob/master/LICENSE.txt)"
 latest-release:
-    version: 2.9.1
-    date: 2014-05-13
-#    version: 3.0.1
-#    date: 2015-09-19
+    version: 3.0.1
+    date: 2015-09-19
 changelog: https://github.com/net-ssh/net-ssh/blob/master/CHANGES.txt
 client: yes
 server: no
@@ -46,8 +44,6 @@ protocols:
         - cast128-ctr
         - blowfish-ctr
         - 3des-ctr
-        - aes256-gcm@openssh.com
-        - aes128-gcm@openssh.com
     compression:
         - zlib
         - zlib@openssh.com
@@ -60,8 +56,6 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
-        - ssh-ed25519-cert-v01@openssh.com
-        - ssh-ed25519
     kex:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group1-sha1
@@ -70,7 +64,6 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
-        - curve25519-sha256@libssh.org
     mac:
         - hmac-sha1
         - hmac-md5
@@ -83,9 +76,6 @@ protocols:
         - hmac-sha2-256-96
         - hmac-sha2-512-96
         - none
-        - hmac-sha2-512-etm@openssh.com
-        - hmac-sha2-256-etm@openssh.com
-        - umac-128-etm@openssh.com
     userauth:
         - none
         - password
