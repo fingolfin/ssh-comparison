@@ -10,7 +10,7 @@ client: yes
 server: no
 library: client
 remarks: |
-    * Pure Ruby implementation of the SSH2 client protocol.
+    * Ruby implementation of the SSH2 client protocol, based on OpenSSL
 
 protocols:
     cipher:
