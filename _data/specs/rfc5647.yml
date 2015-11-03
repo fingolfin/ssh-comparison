@@ -4,3 +4,6 @@ protocols:
     cipher:
         - AEAD_AES_128_GCM
         - AEAD_AES_256_GCM
+    mac:
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_GCM
