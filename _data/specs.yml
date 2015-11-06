@@ -287,6 +287,9 @@ draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
     url: http://tools.ietf.org/html/draft-ietf-secsh-x509-03
     title: "X.509v3 Certificates for SSH Authentication [ expired 2006-09-01 ]"
+    # Quote:
+    #  This document adds "x509v3-sign-rsa" and "x509v3-sign-dss" to the SSH
+    #  publickey type registry as "poisoned" by historical use.
     protocols:
         hostkey:
             - x509v3-sign
