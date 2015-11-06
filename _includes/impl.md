@@ -3,6 +3,7 @@
 * Homepage: [{{ page.impl.homepage }}]({{ page.impl.homepage }})
 * Latest release: {{ page.impl.latest-release.version }} ({{ page.impl.latest-release.date }})
 {% if page.impl.changelog %}* Version history: [{{ page.impl.changelog }}]({{ page.impl.changelog }}) {% endif %}
+{% if page.impl.source-repository %}* Source repository: [{{ page.impl.source-repository }}]({{ page.impl.source-repository }}) {% endif %}
 {% if page.impl.license %}* License: {{ page.impl.license }}{% endif %}
 * Client: {{ page.impl.client }}
 * Server: {{ page.impl.server }}
