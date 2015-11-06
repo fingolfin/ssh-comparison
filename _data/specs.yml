@@ -282,3 +282,19 @@ rfc7479:
     url: https://tools.ietf.org/html/rfc7479
     errata: https://www.rfc-editor.org/errata_search.php?rfc=7479
     title: "Using Ed25519 in SSHFP Resource Records"
+
+draft-ietf-secsh-x509-03:
+    name: draft-ietf-secsh-x509-03
+    url: http://tools.ietf.org/html/draft-ietf-secsh-x509-03
+    title: "X.509v3 Certificates for SSH Authentication [ expired 2006-09-01 ]"
+    protocols:
+        hostkey:
+            - x509v3-sign
+            - x509v3-sign-rsa-sha1
+            - x509v3-sign-dss-sha1
+
+
+draft-ietf-secsh-filexfer-02:
+    name: draft-ietf-secsh-filexfer-02
+    url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
+    title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
