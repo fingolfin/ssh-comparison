@@ -20,7 +20,7 @@ protocols:
     cipher:
         - aes128-cbc
         - aes128-ctr
-        - 3des-cdc
+        - 3des-cbc
         - aes192-cbc
         - aes192-ctr
         - aes256-cbc
