@@ -1,8 +1,0 @@
-name: RFC 4345
-url: https://tools.ietf.org/html/rfc4345
-errata: https://www.rfc-editor.org/errata_search.php?rfc=4345
-title: "Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol"
-protocols:
-    cipher:
-        - arcfour128
-        - arcfour256

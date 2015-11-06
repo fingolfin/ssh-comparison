@@ -1,0 +1,285 @@
+libssh:
+    name: libssh
+    url: http://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
+    title: "The key exchange methode curve25519-sha256@libssh.org"
+    protocols:
+        kex:
+            - curve25519-sha256@libssh.org
+
+openssh:
+    name: OpenSSH
+    url: http://www.openssh.com/specs.html
+    title: "Specifications implemented by OpenSSH, including information about some of their SSH extensions"
+    # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
+    # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
+    # http://www.openssh.com/txt/draft-miller-secsh-umac-01.txt
+    # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
+    #
+    protocols:
+        cipher:
+            - aes128-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
+            - aes256-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
+            - chacha20-poly1305@openssh.com     # openssh/PROTOCOL.chacha20poly1305
+        compression:
+            - zlib@openssh.com     # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
+        hostkey:
+            #- ssh-ed25519-cert-v01@openssh.com             # Undocumented? openssh/myproposal.h
+            - ssh-rsa-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
+            - ssh-dss-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
+            - ecdsa-sha2-nistp256-cert-v01@openssh.com      # openssh/PROTOCOL
+            - ecdsa-sha2-nistp384-cert-v01@openssh.com      # openssh/PROTOCOL
+            - ecdsa-sha2-nistp521-cert-v01@openssh.com      # openssh/PROTOCOL
+            - ssh-rsa-cert-v00@openssh.com                  # openssh/PROTOCOL
+            - ssh-dss-cert-v00@openssh.com                  # openssh/PROTOCOL.agent
+            #- ssh-dsa-cert-v00@openssh.com     # mentioned in openssh/PROTOCOL but not implemented
+        mac:
+            - umac-64@openssh.com               # openssh/PROTOCOL
+            - umac-128@openssh.com
+            #- hmac-ripemd160@openssh.com       # Undocumented? openssh/myproposal.h
+            #- hmac-ripemd160                   # Undocumented? openssh/myproposal.h
+            # ETM modes of existing macs:
+            - hmac-md5-etm@openssh.com
+            - hmac-md5-96-etm@openssh.com
+            - hmac-sha1-etm@openssh.com
+            - hmac-sha1-96-etm@openssh.com
+            - hmac-sha2-256-etm@openssh.com
+            - hmac-sha2-512-etm@openssh.com
+            - umac-64-etm@openssh.com
+            - umac-128-etm@openssh.com
+            - hmac-ripemd160-etm@openssh.com
+
+rfc4250:
+    name: RFC 4250
+    url: https://tools.ietf.org/html/rfc4250
+    title: "The Secure Shell (SSH) Protocol Assigned Numbers"
+    #protocols:
+
+rfc4251:
+    name: RFC 4251
+    url: https://tools.ietf.org/html/rfc4251
+    title: "The Secure Shell (SSH) Protocol Architecture"
+    #protocols:
+
+rfc4252:
+    name: RFC 4252
+    url: https://tools.ietf.org/html/rfc4252
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4252
+    title: "The Secure Shell (SSH) Authentication Protocol"
+    protocols:
+        userauth:
+             - publickey    # REQUIRED
+             - password
+             - hostbased
+             - none
+
+rfc4253:
+    name: RFC 4253
+    url: https://tools.ietf.org/html/rfc4253
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4253
+    title: "The Secure Shell (SSH) Transport Layer Protocol"
+    protocols:
+        cipher:
+            - 3des-cbc      # REQUIRED
+            - blowfish-cbc
+            - twofish256-cbc
+            - twofish-cbc
+            - twofish192-cbc
+            - twofish128-cbc
+            - aes256-cbc
+            - aes192-cbc
+            - aes128-cbc        # RECOMMENDED
+            - serpent256-cbc
+            - serpent192-cbc
+            - serpent128-cbc
+            - arcfour
+            - idea-cbc
+            - cast128-cbc
+            - none
+            #- des-cbc    # HISTORIC
+        compression:
+            - zlib      # OPTIONAL
+            - none      # REQUIRED
+        hostkey:
+            - ssh-dss       # REQUIRED
+            - ssh-rsa       # RECOMMENDED
+            - pgp-sign-rsa
+            - pgp-sign-dss
+        kex:
+            - diffie-hellman-group1-sha1    # REQUIRED
+            - diffie-hellman-group14-sha1   # REQUIRED
+        mac:
+            - hmac-sha1     # REQUIRED
+            - hmac-sha1-96  # RECOMMENDED
+            - hmac-md5
+            - hmac-md5-96
+            - none          # NOT RECOMMENDED
+
+rfc4254:
+    name: RFC 4254
+    url: https://tools.ietf.org/html/rfc4254
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4254
+    title: "The Secure Shell (SSH) Connection Protocol"
+    #protocols:
+
+rfc4255:
+    name: RFC 4255
+    url: https://tools.ietf.org/html/rfc4255
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4255
+    title: "Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints"
+    #protocols:
+
+rfc4256:
+    name: RFC 4256
+    url: https://tools.ietf.org/html/rfc4256
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4256
+    title: "Generic Message Exchange Authentication for the Secure Shell Protocol (SSH)"
+    protocols:
+        userauth:
+             - keyboard-interactive
+
+rfc4335:
+    name: RFC 4335
+    url: https://tools.ietf.org/html/rfc4335
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4335
+    title: "The Secure Shell (SSH) Session Channel Break Extension"
+
+rfc4344:
+    name: RFC 4344
+    url: https://tools.ietf.org/html/rfc4344
+    title: "The Secure Shell (SSH) Transport Layer Encryption Modes"
+    protocols:
+        cipher:
+             - aes128-ctr       # RECOMMENDED
+             - aes192-ctr       # RECOMMENDED
+             - aes256-ctr       # RECOMMENDED
+             - 3des-ctr         # RECOMMENDED
+             - blowfish-ctr
+             - twofish128-ctr
+             - twofish192-ctr
+             - twofish256-ctr
+             - serpent128-ctr
+             - serpent192-ctr
+             - serpent256-ctr
+             - idea-ctr
+             - cast128-ctr
+
+rfc4345:
+    name: RFC 4345
+    url: https://tools.ietf.org/html/rfc4345
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4345
+    title: "Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol"
+    protocols:
+        cipher:
+            - arcfour128
+            - arcfour256
+
+rfc4419:
+    name: RFC 4419
+    url: https://tools.ietf.org/html/rfc4419
+    title: "Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol"
+    protocols:
+        kex:
+            - diffie-hellman-group-exchange-sha1
+            - diffie-hellman-group-exchange-sha256
+
+rfc4432:
+    name: RFC 4432
+    url: https://tools.ietf.org/html/rfc4432
+    title: "RSA Key Exchange for the Secure Shell (SSH) Transport Layer Protocol"
+    protocols:
+        kex:
+            - rsa1024-sha1
+            - rsa2048-sha256
+
+rfc4462:
+    name: RFC 4462
+    url: https://tools.ietf.org/html/rfc4462
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4462
+    title: "Generic Security Service Application Program Interface (GSS-API) Authentication and Key Exchange for the Secure Shell (SSH) Protocol"
+    protocols:
+        kex:
+            - gss-group1-sha1-*
+            - gss-group14-sha1-*
+            - gss-gex-sha1-*
+            #- gss-*            # reserved
+        hostkey:
+            - "null"
+        userauth:
+            - gssapi-with-mic
+            - gssapi-keyex
+            #- gssapi           # unused, from earlier version of the spec
+            #- external-keyx    # unused, from earlier version of the spec
+
+rfc4716:
+    name: RFC 4716
+    url: https://tools.ietf.org/html/rfc4716
+    title: "The Secure Shell (SSH) Public Key File Format"
+
+rfc4819:
+    name: RFC 4819
+    url: https://tools.ietf.org/html/rfc4819
+    title: "Secure Shell Public Key Subsystem"
+
+rfc5647:
+    name: RFC 5647
+    url: https://tools.ietf.org/html/rfc5647
+    title: "AES Galois Counter Mode for the Secure Shell Transport Layer Protocol"
+    protocols:
+        cipher:
+            - AEAD_AES_128_GCM
+            - AEAD_AES_256_GCM
+        mac:
+            - AEAD_AES_128_GCM
+            - AEAD_AES_256_GCM
+
+    # Not really usable, see also
+    #  http://article.gmane.org/gmane.ietf.secsh/7110
+
+rfc5656:
+    name: RFC 5656
+    url: https://tools.ietf.org/html/rfc5656
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=5656
+    title: "Elliptic Curve Algorithm Integration in the Secure Shell Transport Layer"
+    protocols:
+        hostkey:
+            - ecdsa-sha2-nistp256   # REQUIRED
+            - ecdsa-sha2-nistp384   # REQUIRED
+            - ecdsa-sha2-nistp521   # REQUIRED
+        kex:
+            - ecdh-sha2-nistp256    # REQUIRED
+            - ecdh-sha2-nistp384    # REQUIRED
+            - ecdh-sha2-nistp521    # REQUIRED
+            - ecmqv-sha2        # FIXME: nothing supports this?!?
+
+rfc6187:
+    name: RFC 6187
+    url: https://tools.ietf.org/html/rfc6187
+    title: "X.509v3 Certificates for Secure Shell Authentication"
+    protocols:
+        hostkey:
+            - x509v3-ssh-dss
+            - x509v3-ssh-rsa
+            - x509v3-rsa2048-sha256
+            - x509v3-ecdsa-sha2-*
+
+rfc6594:
+    name: RFC 6594
+    url: https://tools.ietf.org/html/rfc6594
+    title: "Use of the SHA-256 Algorithm with RSA, Digital Signature Algorithm (DSA), and Elliptic Curve DSA (ECDSA) in SSHFP Resource Records"
+    #protocols:
+
+rfc6668:
+    name: RFC 6668
+    url: https://tools.ietf.org/html/rfc6668
+    title: "SHA-2 Data Integrity Verification for the Secure Shell (SSH) Transport Layer Protocol"
+    protocols:
+        mac:
+            - hmac-sha2-256  # RECOMMENDED
+            - hmac-sha2-512
+
+rfc7479:
+    name: RFC 7479
+    url: https://tools.ietf.org/html/rfc7479
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=7479
+    title: "Using Ed25519 in SSHFP Resource Records"
+    #protocols:

@@ -1,7 +1,0 @@
-name: RFC 4432
-url: https://tools.ietf.org/html/rfc4432
-title: "RSA Key Exchange for the Secure Shell (SSH) Transport Layer Protocol"
-protocols:
-    kex:
-        - rsa1024-sha1
-        - rsa2048-sha256

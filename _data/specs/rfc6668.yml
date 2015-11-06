@@ -1,7 +1,0 @@
-name: RFC 6668
-url: https://tools.ietf.org/html/rfc6668
-title: "SHA-2 Data Integrity Verification for the Secure Shell (SSH) Transport Layer Protocol"
-protocols:
-    mac:
-        - hmac-sha2-256  # RECOMMENDED
-        - hmac-sha2-512

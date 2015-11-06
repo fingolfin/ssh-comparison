@@ -1,7 +1,0 @@
-name: RFC 4419
-url: https://tools.ietf.org/html/rfc4419
-title: "Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol"
-protocols:
-    kex:
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group-exchange-sha256

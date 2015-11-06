@@ -1,7 +1,0 @@
-name: RFC 4256
-url: https://tools.ietf.org/html/rfc4256
-errata: https://www.rfc-editor.org/errata_search.php?rfc=4256
-title: "Generic Message Exchange Authentication for the Secure Shell Protocol (SSH)"
-protocols:
-    userauth:
-         - keyboard-interactive
