@@ -1,5 +1,6 @@
 name: OpenSSH
 url: http://www.openssh.com/specs.html
+title: "Specifications implemented by OpenSSH, including information about some of their SSH extensions"
 # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
 # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
 # http://www.openssh.com/txt/draft-miller-secsh-umac-01.txt

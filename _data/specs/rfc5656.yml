@@ -1,5 +1,7 @@
 name: RFC 5656
 url: https://tools.ietf.org/html/rfc5656
+errata: https://www.rfc-editor.org/errata_search.php?rfc=5656
+title: "Elliptic Curve Algorithm Integration in the Secure Shell Transport Layer"
 protocols:
     hostkey:
         - ecdsa-sha2-nistp256   # REQUIRED

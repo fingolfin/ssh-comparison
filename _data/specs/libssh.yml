@@ -1,5 +1,6 @@
 name: libssh
 url: http://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
+title: "The key exchange methode curve25519-sha256@libssh.org"
 protocols:
     kex:
         - curve25519-sha256@libssh.org

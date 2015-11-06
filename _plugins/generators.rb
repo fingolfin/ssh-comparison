@@ -47,6 +47,7 @@ module Jekyll
         proto_info = {}
 
         specs.each do |spec_id, spec|
+          next unless spec.has_key?('protocols')
           next unless spec['protocols'].has_key?(proto_class)
           list = spec['protocols'][proto_class]
           list.each do |proto_name|

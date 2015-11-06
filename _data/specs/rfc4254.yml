@@ -1,0 +1,5 @@
+name: RFC 4254
+url: https://tools.ietf.org/html/rfc4254
+errata: https://www.rfc-editor.org/errata_search.php?rfc=4254
+title: "The Secure Shell (SSH) Connection Protocol"
+#protocols:

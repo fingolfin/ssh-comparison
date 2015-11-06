@@ -1,5 +1,7 @@
 name: RFC 4462
 url: https://tools.ietf.org/html/rfc4462
+errata: https://www.rfc-editor.org/errata_search.php?rfc=4462
+title: "Generic Security Service Application Program Interface (GSS-API) Authentication and Key Exchange for the Secure Shell (SSH) Protocol"
 protocols:
     kex:
         - gss-group1-sha1-*

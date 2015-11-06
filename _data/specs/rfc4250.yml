@@ -1,43 +1,4 @@
-name: RFC 4250 # and 4252, 4523
+name: RFC 4250
 url: https://tools.ietf.org/html/rfc4250
-protocols:
-    cipher:
-        - 3des-cbc      # REQUIRED
-        - blowfish-cbc
-        - twofish256-cbc
-        - twofish-cbc
-        - twofish192-cbc
-        - twofish128-cbc
-        - aes256-cbc
-        - aes192-cbc
-        - aes128-cbc        # RECOMMENDED
-        - serpent256-cbc
-        - serpent192-cbc
-        - serpent128-cbc
-        - arcfour
-        - idea-cbc
-        - cast128-cbc
-        - none
-        #- des-cbc    # HISTORIC
-    compression:
-        - zlib      # OPTIONAL
-        - none      # REQUIRED
-    hostkey:
-        - ssh-dss       # REQUIRED
-        - ssh-rsa       # RECOMMENDED
-        - pgp-sign-rsa
-        - pgp-sign-dss
-    kex:
-        - diffie-hellman-group1-sha1    # REQUIRED
-        - diffie-hellman-group14-sha1   # REQUIRED
-    mac:
-        - hmac-sha1     # REQUIRED
-        - hmac-sha1-96  # RECOMMENDED
-        - hmac-md5
-        - hmac-md5-96
-        - none          # NOT RECOMMENDED
-    userauth:
-         - publickey    # REQUIRED
-         - password
-         - hostbased
-         - none
+title: "The Secure Shell (SSH) Protocol Assigned Numbers"
+#protocols:

@@ -1,5 +1,6 @@
 name: RFC 6187
 url: https://tools.ietf.org/html/rfc6187
+title: "X.509v3 Certificates for Secure Shell Authentication"
 protocols:
     hostkey:
         - x509v3-ssh-dss

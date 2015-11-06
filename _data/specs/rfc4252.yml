@@ -1,0 +1,10 @@
+name: RFC 4252
+url: https://tools.ietf.org/html/rfc4252
+errata: https://www.rfc-editor.org/errata_search.php?rfc=4252
+title: "The Secure Shell (SSH) Authentication Protocol"
+protocols:
+    userauth:
+         - publickey    # REQUIRED
+         - password
+         - hostbased
+         - none

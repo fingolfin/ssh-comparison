@@ -1,5 +1,6 @@
 name: RFC 5647
 url: https://tools.ietf.org/html/rfc5647
+title: "AES Galois Counter Mode for the Secure Shell Transport Layer Protocol"
 protocols:
     cipher:
         - AEAD_AES_128_GCM
@@ -7,3 +8,6 @@ protocols:
     mac:
         - AEAD_AES_128_GCM
         - AEAD_AES_256_GCM
+
+# Not really usable, see also
+#  http://article.gmane.org/gmane.ietf.secsh/7110

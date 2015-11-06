@@ -1,5 +1,6 @@
 name: RFC 4344
 url: https://tools.ietf.org/html/rfc4344
+title: "The Secure Shell (SSH) Transport Layer Encryption Modes"
 protocols:
     cipher:
          - aes128-ctr       # RECOMMENDED
