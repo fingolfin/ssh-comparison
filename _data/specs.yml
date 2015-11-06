@@ -46,25 +46,23 @@ openssh:
             - hmac-sha2-512-etm@openssh.com
             - umac-64-etm@openssh.com
             - umac-128-etm@openssh.com
-            - hmac-ripemd160-etm@openssh.com
+            #- hmac-ripemd160-etm@openssh.com   # Undocumented? openssh/myproposal.h
 
 rfc4250:
     name: RFC 4250
     url: https://tools.ietf.org/html/rfc4250
-    title: "The Secure Shell (SSH) Protocol Assigned Numbers"
-    #protocols:
+    title: "SSH Protocol Assigned Numbers"
 
 rfc4251:
     name: RFC 4251
     url: https://tools.ietf.org/html/rfc4251
-    title: "The Secure Shell (SSH) Protocol Architecture"
-    #protocols:
+    title: "SSH Protocol Architecture"
 
 rfc4252:
     name: RFC 4252
     url: https://tools.ietf.org/html/rfc4252
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4252
-    title: "The Secure Shell (SSH) Authentication Protocol"
+    title: "SSH Authentication Protocol"
     protocols:
         userauth:
              - publickey    # REQUIRED
@@ -76,7 +74,7 @@ rfc4253:
     name: RFC 4253
     url: https://tools.ietf.org/html/rfc4253
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4253
-    title: "The Secure Shell (SSH) Transport Layer Protocol"
+    title: "SSH Transport Layer Protocol"
     protocols:
         cipher:
             - 3des-cbc      # REQUIRED
@@ -118,21 +116,19 @@ rfc4254:
     name: RFC 4254
     url: https://tools.ietf.org/html/rfc4254
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4254
-    title: "The Secure Shell (SSH) Connection Protocol"
-    #protocols:
+    title: "SSH Connection Protocol"
 
 rfc4255:
     name: RFC 4255
     url: https://tools.ietf.org/html/rfc4255
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4255
-    title: "Using DNS to Securely Publish Secure Shell (SSH) Key Fingerprints"
-    #protocols:
+    title: "Using DNS to Securely Publish SSH Key Fingerprints"
 
 rfc4256:
     name: RFC 4256
     url: https://tools.ietf.org/html/rfc4256
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4256
-    title: "Generic Message Exchange Authentication for the Secure Shell Protocol (SSH)"
+    title: "Generic Message Exchange Authentication for the SSH Protocol"
     protocols:
         userauth:
              - keyboard-interactive
@@ -141,12 +137,12 @@ rfc4335:
     name: RFC 4335
     url: https://tools.ietf.org/html/rfc4335
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4335
-    title: "The Secure Shell (SSH) Session Channel Break Extension"
+    title: "SSH Session Channel Break Extension"
 
 rfc4344:
     name: RFC 4344
     url: https://tools.ietf.org/html/rfc4344
-    title: "The Secure Shell (SSH) Transport Layer Encryption Modes"
+    title: "SSH Transport Layer Encryption Modes"
     protocols:
         cipher:
              - aes128-ctr       # RECOMMENDED
@@ -167,7 +163,7 @@ rfc4345:
     name: RFC 4345
     url: https://tools.ietf.org/html/rfc4345
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4345
-    title: "Improved Arcfour Modes for the Secure Shell (SSH) Transport Layer Protocol"
+    title: "Improved Arcfour Modes for the SSH Transport Layer Protocol"
     protocols:
         cipher:
             - arcfour128
@@ -176,7 +172,7 @@ rfc4345:
 rfc4419:
     name: RFC 4419
     url: https://tools.ietf.org/html/rfc4419
-    title: "Diffie-Hellman Group Exchange for the Secure Shell (SSH) Transport Layer Protocol"
+    title: "Diffie-Hellman Group Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
             - diffie-hellman-group-exchange-sha1
@@ -185,7 +181,7 @@ rfc4419:
 rfc4432:
     name: RFC 4432
     url: https://tools.ietf.org/html/rfc4432
-    title: "RSA Key Exchange for the Secure Shell (SSH) Transport Layer Protocol"
+    title: "RSA Key Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
             - rsa1024-sha1
@@ -195,7 +191,7 @@ rfc4462:
     name: RFC 4462
     url: https://tools.ietf.org/html/rfc4462
     errata: https://www.rfc-editor.org/errata_search.php?rfc=4462
-    title: "Generic Security Service Application Program Interface (GSS-API) Authentication and Key Exchange for the Secure Shell (SSH) Protocol"
+    title: "GSS-API Authentication and Key Exchange for the SSH Protocol"
     protocols:
         kex:
             - gss-group1-sha1-*
@@ -213,17 +209,17 @@ rfc4462:
 rfc4716:
     name: RFC 4716
     url: https://tools.ietf.org/html/rfc4716
-    title: "The Secure Shell (SSH) Public Key File Format"
+    title: "SSH Public Key File Format"
 
 rfc4819:
     name: RFC 4819
     url: https://tools.ietf.org/html/rfc4819
-    title: "Secure Shell Public Key Subsystem"
+    title: "SSH Public Key Subsystem"
 
 rfc5647:
     name: RFC 5647
     url: https://tools.ietf.org/html/rfc5647
-    title: "AES Galois Counter Mode for the Secure Shell Transport Layer Protocol"
+    title: "AES Galois Counter Mode for the SSH Transport Layer Protocol"
     protocols:
         cipher:
             - AEAD_AES_128_GCM
@@ -239,7 +235,7 @@ rfc5656:
     name: RFC 5656
     url: https://tools.ietf.org/html/rfc5656
     errata: https://www.rfc-editor.org/errata_search.php?rfc=5656
-    title: "Elliptic Curve Algorithm Integration in the Secure Shell Transport Layer"
+    title: "Elliptic Curve Algorithm Integration in the SSH Transport Layer"
     protocols:
         hostkey:
             - ecdsa-sha2-nistp256   # REQUIRED
@@ -254,7 +250,7 @@ rfc5656:
 rfc6187:
     name: RFC 6187
     url: https://tools.ietf.org/html/rfc6187
-    title: "X.509v3 Certificates for Secure Shell Authentication"
+    title: "X.509v3 Certificates for SSH Authentication"
     protocols:
         hostkey:
             - x509v3-ssh-dss
@@ -265,18 +261,17 @@ rfc6187:
 rfc6239:
     name: RFC 6239
     url: https://tools.ietf.org/html/rfc6594
-    title: "Suite B Cryptographic Suites for Secure Shell (SSH)"
+    title: "Suite B Cryptographic Suites for SSH"
 
 rfc6594:
     name: RFC 6594
     url: https://tools.ietf.org/html/rfc6594
-    title: "Use of the SHA-256 Algorithm with RSA, Digital Signature Algorithm (DSA), and Elliptic Curve DSA (ECDSA) in SSHFP Resource Records"
-    #protocols:
+    title: "Use of the SHA-256 Algorithm with RSA, DSA, and ECDSA in SSHFP Resource Records"
 
 rfc6668:
     name: RFC 6668
     url: https://tools.ietf.org/html/rfc6668
-    title: "SHA-2 Data Integrity Verification for the Secure Shell (SSH) Transport Layer Protocol"
+    title: "SHA-2 Data Integrity Verification for the SSH Transport Layer Protocol"
     protocols:
         mac:
             - hmac-sha2-256  # RECOMMENDED
@@ -287,4 +282,3 @@ rfc7479:
     url: https://tools.ietf.org/html/rfc7479
     errata: https://www.rfc-editor.org/errata_search.php?rfc=7479
     title: "Using Ed25519 in SSHFP Resource Records"
-    #protocols:
