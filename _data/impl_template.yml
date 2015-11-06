@@ -1,13 +1,17 @@
 name: NAME
-homepage: http://foobar.quux
-source-repository: http://foobar.quux/foobar.git
-license: NAME
-latest-release:
-    version: X.Y
-    date: 1900-01-01
-changelog: URL
-client: unknown
-server: unknown
+homepage: URL
+#source-repository: URL
+#developer: NAME
+#license: NAME
+#first-release:
+#    date: YYYY-MM-DD
+#latest-release:
+#    version: X.Y
+#    date: 1900-01-01
+#changelog: URL
+#client: unknown
+#server: unknown
+#library: unknown
 remarks: |
     TODO
 protocols:
