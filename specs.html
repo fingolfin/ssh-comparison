@@ -6,9 +6,8 @@ title: SSH related specifications
 <table>
 {% for spec in site.data.specs %}
   <tr>
-  <td><a href="{{ spec[1].url }}">{{ spec[1].name }}</a>
-  {% if spec[1].errata %} (<a href="{{ spec[1].errata }}">Errata</a>){% endif %}
-  </td>
+  <td style="white-space: nowrap; vertical-align: top;"><a href="{{ spec[1].url }}">{{ spec[1].name }}</a>
+  {% if spec[1].errata %} (<a href="{{ spec[1].errata }}">Errata</a>){% endif %}</td>
   <td>{% if spec[1].title %}{{ spec[1].title }}{% endif %}</td>
   </tr>
 {% endfor %}
