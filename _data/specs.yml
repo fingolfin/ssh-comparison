@@ -216,6 +216,11 @@ rfc4819:
     url: https://tools.ietf.org/html/rfc4819
     title: "SSH Public Key Subsystem"
 
+rfc5114:
+    name: RFC 5114
+    url: https://tools.ietf.org/html/rfc5114
+    title: "Additional Diffie-Hellman Groups for Use with IETF Standards [ section 3.4 references SSH ]"
+
 rfc5647:
     name: RFC 5647
     url: https://tools.ietf.org/html/rfc5647
