@@ -58,7 +58,8 @@ protocols:
         - hmac-sha2-256-96  # disabled by default
         - hmac-sha1-96      # disabled by default
         - hmac-md5-96       # disabled by default
-    userauth:   # the following is a guess, based on what FlowSsh supports
+    userauth:
         - publickey
         - password
-        - keyboard-interactive
+        - keyboard-interactive  # only client; there: full support with additional prompts; not just as a version of "password"
+        - gssapi-with-mic       # supports Kerberos 5 and NTLM over GSSAPI
