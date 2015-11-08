@@ -49,7 +49,6 @@ protocols:
         - hmac-sha2-512
         - hmac-md5
         - hmac-ripemd160
-        - none
     userauth:
         - keyboard-interactive
         - publickey

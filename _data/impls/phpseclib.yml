@@ -53,4 +53,3 @@ protocols:
         - keyboard-interactive
         - publickey
         - password
-        - none

@@ -32,7 +32,6 @@ protocols:
         - twofish256-cbc
         - crypticore128@ssh.com
         - seed-cbc@ssh.com
-        - none
     compression:
         - none
         - zlib
@@ -85,7 +84,6 @@ protocols:
         - crypticore-mac@ssh.com
         - hmac-md5
         - hmac-md5-96
-        - none
     userauth:
         - password
         - publickey

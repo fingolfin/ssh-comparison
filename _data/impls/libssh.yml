@@ -52,7 +52,6 @@ protocols:
         - hmac-sha2-512
         - hmac-sha1
     userauth:
-        - none
         - password
         - publickey
         - hostbased

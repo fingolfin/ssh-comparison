@@ -65,4 +65,3 @@ protocols:
         - password
         - keyboard-interactive
         - gssapi-with-mic
-        - none

@@ -56,4 +56,3 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic       # since 1.15.0 (2014-09-18)
         - gssapi-keyex          # since 1.15.0 (2014-09-18)
-        - none

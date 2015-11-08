@@ -90,5 +90,3 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
-        - none
-

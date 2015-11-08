@@ -46,7 +46,6 @@ protocols:
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
     userauth:
-        - none
         - password
         - publickey
         - hostbased

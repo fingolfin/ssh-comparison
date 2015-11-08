@@ -68,7 +68,7 @@ rfc4252:
              - publickey    # REQUIRED
              - password
              - hostbased
-             - none
+             #- none        # suppressed (see issue #27)
 
 rfc4253:
     name: RFC 4253
@@ -85,18 +85,18 @@ rfc4253:
             - twofish128-cbc
             - aes256-cbc
             - aes192-cbc
-            - aes128-cbc        # RECOMMENDED
+            - aes128-cbc    # RECOMMENDED
             - serpent256-cbc
             - serpent192-cbc
             - serpent128-cbc
             - arcfour
             - idea-cbc
             - cast128-cbc
-            - none
-            #- des-cbc    # HISTORIC
+            #- none         # suppressed (see issue #27)
+            #- des-cbc      # HISTORIC
         compression:
-            - zlib      # OPTIONAL
-            - none      # REQUIRED
+            - zlib          # OPTIONAL
+            - none          # REQUIRED
         hostkey:
             - ssh-dss       # REQUIRED
             - ssh-rsa       # RECOMMENDED
@@ -110,7 +110,7 @@ rfc4253:
             - hmac-sha1-96  # RECOMMENDED
             - hmac-md5
             - hmac-md5-96
-            - none          # NOT RECOMMENDED
+            #- none         # NOT RECOMMENDED / suppressed (see issue #27)
 
 rfc4254:
     name: RFC 4254

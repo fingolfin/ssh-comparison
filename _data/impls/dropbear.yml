@@ -28,7 +28,6 @@ protocols:
         #- twofish128-ctr           # Disabled by default
         #- twofish256-ctr           # Disabled by default
         #- blowfish-cbc             # Disabled by default
-        #- none                     # Disabled by default
     compression:
         - zlib@openssh.com
         - zlib
@@ -53,9 +52,7 @@ protocols:
         - hmac-sha2-256
         - hmac-sha2-512
         - hmac-md5
-        #- none                     # Disabled by default
     userauth:
         - publickey
         - password
         - keyboard-interactive
-        - none

@@ -25,7 +25,6 @@ protocols:
         - arcfour256
         - blowfish-cbc
         - 3des-cbc
-        - none
     compression:
         - zlib
         - zlib@openssh.com
@@ -53,7 +52,6 @@ protocols:
         - hmac-sha2-512
     userauth:
         - keyboard-interactive
-        - none
         - password
         - publickey
         - gssapi-with-mic

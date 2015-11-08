@@ -29,7 +29,6 @@ protocols:
         - aes196-cbc        # disabled by default
         - aes128-cbc        # disabled by default
         - 3des-cbc          # disabled by default
-        - none              # disabled by default
     compression:
         - none
         - zlib
@@ -59,9 +58,7 @@ protocols:
         - hmac-sha2-256-96  # disabled by default
         - hmac-sha1-96      # disabled by default
         - hmac-md5-96       # disabled by default
-        - none              # disabled by default
     userauth:   # the following is a guess, based on what FlowSsh supports
         - publickey
         - password
         - keyboard-interactive
-        - none

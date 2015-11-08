@@ -42,4 +42,3 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
-        - none

@@ -22,7 +22,6 @@ protocols:
         - aes256-cbc
         - rijndael-cbc@lysator.liu.se
         - idea-cbc
-        - none
         - arcfour128
         - arcfour256
         - arcfour
@@ -75,9 +74,7 @@ protocols:
         - hmac-sha2-512
         - hmac-sha2-256-96
         - hmac-sha2-512-96
-        - none
     userauth:
-        - none
         - password
         - publickey
         - hostbased
