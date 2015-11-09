@@ -57,4 +57,4 @@ protocols:
         - password
         - publickey
         - keyboard-interactive
-        - gssapi-with-mic
+        - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos

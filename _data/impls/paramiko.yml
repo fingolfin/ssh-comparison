@@ -54,5 +54,5 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
-        - gssapi-with-mic       # since 1.15.0 (2014-09-18)
+        - gssapi-with-mic       # since 1.15.0 (2014-09-18) # only OID 1.2.840.113554.1.2.2 / Kerberos
         - gssapi-keyex          # since 1.15.0 (2014-09-18)
