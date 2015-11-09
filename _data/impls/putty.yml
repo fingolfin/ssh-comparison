@@ -3,9 +3,9 @@ homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git
 license: MIT
 latest-release:
-    version: 0.65
-    date: 2015-07-25
-#changelog: TODO
+    version: 0.66
+    date: 2015-11-07
+changelog: http://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
 remarks: |
