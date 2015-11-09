@@ -2,7 +2,6 @@ name: SecureCRT
 homepage: https://www.vandyke.com/products/securecrt/index.html
 # TODO: also check out VShell
 #    https://www.vandyke.com/products/vshell/features.html
-#source-repository: URL
 developer: VanDyke Software
 license: Proprietary
 #first-release:

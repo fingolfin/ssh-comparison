@@ -3,7 +3,6 @@
 name: Mocca Telnet for iOS
 # I tested "Mocca Telnet Lite"
 homepage: http://www.mochasoft.dk/iphone_telnet.htm
-#source-repository: http://foobar.quux/foobar.git
 license: Proprietary
 latest-release:
     version: 3.0

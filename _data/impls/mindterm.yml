@@ -2,7 +2,6 @@ name: MindTerm
 homepage: http://www.cryptzone.com/products/mindterm/
 # http://www.cryptzone.com/downloadcenter/mindterm
 # http://download.cryptzone.com/files/Mindterm_API_Documentation/index.html
-source-repository: closed
 license: Proprietary
 latest-release:
     version: 4.1.5
