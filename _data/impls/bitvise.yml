@@ -22,11 +22,11 @@ remarks: |
 protocols:
     cipher:
         - aes256-ctr
-        - aes196-ctr
+        - aes192-ctr
         - aes128-ctr
         - 3des-ctr
         - aes256-cbc        # disabled by default
-        - aes196-cbc        # disabled by default
+        - aes192-cbc        # disabled by default
         - aes128-cbc        # disabled by default
         - 3des-cbc          # disabled by default
     compression:
