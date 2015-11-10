@@ -64,17 +64,32 @@ $on-laptop:        800px;
   text-align: left;
 }
 
+//
+// Color for yes / no / unknown
+//
+$yes-color:     #A5C663;
+$no-color:      #D46A6A;
+$unk-color:     darken(yellow, 5%);
+
 .yes .no .unknown { text-align: center; }
 
 // via http://paletton.com/
-tr:nth-child(odd) td.yes { background-color: #7A9F35; }
-tr:nth-child(even) td.yes { background-color: #A5C663; }
+tr:nth-child(odd) td.yes { background-color: darken($yes-color, 15%); }
+tr:nth-child(even) td.yes { background-color: $yes-color; }
 
-tr:nth-child(odd) td.no { background-color: #AA3939; }
-tr:nth-child(even) td.no { background-color: #D46A6A; }
+tr:nth-child(odd) td.no { background-color: darken($no-color, 15%); }
+tr:nth-child(even) td.no { background-color: $no-color; }
 
-tr:nth-child(odd) td.unknown { background-color: darken(yellow, 10%); }
-tr:nth-child(even) td.unknown { background-color: darken(yellow, 5%); }
+tr:nth-child(odd) td.unknown { background-color: darken($unk-color, 5%); }
+tr:nth-child(even) td.unknown { background-color: $unk-color; }
+
+//
+// Highligth column and row the mouse is hovering over.
+//
+tr:hover td.yes { background-color: lighten($yes-color, 20%); }
+tr:hover td.no { background-color: lighten($no-color, 20%); }
+tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
+
 
 
 // The following is closely based on
