@@ -3,7 +3,7 @@ homepage: http://www.libssh.org/
 source-repository: http://git.libssh.org/projects/libssh.git
 references:
     - http://api.libssh.org/stable/
-license: LGPL-2.1
+license: "[LGPL 2.1](https://git.libssh.org/projects/libssh.git/tree/COPYING)"
 latest-release:
     version: 0.7.2
     date: 2015-09-16

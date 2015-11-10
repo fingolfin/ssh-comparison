@@ -1,7 +1,7 @@
 name: Erlang ssh library
 homepage: http://www.erlang.org/doc/man/ssh.html
 source-repository: https://github.com/erlang/otp
-license: APL-2.0
+license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 latest-release:
     version: 4.1.2 (OTP 18.1.2)
     date: 2015-10-16

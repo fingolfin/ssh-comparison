@@ -1,7 +1,7 @@
 name: PuTTY
 homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git
-license: MIT
+license: "[MIT style](http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html)"
 latest-release:
     version: 0.66
     date: 2015-11-07

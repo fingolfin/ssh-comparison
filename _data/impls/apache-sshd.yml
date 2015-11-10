@@ -1,7 +1,7 @@
 name: Apache SSHD
 homepage: http://mina.apache.org/sshd-project/
 source-repository: http://git-wip-us.apache.org/repos/asf/mina-sshd.git
-license: APL-2.0
+license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 latest-release:
     version: 0.14.0
     date: 2015-03-10

@@ -1,7 +1,7 @@
 name: lsh
 homepage: http://www.lysator.liu.se/~nisse/lsh/
 source-repository: http://git.lysator.liu.se/lsh
-license: GPL
+license: "[GPL 2](http://www.gnu.org/licenses/old-licenses/gpl-2.0)"
 latest-release:
     version: 2.1
     date: 2013-06-26
