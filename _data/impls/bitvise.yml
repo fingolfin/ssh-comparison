@@ -48,9 +48,9 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group1-sha1            # disabled by default
         - diffie-hellman-group14-sha1
-        - gss-group1-sha1       # disabled by default
+        - gss-group1-sha1-*       # disabled by default
         - gss-group14-sha1-*
-        - gss-gex-sha1
+        - gss-gex-sha1-*
     mac:
         - hmac-sha2-256
         - hmac-sha1
