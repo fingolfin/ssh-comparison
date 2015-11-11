@@ -1,6 +1,8 @@
 name: AbsoluteTelnet
 homepage: https://celestialsoftware.net/
 license: Proprietary
+first-release:
+    date: 1996      # according to Wikipedia
 latest-release:
     version: 9.84
     date: 2015-02-03

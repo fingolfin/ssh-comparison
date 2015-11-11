@@ -2,6 +2,8 @@ name: Dropbear
 homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
 source-repository: https://secure.ucc.asn.au/hg/dropbear/
 license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE)"
+first-release:
+    date: 2003-04-06    # according to CHANGES file
 latest-release:
     version: 2015.68
     date: 2015-08-08

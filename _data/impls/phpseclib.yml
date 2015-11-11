@@ -2,6 +2,8 @@ name: phpseclib
 homepage: http://phpseclib.sourceforge.net/
 source-repository: https://github.com/phpseclib/phpseclib
 license: "[MIT style](https://github.com/phpseclib/phpseclib/blob/master/LICENSE)"
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 1.0.0
     date: 2015-08-02

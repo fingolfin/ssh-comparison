@@ -4,6 +4,8 @@ name: Mocca Telnet for iOS
 # I tested "Mocca Telnet Lite"
 homepage: http://www.mochasoft.dk/iphone_telnet.htm
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 3.0
     date: 2015-10-23

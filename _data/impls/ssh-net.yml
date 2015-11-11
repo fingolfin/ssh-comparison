@@ -2,6 +2,8 @@ name: SSH.NET
 homepage: https://sshnet.codeplex.com/
 source-repository: https://sshnet.svn.codeplex.com/svn
 license: "[BSD style](https://sshnet.codeplex.com/license)"
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 2014.4.6-beta2
     date: 2014-11-22

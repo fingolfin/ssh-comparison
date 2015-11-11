@@ -1,6 +1,8 @@
 name: Serverauditor
 homepage: https://serverauditor.com/
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 2.2.1
     date: 2015-09-17

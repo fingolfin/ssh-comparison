@@ -1,6 +1,8 @@
 name: SmartFTP
 homepage: https://www.smartftp.com/
 license: Proprietary
+first-release:
+    date: 1998
 latest-release:
     version: 6.0.2165
     date: 2015-10-27

@@ -2,6 +2,8 @@ name: Net::SSH
 homepage: http://net-ssh.github.io/net-ssh//
 source-repository: https://github.com/net-ssh/net-ssh
 license: "[MIT style](https://github.com/net-ssh/net-ssh/blob/master/LICENSE.txt)"
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 3.0.1
     date: 2015-09-19

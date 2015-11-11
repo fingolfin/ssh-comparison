@@ -2,6 +2,8 @@ name: libssh2
 homepage: http://www.libssh2.org/
 source-repository: https://github.com/libssh2/libssh2/
 license: "[BSD style](http://www.libssh2.org/license.html)"
+first-release:
+    date: 2004-12-08    # version 0.1, initial release, date from repository
 latest-release:
     version: 1.6.0
     date: 2015-06-12

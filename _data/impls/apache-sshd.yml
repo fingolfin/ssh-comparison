@@ -3,7 +3,7 @@ homepage: http://mina.apache.org/sshd-project/
 source-repository: http://git-wip-us.apache.org/repos/asf/mina-sshd.git
 license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
-    date: 2009
+    date: 2009      # according to Wikipedia
 latest-release:
     version: 1.0.0
     date: 2015-08-19

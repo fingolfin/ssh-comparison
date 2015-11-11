@@ -1,6 +1,8 @@
 name: iTerminal
 homepage: http://www.comcsoft.com/Portfolio/our_apps/iTerminal/iTerminal_overview.php
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 2.02
     date: 2015-01-07
@@ -18,6 +20,8 @@ remarks: |
        and
        [iTerminal Pro for Universal](https://itunes.apple.com/us/app/id586842129)
     * 2015-10-30: Version 2.02 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`, so likely based on [libssh2](/impls/libssh2.html).
+    * 2015-11-10: the iPhone version now is at 3.0 (the others remain at 2.02),
+                  though supposedly there are only iOS 9 related changes
 
 protocols:
     cipher:

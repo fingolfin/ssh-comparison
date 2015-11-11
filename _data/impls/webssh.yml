@@ -1,6 +1,8 @@
 name: WebSSH
 homepage: https://www.webssh.net
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 11.0
     date: 2015-10-21

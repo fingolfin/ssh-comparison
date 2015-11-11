@@ -3,6 +3,8 @@ homepage: http://www.openssh.com/
 source-repository: https://anongit.mindrot.org/openssh.git
 # http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/
 license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/LICENCE)"
+first-release:
+    date: 1999-12-01    # according to Wikipedia
 latest-release:
     version: 7.1
     date: 2015-08-21

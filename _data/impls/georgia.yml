@@ -3,7 +3,7 @@ homepage: http://www.georgiasoftworks.com/products/ssh/ssh2_server.php
 developer: Georgia SoftWorks
 license: Proprietary
 first-release:
-    date: 2004-07
+    date: 2004-07   # according to Wikipedia
 latest-release:
     version: 8.05.0031
     date: 2014-10-24

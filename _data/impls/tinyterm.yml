@@ -1,6 +1,8 @@
 name: TinyTERM for iOS
 homepage: http://www.censoft.com/products/mobile/
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 3.1.0
     date: 2015-09-23

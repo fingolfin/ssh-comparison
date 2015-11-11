@@ -2,6 +2,8 @@ name: FlowSsh
 developer: Bitvise
 homepage: https://www.bitvise.com/flowssh
 license: Proprietary
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 5.36
     date: 2015-10-29

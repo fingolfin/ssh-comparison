@@ -3,8 +3,8 @@ homepage: http://www.hekkelman.com/salt.html
 #source-repository: URL
 developer: Hekkelman Programmatuur
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2011-11   # according to Wikipedia
 latest-release:
     version: 3.4.10
     date: 2015-05-12

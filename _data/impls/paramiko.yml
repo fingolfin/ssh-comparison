@@ -2,6 +2,8 @@ name: Paramiko
 homepage: http://www.paramiko.org/
 source-repository: https://github.com/paramiko/paramiko
 license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
+first-release:
+    date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
     version: 1.16.0
     date: 2015-11-04

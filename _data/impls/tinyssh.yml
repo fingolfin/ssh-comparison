@@ -2,6 +2,8 @@ name: TinySSH
 homepage: http://tinyssh.org/
 source-repository: https://github.com/janmojzis/tinyssh
 license: "[Public domain](http://tinyssh.org/LICENCE)"
+first-release:
+    date: 2014-02-16
 latest-release:
     #version: X.Y
     date: 2015-05-01

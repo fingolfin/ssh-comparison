@@ -1,6 +1,8 @@
 name: Tectia SSH
 homepage: http://www.ssh.com/products/tectia-ssh
 license: Proprietary
+first-release:
+    date: 1995-07
 latest-release:
     version: 6.4.6
     date: 2014-01-24

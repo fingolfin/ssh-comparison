@@ -2,6 +2,8 @@ name: JSch
 homepage: http://www.jcraft.com/jsch/
 #source-repository: http://git.jcraft.com/jsch.git/
 license: "[BSD style](http://www.jcraft.com/jsch/LICENSE.txt)"
+#first-release:
+#    date: YYYY-MM-DD
 latest-release:
     version: 0.1.53
     date: 2015-06-05

@@ -4,8 +4,8 @@ homepage: https://www.vandyke.com/products/securecrt/index.html
 #    https://www.vandyke.com/products/vshell/features.html
 developer: VanDyke Software
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 1998-06   # according to Wikipedia
 latest-release:
      version: 7.3.5
      date: 2015-09-10

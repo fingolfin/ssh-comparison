@@ -1,6 +1,8 @@
 name: Reflection for UNIX, iOS Edition
 homepage: https://www.attachmate.com/products/reflection/unix/
 license: Proprietary
+first-release:
+    date: 2005  # according to Wikipedia
 latest-release:
     version: 1.5.0.61
     date: 2015-09-24

@@ -1,6 +1,8 @@
 name: JuiceSSH
 homepage: https://juicessh.com/
 license: Proprietary
+first-release:
+    date: 2012-12   # according to their website
 latest-release:
     version: 2.0.9
     date: 2015-10-15
