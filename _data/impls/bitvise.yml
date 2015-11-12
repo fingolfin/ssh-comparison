@@ -3,7 +3,8 @@ developer: Bitvise
 homepage: https://www.bitvise.com/
 license: Proprietary
 first-release:
-    date: 2002-05   # according to Wikipedia
+    date: 2001      # according to company website
+    #date: 2002-05   # according to Wikipedia
 latest-release:
     version: 6.44
     date: 2015-11-10
@@ -14,7 +15,8 @@ server: yes
 #    - windows
 remarks: |
     * Windows client and server
-    * also known as: Bitvise SSH Server + Client; formerly: WinSSHD + Tunnelier
+    * also known as: Bitvise SSH Server + Client
+    * formerly known as: WinSSHD + Tunnelier
     * The release data is for the server (not always in sync with client)
     * [Client version history](https://www.bitvise.com/ssh-client-version-history)
     * [Server version history](https://www.bitvise.com/ssh-server-version-history)
