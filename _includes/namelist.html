@@ -1,0 +1,12 @@
+{% capture cache %}
+{% assign type = include.type  %}
+{% assign namelist = "" | split: ""  %}
+{% for impl in site.impls %}
+  {% for name in impl.protocols[type] %}
+    {% unless namelist contains name %}
+      {% assign namelist = namelist | push: name  %}
+    {% endunless namelist contains name %}
+  {% endfor %}
+{% endfor %}
+{% assign namelist = namelist | sort  %}
+{% endcapture %}{% assign cache = nil %}
