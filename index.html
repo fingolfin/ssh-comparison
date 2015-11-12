@@ -27,8 +27,9 @@ Pull requests and issue reports are welcome.
 <thead>
   <tr>
     <th>Name</th>
-    <th>Version</th>
-    <th>Release date</th>
+    <th>First release date</th>
+    <th>Last release version</th>
+    <th>Last release date</th>
     <th>License</th>
   </tr>
 </thead>
@@ -36,6 +37,7 @@ Pull requests and issue reports are welcome.
 {% for impl_hash in site.data.impls %}
   <tr>
     <td style="background: #ececec; font-weight: bold;"><a href="impls/{{ impl_hash[0] }}.html">{{ impl_hash[1].name }}</a></td>
+    <td>{{ impl_hash[1].first-release.date }}</td>
     <td>{{ impl_hash[1].latest-release.version }}</td>
     <td>{{ impl_hash[1].latest-release.date }}</td>
     <td>{{ impl_hash[1].license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</td>
