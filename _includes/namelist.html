@@ -8,5 +8,12 @@
     {% endunless namelist contains name %}
   {% endfor %}
 {% endfor %}
+{% for impl in site.data.specs %}
+  {% for name in impl[1].protocols[type] %}
+    {% unless namelist contains name %}
+      {% assign namelist = namelist | push: name  %}
+    {% endunless namelist contains name %}
+  {% endfor %}
+{% endfor %}
 {% assign namelist = namelist | sort  %}
 {% endcapture %}{% assign cache = nil %}

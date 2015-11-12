@@ -78,7 +78,7 @@ module Jekyll
       self.content << "<thead><tr><th>id</th>\n"
       self.content << "  <th class='rotate'><div><span>Specification</span></div></th>\n"
       impls_sorted.each do |impl_name, impl|
-        self.content << "  <th class='rotate'><div><span><a href='impls/#{impl_name}.html'>#{impl['title']}</a></span></div></th>\n"
+        self.content << "  <th class=\"rotate\"><div><span><a href=\"/impls/#{impl_name}.html\">#{impl['title']}</a></span></div></th>\n"
       end
       self.content << "</tr></thead>\n"
 
@@ -92,7 +92,7 @@ module Jekyll
         # link to specification, if any
         spec = proto_desc.fetch('spec', nil)
         unless spec.nil?
-          self.content << "  <td><a href='#{spec['url']}'>#{spec['name']}</a></td>\n"
+          self.content << "  <td><a href=\"#{spec['url']}\">#{spec['name']}</a></td>\n"
         else
           self.content << "  <td></td>\n"
         end
@@ -101,12 +101,12 @@ module Jekyll
         impls_sorted.each do |impl_name, impl|
           if proto_desc['impls'].has_key?(impl_name)
             if proto_desc['impls'][impl_name] == "unknown"
-              self.content << "  <td class='unknown'>?</td>"
+              self.content << "  <td class=\"unknown\">?</td>"
             else
-              self.content << "  <td class='yes'>Yes</td>"
+              self.content << "  <td class=\"yes\">Yes</td>  "
             end
           else
-            self.content << "  <td class='no'>No</td>  "
+              self.content << "  <td class=\"no\">No</td>    "
           end
           self.content << "  <!-- #{impl_name} -->\n"
         end
@@ -114,12 +114,6 @@ module Jekyll
         self.content << "</tr>\n"
       end
 
-#    <td>hmac1</td>
-#    <td class='no'>No</td>
-#    <td class='unknown'>?</td>
-#    <td class='yes'>Yes</td>
-#       self.content = <<-EOS
-      #self.content << "</tr>"
       self.content << "</tbody>\n"
       self.content << "</table>\n"
 
