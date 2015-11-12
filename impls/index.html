@@ -9,9 +9,9 @@ layout: default
   The following implementations are currently covered:
 
 <ul>
-{% for impl_hash in site.data.impls %}
+{% for impl in site.impls %}
   <li>
-    <a href="{{ impl_hash[0] }}.html">{{ impl_hash[1].name }}</a>
+    <a href="{{ impl.url }}">{{ impl.title }}</a>
   </li>
 {% endfor %}
 </ul>

@@ -1,34 +1,5 @@
 module Jekyll
 
-  class SSHImplementationPage < Page
-    def initialize(site, name, desc)
-      @desc = desc
-      @site = site
-      @dir = 'impls'
-      @name = "#{name}.html"
-      self.process(@name)       # splits @name into @ext and @basename
-
-      self.content = ''
-      self.data = {
-         'layout' => 'impl',
-         'impl' => desc,
-         'title' => desc['name'],
-         'generated' => true,
-       }
-    end
-  end
-
-  class SSHImplementationPageGenerator < Generator
-    safe true
-
-    def generate(site)
-      dir = site.config['category_dir'] || 'categories'
-      site.data['impls'].each do |name, desc|
-        site.pages << SSHImplementationPage.new(site, name, desc)
-      end
-    end
-  end
-
   class SSHComparisonPage < Page
     def initialize(site)
       @site = site
@@ -37,7 +8,11 @@ module Jekyll
       self.process(@name)       # splits @name into @ext and @basename
 
       specs = site.data['specs']
-      impls = site.data['impls']
+      impls_list = site.collections['impls'].docs
+      impls = {}
+      impls_list.each do |impl|
+        impls[impl.basename_without_ext] = impl.data
+      end
 
       self.content = ""
 
@@ -96,14 +71,14 @@ module Jekyll
       table_id = "cmp-table-#{proto_class}"
       self.content << "<table id='#{table_id}' class='impl-comparison tablesorter table-header-rotated'>\n"
 
-      impls_sorted = impls.sort_by {|k,v| v["name"].downcase}
+      impls_sorted = impls.sort_by {|k,v| v["title"].downcase}
       protos_sorted = proto_info.sort_by {|k,v| k}
 
       # Table head
       self.content << "<thead><tr><th>id</th>\n"
       self.content << "  <th class='rotate'><div><span>Specification</span></div></th>\n"
       impls_sorted.each do |impl_name, impl|
-        self.content << "  <th class='rotate'><div><span><a href='impls/#{impl_name}.html'>#{impl['name']}</a></span></div></th>\n"
+        self.content << "  <th class='rotate'><div><span><a href='impls/#{impl_name}.html'>#{impl['title']}</a></span></div></th>\n"
       end
       self.content << "</tr></thead>\n"
 

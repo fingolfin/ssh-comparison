@@ -13,3 +13,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 markdown: kramdown
 
 exclude: [ssh-detect.py]
+
+collections:
+  impls:
+    output: true

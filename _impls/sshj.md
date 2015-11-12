@@ -1,0 +1,59 @@
+---
+layout: impl
+
+title: SSHJ
+homepage: https://github.com/hierynomus/sshj
+source-repository: https://github.com/hierynomus/sshj
+changelog: https://github.com/hierynomus/sshj
+license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
+#first-release:
+#    date: YYYY-MM-DD
+latest-release:
+    version: 0.14.0
+    date: 2015-11-04
+#changelog: URL
+client: no
+server: no
+library: client
+remarks: |
+    * Pure Java implementation.
+protocols:
+    cipher:
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - aes128-cbc 
+        - aes192-cbc 
+        - aes256-cbc 
+        - 3des-cbc
+        - blowfish-cbc
+    compression:
+        - zlib              # disabled by default
+        - zlib@openssh.com  # disabled by default
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - curve25519-sha256@libssh.org
+        - diffie-hellman-group-exchange-sha256
+        - ecdh-sha2-nistp521
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-sha2-256
+        - hmac-sha2-512
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - gssapi-with-mic
+        - hostbased
+---

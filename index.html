@@ -34,13 +34,13 @@ Pull requests and issue reports are welcome.
   </tr>
 </thead>
 <tbody>
-{% for impl_hash in site.data.impls %}
+{% for impl in site.impls %}
   <tr>
-    <td style="background: #ececec; font-weight: bold;"><a href="impls/{{ impl_hash[0] }}.html">{{ impl_hash[1].name }}</a></td>
-    <td>{{ impl_hash[1].first-release.date }}</td>
-    <td>{{ impl_hash[1].latest-release.version }}</td>
-    <td>{{ impl_hash[1].latest-release.date }}</td>
-    <td>{{ impl_hash[1].license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</td>
+    <td style="background: #ececec; font-weight: bold;"><a href="{{ impl.url }}">{{ impl.title }}</a></td>
+    <td>{{ impl.first-release.date }}</td>
+    <td>{{ impl.latest-release.version }}</td>
+    <td>{{ impl.latest-release.date }}</td>
+    <td>{{ impl.license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</td>
   </tr>
 {% endfor %}
 </tbody>
