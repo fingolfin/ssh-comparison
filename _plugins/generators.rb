@@ -76,7 +76,7 @@ module Jekyll
 
       # Table head
       self.content << "<thead><tr><th>id</th>\n"
-      self.content << "  <th class='rotate'><div><span>Specification</span></div></th>\n"
+      self.content << "  <th class=\"rotate\"><div><span>Specification</span></div></th>\n"
       impls_sorted.each do |impl_name, impl|
         self.content << "  <th class=\"rotate\"><div><span><a href=\"/impls/#{impl_name}.html\">#{impl['title']}</a></span></div></th>\n"
       end
