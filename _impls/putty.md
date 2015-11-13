@@ -6,7 +6,16 @@ homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git
 license: "[MIT style](http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html)"
 first-release:
-    date: 1999-01-22    # first version (0.45) mentioned in changelog
+    date: 1998
+# It is not clear when exactly the first *public* PuTTY release was. The
+# changelog starts at version 0.45, released 1999-01-22, and this is
+# also the date Wikipedia lists. I contacted Simon Tatham about this,
+# and he cannot fully reconstruct when the first release was. But with
+# help from the Internet archive, it is clear that already version 0.43
+# was released to the public, at the latest in in December 1998.
+# The _name_ 'PuTTY' appeared around May/June 1998, and according to Simon,
+# the development code made its first successful SSH connection 1998-05-29.
+# So, all in all, this is why I give 1998 as date of the first release.
 latest-release:
     version: 0.66
     date: 2015-11-07
