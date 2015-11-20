@@ -25,7 +25,7 @@ protocols:
         - aes128-cbc 
         - aes192-cbc 
         - aes256-cbc 
-        - 3dex-ctr
+        - 3des-ctr
         - 3des-cbc
         - blowfish-ctr
         - blowfish-cbc
