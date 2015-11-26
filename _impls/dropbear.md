@@ -8,8 +8,8 @@ license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE
 first-release:
     date: 2003-04-06    # according to CHANGES file
 latest-release:
-    version: 2015.68
-    date: 2015-08-08
+    version: 2015.69
+    date: 2015-11-25
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
@@ -23,6 +23,8 @@ protocols:
     cipher:
         - aes128-ctr
         - aes256-ctr
+        #- twofish256-ctr           # Disabled by default
+        #- twofish128-ctr           # Disabled by default
         - aes128-cbc
         - aes256-cbc
         - twofish256-cbc
@@ -30,8 +32,6 @@ protocols:
         - twofish128-cbc
         - 3des-ctr
         - 3des-cbc
-        #- twofish128-ctr           # Disabled by default
-        #- twofish256-ctr           # Disabled by default
         #- blowfish-cbc             # Disabled by default
     compression:
         - zlib@openssh.com
