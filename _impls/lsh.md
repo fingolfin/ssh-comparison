@@ -10,52 +10,30 @@ first-release:
 latest-release:
     version: 2.1
     date: 2013-06-26
-# FIXME: The following ChangeLog does not mention 2.1; it mentions 2.9
-# but that is an experimental version OLDER than 2.1
-#changelog: https://git.lysator.liu.se/lsh/lsh/blob/master/NEWS
 client: yes
 server: yes
 remarks: |
     * [Wikipedia](https://en.wikipedia.org/wiki/Lsh)
     * 2015-07-10: The version history mentions an experimental 2.9, but does NOT mention the
-      actual release 2.1, which is newer than the experimental 2.9 release.
+      actual release 2.1, which seems to be newer than the experimental 2.9 release.
 
 protocols:
     cipher:
-        - 3des-cbc
-        - 3des-ctr
-        - blowfish-cbc
-        - blowfish-ctr
-        - twofish256-cbc
-        - twofish-cbc
-        - twofish128-cbc
-        - twofish192-cbc
-        - twofish128-ctr
-        - twofish192-ctr
-        - twofish256-ctr
         - aes256-cbc
-        - aes192-cbc
-        - aes128-cbc
-        - aes128-ctr
-        - aes192-ctr
-        - aes256-ctr
-        - serpent256-cbc
-        - serpent192-cbc
-        - serpent128-cbc
-        - serpent128-ctr
-        - serpent192-ctr
-        - serpent256-ctr
+        - 3des-cbc
+        - blowfish-cbc
         - arcfour
-        - cast128-cbc
-        - cast128-ctr
+        - aes256-ctr                    # disabled by default
+        - twofish-cbc                   # disabled by default
+        - cast128-cbc                   # disabled by default
+        - serpent256-cbc                # disabled by default
+        #- serpent-cbc@lysator.liu.se    # disabled by default; non-standard
     compression:
-        - zlib
         - none
+        - zlib
     hostkey:
-        - ssh-dss
         - ssh-rsa
-        - ssh-dsa
-        - ssh-dsa-sha256@lysator.liu.se
+        - ssh-dss
         - spki-sign-rsa
         - spki-sign-dss
     kex:
@@ -63,7 +41,6 @@ protocols:
         - diffie-hellman-group14-sha1
     mac:
         - hmac-sha1
-        - hmac-sha1-96
         - hmac-md5
     userauth:
         - publickey
