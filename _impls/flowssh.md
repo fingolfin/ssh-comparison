@@ -8,8 +8,8 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 5.36
-    date: 2015-10-29
+    version: 5.37
+    date: 2015-11-10
 changelog: https://www.bitvise.com/flowssh-version-history
 client: yes
 server: no

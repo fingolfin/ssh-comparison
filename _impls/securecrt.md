@@ -10,8 +10,8 @@ license: Proprietary
 first-release:
     date: 1998-06   # according to Wikipedia
 latest-release:
-     version: 7.3.5
-     date: 2015-09-10
+     version: 7.3.6
+     date: 2015-12-01
 changelog: https://www.vandyke.com/products/securecrt/history.txt
 client: yes
 server: no

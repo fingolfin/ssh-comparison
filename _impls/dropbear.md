@@ -8,8 +8,8 @@ license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE
 first-release:
     date: 2003-04-06    # according to CHANGES file
 latest-release:
-    version: 2015.69
-    date: 2015-11-25
+    version: 2015.70
+    date: 2015-11-26
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
