@@ -97,7 +97,8 @@ try:
             # Read SSH client identification, plus extra fluff
             while not f.closed:
                 line = f.readline()
-                print >>sys.stderr, 'received "%s"' % line.strip()
+                ident = line.strip()
+                print >>sys.stderr, 'received "%s"' % ident
                 if line.startswith("SSH-"):
                     break
 
@@ -189,6 +190,9 @@ try:
             if vals["languages_client_to_server"] != vals["languages_server_to_client"]:
                 print >>sys.stderr, 'WARNING: languages sets for c/s and s/c differ'
 
+            first_kex_packet_follows = read_byte(f)
+            reserved = read_uint32(f)
+
             # TODO: validate the payload length so far
 
             # receive padding
@@ -200,6 +204,7 @@ try:
             # Output everything
             #
 
+            print ""
             print "protocols:"
             print_list("cipher", vals["encryption_algorithms_client_to_server"])
             print_list("compression", vals["compression_algorithms_client_to_server"])
@@ -210,6 +215,10 @@ try:
             # TODO: continue with fake useauth, to test support for different methods?
             print "#    userauth:"
             print "#        - unknown"
+
+            print ""
+            print "first_kex_packet_follows:", first_kex_packet_follows
+            print "ident: \"%s\"" % ident
 
             # TODO: send a disconnect message
 
