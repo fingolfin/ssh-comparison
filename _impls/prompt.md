@@ -10,14 +10,10 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - iphone
-#    - ipad
-#
-remarks: |
-    * iOS client for Apple iPhone and iPad.
-    * Available at the [Apple App Store](https://itunes.apple.com/us/app/id917437289)
-    * 2015-07-10: Version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`, so likely based on [OpenSSH](/impls/openssh.html).
+platforms:
+    - iphone
+    - ipad
+
 protocols:
     cipher:
         - aes128-ctr
@@ -57,4 +53,11 @@ protocols:
         - hmac-ripemd160@openssh.com
 #    userauth:
 #        - unknown
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-OpenSSH_5.4"
+based-on: "[OpenSSH](/impls/openssh.html)"
 ---
+* iOS client for Apple iPhone and iPad.
+* Available on the [Apple App Store](https://itunes.apple.com/us/app/id917437289)
+* 2015-07-10: Version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`

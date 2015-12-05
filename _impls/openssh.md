@@ -93,4 +93,6 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+
+first_kex_packet_follows: 0
 ---

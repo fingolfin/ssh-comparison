@@ -1,9 +1,9 @@
 ---
-title: vSSH
+title: vSSH for iOS
 homepage: http://www.velestar.com/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2012
 latest-release:
     version: 1.11
     date: 2015-10-22
@@ -16,21 +16,6 @@ server: no
 # seems they also have versions for Android and Windows Phone, and also Mac OS X?
 # Homepage is oddly outdated: last news item is from Nov 2014, 
 #
-# TODO: add app store links?!
-remarks: |
-    * Mobile client for Apple iOS (iPhone and iPad).
-    * There are four versions for iOS available via the Apple app store:
-        [vSSH Lite](https://itunes.apple.com/us/app/id535055496),
-        [vSSH](https://itunes.apple.com/us/app/id527244258),
-        [vSSH HD Lite](https://itunes.apple.com/us/app/id535056241),
-        [vSSH HD](https://itunes.apple.com/us/app/id530136764).
-
-    * Android:
-        [Google Play](https://play.google.com/store/apps/details?id=com.velestar.vssh)
-
-    * 2015-07-10: Version 1.9 for iOS identifies itself on the wire as `SSH-2.0-vSSH_2.0`.
-    * 2015-10-30: Version 1.11 for iOS identifies itself on the wire as `SSH-2.0-vSSH_1.9`.
-    * Version 1.11 is based on [PuTTY](/impls/putty.html) 0.65
 protocols:
     cipher:
         - aes256-ctr
@@ -66,4 +51,19 @@ protocols:
         - hmac-md5
 #    userauth:
 #        - unknown
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-vSSH_1.9"
+based-on: "[PuTTY](/impls/putty.html)"
 ---
+* Mobile client for Apple iOS (iPhone and iPad).
+* There is also an [Android version](/impls/vssh-android.html).
+* There are four versions for iOS available via the Apple app store:
+    [vSSH Lite](https://itunes.apple.com/us/app/id535055496),
+    [vSSH](https://itunes.apple.com/us/app/id527244258),
+    [vSSH HD Lite](https://itunes.apple.com/us/app/id535056241),
+    [vSSH HD](https://itunes.apple.com/us/app/id530136764).
+* 2015-07-10: Version 1.9 for iOS identifies itself on the wire as `SSH-2.0-vSSH_2.0`.
+* 2015-10-30: Version 1.11 for iOS identifies itself on the wire as `SSH-2.0-vSSH_1.9`.
+* Version 1.11 for iOS is based on [PuTTY](/impls/putty.html) 0.65 according to its
+  "What's New" page in the Apple app store.

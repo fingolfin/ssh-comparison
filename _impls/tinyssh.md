@@ -4,16 +4,15 @@ homepage: http://tinyssh.org/
 source-repository: https://github.com/janmojzis/tinyssh
 license: "[Public domain](http://tinyssh.org/LICENCE)"
 first-release:
-    date: 2014-02-16
+    date: 2014-02-16    # according to Wikipedia
+    # see also https://news.ycombinator.com/item?id=7727738 from May 11, 2014
+    # and http://tuxdiary.com/2014/05/11/tinyssh/
 latest-release:
     #version: X.Y
     date: 2015-05-01
 #changelog: TODO
 client: no
 server: yes
-remarks: |
-    * Minimalistic SSH implementation, still in alpha stage.
-
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com
@@ -33,3 +32,4 @@ protocols:
     userauth:
         - publickey
 ---
+* Minimalistic SSH implementation, still in alpha stage.

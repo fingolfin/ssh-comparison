@@ -11,9 +11,7 @@ latest-release:
 client: no
 server: yes
 library: no
-remarks: |
-    * Windows SSH and SFTP server.
-
 protocols:
     todo:
 ---
+* Windows SSH and SFTP server.

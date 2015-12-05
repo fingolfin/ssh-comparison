@@ -5,24 +5,14 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 2.02
-    date: 2015-01-07
+    version: 3.02
+    date: 2015-12-01
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - iphone
-#    - ipad
-remarks: |
-    * Client for Apple iOS (iPhone, iPod, iPad).
-    * Available at the Apple App Store in three versions:
-       [iTerminal](https://itunes.apple.com/us/app/id581455211)
-       [iTerminal Pro for iPhone](https://itunes.apple.com/us/app/id787053466)
-       and
-       [iTerminal Pro for Universal](https://itunes.apple.com/us/app/id586842129)
-    * 2015-10-30: Version 2.02 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`, so likely based on [libssh2](/impls/libssh2.html).
-    * 2015-11-10: the iPhone version now is at 3.0 (the others remain at 2.02),
-                  though supposedly there are only iOS 9 related changes
+platforms:
+    - iphone
+    - ipad
 
 protocols:
     cipher:
@@ -56,4 +46,14 @@ protocols:
         - hmac-ripemd160@openssh.com
 #    userauth:
 #        - unknown
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-libssh2_1.4.3"
+based-on: "[libssh2](/impls/libssh2.html)"
 ---
+* Client for Apple iOS (iPhone, iPod, iPad).
+* Available on the Apple App Store in three versions:
+   [iTerminal](https://itunes.apple.com/us/app/id581455211),
+   [iTerminal Pro for iPhone](https://itunes.apple.com/us/app/id787053466),
+   [iTerminal Pro for Universal](https://itunes.apple.com/us/app/id586842129)
+* 2015-10-30: Version 2.02 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`

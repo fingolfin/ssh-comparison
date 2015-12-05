@@ -27,10 +27,13 @@ layout: default
 {% endif %}
 <li>Client: {{ page.client }}</li>
 <li>Server: {{ page.server }}</li>
+{% if page.based-on %}
+<li>{{ "Based on: " | append: page.based-on | markdownify }}</li>
+{% endif %}
 </ul>
 
-{% if page.remarks %}
 <h3>Remarks</h3>
+{% if page.remarks %}
 {{ page.remarks | markdownify }}
 {% endif %}
 {{ content }}
@@ -40,7 +43,6 @@ layout: default
 
 {% for proto_class in site.data.proto_classes %}
 {% assign proto_class_id = proto_class[0] %}
-<h4>{{ proto_class[1] }}</h4>
-<p>{{ page.protocols[proto_class_id] | join: ', ' }}</p>
+<p><strong>{{ proto_class[1] }}:</strong>
+{{ page.protocols[proto_class_id] | join: ', ' }}</p>
 {% endfor %}
-

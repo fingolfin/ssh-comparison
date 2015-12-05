@@ -10,10 +10,6 @@ latest-release:
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
-remarks: |
-    * Windows client.
-    * Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, OneDrive, SSH, Terminal client.
-    * [Details on its SSH support](https://www.smartftp.com/client/features/ssh).
 protocols:
     cipher:
         - aes128-gcm@openssh.com
@@ -66,3 +62,6 @@ protocols:
         - gssapi-with-mic
         - hostbased
 ---
+* Windows client.
+* Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, OneDrive, SSH, Terminal client.
+* [Details on its SSH support](https://www.smartftp.com/client/features/ssh).

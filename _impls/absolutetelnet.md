@@ -5,17 +5,12 @@ license: Proprietary
 first-release:
     date: 1996      # according to Wikipedia
 latest-release:
-    version: 9.84
-    date: 2015-02-03
+    version: 10.12
+    date: 2015-06-16
 changelog: https://celestialsoftware.net/absolutetelnet-ssh-client/absolutetelnet/ssh-version-history-9.53.html
 client: yes
 server: no
 library: no
-remarks: |
-    * Windows client.
-    * [Wikipedia](https://en.wikipedia.org/wiki/AbsoluteTelnet)
-
-# X11 forwarding, Port forwarding, sftp client, telnet client
 protocols:
     cipher:
         - aes128-ctr
@@ -58,4 +53,10 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+
+
+# X11 forwarding, Port forwarding, sftp client, telnet client
 ---
+
+* Windows client.
+* [Wikipedia](https://en.wikipedia.org/wiki/AbsoluteTelnet)

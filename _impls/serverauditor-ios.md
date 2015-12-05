@@ -49,13 +49,12 @@ protocols:
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh2_1.4.3"
-based-on: libssh2
+based-on: "[libssh2](/impls/libssh2.html)"
 ---
-### Remarks
-
 * Mobile client for iOS (iPhone, iPad).
 * There is also an [Android version](/impls/serverauditor-android.html)
   and a [Google Chrome plugin](/impls/serverauditor-chrome.html).
-* Available at the
+* Available on the
   [Apple App Store](https://itunes.apple.com/us/app/id549039908).
-* 2015-12-05: Version 2.2.1 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`, so likely based on [libssh2](/impls/libssh2.html).
+* 2015-12-05: Version 2.2.1 for iOS identifies itself on the wire as
+  `SSH-2.0-libssh2_1.4.3`.

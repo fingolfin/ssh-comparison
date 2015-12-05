@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Xshell 5
 homepage: http://www.netsarang.com/products/xsh_overview.html
 developer: NetSarang
@@ -14,8 +12,6 @@ changelog: http://www.netsarang.com/products/xsh_update.html
 client: yes
 server: no
 library: no
-#remarks: |
-#    TODO
 protocols:
     cipher:
         - aes128-cbc

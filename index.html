@@ -31,6 +31,7 @@ Pull requests and issue reports are welcome.
     <th>Last release version</th>
     <th>Last release date</th>
     <th>License</th>
+    <th>Based on</th>
   </tr>
 </thead>
 <tbody>
@@ -41,6 +42,7 @@ Pull requests and issue reports are welcome.
     <td>{{ impl.latest-release.version }}</td>
     <td>{{ impl.latest-release.date }}</td>
     <td>{{ impl.license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</td>
+    <td>{% if impl.based-on %}{{ impl.based-on | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}{% endif %}</td>
   </tr>
 {% endfor %}
 </tbody>

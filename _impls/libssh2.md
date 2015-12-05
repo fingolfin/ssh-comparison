@@ -12,9 +12,6 @@ changelog: http://www.libssh2.org/changes.html
 client: yes
 server: no
 library: client
-remarks: |
-    * C library for clients.
-    * Not to be confused with the unrelated [libssh](/impls/libssh.html)
 
 protocols:
     cipher:
@@ -54,3 +51,5 @@ protocols:
         - hostbased
         - keyboard-interactive
 ---
+* C library for clients.
+* Not to be confused with the unrelated [libssh](/impls/libssh.html)

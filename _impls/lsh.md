@@ -45,4 +45,6 @@ protocols:
         - password
         - hostbased
         - keyboard-interactive
+
+first_kex_packet_follows: 0
 ---

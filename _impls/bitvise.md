@@ -12,17 +12,8 @@ latest-release:
 changelog: https://www.bitvise.com/ssh-server-version-history
 client: yes
 server: yes
-#platforms:
-#    - windows
-remarks: |
-    * Windows client and server
-    * also known as: Bitvise SSH Server + Client
-    * formerly known as: WinSSHD + Tunnelier
-    * The release data is for the server (not always in sync with client)
-    * [Client version history](https://www.bitvise.com/ssh-client-version-history)
-    * [Server version history](https://www.bitvise.com/ssh-server-version-history)
-    * Both the client and the server are free for use that is both personal and
-      non-commercial. The client is also free for individual use in organizations.
+platforms:
+    - windows
 
 protocols:
     cipher:
@@ -106,3 +97,11 @@ protocols:
 # dh-group14).
 # 
 ---
+* Windows client and server
+* also known as: Bitvise SSH Server + Client
+* formerly known as: WinSSHD + Tunnelier
+* The release data is for the server (not always in sync with client)
+* [Client version history](https://www.bitvise.com/ssh-client-version-history)
+* [Server version history](https://www.bitvise.com/ssh-server-version-history)
+* Both the client and the server are free for use that is both personal and
+  non-commercial. The client is also free for individual use in organizations.

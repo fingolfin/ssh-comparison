@@ -1,29 +1,18 @@
 ---
-layout: impl
-
 title: WebSSH
 homepage: https://www.webssh.net
 license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 11.0
-    date: 2015-10-21
+    version: 13.1
+    date: 2015-11-30
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - iphone
-#    - ipad
-remarks: |
-    * Client for Apple iOS (iPhone, iPod, iPad).
-    * Available at the Apple App Store in two versions:
-       [WebSSH Essential](https://itunes.apple.com/us/app/id958955657)
-       and
-       [WebSSH Pro](https://itunes.apple.com/us/app/id497714887)
-    
-    * 2015-07-10: Version 8.3.2 identifies itself on the wire as `SSH-2.0-PuTTY_Release_0.63`,
-      so likely based on [PuTTY](/impls/putty.html).
+platforms:
+    - iphone
+    - ipad
 protocols:
     cipher:
         - aes256-ctr
@@ -58,4 +47,14 @@ protocols:
         - keyboard-interactive
         - publickey
         - password
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-PuTTY_Release_0.63"
+based-on: "[PuTTY](/impls/putty.html)"
 ---
+* Client for Apple iOS (iPhone, iPod, iPad).
+* Available on the Apple App Store in two versions:
+   [WebSSH Essential](https://itunes.apple.com/us/app/id958955657),
+   [WebSSH Pro](https://itunes.apple.com/us/app/id497714887)
+* 2015-07-10: Version 8.3.2 identifies itself on the wire as `SSH-2.0-PuTTY_Release_0.63`.
+* 2015-12-05: Version 13.1 identifies itself on the wire as `SSH-2.0-PuTTY_Release_0.63`.

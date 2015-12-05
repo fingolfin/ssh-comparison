@@ -6,8 +6,8 @@ license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE
 first-release:
     date: 2003-04-06    # according to CHANGES file
 latest-release:
-    version: 2015.70
-    date: 2015-11-26
+    version: 2015.71
+    date: 2015-12-03
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
@@ -59,4 +59,7 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
+
+first_kex_packet_follows: 1
+ident: "SSH-2.0-dropbear_2015.71"
 ---

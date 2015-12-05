@@ -44,12 +44,10 @@ first_kex_packet_follows: 0
 ident: "SSH-2.0-ParamikoJS_0.0.1"
 based-on: paramikojs
 ---
-### Remarks
-
 * Client for Google Chrome.
 * There is also an [Android version](/impls/serverauditor-android.html)
   and an [iOS version](/impls/serverauditor-ios.html).
-* Available at the
+* Available on the
   [Google Chrome web store](https://chrome.google.com/webstore/detail/serverauditor-ssh-client/fjcdjmmkgnkgihjnlbgcdamkadlkbmam?utm_source=chrome-ntp-icon).
 * 2015-12-05: Version 2.1 for Chrome identifies itself on the wire
   as `SSH-2.0-ParamikoJS_0.0.1`, so likely based on

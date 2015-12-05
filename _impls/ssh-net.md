@@ -12,8 +12,6 @@ latest-release:
 client: no
 server: no
 library: client
-remarks: |
-    * Library for .NET.
 
 # sftp; SOCKS4, SOCKS5 and HTTP Proxy
 protocols:
@@ -58,3 +56,4 @@ protocols:
         - password
         - keyboard-interactive
 ---
+* Library for .NET.

@@ -10,14 +10,6 @@ latest-release:
 #changelog: TODO
 client: yes
 server: yes
-remarks: |
-    * Formerly known as just "SSH" or "ssh.com"
-    * Strictly speaking, the Tectica SSH client and server are two separate
-      products.
-    * The information here is based on the Tectia SSH manual, in particular
-      [ssh-server-config](https://support.ssh.com/manuals/server-admin/64/ssh-server-config.html)
-      as well as the list of
-      [supported user authentication methods](https://support.ssh.com/manuals/server-admin/64/server-auth-supported-methods.html).
 protocols:
     cipher:
         - 3des-cbc
@@ -98,3 +90,10 @@ protocols:
         #- RADIUS            # through keyboard-interactive
         #- LAM               # through keyboard-interactive / AIX only
 ---
+* Formerly known as just "SSH" or "ssh.com"
+* Strictly speaking, the Tectica SSH client and server are two separate
+  products.
+* The information here is based on the Tectia SSH manual, in particular
+  [ssh-server-config](https://support.ssh.com/manuals/server-admin/64/ssh-server-config.html)
+  as well as the list of
+  [supported user authentication methods](https://support.ssh.com/manuals/server-admin/64/server-auth-supported-methods.html).

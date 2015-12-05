@@ -16,12 +16,7 @@ changelog: https://git.libssh.org/projects/libssh.git/tree/ChangeLog
 client: yes
 server: yes
 library: both
-remarks: |
-    * Mulitplatform C library for clients and servers.
-    * Not to be confused with the unrelated [libssh2](/impls/libssh2.html)
 
-# SFTP, ...
-#
 # Note: internally, there are also ciphers des-cbc-ssh1 and 3des-cbc-ssh1.
 # But according to the authors, these are only there for SSH v1 support.
 # And indeed, a test program does not offer them during KEXINIT for v2
@@ -63,3 +58,5 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
 ---
+* Mulitplatform C library for clients and servers.
+* Not to be confused with the unrelated [libssh2](/impls/libssh2.html)

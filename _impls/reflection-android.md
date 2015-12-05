@@ -1,20 +1,17 @@
 ---
-title: Reflection for UNIX, iOS Edition
+title: Reflection for UNIX, Android Edition
 homepage: https://www.attachmate.com/products/reflection/unix/
 license: Proprietary
 first-release:
     date: 2005  # according to Wikipedia
 latest-release:
-    version: 1.5.0.61
-    date: 2015-09-24
+    version: 1.5.0.62
+    date: 2015-09-25
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - iphone
-#    - ipad
-# TODO: also available for android, but the versions are not completely in sync
-#  (as I write this, the android version is 1.3.1.22 from April 22, 2015)
+platforms:
+    - android
 #
 # TODO: They also have a client / server for Unix and Windows, called
 #  Reflection for Secure IT (formerly F-Secure SSH), see
@@ -28,14 +25,6 @@ server: no
 #
 # Beyond that, they even have a "web client"?
 
-remarks: |
-    * Mobile client for Android and iOS.
-    * Available at
-        [Apple App Store](https://itunes.apple.com/us/app/id920472514),
-        [Google Play](https://play.google.com/store/apps/details?id=rTablet.Android&hl=en).
-    * They also offer clients and servers for Unix and Windows, under the name Reflection for Secure IT
-      (formerly known as F-Secure SSH). These should be covered by a separate entry.
-    * 2015-07-10: Version 1.3.1.21 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`, so likely based on [libssh2](/impls/libssh2.html).
 protocols:
     cipher:
         - aes128-ctr
@@ -68,4 +57,15 @@ protocols:
         - hmac-ripemd160@openssh.com
 #    userauth:
 #        - unknown
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-libssh2_1.4.3"
+based-on: "[libssh2](/impls/libssh2.html)"
 ---
+* Mobile client for Android.
+* There is also an [iOS version](/impls/reflection-ios.html).
+* Available on
+    [Google Play](https://play.google.com/store/apps/details?id=rTablet.Android&hl=en).
+* They also offer clients and servers for Unix and Windows, under the name Reflection for Secure IT
+  (formerly known as F-Secure SSH). These should be covered by a separate entry.
+* 2015-12-05: Version 1.5.0.62 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`

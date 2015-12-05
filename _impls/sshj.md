@@ -13,8 +13,6 @@ latest-release:
 client: no
 server: no
 library: client
-remarks: |
-    * Pure Java implementation.
 protocols:
     cipher:
         - aes128-ctr
@@ -91,3 +89,4 @@ protocols:
         - gssapi-with-mic
         - hostbased
 ---
+* Pure Java implementation.
