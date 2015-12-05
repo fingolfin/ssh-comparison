@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: TinyTERM for iOS
 homepage: http://www.censoft.com/products/mobile/
 license: Proprietary

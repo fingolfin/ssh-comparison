@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: vSSH
 homepage: http://www.velestar.com/
 license: Proprietary

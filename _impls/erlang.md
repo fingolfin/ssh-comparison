@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Erlang ssh library
 homepage: http://www.erlang.org/doc/man/ssh.html
 source-repository: https://github.com/erlang/otp

@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: lsh
 homepage: http://www.lysator.liu.se/~nisse/lsh/
 source-repository: http://git.lysator.liu.se/lsh

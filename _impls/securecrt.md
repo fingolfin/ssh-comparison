@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: SecureCRT
 homepage: https://www.vandyke.com/products/securecrt/index.html
 # TODO: also check out VShell

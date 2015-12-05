@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Tectia SSH
 homepage: http://www.ssh.com/products/tectia-ssh
 license: Proprietary

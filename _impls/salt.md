@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: salt
 homepage: http://www.hekkelman.com/salt.html
 #source-repository: URL

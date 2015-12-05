@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Dropbear
 homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
 source-repository: https://secure.ucc.asn.au/hg/dropbear/

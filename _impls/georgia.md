@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Georgia SoftWorks SSH Server and Client
 homepage: http://www.georgiasoftworks.com/products/ssh/ssh2_server.php
 developer: Georgia SoftWorks

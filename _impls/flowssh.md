@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: FlowSsh
 developer: Bitvise
 homepage: https://www.bitvise.com/flowssh

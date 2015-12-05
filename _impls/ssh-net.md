@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: SSH.NET
 homepage: https://sshnet.codeplex.com/
 source-repository: https://sshnet.svn.codeplex.com/svn

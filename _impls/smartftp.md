@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: SmartFTP
 homepage: https://www.smartftp.com/
 license: Proprietary

@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: cryptlib
 homepage: http://www.cryptlib.com
 #source-repository: TODO

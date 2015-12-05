@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: PuTTY
 homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git

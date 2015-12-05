@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 # SSH-2.0-1.0.00
 # waits for server to send KEX packet
 title: Mocca Telnet for iOS

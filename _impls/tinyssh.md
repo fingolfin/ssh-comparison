@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: TinySSH
 homepage: http://tinyssh.org/
 source-repository: https://github.com/janmojzis/tinyssh

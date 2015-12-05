@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Serverauditor for iOS
 homepage: https://serverauditor.com/
 license: Proprietary

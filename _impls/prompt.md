@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Prompt
 homepage: https://www.panic.com/prompt/
 license: Proprietary

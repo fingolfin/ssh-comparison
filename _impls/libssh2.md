@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: libssh2
 homepage: http://www.libssh2.org/
 source-repository: https://github.com/libssh2/libssh2/

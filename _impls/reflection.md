@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Reflection for UNIX, iOS Edition
 homepage: https://www.attachmate.com/products/reflection/unix/
 license: Proprietary

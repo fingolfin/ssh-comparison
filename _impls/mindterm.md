@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: MindTerm
 homepage: http://www.cryptzone.com/products/mindterm/
 # http://www.cryptzone.com/downloadcenter/mindterm

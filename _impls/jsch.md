@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: JSch
 homepage: http://www.jcraft.com/jsch/
 #source-repository: http://git.jcraft.com/jsch.git/

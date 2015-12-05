@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: phpseclib
 homepage: http://phpseclib.sourceforge.net/
 source-repository: https://github.com/phpseclib/phpseclib

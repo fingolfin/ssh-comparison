@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Bitvise SSH
 developer: Bitvise
 homepage: https://www.bitvise.com/

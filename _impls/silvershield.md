@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: SilverSHielD
 homepage: http://www.extenua.com/silver-shield/
 developer: Extenua, Inc.

@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: OpenSSH
 homepage: http://www.openssh.com/
 source-repository: https://anongit.mindrot.org/openssh.git

@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Apache SSHD
 homepage: http://mina.apache.org/sshd-project/
 source-repository: http://git-wip-us.apache.org/repos/asf/mina-sshd.git

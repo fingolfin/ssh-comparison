@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: JuiceSSH
 homepage: https://juicessh.com/
 license: Proprietary

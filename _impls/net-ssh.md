@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Net::SSH
 homepage: http://net-ssh.github.io/net-ssh//
 source-repository: https://github.com/net-ssh/net-ssh

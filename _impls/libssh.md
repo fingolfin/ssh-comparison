@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: libssh
 homepage: http://www.libssh.org/
 source-repository: http://git.libssh.org/projects/libssh.git

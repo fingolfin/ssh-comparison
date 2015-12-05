@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: iTerminal
 homepage: http://www.comcsoft.com/Portfolio/our_apps/iTerminal/iTerminal_overview.php
 license: Proprietary

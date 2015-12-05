@@ -17,3 +17,10 @@ exclude: [ssh-detect.py]
 collections:
   impls:
     output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: impls
+    values:
+      layout: impl

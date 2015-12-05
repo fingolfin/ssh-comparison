@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: SSHJ
 homepage: https://github.com/hierynomus/sshj
 source-repository: https://github.com/hierynomus/sshj

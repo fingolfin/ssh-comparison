@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: AbsoluteTelnet
 homepage: https://celestialsoftware.net/
 license: Proprietary

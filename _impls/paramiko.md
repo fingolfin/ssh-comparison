@@ -1,6 +1,4 @@
 ---
-layout: impl
-
 title: Paramiko
 homepage: http://www.paramiko.org/
 source-repository: https://github.com/paramiko/paramiko
