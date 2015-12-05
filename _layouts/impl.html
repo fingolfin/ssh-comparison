@@ -1,5 +1,46 @@
 ---
 layout: default
 ---
-{% capture implTemplate %}{% include impl.md %}{% endcapture %}
-{{ implTemplate | markdownify }}
+<h2>{{ page.title }}</h2>
+
+<ul>
+<li>Homepage: <a href="{{ page.homepage }}">{{ page.homepage }}</a></li>
+{% if page.developer %}
+<li>Developer: {{ page.developer }}</li>
+{% endif %}
+<li>First release:
+    {% if page.first-release %}
+      {{ page.first-release.date }}
+    {% else %}
+      ?
+    {% endif %}
+    </li>
+<li>Latest release: {{ page.latest-release.version }} ({{ page.latest-release.date }})</li>
+{% if page.changelog %}
+<li>Version history: <a href="{{ page.changelog }}">{{ page.changelog }}</a></li>
+{% endif %}
+{% if page.source-repository %}
+<li>Source repository: <a href="{{ page.source-repository }}">{{ page.source-repository }}</a></li>
+{% endif %}
+{% if page.license %}
+<li>License: {{ page.license }}</li>
+{% endif %}
+<li>Client: {{ page.client }}</li>
+<li>Server: {{ page.server }}</li>
+</ul>
+
+{% if page.remarks %}
+<h3>Remarks</h3>
+{{ page.remarks | markdownify }}
+{% endif %}
+{{ content }}
+
+
+<h3>Supported protocols</h3>
+
+{% for proto_class in site.data.proto_classes %}
+{% assign proto_class_id = proto_class[0] %}
+<h4>{{ proto_class[1] }}</h4>
+<p>{{ page.protocols[proto_class_id] | join: ', ' }}</p>
+{% endfor %}
+
