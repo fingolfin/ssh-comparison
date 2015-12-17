@@ -23,12 +23,12 @@ layout: default
 <li>Source repository: <a href="{{ page.source-repository }}">{{ page.source-repository }}</a></li>
 {% endif %}
 {% if page.license %}
-<li>License: {{ page.license }}</li>
+<li>License: {{ page.license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</li>
 {% endif %}
 <li>Client: {{ page.client }}</li>
 <li>Server: {{ page.server }}</li>
 {% if page.based-on %}
-<li>{{ "Based on: " | append: page.based-on | markdownify }}</li>
+<li>Based on: {{ page.based-on | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</li>
 {% endif %}
 </ul>
 
