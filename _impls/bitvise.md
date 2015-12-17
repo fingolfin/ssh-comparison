@@ -29,7 +29,7 @@ protocols:
         - zlib
     hostkey:
         - ssh-rsa
-        - ssh-dsa
+        - ssh-dss
         - ecdsa-sha2-1.3.132.0.10   # SEC 2 prime curve secp256k1? Not listed in RFC 5656
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384

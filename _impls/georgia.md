@@ -31,7 +31,7 @@ protocols:
         - none
     hostkey:
         - ssh-rsa
-        - ssh-dsa
+        - ssh-dss
         - ecdsa-sha2-nistp521
         - x509v3-sign-dss
         - x509v3-sign-rsa
