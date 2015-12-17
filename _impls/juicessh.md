@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 2012-12   # according to their website
 latest-release:
-    version: 2.0.9
-    date: 2015-10-15
+    version: 2.1.0
+    date: 2015-12-16
 changelog: https://juicessh.com/changelog
 client: yes
 server: no
