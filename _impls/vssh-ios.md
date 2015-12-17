@@ -10,12 +10,9 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - iphone
-#    - ipad
-# seems they also have versions for Android and Windows Phone, and also Mac OS X?
-# Homepage is oddly outdated: last news item is from Nov 2014, 
-#
+platforms:
+    - iphone
+    - ipad
 protocols:
     cipher:
         - aes256-ctr

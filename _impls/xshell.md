@@ -6,12 +6,14 @@ license: Proprietary
 first-release:
     date: 2002-11-02
 latest-release:
-    version: 0806
-    date: 2015-11-09
+    version: 0835
+    date: 2015-12-08
 changelog: http://www.netsarang.com/products/xsh_update.html
 client: yes
 server: no
 library: no
+platforms:
+    - windows
 protocols:
     cipher:
         - aes128-cbc

@@ -15,10 +15,6 @@ server: no
 library: no
 platforms:
     - android
-#
-remarks: |
-    * Android client
-    * Available on [Google Play](https://play.google.com/store/apps/details?id=org.connectbot)
 protocols:
     cipher:
         - aes256-ctr
@@ -61,3 +57,5 @@ first_kex_packet_follows: 0
 ident: " SSH-2.0-TrileadSSH2Java_213"
 based-on: "Trilead SSH-2"
 ---
+* Android client
+* Available on [Google Play](https://play.google.com/store/apps/details?id=org.connectbot)

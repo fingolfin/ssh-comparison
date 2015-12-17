@@ -12,10 +12,6 @@ changelog: https://www.bitvise.com/flowssh-version-history
 client: yes
 server: no
 library: client
-remarks: |
-    * Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
-    * 2015-07-10: The information provided here is based on the FlowSshC.h header file,
-      as well as the [FlowSsh documentation](https://www.bitvise.com/fsd-index).
 protocols:
     cipher:
         - aes256-ctr
@@ -57,3 +53,6 @@ protocols:
         - password
         - keyboard-interactive
 ---
+* Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
+* 2015-07-10: The information provided here is based on the FlowSshC.h header file,
+  as well as the [FlowSsh documentation](https://www.bitvise.com/fsd-index).

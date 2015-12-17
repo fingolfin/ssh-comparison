@@ -12,10 +12,6 @@ latest-release:
 client: yes
 server: yes
 library: both
-
-remarks: |
-    * Client and server library written in C.
-
 protocols:
     cipher:
         - aes128-cbc
@@ -39,3 +35,4 @@ protocols:
         - password
         - keyboard-interactive
 ---
+* Client and server library written in C.

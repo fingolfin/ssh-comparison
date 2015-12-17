@@ -14,7 +14,6 @@ client: yes
 server: yes
 platforms:
     - windows
-
 protocols:
     cipher:
         - aes256-ctr

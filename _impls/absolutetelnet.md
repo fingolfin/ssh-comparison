@@ -11,6 +11,8 @@ changelog: https://celestialsoftware.net/absolutetelnet-ssh-client/absolutetelne
 client: yes
 server: no
 library: no
+platforms:
+    - windows
 protocols:
     cipher:
         - aes128-ctr

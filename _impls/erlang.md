@@ -18,10 +18,6 @@ changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
 library: both
-remarks: |
-    * Server and client implementation (and library) for the 
-      [Erlang](http://www.erlang.org/) programming language.
-    * Uses OpenSSL crypto library
 #  SFTP Client + Server, ....
 protocols:
     cipher:
@@ -52,3 +48,6 @@ protocols:
         - password
         - keyboard-interactive
 ---
+* Server and client implementation (and library) for the 
+  [Erlang](http://www.erlang.org/) programming language.
+* Uses OpenSSL crypto library
