@@ -6,8 +6,8 @@ license: Proprietary
 first-release:
     date: 2002-11-02
 latest-release:
-    version: 0835
-    date: 2015-12-08
+    version: 0896
+    date: 2016-02-04
 changelog: http://www.netsarang.com/products/xsh_update.html
 client: yes
 server: no
@@ -36,28 +36,34 @@ protocols:
         - arcfour256                # since version 0752
     compression:
         - none
-        - zlib
+        - zlib                      # disabled by default
     hostkey:
         - ssh-rsa
         - ssh-dss
+        - ecdsa-sha2-nistp256       # since version 0858
     kex:
+        - ecdh-sha2-nistp256        # since version 0858
+        - ecdh-sha2-nistp384        # since version 0858
+        - ecdh-sha2-nistp521        # since version 0858
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group-exchange-sha256
     mac:
+        - hmac-sha2-256-etm@openssh.com # since version 0752
+        - hmac-sha2-512-etm@openssh.com # since version 0858
+        - hmac-sha1-etm@openssh.com     # since version 0752
+        - hmac-sha2-256
+        - hmac-sha2-512                 # since version 0858
         - hmac-sha1
         - hmac-sha1-96
         - hmac-md5
         - hmac-md5-96
-        - hmac-sha2-256
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
-        - hmac-sha1-etm@openssh.com     # since version 0752
         - hmac-sha1-96-etm@openssh.com  # since version 0752
         - hmac-md5-etm@openssh.com      # since version 0752
         - hmac-md5-96-etm@openssh.com   # since version 0752
-        - hmac-sha2-256-etm@openssh.com # since version 0752
     userauth:
         - publickey
         - gssapi-with-mic
