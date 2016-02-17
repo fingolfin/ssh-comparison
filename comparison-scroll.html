@@ -12,9 +12,11 @@ types:
 
 {% for type in page.types %}
 {% include namelist.html type=type %}
-### {{ site.data.proto_classes[type] }}
 
-<table id='cmp-table-cipher' class='impl-comparison tablesorter table-header-rotated'>
+<h3>{{ site.data.proto_classes[type] }}</h3>
+
+<div id='cmp-table-{{ type }}-parent' class='cmp-table-parent'>
+<table id='cmp-table-{{ type }}' class='impl-comparison table-header-rotated'> 
 <thead>
   <tr>
     <th>id</th>
@@ -50,5 +52,14 @@ types:
 {% endfor %}
 </tbody>
 </table>
+</div>
 
 {% endfor %}
+
+<script>
+$(document).ready(function(){ 
+{% for type in page.types %}
+    $("#cmp-table-{{ type }}").tableHeadFixer({'left' : 1});
+{% endfor %}
+})
+</script>
