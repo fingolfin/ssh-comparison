@@ -56,6 +56,11 @@ $on-laptop:        800px;
     border-collapse: collapse;
 }
 
+.cmp-table-parent {
+    max-height: 800px;
+    margin-bottom: 3em;
+}
+
 .impl-comparison th { padding: 5px 10px 5px 10px; white-space: nowrap; }
 .impl-comparison td { padding: 0px 10px 0px 10px; white-space: nowrap; }
 
@@ -72,6 +77,10 @@ $no-color:      #D46A6A;
 $unk-color:     darken(yellow, 5%);
 
 .yes .no .unknown { text-align: center; }
+
+tr:nth-child(odd) td { background-color: darken(white, 10%); }
+tr:nth-child(even) td { background-color: white; }
+
 
 // via http://paletton.com/
 tr:nth-child(odd) td.yes { background-color: darken($yes-color, 15%); }
