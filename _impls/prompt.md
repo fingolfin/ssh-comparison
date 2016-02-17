@@ -1,19 +1,18 @@
 ---
-title: Prompt
+title: Prompt 2
 homepage: https://www.panic.com/prompt/
 license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 2.1.3
-    date: 2015-08-14
+    version: 2.5
+    date: 2016-02-16
 #changelog: TODO
 client: yes
 server: no
 platforms:
     - iphone
     - ipad
-
 protocols:
     cipher:
         - aes128-ctr
@@ -33,9 +32,15 @@ protocols:
         - zlib@openssh.com
         - none
     hostkey:
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
         - ssh-rsa
         - ssh-dss
     kex:
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
@@ -61,3 +66,5 @@ based-on: "[OpenSSH](/impls/openssh.html)"
 * iOS client for Apple iPhone and iPad.
 * Available on the [Apple App Store](https://itunes.apple.com/us/app/id917437289)
 * 2015-07-10: Version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* 2016-02-17: Version 2.5 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* Vendor provides a [list of supported protocols](https://library.panic.com/prompt/prompt-key-security/)
