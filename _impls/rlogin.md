@@ -4,12 +4,12 @@ homepage: http://nanno.dip.jp/softlib/man/rlogin/
 source-repository: TODO
 # http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/
 license: "TODO"
-#first-release:
-#    date: TODO
+first-release:
+    date: 2005-05-16    # first release with SSH 2 support was 1.0.7
 latest-release:
     version: 2.20.0
     date: 2016-08-21
-changelog: TODO
+changelog: http://nanno.dip.jp/softlib/man/rlogin/history.html
 client: yes
 server: no
 library: no
@@ -21,78 +21,114 @@ remarks: |
 
 protocols:
     cipher:
-        - 3des-cbc
-        - 3des-ctr
-        - blowfish-cbc
-        - blowfish-ctr
-        - idea-cbc
-        - idea-ctr
-        - cast128-cbc
-        - cast128-ctr
-        - arcfour
-        - arcfour128
-        - arcfour256
-        - aes128-cbc
-        - aes192-cbc
-        - aes256-cbc
-        - aes128-ctr
-        - aes192-ctr
+        - chacha20-poly1305@openssh.com
         - aes256-ctr
-        - twofish128-cbc
-        - twofish192-cbc
-        - twofish256-cbc
-        - twofish128-ctr
-        - twofish192-ctr
-        - twofish256-ctr
-        - serpent128-cbc
-        - serpent192-cbc
-        - serpent256-cbc
-        - serpent128-ctr
-        - serpent192-ctr
-        - serpent256-ctr
-        - camellia128-cbc
-        - camellia192-cbc
-        - camellia256-cbc
-        - camellia128-ctr
-        - camellia192-ctr
+        - aes192-ctr
+        - aes128-ctr
         - camellia256-ctr
-        - seed-cbc@ssh.com
+        - camellia192-ctr
+        - camellia128-ctr
+        - blowfish-ctr
+        - cast128-ctr
+        - twofish-ctr
+        - idea-ctr
         - seed-ctr@ssh.com
+        - 3des-ctr
+        - AEAD_AES_256_GCM
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_CCM
+        - AEAD_AES_128_CCM
         - aes128-gcm@openssh.com
         - aes256-gcm@openssh.com
-        - chacha20-poly1305@openssh.com
+        - arcfour256
+        - arcfour128
+        - arcfour
+        - aes256-cbc
+        - aes192-cbc
+        - aes128-cbc
+        - camellia256-cbc
+        - camellia192-cbc
+        - camellia128-cbc
+        - blowfish-cbc
+        - cast128-cbc
+        - idea-cbc
+        - twofish-cbc
+        - seed-cbc@ssh.com
+        - 3des-cbc
+        - twofish256-ctr
+        - twofish192-ctr
+        - twofish128-ctr
+        - serpent256-ctr
+        - serpent192-ctr
+        - serpent128-ctr
+        - twofish256-cbc
+        - twofish192-cbc
+        - twofish128-cbc
+        - serpent256-cbc
+        - serpent192-cbc
+        - serpent128-cbc
     compression:
         - none
         - zlib
         - zlib@openssh.com
     hostkey:
-        - ssh-rsa
-        - ssh-dss
-        - ssh-ed25519
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-dss-cert-v01@openssh.com
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - ssh-ed25519
-#    kex:
-#        - unknown
+        - ssh-rsa-sha2-512
+        - ssh-rsa-sha2-256
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - curve25519-sha256
+        - curve25519-sha256@libssh.org
+        - ecdh-sha2-nistp521
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp256
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group15-sha256
+        - diffie-hellman-group16-sha256
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
     mac:
-        - hmac-md5
-        - hmac-md5-96
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-md5-etm@openssh.com
+        - umac-64-etm@openssh.com
+        - umac-128-etm@openssh.com
+        - hmac-sha2-256
+        - hmac-sha2-256-96
+        - hmac-sha2-512
+        - hmac-sha2-512-96
         - hmac-sha1
         - hmac-sha1-96
+        - hmac-md5
+        - hmac-md5-96
         - hmac-ripemd160
         - hmac-whirlpool
-        - hmac-sha2-256
-        - hmac-sha2-512
-#umac-32/64/96/128,
-#*-etm@openssh.com
-
-#    userauth:
-#        - unknown
+        - umac-64@openssh.com
+        - umac-128@openssh.com
+        - umac-128
+        - umac-96
+        - umac-64
+        - umac-32
+    userauth:
+        - publickey
+        - hostbased
+        - password
+        - keyboard-interactive
 
 ---
-* Website also lists these HMACs: "umac-32/64/96/128, *-etm@openssh.com"; but this is
-  ambiguous (are there -etm variants of all hmacs, or just of the umac family?), and moreover,
-  umac-32 and umac-96 seem to be properiatery additions to the umac family.
-* Website does not list support key exchange methods. Since testing the software requires
-  knowledge of Japanese, this information is missing for now.
+* Seems to implement many non-standardized protocol variations, such as umac-32 and umac-96,
+  or AEAD_AES_256_CCM; and also things that once were discussed, but then dropped from
+  the specs, like hmac-sha2-256-96
