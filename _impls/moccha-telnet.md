@@ -1,7 +1,7 @@
 ---
 # SSH-2.0-1.0.00
 # waits for server to send KEX packet
-title: Mocca Telnet for iOS
+title: Mocca Telnet (iOS)
 # I tested "Mocca Telnet Lite"
 homepage: http://www.mochasoft.dk/iphone_telnet.htm
 license: Proprietary

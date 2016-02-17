@@ -1,5 +1,5 @@
 ---
-title: Serverauditor for Android
+title: Serverauditor (Android)
 homepage: https://serverauditor.com/
 license: Proprietary
 #first-release:

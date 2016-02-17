@@ -1,5 +1,5 @@
 ---
-title: vSSH for iOS
+title: vSSH (iOS)
 homepage: http://www.velestar.com/
 license: Proprietary
 first-release:

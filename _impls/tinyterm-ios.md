@@ -1,5 +1,5 @@
 ---
-title: TinyTERM for iOS
+title: TinyTERM (iOS)
 homepage: http://www.censoft.com/products/mobile/
 license: Proprietary
 #first-release:

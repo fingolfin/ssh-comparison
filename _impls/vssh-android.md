@@ -1,5 +1,5 @@
 ---
-title: vSSH for Android
+title: vSSH (Android)
 homepage: http://www.velestar.com/
 license: Proprietary
 first-release:

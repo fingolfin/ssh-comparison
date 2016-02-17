@@ -1,5 +1,5 @@
 ---
-title: Reflection for UNIX, iOS Edition
+title: Reflection (iOS)
 homepage: https://www.attachmate.com/products/reflection/unix/
 license: Proprietary
 first-release:

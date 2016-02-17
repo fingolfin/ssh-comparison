@@ -1,5 +1,5 @@
 ---
-title: Serverauditor for iOS
+title: Serverauditor (iOS)
 homepage: https://serverauditor.com/
 license: Proprietary
 #first-release:

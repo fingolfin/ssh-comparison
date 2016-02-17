@@ -1,5 +1,5 @@
 ---
-title: TinyTERM for Android
+title: TinyTERM (Android)
 homepage: http://www.censoft.com/products/mobile/
 license: Proprietary
 #first-release:

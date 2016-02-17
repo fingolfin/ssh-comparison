@@ -1,5 +1,5 @@
 ---
-title: Reflection for UNIX, Android Edition
+title: Reflection (Android)
 homepage: https://www.attachmate.com/products/reflection/unix/
 license: Proprietary
 first-release:

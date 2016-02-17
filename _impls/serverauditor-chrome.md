@@ -1,5 +1,5 @@
 ---
-title: Serverauditor for Chrome
+title: Serverauditor (Chrome)
 homepage: https://serverauditor.com/
 license: Proprietary
 #first-release:

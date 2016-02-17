@@ -1,5 +1,5 @@
 ---
-title: Georgia SoftWorks SSH Server and Client
+title: Georgia SoftWorks SSH
 homepage: http://www.georgiasoftworks.com/products/ssh/ssh2_server.php
 developer: Georgia SoftWorks
 license: Proprietary
