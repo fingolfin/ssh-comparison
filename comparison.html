@@ -24,10 +24,12 @@ types:
     {% for impl in site.impls %}
     <th class='rotate'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
     {% endfor %}
+    <th class='rotate'><div><span># of impls</span></div></th>
   </tr>
 </thead>
 <tbody>
 {% for item in namelist %}
+  {% assign counter = 0 %}
   <tr>
     <td>{{ item }}</td>
     <td>
@@ -41,6 +43,7 @@ types:
       {% if impl.protocols contains type %}
         {% if impl.protocols[type] contains item %}
           <td class='yes'>Yes</td>
+          {% assign counter = counter | plus: 1 %}
         {% else %}
           <td class='no'>No</td>
         {% endif %}
@@ -48,6 +51,7 @@ types:
         <td class='unknown'>?</td>
       {% endif %}
     {% endfor %}
+    <td>{{ counter }}</td>
   </tr>
 {% endfor %}
 </tbody>
