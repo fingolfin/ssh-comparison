@@ -10,10 +10,9 @@ latest-release:
 changelog: https://juicessh.com/changelog
 client: yes
 server: no
-#platforms:
-#    - android
-#
-remarks: |
+platforms:
+    - android
+
 protocols:
     cipher:
         - aes128-ctr

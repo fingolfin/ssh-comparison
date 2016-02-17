@@ -20,9 +20,8 @@ latest-release:
 changelog: http://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
-remarks: |
-    * Windows client
-    * [Wikipedia](https://en.wikipedia.org/wiki/PuTTY)
+platforms:
+    - windows
 
 protocols:
     cipher:
@@ -78,3 +77,4 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
 ---
+* [Wikipedia](https://en.wikipedia.org/wiki/PuTTY)

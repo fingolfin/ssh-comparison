@@ -12,11 +12,6 @@ changelog: http://www.paramiko.org/changelog.html
 client: yes
 server: yes
 library: both
-#platforms
-#
-remarks: |
-    * [Python](https://www.python.org/) library.
-    * Built on [PyCrypto](http://pycrypto.org/), a Python C extension for low level cryptography.
 
 protocols:
     cipher:
@@ -60,3 +55,5 @@ protocols:
         - gssapi-with-mic       # since 1.15.0 (2014-09-18) # only OID 1.2.840.113554.1.2.2 / Kerberos
         - gssapi-keyex          # since 1.15.0 (2014-09-18)
 ---
+* [Python](https://www.python.org/) library.
+* Built on [PyCrypto](http://pycrypto.org/), a Python C extension for low level cryptography.

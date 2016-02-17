@@ -13,8 +13,9 @@ latest-release:
 client: yes
 server: no
 library: no
-remarks: |
-    * Windows client
+platforms:
+    - windows
+
 protocols:
     cipher:
         - aes128-ctr

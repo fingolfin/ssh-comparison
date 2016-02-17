@@ -12,8 +12,6 @@ changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
 client: unknown
 server: unknown
 library: client
-remarks: |
-    * Pure PHP implementation.
 
 protocols:
     cipher:
@@ -57,3 +55,4 @@ protocols:
         - publickey
         - password
 ---
+* Pure PHP implementation.

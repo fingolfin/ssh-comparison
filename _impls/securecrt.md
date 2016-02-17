@@ -14,10 +14,6 @@ changelog: https://www.vandyke.com/products/securecrt/history.txt
 client: yes
 server: no
 library: no
-remarks: |
-    * Windows, Linux, Mac OS X, iOS (iPad) client
-# iOS version 1.1.1 Jul 20, 2015
-# https://itunes.apple.com/en/app/id911124130
 protocols:
     cipher:
         - aes128-cbc
@@ -73,4 +69,8 @@ protocols:
 #check-file-handle
 #receipt@vandyke.com
 #receipt-request@vandyke.com
+
+# iOS version 1.1.1 Jul 20, 2015
+# https://itunes.apple.com/en/app/id911124130
 ---
+* Windows, Linux, Mac OS X, iOS (iPad) client

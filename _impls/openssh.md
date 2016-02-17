@@ -13,13 +13,6 @@ changelog: http://news.gmane.org/gmane.network.openssh.announce
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
 server: yes
-remarks: |
-    * Probably the most widely deployed SSH implementation.
-    * There are actually two versions: Regular OpenSSH is part of OpenBSD.
-      This version is hosted in the [OpenBSD CVS repository](http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/).
-      For everybody else, there is "Portable OpenSSH". This document is
-      refering to the portable version, since that is what the majority
-      of OpenSSH users is using (as they are not running OpenBSD).
 
 protocols:
     cipher:
@@ -96,3 +89,9 @@ protocols:
 
 first_kex_packet_follows: 0
 ---
+* Probably the most widely deployed SSH implementation.
+* There are actually two versions: Regular OpenSSH is part of OpenBSD.
+  This version is hosted in the [OpenBSD CVS repository](http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/).
+  For everybody else, there is "Portable OpenSSH". This document is
+  refering to the portable version, since that is what the majority
+  of OpenSSH users is using (as they are not running OpenBSD).

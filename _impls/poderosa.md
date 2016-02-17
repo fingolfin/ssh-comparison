@@ -15,6 +15,7 @@ server: no
 library: no
 platforms:
     - windows
+
 protocols:
     cipher:
         - aes256-ctr

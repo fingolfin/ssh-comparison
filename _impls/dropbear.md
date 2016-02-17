@@ -12,9 +12,6 @@ changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
 library: no
-remarks: |
-    * Server and client for POSIX-based platforms.
-    * [Wikipedia](https://en.wikipedia.org/wiki/Dropbear_%28software%29)
 
 # X11 forwarding, and authentication-agent forwarding, ...
 protocols:
@@ -63,3 +60,5 @@ protocols:
 first_kex_packet_follows: 1
 ident: "SSH-2.0-dropbear_2015.71"
 ---
+* Server and client for POSIX-based platforms.
+* [Wikipedia](https://en.wikipedia.org/wiki/Dropbear_%28software%29)

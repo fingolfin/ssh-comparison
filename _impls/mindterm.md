@@ -12,13 +12,6 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
-remarks: |
-    * Pure Java implementation.
-    * 2015-07-10:  The information provided here is mostly based on the
-      [MindTerm Datasheet](http://www.cryptzone.com/pdfs/Cryptzone_Datasheet_MindTerm_EN.pdf)
-      as well as the
-      [MindTerm 2.0 User's Guide](https://www.astro.umd.edu/resources/internal/ssh/MindTerm_User.pdf).
-      But since MindTerm is at version 4.x now, there may be inaccuracies!
 
 # SOCKS, 
 protocols:
@@ -109,3 +102,9 @@ protocols:
         #- securid          # keyboard-interactive sub-method?
         #- cryptocard       # keyboard-interactive sub-method?
 ---
+* Pure Java implementation.
+* 2015-07-10:  The information provided here is mostly based on the
+  [MindTerm Datasheet](http://www.cryptzone.com/pdfs/Cryptzone_Datasheet_MindTerm_EN.pdf)
+  as well as the
+  [MindTerm 2.0 User's Guide](https://www.astro.umd.edu/resources/internal/ssh/MindTerm_User.pdf).
+  But since MindTerm is at version 4.x now, there may be inaccuracies!

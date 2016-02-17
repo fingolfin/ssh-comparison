@@ -12,8 +12,7 @@ latest-release:
 client: yes   # for multiple devices; but do they all support the same?
 server: yes
 #library: unknown
-remarks: |
-    * data based on [user's manual](http://www.georgiasoftworks.com/docs/ssh2/SSH2_usersguide.php)
+
 # TODO: http://www.georgiasoftworks.com/products/ssh/ssh_authentication_x509v3.php
 # TODO: what about http://www.georgiasoftworks.com/security/fips.php ?
 protocols:
@@ -48,3 +47,4 @@ protocols:
         - hmac-sha1-96
 #    userauth:
 ---
+* data based on [user's manual](http://www.georgiasoftworks.com/docs/ssh2/SSH2_usersguide.php)

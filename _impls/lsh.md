@@ -10,10 +10,6 @@ latest-release:
     date: 2013-06-26
 client: yes
 server: yes
-remarks: |
-    * [Wikipedia](https://en.wikipedia.org/wiki/Lsh)
-    * 2015-07-10: The version history mentions an experimental 2.9, but does NOT mention the
-      actual release 2.1, which seems to be newer than the experimental 2.9 release.
 
 protocols:
     cipher:
@@ -48,3 +44,6 @@ protocols:
 
 first_kex_packet_follows: 0
 ---
+* [Wikipedia](https://en.wikipedia.org/wiki/Lsh)
+* 2015-07-10: The version history mentions an experimental 2.9, but does NOT mention the
+  actual release 2.1, which seems to be newer than the experimental 2.9 release.

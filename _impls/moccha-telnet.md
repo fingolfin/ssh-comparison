@@ -16,14 +16,6 @@ server: false
 #platforms:
 #    - iphone
 #    - ipad
-remarks: |
-    * Multi-platform client, with versions for Android, iOS, and more.
-    * The tests here were done with "Mocca Telnet Lite" on an iPhone
-    * Available on Apple app store:
-      * [Mocha Telnet](https://itunes.apple.com/us/app/id286892932)
-      * [Telnet Lite](https://itunes.apple.com/us/app/id286893976)
-    
-    * 2015-07-10: Version 2.7 for iOS identifies itself on the wire as `SSH-2.0-1.0.00`.
 
 # TODO: add more versions 
 protocols:
@@ -40,3 +32,10 @@ protocols:
 #    userauth:
 #        - unknown
 ---
+* Multi-platform client, with versions for Android, iOS, and more.
+* The tests here were done with "Mocca Telnet Lite" on an iPhone
+* Available on Apple app store:
+  * [Mocha Telnet](https://itunes.apple.com/us/app/id286892932)
+  * [Telnet Lite](https://itunes.apple.com/us/app/id286893976)
+
+* 2015-07-10: Version 2.7 for iOS identifies itself on the wire as `SSH-2.0-1.0.00`.

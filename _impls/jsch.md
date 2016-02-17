@@ -11,10 +11,7 @@ latest-release:
 changelog: http://www.jcraft.com/jsch/ChangeLog
 client: true
 server: unknown
-remarks: |
-    * Pure Java implementation.
-    * 2015-07-10: There is a [git repository](http://git.jcraft.com/jsch.git)
-    but it contains only a single commit with an outdated version.
+
 protocols:
     cipher:
         - aes128-ctr
@@ -62,3 +59,6 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
 ---
+* Pure Java implementation.
+* 2015-07-10: There is a [git repository](http://git.jcraft.com/jsch.git)
+but it contains only a single commit with an outdated version.

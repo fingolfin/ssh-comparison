@@ -12,8 +12,6 @@ changelog: https://github.com/net-ssh/net-ssh/blob/master/CHANGES.txt
 client: yes
 server: no
 library: client
-remarks: |
-    * Ruby implementation of the SSH2 client protocol, based on OpenSSL
 
 protocols:
     cipher:
@@ -83,3 +81,4 @@ protocols:
         - hostbased
         - keyboard-interactive
 ---
+* Ruby implementation of the SSH2 client protocol, based on OpenSSL
