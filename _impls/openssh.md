@@ -17,9 +17,9 @@ server: yes
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com # since 6.5
-        - aes128-ctr
-        - aes192-ctr
-        - aes256-ctr
+        - aes128-ctr                    # since 3.7
+        - aes192-ctr                    # since 3.7
+        - aes256-ctr                    # since 3.7
         - aes128-gcm@openssh.com        # since 6.2
         - aes256-gcm@openssh.com        # since 6.2
         - arcfour256                    # will be disabled by default in a future version
@@ -40,41 +40,41 @@ protocols:
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
-        - ssh-ed25519-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com  # since 6.5
         - ssh-rsa-cert-v01@openssh.com
-        - ssh-dss-cert-v01@openssh.com  # disabled by default in 7.0
+        - ssh-dss-cert-v01@openssh.com      # disabled by default in 7.0
         - ssh-rsa-cert-v00@openssh.com
-        - ssh-dss-cert-v00@openssh.com  # disabled by default in 7.0
-        - ecdsa-sha2-nistp256
-        - ecdsa-sha2-nistp384
-        - ecdsa-sha2-nistp521
-        - ssh-ed25519
+        - ssh-dss-cert-v00@openssh.com      # disabled by default in 7.0
+        - ecdsa-sha2-nistp256               # since 5.7
+        - ecdsa-sha2-nistp384               # since 5.7
+        - ecdsa-sha2-nistp521               # since 5.7
+        - ssh-ed25519                       # since 6.5
         - ssh-rsa
-        - ssh-dss                       # disabled by default in 7.0
+        - ssh-dss                           # disabled by default in 7.0
     kex:
-        - curve25519-sha256@libssh.org
-        - ecdh-sha2-nistp256
-        - ecdh-sha2-nistp384
-        - ecdh-sha2-nistp521
-        - diffie-hellman-group-exchange-sha256
+        - curve25519-sha256@libssh.org      # since 6.5
+        - ecdh-sha2-nistp256                # since 5.7
+        - ecdh-sha2-nistp384                # since 5.7
+        - ecdh-sha2-nistp521                # since 5.7
+        - diffie-hellman-group-exchange-sha256  # since 4.3
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1   # disabled by default in 7.0, susceptible to logjam
     mac:
-        - umac-64-etm@openssh.com
-        - umac-128-etm@openssh.com
-        - hmac-sha2-256-etm@openssh.com
-        - hmac-sha2-512-etm@openssh.com
-        - hmac-sha1-etm@openssh.com
-        - umac-64@openssh.com
-        - umac-128@openssh.com
-        - hmac-sha2-256
-        - hmac-sha2-512
+        - umac-64-etm@openssh.com           # since 6.2
+        - umac-128-etm@openssh.com          # since 6.2
+        - hmac-sha2-256-etm@openssh.com     # since 6.2
+        - hmac-sha2-512-etm@openssh.com     # since 6.2
+        - hmac-sha1-etm@openssh.com         # since 6.2
+        - umac-64@openssh.com               # since 4.7
+        - umac-128@openssh.com              # since 6.2
+        - hmac-sha2-256                     # since 5.9
+        - hmac-sha2-512                     # since 5.9
         - hmac-sha1
-        - hmac-md5-etm@openssh.com
-        - hmac-ripemd160-etm@openssh.com
-        - hmac-sha1-96-etm@openssh.com
-        - hmac-md5-96-etm@openssh.com
+        - hmac-md5-etm@openssh.com          # since 6.2
+        - hmac-ripemd160-etm@openssh.com    # since 6.2
+        - hmac-sha1-96-etm@openssh.com      # since 6.2
+        - hmac-md5-96-etm@openssh.com       # since 6.2
         - hmac-md5
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
