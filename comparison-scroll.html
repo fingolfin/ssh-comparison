@@ -15,8 +15,8 @@ types:
 
 <h3>{{ site.data.proto_classes[type] }}</h3>
 
-<div id='cmp-table-{{ type }}-parent' class='cmp-table-parent-scroll'>
-<table id='cmp-table-{{ type }}' class='impl-comparison table-header-rotated'> 
+<!-- <div id='cmp-table-{{ type }}-parent' class='cmp-table-parent-scroll'> -->
+<table id='cmp-table-{{ type }}' class='impl-comparison impl-comparison-scroll'>  <!-- table-header-rotated -->
 <thead>
   <tr>
     <th>id</th>
@@ -56,14 +56,29 @@ types:
 {% endfor %}
 </tbody>
 </table>
-</div>
+<!-- </div> -->
 
 {% endfor %}
 
 <script>
 $(document).ready(function(){ 
 {% for type in page.types %}
-    $("#cmp-table-{{ type }}").tableHeadFixer({'left' : 1});
+$('#cmp-table-{{ type }}').DataTable( {
+        scrollY:        "500px",
+        scrollX:        true,
+        scrollCollapse: true,
+        colReorder:     true,
+        rowReorder:     true,
+        //hover: true,
+        paging:         false,
+        searching:      false,
+        info:           false,
+        heightMatch:    'none',
+        fixedColumns:   {
+            leftColumns: 1,
+            rightColumns: 1
+        }
+    } );
 {% endfor %}
-})
+});
 </script>

@@ -66,6 +66,7 @@ $on-laptop:        800px;
 }
 
 .impl-comparison th { padding: 5px 10px 5px 10px; white-space: nowrap; }
+.impl-comparison-scroll th { padding: 5px 10px 5px 10px; font-size: $base-font-size *0.7; white-space: normal; }
 .impl-comparison td { padding: 0px 10px 0px 10px; white-space: nowrap; }
 
 .impl-comparison td:nth-child(1) {
