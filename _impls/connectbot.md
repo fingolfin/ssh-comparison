@@ -30,6 +30,7 @@ protocols:
     compression:
         - none
     hostkey:
+        - curve25519-sha256
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
