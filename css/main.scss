@@ -52,6 +52,11 @@ $on-laptop:        800px;
 ;
 
 
+// let <strong> show up as bold
+strong {
+  font-weight: bold;
+}
+
 .impl-comparison {
     border-collapse: collapse;
 }
@@ -173,10 +178,4 @@ tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
   border: 1px solid #AAA;
   text-align: left;
   vertical-align: middle;
-}
-
-
-
-strong {
-  font-weight: bold;
 }
