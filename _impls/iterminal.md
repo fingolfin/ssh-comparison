@@ -5,8 +5,8 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 3.02
-    date: 2015-12-01
+    version: 4.0
+    date: 2016-02-17
 #changelog: TODO
 client: yes
 server: no
@@ -56,4 +56,5 @@ based-on: "[libssh2](/impls/libssh2.html)"
    [iTerminal](https://itunes.apple.com/us/app/id581455211),
    [iTerminal Pro for iPhone](https://itunes.apple.com/us/app/id787053466),
    [iTerminal Pro for Universal](https://itunes.apple.com/us/app/id586842129)
-* 2015-10-30: Version 2.02 for iOS identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`
+* 2015-10-30: Version 2.02 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`
+* 2016-02-19: Version 4.0 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`
