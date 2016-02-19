@@ -14,9 +14,9 @@ types:
 
 <h3>{{ site.data.proto_classes[type] }}</h3>
 
-<div id='cmp-table-{{ type }}-parent' class='cmp-table-parent'>
-<table id='cmp-table-{{ type }}' class='impl-comparison tablesorter table-header-rotated'>
-{% include cmp-table.html type=type %}
+<div class='cmp-table-parent'>
+<table id='cmp-table-{{ type }}' class='impl-comparison table-header-rotated'>
+{% include cmp-table.html type=type scroll=false %}
 </table>
 </div>
 

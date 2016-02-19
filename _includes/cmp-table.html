@@ -7,8 +7,20 @@
     {% for impl in site.impls %}
     <th class='rotate'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
     {% endfor %}
+    {% if include.scroll %}<th class='rotate only-for-scroll'><div><span><!-- dummy -->&nbsp;</span></div></th>{% endif %}
     <th class='rotate'><div><span># of impls</span></div></th>
   </tr>
+{% if include.scroll %}
+  <tr class="only-for-scroll"> <!-- second column for sorting -->
+    <th class="only-for-scroll"> </th> <!-- id -->
+    <th class="only-for-scroll"> </th> <!-- spe -->
+    {% for impl in site.impls %}
+    <th class="only-for-scroll">&nbsp;</th> <!-- impl -->
+    {% endfor %}
+    <th class="only-for-scroll"> </th> <!-- dummy -->
+    <th class="only-for-scroll"> </th> <!-- # of impls -->
+  </tr>
+{% endif %}
 </thead>
 <tbody>
 {% for item in namelist %}
@@ -34,6 +46,7 @@
         <td class='unknown'>?</td>
       {% endif %}
     {% endfor %}
+    {% if include.scroll %}<td class="only-for-scroll"><!-- dummy -->&nbsp;</td>{% endif %}
     <td>{{ counter }}</td>
   </tr>
 {% endfor %}
