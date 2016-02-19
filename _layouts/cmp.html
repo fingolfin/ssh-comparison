@@ -1,0 +1,50 @@
+---
+layout: default
+scroll: true
+---
+
+<nav id="cmp-switcher">
+<ul>
+{% for class in site.data.proto_classes %}
+  <li><a{% if page.type == class[0] %} class="active"{% endif %} href="{{ site.baseurl }}/comparison/{{ class[0] }}.html">{{ class[1] }}</a></li>
+{% endfor %}
+</ul>
+</nav>
+
+<br>
+
+{% if page.scroll %}
+<table id='cmp-table-{{ page.type }}' class='impl-comparison table-header-rotated compact'>
+{% include cmp-table-content.html type=page.type scroll=true %}
+</table>
+
+<script>
+$(document).ready(function(){ 
+$('#cmp-table-{{ page.type }}').DataTable( {
+        scrollY:        "700px",
+        scrollX:        true,
+        scrollCollapse: true,
+        //colReorder:     true,
+        //rowReorder:     true,
+        //hover: true,
+        paging:         false,
+        searching:      false,
+        info:           false,
+        heightMatch:    'none',
+        fixedColumns:   {
+            leftColumns: 1,
+            rightColumns: 1
+        }
+    } );
+});
+</script>
+
+{% else %}
+
+<div class='cmp-table-parent'>
+<table id='cmp-table-{{ page.type }}' class='impl-comparison table-header-rotated'>
+{% include cmp-table.html type=page.type scroll=false %}
+</table>
+</div>
+
+{% endif %}

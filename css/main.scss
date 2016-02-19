@@ -141,3 +141,39 @@ tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
   text-align: left;
   vertical-align: middle;
 }
+
+
+//
+// Navigation on the various comparison pages.
+// Based on http://www.w3schools.com/css/css_navbar.asp
+//
+
+#cmp-switcher ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border: 1px solid #e7e7e7;
+    background-color: #f3f3f3;
+}
+
+#cmp-switcher li {
+    float: left;
+}
+
+#cmp-switcher li a {
+    display: block;
+    color: #666;
+    text-align: center;
+    padding: 4px 16px;
+    text-decoration: none;
+}
+
+#cmp-switcher li a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#cmp-switcher li a.active {
+    color: white;
+    background-color: #4CAF50;
+}
