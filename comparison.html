@@ -11,50 +11,12 @@ types:
 ---
 
 {% for type in page.types %}
-{% include namelist.html type=type %}
 
 <h3>{{ site.data.proto_classes[type] }}</h3>
 
 <div id='cmp-table-{{ type }}-parent' class='cmp-table-parent'>
 <table id='cmp-table-{{ type }}' class='impl-comparison tablesorter table-header-rotated'>
-<thead>
-  <tr>
-    <th>id</th>
-    <th class='rotate'><div><span>Specification</span></div></th>
-    {% for impl in site.impls %}
-    <th class='rotate'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
-    {% endfor %}
-    <th class='rotate'><div><span># of impls</span></div></th>
-  </tr>
-</thead>
-<tbody>
-{% for item in namelist %}
-  {% assign counter = 0 %}
-  <tr>
-    <td>{{ item }}</td>
-    <td>
-    {% for spec in site.data.specs %}
-      {% if spec[1].protocols[type] contains item %}
-        <a href='{{ spec[1].url }}'>{{ spec[1].name }}</a>
-      {% endif %}
-    {% endfor %}
-    </td>
-    {% for impl in site.impls %}
-      {% if impl.protocols contains type %}
-        {% if impl.protocols[type] contains item %}
-          <td class='yes'>Yes</td>
-          {% assign counter = counter | plus: 1 %}
-        {% else %}
-          <td class='no'>No</td>
-        {% endif %}
-      {% else %}
-        <td class='unknown'>?</td>
-      {% endif %}
-    {% endfor %}
-    <td>{{ counter }}</td>
-  </tr>
-{% endfor %}
-</tbody>
+{% include cmp-table.html type=type %}
 </table>
 </div>
 
