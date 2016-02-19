@@ -36,8 +36,8 @@ protocols:
         - 3des-ctr
         - AEAD_AES_256_GCM
         - AEAD_AES_128_GCM
-        - AEAD_AES_256_CCM
-        - AEAD_AES_128_CCM
+        #- AEAD_AES_256_CCM     # ignore
+        #- AEAD_AES_128_CCM     # ignore
         - aes128-gcm@openssh.com
         - aes256-gcm@openssh.com
         - arcfour256
