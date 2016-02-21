@@ -2,12 +2,12 @@
 title: TinyTERM (iOS)
 homepage: http://www.censoft.com/products/mobile/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2010-10-22
 latest-release:
     version: 3.1.0
     date: 2015-09-23
-#changelog: TODO
+changelog: http://www.censoft.com/help/ios/TinyTERM_for_iOS_Version_History.pdf
 client: yes
 server: no
 platforms:
