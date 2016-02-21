@@ -8,8 +8,8 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 3.0
-    date: 2015-10-23
+    version: 3.1
+    date: 2016-02-19
 #changelog: TODO
 client: true
 server: false
@@ -31,6 +31,9 @@ protocols:
         - hmac-sha1
 #    userauth:
 #        - unknown
+
+first_kex_packet_follows: 0
+ident: "SSH-2.0-1.0.00"
 ---
 * Multi-platform client, with versions for Android, iOS, and more.
 * The tests here were done with "Mocca Telnet Lite" on an iPhone
