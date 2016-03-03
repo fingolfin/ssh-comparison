@@ -45,8 +45,8 @@ protocols:
         - ssh-ed25519-cert-v01@openssh.com  # since 6.5
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss-cert-v01@openssh.com      # disabled by default since 7.0
-        - ssh-rsa-cert-v00@openssh.com
-        - ssh-dss-cert-v00@openssh.com      # disabled by default since 7.0
+        #- ssh-rsa-cert-v00@openssh.com      # removed in 7.0
+        #- ssh-dss-cert-v00@openssh.com      # removed in 7.0
         - ecdsa-sha2-nistp256               # since 5.7
         - ecdsa-sha2-nistp384               # since 5.7
         - ecdsa-sha2-nistp521               # since 5.7
@@ -62,6 +62,7 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1   # disabled by default since 7.0; susceptible to logjam
+        - ext-info-c                        # since 7.2
     mac:
         - umac-64-etm@openssh.com           # since 6.2
         - umac-128-etm@openssh.com          # since 6.2
