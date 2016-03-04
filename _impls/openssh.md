@@ -89,6 +89,8 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+    extension:
+        - server-sig-algs                   # since 7.2
 
 first_kex_packet_follows: 0
 ---
