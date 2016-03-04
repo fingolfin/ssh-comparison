@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 7.0.2198
-    date: 2016-03-02
+    version: 7.0.2199
+    date: 2016-03-04
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -52,6 +52,7 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - curve25519-sha256@libssh.org
+        - ext-info-c
     mac:
         - hmac-sha1
         - hmac-sha2-256
@@ -62,6 +63,9 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+    extension:
+        - server-sig-algs
+        - no-flow-control
 ---
 * Windows client.
 * Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, Microsoft OneDrive, SSH, Terminal client.
