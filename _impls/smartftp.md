@@ -35,8 +35,8 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - x509v3-rsa2048-sha256
-        - x509v3-sign-rsa
-        - x509v3-sign-dss
+        - x509v3-ssh-rsa
+        - x509v3-ssh-dss
         - x509v3-sign-rsa-sha256@ssh.com
         - x509v3-sign-dss-sha256@ssh.com
         - x509v3-ecdsa-sha2-nistp256
