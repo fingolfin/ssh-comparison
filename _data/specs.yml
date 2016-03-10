@@ -310,9 +310,9 @@ draft-ietf-secsh-filexfer-02:
     url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
     title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
-draft-ssh-ext-info:
-    name: draft-ssh-ext-info
-    url: https://tools.ietf.org/html/draft-ssh-ext-info
+draft-ietf-curdle-ssh-ext-info:
+    name: draft-ietf-curdle-ssh-ext-info
+    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-ext-info
     title: "Extension Negotiation in Secure Shell (SSH)"
     protocols:
         extension:
@@ -325,9 +325,9 @@ draft-ssh-ext-info:
             - ext-info-s
             - ext-info-c         
 
-draft-rsa-dsa-sha2-256:
-    name: draft-rsa-dsa-sha2-256
-    url: https://tools.ietf.org/html/draft-rsa-dsa-sha2-256
+draft-ietf-curdle-rsa-sha2:
+    name: draft-ietf-curdle-rsa-sha2
+    url: https://tools.ietf.org/html/draft-ietf-curdle-rsa-sha2
     title: "Use of RSA Keys with SHA-2 256 and 512 in Secure Shell (SSH)"
     protocols:
         hostkey:
