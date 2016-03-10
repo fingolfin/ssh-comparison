@@ -261,7 +261,10 @@ rfc6187:
             - x509v3-ssh-dss
             - x509v3-ssh-rsa
             - x509v3-rsa2048-sha256
-            - x509v3-ecdsa-sha2-*
+            #- x509v3-ecdsa-sha2-*
+            - x509v3-ecdsa-sha2-nistp256
+            - x509v3-ecdsa-sha2-nistp384
+            - x509v3-ecdsa-sha2-nistp521
 
 rfc6239:
     name: RFC 6239
