@@ -5,8 +5,8 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 2.2.1
-    date: 2015-09-16
+    version: 2.2.4
+    date: 2016-05-02
 #changelog: TODO
 client: yes
 server: no
@@ -34,10 +34,13 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
-        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
     mac:
+        - hmac-sha2-256
+        - hmac-sha2-512
         - hmac-sha1
         - hmac-sha1-96
         - hmac-md5
@@ -48,7 +51,7 @@ protocols:
 #        - unknown
 
 first_kex_packet_follows: 0
-ident: "SSH-2.0-libssh2_1.4.3"
+ident: "SSH-2.0-libssh2_1.7.0"
 based-on: "[libssh2](/impls/libssh2.html)"
 ---
 * Mobile client for iOS (iPhone, iPad).
@@ -58,3 +61,5 @@ based-on: "[libssh2](/impls/libssh2.html)"
   [Apple App Store](https://itunes.apple.com/us/app/id549039908).
 * 2015-12-05: Version 2.2.1 for iOS identifies itself on the wire as
   `SSH-2.0-libssh2_1.4.3`.
+* 2016-05-03: Version 2.2.5 for iOS identifies itself on the wire as
+  `SSH-2.0-libssh2_1.7.0`.
