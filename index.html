@@ -4,24 +4,26 @@ layout: default
 
 <div class="home">
 
-
-<p style="font-size: large; "><strong>
+<ul>
+<li><strong>
 <a href='{{ site.baseurl }}/comparison/cipher.html'>Go to the comparison page.</a>
-</strong></p>
+</strong>
 
-<p>
+<li><a href="{{ site.baseurl }}/about">Learn what this is all about.</a>
+
+<li>
 <a href='https://github.com/fingolfin/ssh-comparison'>Get the
 source code for this site on GitHub.</a>
-Pull requests and issue reports are welcome.
-</p>
+Pull requests and issue reports are highly welcome.
 
-<p>
-<a href='specs.html'>Some SSH related specifications.</a>
-</p>
 
-  <h1 class="page-heading">Implementations</h1>
-  
-  The following {{ site.impls | size }} implementations are currently covered:
+<li> <a href='specs.html'>Some SSH related specifications.</a>
+</ul>
+
+
+<h1 class="page-heading">Implementations</h1>
+
+The following {{ site.impls | size }} implementations are currently covered:
 
 <table id="impl-list" class="tablesorter" style="padding: 1em;">
 <thead>
