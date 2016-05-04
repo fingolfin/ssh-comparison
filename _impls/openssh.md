@@ -7,8 +7,8 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 7.2
-    date: 2016-02-29
+    version: 7.2p2
+    date: 2016-03-09
 changelog: http://news.gmane.org/gmane.network.openssh.announce
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
