@@ -6,9 +6,10 @@ license: Proprietary
 first-release:
     date: 2004-07   # according to Wikipedia
 latest-release:
-    version: 8.05.0031
-    date: 2014-10-24
-#changelog: URL
+    version: 8.07.0002
+    date: 2016-02-26
+changelog: http://www.georgiasoftworks.com/products/uts/release_notes.php
+
 client: yes   # for multiple devices; but do they all support the same?
 server: yes
 #library: unknown
