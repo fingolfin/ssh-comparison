@@ -9,7 +9,7 @@ first-release:
     # and http://tuxdiary.com/2014/05/11/tinyssh/
 latest-release:
     #version: X.Y
-    date: 2015-05-01
+    date: 2016-03-18
 #changelog: TODO
 client: no
 server: yes
