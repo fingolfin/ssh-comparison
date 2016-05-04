@@ -12,8 +12,8 @@ first-release:
 #	        be a beta release and (if necessary) there could still
 #	        be changes in its API before it reaches 1.0.
 latest-release:
-    version: 4.2 (OTP 18.2)
-    date: 2015-12-15
+    version: 4.2.2 (OTP 18.3)
+    date: 2016-03-14
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes

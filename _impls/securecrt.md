@@ -8,8 +8,8 @@ license: Proprietary
 first-release:
     date: 1998-06   # according to Wikipedia
 latest-release:
-     version: 7.3.7
-     date: 2016-02-25
+     version: 8.0.1
+     date: 2016-04-26
 changelog: https://www.vandyke.com/products/securecrt/history.txt
 client: yes
 server: no
@@ -43,6 +43,8 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - gss-gex-sha1-*
+        - x509v3-ssh-rsa    # since 8.0 (windows only??)
+        - x509v3-ssh-dss    # since 8.0 (windows only??)
     mac:
         - hmac-sha1
         - hmac-sha2-512

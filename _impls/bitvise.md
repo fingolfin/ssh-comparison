@@ -7,8 +7,8 @@ first-release:
     date: 2001      # according to company website
     #date: 2002-05   # according to Wikipedia
 latest-release:
-    version: 6.45
-    date: 2015-11-23
+    version: 6.47
+    date: 2016-04-05
 changelog: https://www.bitvise.com/ssh-server-version-history
 client: yes
 server: yes

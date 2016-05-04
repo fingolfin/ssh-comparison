@@ -6,8 +6,8 @@ license: Proprietary
 first-release:
     date: 2002-11-02
 latest-release:
-    version: 0896
-    date: 2016-02-04
+    version: 0977
+    date: 2016-04-22
 changelog: http://www.netsarang.com/products/xsh_update.html
 client: yes
 server: no
