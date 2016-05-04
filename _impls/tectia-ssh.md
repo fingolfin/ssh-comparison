@@ -5,8 +5,17 @@ license: Proprietary
 first-release:
     date: 1995-07
 latest-release:
-    version: 6.4.6
-    date: 2014-01-24
+    version: 6.4.13
+    date: 2016-03-31
+
+#Sources for information:
+# * https://answers.ssh.com/questions/4164/whats-new-in-tectia-clientserverconnectsecure-6413
+# * http://sshcommunicationssecurity.force.com/documents
+#   * http://sshcommunicationssecurity.force.com/documents/servlet/fileField?id=0BE330000004GVK
+
+# TODO: seems the z/OS version has a separate version number 6.5.0:
+#  https://answers.ssh.com/questions/4152/whats-new-in-tectia-ssh-server-for-ibm-zos-650
+
 #changelog: TODO
 client: yes
 server: yes
@@ -97,3 +106,5 @@ protocols:
   [ssh-server-config](https://support.ssh.com/manuals/server-admin/64/ssh-server-config.html)
   as well as the list of
   [supported user authentication methods](https://support.ssh.com/manuals/server-admin/64/server-auth-supported-methods.html).
+* WARNING: The data here was lasted update for release 6.4.6; changes made
+  since then are not reflected by the list above.
