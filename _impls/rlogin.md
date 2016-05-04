@@ -1,9 +1,8 @@
 ---
 title: RLogin
 homepage: http://nanno.dip.jp/softlib/man/rlogin/
-source-repository: TODO
-# http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/
-license: "TODO"
+#source-repository: TODO
+license: "Unknown (open source?)"
 first-release:
     date: 2005-05-16    # first release with SSH 2 support was 1.0.7
 latest-release:
@@ -133,3 +132,4 @@ protocols:
   or AEAD_AES_256_CCM; and also things that once were discussed, but then dropped from
   the specs, like hmac-sha2-256-96
 * Release notes of version 2.20.1 refer to openssl-1.0.2g, so presumably based on that.
+* Source code available at <http://nanno.dip.jp/softlib/source/rlogin.zip>, but license is unclear.
