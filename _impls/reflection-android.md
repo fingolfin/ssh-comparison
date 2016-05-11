@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 2005  # according to Wikipedia
 latest-release:
-    version: 1.5.0.62
-    date: 2015-09-25
+    version: 1.6.0.86
+    date: 2016-03-28
 #changelog: TODO
 client: yes
 server: no
@@ -69,3 +69,4 @@ based-on: "[libssh2](/impls/libssh2.html)"
 * They also offer clients and servers for Unix and Windows, under the name Reflection for Secure IT
   (formerly known as F-Secure SSH). These should be covered by a separate entry.
 * 2015-12-05: Version 1.5.0.62 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`
+* 2016-05-11: Version 1.6.0.86 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`
