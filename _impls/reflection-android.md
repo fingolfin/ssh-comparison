@@ -65,7 +65,7 @@ based-on: "[libssh2](/impls/libssh2.html)"
 * Mobile client for Android.
 * There is also an [iOS version](/impls/reflection-ios.html).
 * Available on
-    [Google Play](https://play.google.com/store/apps/details?id=rTablet.Android&hl=en).
+    [Google Play](https://play.google.com/store/apps/details?id=rTablet.Android).
 * They also offer clients and servers for Unix and Windows, under the name Reflection for Secure IT
   (formerly known as F-Secure SSH). These should be covered by a separate entry.
 * 2015-12-05: Version 1.5.0.62 identifies itself on the wire as `SSH-2.0-libssh2_1.4.3`

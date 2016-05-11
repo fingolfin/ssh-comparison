@@ -10,8 +10,8 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - chrome
+platforms:
+    - chrome
 # has cloud service for account sync
 protocols:
     cipher:

@@ -13,9 +13,9 @@ latest-release:
 #changelog: TODO
 client: true
 server: false
-#platforms:
-#    - iphone
-#    - ipad
+platforms:
+    - iphone
+    - ipad
 
 # TODO: add more versions 
 protocols:

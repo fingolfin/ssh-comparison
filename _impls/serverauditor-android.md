@@ -10,8 +10,8 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
-#platforms:
-#    - android
+platforms:
+    - android
 # has cloud service for account sync
 
 protocols:
