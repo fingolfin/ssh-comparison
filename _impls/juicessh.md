@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 2012-12   # according to their website
 latest-release:
-    version: 2.1.0
-    date: 2015-12-16
+    version: 2.1.2
+    date: 2015-12-26
 changelog: https://juicessh.com/changelog
 client: yes
 server: no
@@ -35,6 +35,9 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
     kex:
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
         - diffie-hellman-group14-sha1
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
