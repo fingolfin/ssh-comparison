@@ -5,8 +5,8 @@ license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 2.1
-    date: 2015-11-24
+    version: 2.2.15
+    date: 2016-05-03
 #changelog: TODO
 client: yes
 server: no
@@ -34,13 +34,13 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
     kex:
-        - diffie-hellman-group1-sha1
-        - diffie-hellman-group14-sha1
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group-exchange-sha256
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group1-sha1
     mac:
         - hmac-md5
         - hmac-sha1
@@ -51,7 +51,7 @@ protocols:
 #        - unknown
 
 first_kex_packet_follows: 0
-ident: "SSH-2.0-JSCH-0.1.52"
+ident: "SSH-2.0-JSCH-0.1.53"
 based-on: "[JSch](/impls/jsch.html)"
 ---
 * Mobile client for Android.
