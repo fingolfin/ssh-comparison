@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1996      # according to Wikipedia
 latest-release:
-    version: 10.12
-    date: 2015-06-16
+    version: 10.15
+    date: 2016-01-21
 changelog: https://celestialsoftware.net/absolutetelnet-ssh-client/absolutetelnet/ssh-version-history-9.53.html
 client: yes
 server: no
