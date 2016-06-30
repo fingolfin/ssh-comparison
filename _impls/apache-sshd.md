@@ -56,6 +56,3 @@ protocols:
         - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
 ---
 * Pure Java implementation.
-* 2015-07-10: Does not seem to provide an overview of changes in new releases?
-  But at least there was a
-  [release announcment for 0.14.0](http://www.mail-archive.com/users@mina.apache.org/msg05959.html).
