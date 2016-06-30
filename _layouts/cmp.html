@@ -13,7 +13,7 @@ scroll: true
 
 <br>
 
-{% if page.scroll %}
+{% if layout.scroll %}
 <table id='cmp-table-{{ page.type }}' class='impl-comparison table-header-rotated compact'>
 {% include cmp-table-content.html type=page.type scroll=true %}
 </table>
