@@ -6,8 +6,9 @@ license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2009      # according to Wikipedia
 latest-release:
-    version: 1.1.0
-    date: 2016-01-15
+    version: 1.2.0
+    date: 2016-03-09
+changelog: "https://issues.apache.org/jira/browse/SSHD/?selectedTab=com.atlassian.jira.jira-projects-plugin:changelog-panel"
 client: yes
 server: yes
 library: both
