@@ -333,3 +333,17 @@ draft-ietf-curdle-rsa-sha2:
         hostkey:
             - rsa-sha2-256
             - rsa-sha2-512
+
+draft-ietf-curdle-ssh-kex-sha2:
+    name: draft-ietf-curdle-ssh-kex-sha2
+    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-kex-sha2
+    title: "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)"
+    protocols:
+        kex:
+            - curve25519-sha256 # REQUIRED
+            - curve448-sha512 # OPTIONAL
+            - diffie-hellman-group14-sha256 # REQUIRED
+            - diffie-hellman-group15-sha512 # OPTIONAL
+            - diffie-hellman-group16-sha512 # RECOMMENDED
+            - diffie-hellman-group17-sha512 # OPTIONAL
+            - diffie-hellman-group18-sha512 # OPTIONAL
