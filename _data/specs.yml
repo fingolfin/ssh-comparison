@@ -1,3 +1,8 @@
+iana:
+    name: IANA
+    url: https://www.ietf.org/assignments/ssh-parameters/ssh-parameters.xml
+    title: "IANA SSH algorithm registry"
+
 libssh:
     name: libssh
     url: http://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
@@ -103,8 +108,8 @@ rfc4253:
             - pgp-sign-rsa
             - pgp-sign-dss
         kex:
-            - diffie-hellman-group1-sha1    # REQUIRED
-            - diffie-hellman-group14-sha1   # REQUIRED
+            - diffie-hellman-group1-sha1    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - diffie-hellman-group14-sha1   # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD
         mac:
             - hmac-sha1     # REQUIRED
             - hmac-sha1-96  # RECOMMENDED
@@ -175,8 +180,8 @@ rfc4419:
     title: "Diffie-Hellman Group Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
-            - diffie-hellman-group-exchange-sha1
-            - diffie-hellman-group-exchange-sha256
+            - diffie-hellman-group-exchange-sha1    # draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - diffie-hellman-group-exchange-sha256  # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 rfc4432:
     name: RFC 4432
@@ -184,8 +189,8 @@ rfc4432:
     title: "RSA Key Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
-            - rsa1024-sha1
-            - rsa2048-sha256
+            - rsa1024-sha1      # draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - rsa2048-sha256    # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 rfc4462:
     name: RFC 4462
@@ -194,9 +199,9 @@ rfc4462:
     title: "GSS-API Authentication and Key Exchange for the SSH Protocol"
     protocols:
         kex:
-            - gss-group1-sha1-*
-            - gss-group14-sha1-*
-            - gss-gex-sha1-*
+            - gss-gex-sha1-*        # draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - gss-group1-sha1-*     # draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - gss-group14-sha1-*    # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             #- gss-*            # reserved
         hostkey:
             - "null"
@@ -250,7 +255,7 @@ rfc5656:
             - ecdh-sha2-nistp256    # REQUIRED
             - ecdh-sha2-nistp384    # REQUIRED
             - ecdh-sha2-nistp521    # REQUIRED
-            - ecmqv-sha2        # FIXME: nothing supports this?!?
+            - ecmqv-sha2            # OPTIONAL / in reality, nothing supports this; draft-ietf-curdle-ssh-kex-sha2 suggests to change its status to SHOULD NOT
 
 rfc6187:
     name: RFC 6187
@@ -282,14 +287,20 @@ rfc6668:
     title: "SHA-2 Data Integrity Verification for the SSH Transport Layer Protocol"
     protocols:
         mac:
-            - hmac-sha2-256  # RECOMMENDED
-            - hmac-sha2-512
+            - hmac-sha2-256 # RECOMMENDED
+            - hmac-sha2-512 # OPTIONAL
 
 rfc7479:
     name: RFC 7479
     url: https://tools.ietf.org/html/rfc7479
     errata: https://www.rfc-editor.org/errata_search.php?rfc=7479
     title: "Using Ed25519 in SSHFP Resource Records"
+
+rfc7748:
+    name: RFC 7748
+    url: https://tools.ietf.org/html/rfc7748
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=7748
+    title: "Elliptic Curves for Security"
 
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
@@ -331,24 +342,36 @@ draft-ietf-curdle-rsa-sha2:
     title: "Use of RSA Keys with SHA-2 256 and 512 in Secure Shell (SSH)"
     protocols:
         hostkey:
-            - rsa-sha2-256
-            - rsa-sha2-512
+            - rsa-sha2-256 # RECOMMENDED
+            - rsa-sha2-512 # OPTIONAL
+
+draft-ietf-curdle-ssh-modp-dh-sha2:
+    name: draft-ietf-curdle-ssh-modp-dh-sha2
+    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-modp-dh-sha2
+    title: "More Modular Exponential (MODP) Diffie-Hellman (DH) Key Exchange (KEX) Groups for Secure Shell (SSH)"
+    protocols:
+        kex:
+            - diffie-hellman-group14-sha256 # MAY / draft-ietf-curdle-ssh-kex-sha2: REQUIRED
+            - diffie-hellman-group15-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - diffie-hellman-group16-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
+            - diffie-hellman-group17-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - diffie-hellman-group18-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - gss-group14-sha256-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
+            - gss-group15-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - gss-group16-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
+            - gss-group17-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - gss-group18-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+
+draft-ietf-curdle-ssh-curves:
+    name: draft-ietf-curdle-ssh-curves
+    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-curves
+    title: "Secure Shell (SSH) Key Exchange Method using Curve25519 and Curve448"
+    protocols:
+        kex:
+            - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: REQUIRED
+            - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
 
 draft-ietf-curdle-ssh-kex-sha2:
     name: draft-ietf-curdle-ssh-kex-sha2
     url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-kex-sha2
     title: "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)"
-    protocols:
-        kex:
-            - curve25519-sha256 # REQUIRED
-            - curve448-sha512 # OPTIONAL
-            - diffie-hellman-group14-sha256 # REQUIRED
-            - diffie-hellman-group15-sha512 # OPTIONAL
-            - diffie-hellman-group16-sha512 # RECOMMENDED
-            - diffie-hellman-group17-sha512 # OPTIONAL
-            - diffie-hellman-group18-sha512 # OPTIONAL
-            - gss-group14-sha256-* # RECOMMENDED
-            - gss-group15-sha512-* # OPTIONAL
-            - gss-group16-sha512-* # RECOMMENDED
-            - gss-group17-sha512-* # OPTIONAL
-            - gss-group18-sha512-* # OPTIONAL
