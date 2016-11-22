@@ -52,6 +52,9 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
+    extension:
+        - elevation
+        - server-sig-algs
 ---
 * Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
 * 2015-07-10: The information provided here is based on the FlowSshC.h header file,

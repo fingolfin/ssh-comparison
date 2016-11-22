@@ -58,6 +58,9 @@ protocols:
         - password
         - keyboard-interactive  # only client; there: full support with additional prompts; not just as a version of "password"
         - gssapi-with-mic       # supports Kerberos 5 and NTLM over GSSAPI
+    extension:
+        - elevation
+        - server-sig-algs
 
 # The following information was provided by denis bider.
 #
