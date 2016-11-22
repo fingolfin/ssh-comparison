@@ -6,7 +6,7 @@ first-release:
     date: 1998
 latest-release:
     version: 8.0.2268
-    date: 2016-12-01
+    date: 2016-11-21
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
