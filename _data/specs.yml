@@ -347,3 +347,8 @@ draft-ietf-curdle-ssh-kex-sha2:
             - diffie-hellman-group16-sha512 # RECOMMENDED
             - diffie-hellman-group17-sha512 # OPTIONAL
             - diffie-hellman-group18-sha512 # OPTIONAL
+            - gss-group14-sha256-* # RECOMMENDED
+            - gss-group15-sha512-* # OPTIONAL
+            - gss-group16-sha512-* # RECOMMENDED
+            - gss-group17-sha512-* # OPTIONAL
+            - gss-group18-sha512-* # OPTIONAL
