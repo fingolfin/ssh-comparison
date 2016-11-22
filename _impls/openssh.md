@@ -7,9 +7,9 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 7.2p2
-    date: 2016-03-09
-changelog: http://news.gmane.org/gmane.network.openssh.announce
+    version: 7.3
+    date: 2016-08-01
+changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
 server: yes
@@ -61,7 +61,10 @@ protocols:
         - diffie-hellman-group-exchange-sha256  # since 4.3
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
-        - diffie-hellman-group1-sha1   # disabled by default since 7.0; susceptible to logjam
+        - diffie-hellman-group1-sha1        # disabled by default since 7.0; susceptible to logjam
+        - diffie-hellman-group14-sha256     # since 7.3
+        - diffie-hellman-group16-sha512     # since 7.3
+        - diffie-hellman-group18-sha512     # since 7.3
         - ext-info-c                        # since 7.2
     mac:
         - umac-64-etm@openssh.com           # since 6.2
