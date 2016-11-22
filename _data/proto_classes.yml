@@ -4,6 +4,7 @@ hostkey: "Hostkey formats"
 kex: "Key exchange protocols"
 mac: "Message authentication codes (MACs)"
 userauth: "User authentication methods"
+extension: "Protocol extensions"
 
 #- name: cipher 
 #  desc: "Ciphers"
