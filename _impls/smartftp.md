@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 7.0.2202
-    date: 2016-03-12
+    version: 8.0.2268
+    date: 2016-11-21
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -22,7 +22,6 @@ protocols:
         - aes256-cbc
         - 3des-cbc
     compression:
-        - zlib
         - zlib@openssh.com
         - none
     hostkey:
@@ -42,14 +41,14 @@ protocols:
         - x509v3-ecdsa-sha2-nistp521
         - ssh-ed25519
     kex:
-        - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
-        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha256
         - diffie-hellman-group-exchange-sha256
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - curve25519-sha256@libssh.org
+        - curve25519-sha256
         - ext-info-c
     mac:
         - hmac-sha1
