@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 8.0.2268
-    date: 2016-11-21
+    version: 8.0.2270
+    date: 2016-11-25
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -43,7 +43,9 @@ protocols:
     kex:
         - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256
-        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1 # Minimum group size 2048-bit
+        - diffie-hellman-group-exchange-sha256 # Minimum group size 2048-bit
+        - diffie-hellman-group16-sha512
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
