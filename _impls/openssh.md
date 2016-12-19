@@ -7,12 +7,19 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 7.3
-    date: 2016-08-01
+    version: 7.4
+    date: 2016-12-19
 changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
 server: yes
+
+# TODO: strictly speaking, we want:
+#  ssh client, ssh server, sftp client, sftp server,
+#   and for each whether there is a UI, or a library, or both.
+# so any tuple from {ssh, sftp} x {client, server} x {ui, library}
+# could specify this as a list of triples, e.g.  ssh-client-ui, sftp-server-library
+# perhaps allowing use of asterisk:  *-*-* = all supported; or ssh-*-* for all ssh variants supported, etc.
 
 protocols:
     cipher:
@@ -25,7 +32,7 @@ protocols:
         - arcfour256                    # disabled by default since 7.2
         - arcfour128                    # disabled by default since 7.2
         - aes128-cbc
-        - 3des-cbc
+        - 3des-cbc                      # disabled by default since 7.4
         - blowfish-cbc                  # disabled by default since 7.2
         - cast128-cbc                   # disabled by default since 7.2
         - aes192-cbc
@@ -54,6 +61,7 @@ protocols:
         - ssh-rsa
         - ssh-dss                           # disabled by default since 7.0
     kex:
+        - curve25519-sha256                 # since 7.4
         - curve25519-sha256@libssh.org      # since 6.5
         - ecdh-sha2-nistp256                # since 5.7
         - ecdh-sha2-nistp384                # since 5.7
