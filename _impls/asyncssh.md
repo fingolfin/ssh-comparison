@@ -6,8 +6,8 @@ license: "[EPL v1.0](http://www.eclipse.org/legal/epl-v10.html)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.7.1
-    date: 2016-10-07
+    version: 1.8.1
+    date: 2016-12-29
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -51,6 +51,7 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
+        - curve25519-sha256                         # since 1.8.0
         - curve25519-sha256@libssh.org              # since 1.0.0
         - ecdh-sha2-nistp521                        # since 1.0.0
         - ecdh-sha2-nistp384                        # since 1.0.0
@@ -64,6 +65,8 @@ protocols:
         - diffie-hellman-group1-sha1
         - ext-info-c                                # since 1.7.0
     mac:
+        - umac-64-etm@openssh.com                   # since 1.8.0
+        - umac-128-etm@openssh.com                  # since 1.8.0
         - hmac-sha2-256-etm@openssh.com
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha1-etm@openssh.com
@@ -72,6 +75,8 @@ protocols:
         - hmac-sha2-512-96-etm@openssh.com
         - hmac-sha1-96-etm@openssh.com
         - hmac-md5-96-etm@openssh.com
+        - umac-64@openssh.com                       # since 1.8.0
+        - umac-128@openssh.com                      # since 1.8.0
         - hmac-sha2-256
         - hmac-sha2-512
         - hmac-sha1
@@ -89,8 +94,8 @@ protocols:
 
 first_kex_packet_follows: 1
 ---
-* A Python asyncio implementation of SSH
-* Supports SSHv2 and SFTPv3
-* Supports TCP/IP and UNIX domain socket forwarding
-* Supports SSH agent and SSH agent forwarding
+* A Python asyncio implementation of SSHv2 and SFTPv3
+* Supports TCP/IP, UNIX domain socket, and X11 forwarding
+* Supports OpenSSH ssh-agent and agent forwarding on UNIX
+* Supports PuTTY Pageant agent on Windows
 * Supports OpenSSH-compatible known_hosts and authorized_keys files
