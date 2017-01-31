@@ -5,15 +5,9 @@ source-repository: https://github.com/erlang/otp
 license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
-# From http://www.erlang.org/download/otp_src_R10B-8.readme: 
-# OTP-5631  The previously undocumented and UNSUPPORTED ssh
-#	        application has been updated and documented. This
-#	        release of the ssh application is still considered to
-#	        be a beta release and (if necessary) there could still
-#	        be changes in its API before it reaches 1.0.
 latest-release:
-    version: 4.2.2 (OTP 18.3)
-    date: 2016-03-14
+    version: 4.4 (OTP 19.2)
+    date: 2016-12-14
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -61,4 +55,4 @@ protocols:
 ---
 * Server and client implementation (and library) for the 
   [Erlang](http://www.erlang.org/) programming language.
-* Uses OpenSSL crypto library
+* Uses OpenSSL crypto library or other libraries with compatible API.
