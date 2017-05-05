@@ -1,0 +1,42 @@
+name: golang.org/x/crypto/ssh
+homepage: https://godoc.org/golang.org/x/crypto/ssh
+source-repository: https://github.com/golang/crypto
+latest-release:
+    version: 1
+client: yes
+server: no
+protocols:
+    cipher:
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - arcfour128
+        - arcfour256
+        - aes128-gcm@openssh.com
+    kex:
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
+        - curve25519-sha256@libssh.org
+    mac:
+        - hmac-sha1
+        - hmac-sha1-96
+        - hmac-sha2-256
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - none
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-dss-cert-v01@openssh.com
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
