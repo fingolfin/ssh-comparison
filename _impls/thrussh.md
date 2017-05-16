@@ -19,10 +19,10 @@ protocols:
     hostkey:
         - rsa-sha2-256
         - rsa-sha2-512
-        - ssh-ed25519                       # since 6.5
+        - ssh-ed25519
     kex:
-        - curve25519-sha256@libssh.org      # since 6.5
-        - ecdh-sha2-nistp256                # since 5.7
+        - curve25519-sha256@libssh.org
+        - ecdh-sha2-nistp256
     mac:
     userauth:
         - publickey
