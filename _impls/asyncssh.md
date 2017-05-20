@@ -6,8 +6,8 @@ license: "[EPL v1.0](http://www.eclipse.org/legal/epl-v10.html)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.9.0
-    date: 2017-02-18
+    version: 1.10.1
+    date: 2017-05-19
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -108,7 +108,7 @@ protocols:
 
 first_kex_packet_follows: 1
 ---
-* A Python asyncio implementation of SSHv2 and SFTPv3
+* A Python asyncio implementation of SSHv2, SFTPv3, and SCP
 * Supports TCP/IP, UNIX domain socket, and X11 forwarding
 * Supports OpenSSH ssh-agent and agent forwarding on UNIX
 * Supports PuTTY Pageant agent on Windows
