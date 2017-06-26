@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 4.4 (OTP 19.2)
-    date: 2016-12-14
+    version: 4.5 (OTP 20.0)
+    date: 2017-06-21
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -34,6 +34,8 @@ protocols:
         - ecdsa-sha2-nistp521   # since version 4.2
         - ssh-rsa
         - ssh-dss
+        - rsa-sha2-256              # since 4.5
+        - rsa-sha2-512              # since 4.5
     kex:
        - ecdh-sha2-nistp256
        - ecdh-sha2-nistp384
@@ -41,7 +43,12 @@ protocols:
        - diffie-hellman-group-exchange-sha256
        - diffie-hellman-group-exchange-sha1
        - ecdh-sha2-nistp521
-       - diffie-hellman-group1-sha1
+       - diffie-hellman-group1-sha1   # disabled by default since 4.5
+       - diffie-hellman-group14-sha256      # since 4.5
+       - diffie-hellman-group16-sha512      # since 4.5
+       - diffie-hellman-group18-sha512      # since 4.5
+       - ext-info-c                         # since 4.5
+       - ext-info-s                         # since 4.5
     mac:
         - hmac-sha2-256
         - hmac-sha2-512
@@ -52,6 +59,8 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
+    extension:
+        - server-sig-algs                   # since 4.5
 ---
 * Server and client implementation (and library) for the 
   [Erlang](http://www.erlang.org/) programming language.
