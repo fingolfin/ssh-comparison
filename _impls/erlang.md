@@ -37,18 +37,18 @@ protocols:
         - rsa-sha2-256              # since 4.5
         - rsa-sha2-512              # since 4.5
     kex:
-       - ecdh-sha2-nistp256
-       - ecdh-sha2-nistp384
-       - diffie-hellman-group14-sha1
-       - diffie-hellman-group-exchange-sha256
-       - diffie-hellman-group-exchange-sha1
-       - ecdh-sha2-nistp521
-       - diffie-hellman-group1-sha1   # disabled by default since 4.5
-       - diffie-hellman-group14-sha256      # since 4.5
-       - diffie-hellman-group16-sha512      # since 4.5
-       - diffie-hellman-group18-sha512      # since 4.5
-       - ext-info-c                         # since 4.5
-       - ext-info-s                         # since 4.5
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - ecdh-sha2-nistp521
+        - diffie-hellman-group1-sha1   # disabled by default since 4.5
+        - diffie-hellman-group14-sha256      # since 4.5
+        - diffie-hellman-group16-sha512      # since 4.5
+        - diffie-hellman-group18-sha512      # since 4.5
+        - ext-info-c                         # since 4.5
+        - ext-info-s                         # since 4.5
     mac:
         - hmac-sha2-256
         - hmac-sha2-512
