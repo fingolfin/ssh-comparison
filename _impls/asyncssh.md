@@ -6,8 +6,8 @@ license: "[EPL v1.0](http://www.eclipse.org/legal/epl-v10.html)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.8.1
-    date: 2016-12-29
+    version: 1.11.1
+    date: 2017-11-15
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -34,6 +34,7 @@ protocols:
         - zlib
         - none
     hostkey:
+        - null                                      # since 1.9.0
         - ssh-ed25519-cert-v01@openssh.com          # since 1.0.0
         - ecdsa-sha2-nistp521-cert-v01@openssh.com  # since 1.0.0
         - ecdsa-sha2-nistp384-cert-v01@openssh.com  # since 1.0.0
@@ -42,6 +43,12 @@ protocols:
         - ssh-dss-cert-v01@openssh.com              # since 1.0.0
         #- ssh-rsa-cert-v00@openssh.com             # removed in 1.3.2
         #- ssh-dss-cert-v00@openssh.com             # removed in 1.3.2
+        - x509v3-ecdsa-sha2-nistp521                # since 1.11.0
+        - x509v3-ecdsa-sha2-nistp384                # since 1.11.0
+        - x509v3-ecdsa-sha2-nistp256                # since 1.11.0
+        - x509v3-ecdsa-ssh-rsa2048-sha256           # since 1.11.0
+        - x509v3-ecdsa-ssh-rsa                      # since 1.11.0
+        - x509v3-ecdsa-ssh-dss                      # since 1.11.0
         - ssh-ed25519                               # since 1.0.0
         - ecdsa-sha2-nistp521                       # since 1.0.0
         - ecdsa-sha2-nistp384                       # since 1.0.0
@@ -51,18 +58,29 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
+        - gss-gex-sha256-*                          # since 1.9.0
+        - gss-gex-sha1-*                            # since 1.9.0
+        - gss-group1-sha1-*                         # since 1.9.0
+        - gss-group14-sha1-*                        # since 1.9.0
+        - gss-group14-sha256-*                      # since 1.9.0
+        - gss-group15-sha512-*                      # since 1.9.0
+        - gss-group16-sha512-*                      # since 1.9.0
+        - gss-group17-sha512-*                      # since 1.9.0
+        - gss-group18-sha512-*                      # since 1.9.0
         - curve25519-sha256                         # since 1.8.0
         - curve25519-sha256@libssh.org              # since 1.0.0
         - ecdh-sha2-nistp521                        # since 1.0.0
         - ecdh-sha2-nistp384                        # since 1.0.0
         - ecdh-sha2-nistp256                        # since 1.0.0
         - diffie-hellman-group-exchange-sha256
-        - diffie-hellman-group16-sha512             # since 1.7.0
-        - diffie-hellman-group18-sha512             # since 1.7.0
-        - diffie-hellman-group14-sha256             # since 1.7.0
         - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha256             # since 1.7.0
+        - diffie-hellman-group15-sha512             # since 1.9.0
+        - diffie-hellman-group16-sha512             # since 1.7.0
+        - diffie-hellman-group17-sha512             # since 1.9.0
+        - diffie-hellman-group18-sha512             # since 1.7.0
         - ext-info-c                                # since 1.7.0
     mac:
         - umac-64-etm@openssh.com                   # since 1.8.0
@@ -86,6 +104,8 @@ protocols:
         - hmac-sha1-96
         - hmac-md5-96
     userauth:
+        - gssapi-keyex                              # since 1.9.0
+        - gssapi-with-mic                           # since 1.9.0
         - publickey
         - keyboard-interactive
         - password
@@ -94,7 +114,7 @@ protocols:
 
 first_kex_packet_follows: 1
 ---
-* A Python asyncio implementation of SSHv2 and SFTPv3
+* A Python asyncio implementation of SSHv2, SFTPv3, and SCP
 * Supports TCP/IP, UNIX domain socket, and X11 forwarding
 * Supports OpenSSH ssh-agent and agent forwarding on UNIX
 * Supports PuTTY Pageant agent on Windows
