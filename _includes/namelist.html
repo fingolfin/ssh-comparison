@@ -5,14 +5,14 @@
   {% for name in impl.protocols[type] %}
     {% unless namelist contains name %}
       {% assign namelist = namelist | push: name  %}
-    {% endunless namelist contains name %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
 {% for spec in site.data.specs %}
   {% for name in spec[1].protocols[type] %}
     {% unless namelist contains name %}
       {% assign namelist = namelist | push: name  %}
-    {% endunless namelist contains name %}
+    {% endunless %}
   {% endfor %}
 {% endfor %}
 {% assign namelist = namelist | sort  %}
