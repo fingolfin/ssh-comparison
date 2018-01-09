@@ -34,7 +34,7 @@ protocols:
         - zlib
         - none
     hostkey:
-        - null                                      # since 1.9.0
+        - "null"                                    # since 1.9.0
         - ssh-ed25519-cert-v01@openssh.com          # since 1.0.0
         - ecdsa-sha2-nistp521-cert-v01@openssh.com  # since 1.0.0
         - ecdsa-sha2-nistp384-cert-v01@openssh.com  # since 1.0.0
