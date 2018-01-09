@@ -12,7 +12,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 # Build settings
 markdown: kramdown
 
-gems:
+plugins:
   - jekyll-redirect-from
 
 exclude: [ssh-detect.py]
