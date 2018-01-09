@@ -189,7 +189,7 @@ rfc4432:
     title: "RSA Key Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
-            - rsa1024-sha1      # draft-ietf-curdle-ssh-kex-sha2: SHOULD NOT
+            - rsa1024-sha1      # draft-ietf-curdle-ssh-kex-sha2: MUST NOT
             - rsa2048-sha256    # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 rfc4462:
@@ -252,10 +252,10 @@ rfc5656:
             - ecdsa-sha2-nistp384   # REQUIRED
             - ecdsa-sha2-nistp521   # REQUIRED
         kex:
-            - ecdh-sha2-nistp256    # REQUIRED
-            - ecdh-sha2-nistp384    # REQUIRED
-            - ecdh-sha2-nistp521    # REQUIRED
-            - ecmqv-sha2            # OPTIONAL / in reality, nothing supports this; draft-ietf-curdle-ssh-kex-sha2 suggests to change its status to SHOULD NOT
+            - ecdh-sha2-nistp256    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - ecdh-sha2-nistp384    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - ecdh-sha2-nistp521    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: MAY [not recommended]
+            - ecmqv-sha2            # OPTIONAL
 
 rfc6187:
     name: RFC 6187
@@ -345,22 +345,22 @@ draft-ietf-curdle-rsa-sha2:
             - rsa-sha2-256 # RECOMMENDED
             - rsa-sha2-512 # OPTIONAL
 
-draft-ietf-curdle-ssh-modp-dh-sha2:
-    name: draft-ietf-curdle-ssh-modp-dh-sha2
-    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-modp-dh-sha2
+rfc8268:
+    name: RFC 8268
+    url: https://tools.ietf.org/html/rfc8268
     title: "More Modular Exponential (MODP) Diffie-Hellman (DH) Key Exchange (KEX) Groups for Secure Shell (SSH)"
     protocols:
         kex:
-            - diffie-hellman-group14-sha256 # MAY / draft-ietf-curdle-ssh-kex-sha2: REQUIRED
-            - diffie-hellman-group15-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
-            - diffie-hellman-group16-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
-            - diffie-hellman-group17-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
-            - diffie-hellman-group18-sha512 # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
-            - gss-group14-sha256-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
-            - gss-group15-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
-            - gss-group16-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: RECOMMENDED
-            - gss-group17-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
-            - gss-group18-sha512-*          # MAY / draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - diffie-hellman-group14-sha256 # draft-ietf-curdle-ssh-kex-sha2: MUST
+            - diffie-hellman-group15-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - diffie-hellman-group16-sha512 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - diffie-hellman-group17-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - diffie-hellman-group18-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group14-sha256-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group15-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 draft-ietf-curdle-ssh-curves:
     name: draft-ietf-curdle-ssh-curves
@@ -368,8 +368,8 @@ draft-ietf-curdle-ssh-curves:
     title: "Secure Shell (SSH) Key Exchange Method using Curve25519 and Curve448"
     protocols:
         kex:
-            - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: REQUIRED
-            - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: OPTIONAL
+            - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 draft-ietf-curdle-ssh-kex-sha2:
     name: draft-ietf-curdle-ssh-kex-sha2
