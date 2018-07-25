@@ -71,6 +71,7 @@ protocols:
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss-cert-v01@openssh.com
     kex:
+        - curve25519-sha256
         - curve25519-sha256@libssh.org
         - diffie-hellman-group-exchange-sha256
         - ecdh-sha2-nistp521
