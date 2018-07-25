@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.15.0
-    date: 2015-11-20
+    version: 0.26.0
+    date: 2018-07-24
 #changelog: URL
 client: no
 server: no
@@ -65,7 +65,11 @@ protocols:
         - ssh-rsa
         - ssh-dss
         - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
         - ssh-ed25519
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-dss-cert-v01@openssh.com
     kex:
         - curve25519-sha256@libssh.org
         - diffie-hellman-group-exchange-sha256
@@ -73,8 +77,21 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp256
         - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group14-sha256@ssh.com
+        - diffie-hellman-group15-sha256
+        - diffie-hellman-group15-sha256@ssh.com
+        - diffie-hellman-group15-sha384@ssh.com
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group16-sha256
+        - diffie-hellman-group16-sha384@ssh.com
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group16-sha512@ssh.com
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group18-sha512
+        - diffie-hellman-group18-sha512@ssh.com
     mac:
         - hmac-sha1
         - hmac-sha1-96
@@ -82,6 +99,8 @@ protocols:
         - hmac-md5-96
         - hmac-sha2-256
         - hmac-sha2-512
+        - hmac-ripemd160
+        - hmac-ripemd160@openssh.com
     userauth:
         - publickey
         - password
