@@ -321,17 +321,16 @@ draft-ietf-secsh-filexfer-02:
     url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
     title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
-draft-ietf-curdle-ssh-ext-info:
-    name: draft-ietf-curdle-ssh-ext-info
-    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-ext-info
-    title: "Extension Negotiation in Secure Shell (SSH)"
+rfc8308:
+    name: RFC 8308
+    url: https://tools.ietf.org/html/rfc8308
+    title: "Extension Negotiation in the Secure Shell (SSH) Protocol"
     protocols:
         extension:
             - server-sig-algs
-            - no-flow-control
-            - accept-channels
-            - elevation
             - delay-compression
+            - no-flow-control
+            - elevation
         kex:
             - ext-info-s
             - ext-info-c         
