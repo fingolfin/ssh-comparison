@@ -335,10 +335,10 @@ rfc8308:
             - ext-info-s
             - ext-info-c         
 
-draft-ietf-curdle-rsa-sha2:
-    name: draft-ietf-curdle-rsa-sha2
-    url: https://tools.ietf.org/html/draft-ietf-curdle-rsa-sha2
-    title: "Use of RSA Keys with SHA-2 256 and 512 in Secure Shell (SSH)"
+rfc8332:
+    name: RFC 8332
+    url: https://tools.ietf.org/html/rfc8332
+    title: "Use of RSA Keys with SHA-256 and SHA-512 in the Secure Shell (SSH) Protocol"
     protocols:
         hostkey:
             - rsa-sha2-256 # RECOMMENDED
