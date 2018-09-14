@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 4.5 (OTP 20.0)
-    date: 2017-06-21
+    version: 4.7.1 (OTP 21.1)
+    date: 2018-09-26
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -24,6 +24,7 @@ protocols:
         - AEAD_AES_128_GCM          # since version 4.2
         - AEAD_AES_256_GCM          # since version 4.2
         - 3des-cbc
+        - chacha20-poly1305@openssh.com # since version 4.7.1
     compression:
         - zlib
         - zlib@openssh.com
@@ -47,6 +48,9 @@ protocols:
         - diffie-hellman-group14-sha256      # since 4.5
         - diffie-hellman-group16-sha512      # since 4.5
         - diffie-hellman-group18-sha512      # since 4.5
+        - curve25519-sha256                  # since version 4.7.1
+        - curve448-sha512                    # since version 4.7.1
+        - curve25519-sha256@libssh.org       # since version 4.7.1
         - ext-info-c                         # since 4.5
         - ext-info-s                         # since 4.5
     mac:
