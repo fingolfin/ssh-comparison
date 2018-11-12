@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/master/LICE
 first-release:
     date: 2007-11   # according to Wikipedia
 latest-release:
-    version: 1.9.2
-    date: 2017-02-21
+    version: 1.9.5
+    date: 2018-11-06
 #changelog: URL
 client: yes
 server: no
@@ -32,6 +32,8 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - rsa-sha2-256
+        - rsa-sha2-512
         - ssh-ed25519
         - ssh-rsa
     kex:
@@ -58,6 +60,8 @@ protocols:
         - keyboard-interactive
         - password
         - publickey
+    extension:
+        - server-sig-algs
 
 first_kex_packet_follows: 0
 ident: " SSH-2.0-TrileadSSH2Java_213"
