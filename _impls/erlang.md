@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 4.7.1 (OTP 21.1)
-    date: 2018-09-26
+    version: 4.7.3 (OTP 21.2.2)
+    date: 2018-12-28
 changelog: http://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -33,6 +33,8 @@ protocols:
         - ecdsa-sha2-nistp256   # since version 4.2
         - ecdsa-sha2-nistp384   # since version 4.2
         - ecdsa-sha2-nistp521   # since version 4.2
+        - ssh-ed25519
+        - ssh-ed448
         - ssh-rsa
         - ssh-dss
         - rsa-sha2-256              # since 4.5
