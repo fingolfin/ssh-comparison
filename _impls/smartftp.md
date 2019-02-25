@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 8.0.2270
-    date: 2016-11-25
+    version: 9.0.2637
+    date: 2019-02-20
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -28,14 +28,12 @@ protocols:
         - rsa-sha2-256
         - rsa-sha2-512
         - ssh-rsa
-        - ssh-dss
         - ssh-rsa-sha256@ssh.com
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - x509v3-rsa2048-sha256
         - x509v3-ssh-rsa
-        - x509v3-ssh-dss
         - x509v3-ecdsa-sha2-nistp256
         - x509v3-ecdsa-sha2-nistp384
         - x509v3-ecdsa-sha2-nistp521
