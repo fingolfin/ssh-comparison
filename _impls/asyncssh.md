@@ -2,12 +2,12 @@
 title: AsyncSSH
 homepage: http://asyncssh.readthedocs.io/
 source-repository: https://github.com/ronf/asyncssh
-license: "[EPL v1.0](http://www.eclipse.org/legal/epl-v10.html)"
+license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.13.1
-    date: 2018-06-16
+    version: 1.16.0
+    date: 2019-03-02
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -36,10 +36,11 @@ protocols:
     hostkey:
         - "null"                                        # since 1.9.0
         - ssh-ed25519-cert-v01@openssh.com              # since 1.0.0
+        - ssh-ed448-cert-v01@openssh.com                # since 1.16.0
         - ecdsa-sha2-nistp521-cert-v01@openssh.com      # since 1.0.0
         - ecdsa-sha2-nistp384-cert-v01@openssh.com      # since 1.0.0
         - ecdsa-sha2-nistp256-cert-v01@openssh.com      # since 1.0.0
-        - ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com  # since 1.0.0
+        - ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com  # since 1.13.1
         - ssh-rsa-cert-v01@openssh.com                  # since 1.0.0
         - ssh-dss-cert-v01@openssh.com                  # since 1.0.0
         #- ssh-rsa-cert-v00@openssh.com                 # removed in 1.3.2
@@ -52,6 +53,7 @@ protocols:
         - x509v3-ssh-rsa                                # since 1.11.0
         - x509v3-ssh-dss                                # since 1.11.0
         - ssh-ed25519                                   # since 1.0.0
+        - ssh-ed448                                     # since 1.16.0
         - ecdsa-sha2-nistp521                           # since 1.0.0
         - ecdsa-sha2-nistp384                           # since 1.0.0
         - ecdsa-sha2-nistp256                           # since 1.0.0
@@ -72,6 +74,7 @@ protocols:
         - gss-group18-sha512-*                          # since 1.9.0
         - curve25519-sha256                             # since 1.8.0
         - curve25519-sha256@libssh.org                  # since 1.0.0
+        - curve448-sha512                               # since 1.16.0
         - ecdh-sha2-nistp521                            # since 1.0.0
         - ecdh-sha2-nistp384                            # since 1.0.0
         - ecdh-sha2-nistp256                            # since 1.0.0
