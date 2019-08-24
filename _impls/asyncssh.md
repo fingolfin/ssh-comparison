@@ -6,8 +6,8 @@ license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.16.0
-    date: 2019-03-02
+    version: 1.18.0
+    date: 2019-08-23
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -63,15 +63,21 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
+        - gss-curve25519-sha256-*                       # since 1.18.0
+        - gss-curve448-sha512-*                         # since 1.18.0
+        - gss-nistp521-sha512-*                         # since 1.18.0
+        - gss-nistp384-sha256-*                         # since 1.18.0
+        - gss-nistp256-sha256-*                         # since 1.18.0
+        - gss-13.3.132.0.10-sha256-*                    # since 1.18.0
         - gss-gex-sha256-*                              # since 1.9.0
         - gss-gex-sha1-*                                # since 1.9.0
-        - gss-group1-sha1-*                             # since 1.9.0
-        - gss-group14-sha1-*                            # since 1.9.0
         - gss-group14-sha256-*                          # since 1.9.0
         - gss-group15-sha512-*                          # since 1.9.0
         - gss-group16-sha512-*                          # since 1.9.0
         - gss-group17-sha512-*                          # since 1.9.0
         - gss-group18-sha512-*                          # since 1.9.0
+        - gss-group14-sha1-*                            # since 1.9.0
+        - gss-group1-sha1-*                             # since 1.9.0
         - curve25519-sha256                             # since 1.8.0
         - curve25519-sha256@libssh.org                  # since 1.0.0
         - curve448-sha512                               # since 1.16.0
@@ -81,13 +87,13 @@ protocols:
         - ecdh-sha2-1.3.132.0.10                        # since 1.13.1
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group1-sha1
-        - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256                 # since 1.7.0
         - diffie-hellman-group15-sha512                 # since 1.9.0
         - diffie-hellman-group16-sha512                 # since 1.7.0
         - diffie-hellman-group17-sha512                 # since 1.9.0
         - diffie-hellman-group18-sha512                 # since 1.7.0
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
         - rsa2048-sha256                                # since 1.13.1
         - rsa1024-sha1                                  # since 1.13.1
         - ext-info-c                                    # since 1.7.0
