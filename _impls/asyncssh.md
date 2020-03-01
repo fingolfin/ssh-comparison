@@ -6,8 +6,8 @@ license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 1.18.0
-    date: 2019-08-23
+    version: 2.2.0
+    date: 2020-02-29
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -35,6 +35,8 @@ protocols:
         - none
     hostkey:
         - "null"                                        # since 1.9.0
+        - sk-ssh-ed25519-cert-v01@openssh.com           # since 2.2.0
+        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com   # since 2.2.0
         - ssh-ed25519-cert-v01@openssh.com              # since 1.0.0
         - ssh-ed448-cert-v01@openssh.com                # since 1.16.0
         - ecdsa-sha2-nistp521-cert-v01@openssh.com      # since 1.0.0
@@ -52,6 +54,8 @@ protocols:
         - x509v3-rsa2048-sha256                         # since 1.11.0
         - x509v3-ssh-rsa                                # since 1.11.0
         - x509v3-ssh-dss                                # since 1.11.0
+        - sk-ssh-ed25519@openssh.com                    # since 2.2.0
+        - sk-ecdsa-sha2-nistp256@openssh.com            # since 2.2.0
         - ssh-ed25519                                   # since 1.0.0
         - ssh-ed448                                     # since 1.16.0
         - ecdsa-sha2-nistp521                           # since 1.0.0
