@@ -5,7 +5,7 @@ iana:
 
 libssh:
     name: libssh
-    url: http://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
+    url: https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
     title: "The key exchange methode curve25519-sha256@libssh.org"
     protocols:
         kex:
@@ -13,30 +13,23 @@ libssh:
 
 openssh:
     name: OpenSSH
-    url: http://www.openssh.com/specs.html
+    url: https://www.openssh.com/specs.html
     title: "Specifications implemented by OpenSSH, including information about some of their SSH extensions"
-    # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
-    # http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
-    # http://www.openssh.com/txt/draft-miller-secsh-umac-01.txt
-    # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
+    # https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
+    # https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
+    # https://www.openssh.com/txt/draft-miller-secsh-umac-01.txt
+    # https://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
     #
     protocols:
         cipher:
-            - aes128-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
-            - aes256-gcm@openssh.com            # see also http://www.openssh.com/txt/release-6.2
-            - chacha20-poly1305@openssh.com     # openssh/PROTOCOL.chacha20poly1305
+            - aes128-gcm@openssh.com            # see also https://www.openssh.com/txt/release-6.2
+            - aes256-gcm@openssh.com            # see also https://www.openssh.com/txt/release-6.2
         compression:
             - zlib@openssh.com     # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
         hostkey:
-            #- ssh-ed25519-cert-v01@openssh.com             # Undocumented? openssh/myproposal.h
-            - ssh-rsa-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
-            - ssh-dss-cert-v01@openssh.com                  # openssh/PROTOCOL.certkeys
-            - ecdsa-sha2-nistp256-cert-v01@openssh.com      # openssh/PROTOCOL
-            - ecdsa-sha2-nistp384-cert-v01@openssh.com      # openssh/PROTOCOL
-            - ecdsa-sha2-nistp521-cert-v01@openssh.com      # openssh/PROTOCOL
-            - ssh-rsa-cert-v00@openssh.com                  # openssh/PROTOCOL
-            - ssh-dss-cert-v00@openssh.com                  # openssh/PROTOCOL.agent
-            #- ssh-dsa-cert-v00@openssh.com     # mentioned in openssh/PROTOCOL but not implemented
+            #- ssh-rsa-cert-v00@openssh.com     # obsolete
+            #- ssh-dss-cert-v00@openssh.com     # obsolete
+            #- ssh-dsa-cert-v00@openssh.com     # obsolete, never (?) implemented
         mac:
             - umac-64@openssh.com               # openssh/PROTOCOL
             - umac-128@openssh.com
@@ -52,6 +45,38 @@ openssh:
             - umac-64-etm@openssh.com
             - umac-128-etm@openssh.com
             #- hmac-ripemd160-etm@openssh.com   # Undocumented? openssh/myproposal.h
+
+openssh-chacha:
+    name: OpenSSH
+    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.chacha20poly1305?annotate=HEAD
+    title: "OpenSSH: chacha20poly1305"
+    protocols:
+        cipher:
+            - chacha20-poly1305@openssh.com
+
+openssh-certkeys:
+    name: OpenSSH
+    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.certkeys?annotate=HEAD
+    title: "OpenSSH: certkeys"
+    protocols:
+        hostkey:
+            - ssh-rsa-cert-v01@openssh.com
+            - ssh-dss-cert-v01@openssh.com
+            - ecdsa-sha2-nistp256-cert-v01@openssh.com
+            - ecdsa-sha2-nistp384-cert-v01@openssh.com
+            - ecdsa-sha2-nistp521-cert-v01@openssh.com
+            - ssh-ed25519-cert-v01@openssh.com
+
+openssh-u2f:
+    name: OpenSSH
+    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.u2f?annotate=HEAD
+    title: "OpenSSH: U2F"
+    protocols:
+        hostkey:
+            - sk-ecdsa-sha2-nistp256@openssh.com
+            - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+            - sk-ssh-ed25519@openssh.com
+            - sk-ssh-ed25519-cert-v01@openssh.com
 
 rfc4250:
     name: RFC 4250
@@ -304,7 +329,7 @@ rfc7748:
 
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
-    url: http://tools.ietf.org/html/draft-ietf-secsh-x509-03
+    url: https://tools.ietf.org/html/draft-ietf-secsh-x509-03
     title: "X.509v3 Certificates for SSH Authentication [ expired 2006-09-01 ]"
     # Quote:
     #  This document adds "x509v3-sign-rsa" and "x509v3-sign-dss" to the SSH
@@ -333,7 +358,7 @@ rfc8308:
             - elevation
         kex:
             - ext-info-s
-            - ext-info-c         
+            - ext-info-c
 
 rfc8332:
     name: RFC 8332
