@@ -257,12 +257,6 @@ rfc8160:
     url: https://tools.ietf.org/html/rfc8160
     title: "IUTF8 Terminal Mode in Secure Shell (SSH)"
 
-rfc8270:
-    name: RFC 8270
-    url: https://tools.ietf.org/html/rfc8270
-    errata: https://www.rfc-editor.org/errata_search.php?rfc=8270
-    title: "Increase the Secure Shell Minimum Recommended Diffie-Hellman Modulus Size to 2048 Bits"
-
 rfc8268:
     name: RFC 8268
     url: https://tools.ietf.org/html/rfc8268
@@ -279,6 +273,12 @@ rfc8268:
             - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
             - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+
+rfc8270:
+    name: RFC 8270
+    url: https://tools.ietf.org/html/rfc8270
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=8270
+    title: "Increase the Secure Shell Minimum Recommended Diffie-Hellman Modulus Size to 2048 Bits"
 
 rfc8308:
     name: RFC 8308
