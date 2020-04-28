@@ -34,6 +34,8 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - x509v3-ssh-rsa    # since 8.0 (windows only??)
+        - x509v3-ssh-dss    # since 8.0 (windows only??)
     kex:
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
@@ -43,8 +45,6 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - gss-gex-sha1-*
-        - x509v3-ssh-rsa    # since 8.0 (windows only??)
-        - x509v3-ssh-dss    # since 8.0 (windows only??)
     mac:
         - hmac-sha1
         - hmac-sha2-512
