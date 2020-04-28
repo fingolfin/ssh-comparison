@@ -327,24 +327,33 @@ rfc7748:
     errata: https://www.rfc-editor.org/errata_search.php?rfc=7748
     title: "Elliptic Curves for Security"
 
-draft-ietf-secsh-x509-03:
-    name: draft-ietf-secsh-x509-03
-    url: https://tools.ietf.org/html/draft-ietf-secsh-x509-03
-    title: "X.509v3 Certificates for SSH Authentication [ expired 2006-09-01 ]"
-    # Quote:
-    #  This document adds "x509v3-sign-rsa" and "x509v3-sign-dss" to the SSH
-    #  publickey type registry as "poisoned" by historical use.
+rfc8160:
+    name: RFC 8160
+    url: https://tools.ietf.org/html/rfc8160
+    title: "IUTF8 Terminal Mode in Secure Shell (SSH)"
+
+rfc8270:
+    name: RFC 8270
+    url: https://tools.ietf.org/html/rfc8270
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=8270
+    title: "Increase the Secure Shell Minimum Recommended Diffie-Hellman Modulus Size to 2048 Bits"
+
+rfc8268:
+    name: RFC 8268
+    url: https://tools.ietf.org/html/rfc8268
+    title: "More Modular Exponential (MODP) Diffie-Hellman (DH) Key Exchange (KEX) Groups for Secure Shell (SSH)"
     protocols:
-        hostkey:
-            - x509v3-sign
-            - x509v3-sign-rsa-sha1
-            - x509v3-sign-dss-sha1
-
-
-draft-ietf-secsh-filexfer-02:
-    name: draft-ietf-secsh-filexfer-02
-    url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
-    title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
+        kex:
+            - diffie-hellman-group14-sha256 # draft-ietf-curdle-ssh-kex-sha2: MUST
+            - diffie-hellman-group15-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - diffie-hellman-group16-sha512 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - diffie-hellman-group17-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - diffie-hellman-group18-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group14-sha256-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group15-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 rfc8308:
     name: RFC 8308
@@ -369,23 +378,6 @@ rfc8332:
             - rsa-sha2-256 # RECOMMENDED
             - rsa-sha2-512 # OPTIONAL
 
-rfc8268:
-    name: RFC 8268
-    url: https://tools.ietf.org/html/rfc8268
-    title: "More Modular Exponential (MODP) Diffie-Hellman (DH) Key Exchange (KEX) Groups for Secure Shell (SSH)"
-    protocols:
-        kex:
-            - diffie-hellman-group14-sha256 # draft-ietf-curdle-ssh-kex-sha2: MUST
-            - diffie-hellman-group15-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - diffie-hellman-group16-sha512 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
-            - diffie-hellman-group17-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - diffie-hellman-group18-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group14-sha256-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
-            - gss-group15-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
-            - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
-
 rfc8709:
     name: RFC 8709
     url: https://tools.ietf.org/html/rfc8709
@@ -396,13 +388,31 @@ rfc8709:
             - ssh-ed448
 
 rfc8731:
-    name: RFC
+    name: RFC 8731
     url: https://tools.ietf.org/html/rfc8731
     title: "Secure Shell (SSH) Key Exchange Method using Curve25519 and Curve448"
     protocols:
         kex:
             - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: MAY
+
+draft-ietf-secsh-x509-03:
+    name: draft-ietf-secsh-x509-03
+    url: https://tools.ietf.org/html/draft-ietf-secsh-x509-03
+    title: "X.509v3 Certificates for SSH Authentication [ expired 2006-09-01 ]"
+    # Quote:
+    #  This document adds "x509v3-sign-rsa" and "x509v3-sign-dss" to the SSH
+    #  publickey type registry as "poisoned" by historical use.
+    protocols:
+        hostkey:
+            - x509v3-sign
+            - x509v3-sign-rsa-sha1
+            - x509v3-sign-dss-sha1
+
+draft-ietf-secsh-filexfer-02:
+    name: draft-ietf-secsh-filexfer-02
+    url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
+    title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
 draft-ietf-curdle-ssh-kex-sha2:
     name: draft-ietf-curdle-ssh-kex-sha2
