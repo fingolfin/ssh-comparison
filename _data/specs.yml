@@ -386,9 +386,18 @@ rfc8268:
             - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
             - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
 
-draft-ietf-curdle-ssh-curves:
-    name: draft-ietf-curdle-ssh-curves
-    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-curves
+rfc8709:
+    name: RFC 8709
+    url: https://tools.ietf.org/html/rfc8709
+    title: "Ed25519 and Ed448 Public Key Algorithms for the Secure Shell (SSH) Protocol"
+    protocols:
+        hostkey:
+            - ssh-ed25519
+            - ssh-ed448
+
+rfc8731:
+    name: RFC
+    url: https://tools.ietf.org/html/rfc8731
     title: "Secure Shell (SSH) Key Exchange Method using Curve25519 and Curve448"
     protocols:
         kex:
