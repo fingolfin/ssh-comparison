@@ -6,9 +6,9 @@ license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2009      # according to Wikipedia
 latest-release:
-    version: 1.2.0
-    date: 2016-03-09
-changelog: "https://issues.apache.org/jira/browse/SSHD/?selectedTab=com.atlassian.jira.jira-projects-plugin:changelog-panel"
+    version: 2.4.0
+    date: 2020-01-17
+changelog: "https://github.com/apache/mina-sshd/blob/master/CHANGES.md"
 client: yes
 server: yes
 library: both
@@ -31,9 +31,22 @@ protocols:
     hostkey:
         - ssh-rsa
         - ssh-dss
+        - ssh-dss-cert-v01@openssh.com
+        - ssh-rsa-cert-v01@openssh.com
+        - rsa-sha2-256
+        - rsa-sha2-256-cert-v01@openssh.com
+        - rsa-sha2-512
+        - rsa-sha2-512-cert-v01@openssh.com
         - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - ssh-ed25519
+        - ssh-ed25519-cert-v01@openssh.com
+        - sk-ssh-ed25519@openssh.com
     kex:
         - ecdh-sha2-nistp521
         - ecdh-sha2-nistp384
@@ -42,6 +55,11 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group18-sha512
     mac:
         - hmac-md5
         - hmac-sha1
@@ -49,6 +67,9 @@ protocols:
         - hmac-sha2-512             # was brokeb before 1.1.0
         - hmac-sha1-96
         - hmac-md5-96
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
     userauth:
         - keyboard-interactive
         - password
