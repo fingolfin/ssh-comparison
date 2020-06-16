@@ -6,8 +6,8 @@ license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE
 first-release:
     date: 2003-04-06    # according to CHANGES file
 latest-release:
-    version: 2016.73
-    date: 2016-03-18
+    version: 2020.79
+    date: 2020-06-15
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
@@ -39,10 +39,13 @@ protocols:
         - ssh-rsa
         - ssh-dss
     kex:
+        - curve25519
         - curve25519-sha256@libssh.org
         - ecdh-sha2-nistp521
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp256
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group14-sha256
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
         - kexguess2@matt.ucc.asn.au     # Dropbear extension (only documented in their CHANGES file?)
