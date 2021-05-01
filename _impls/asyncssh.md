@@ -6,8 +6,8 @@ license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 2.4.0
-    date: 2020-08-29
+    version: 2.6.0
+    date: 2021-05-01
 changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -26,6 +26,7 @@ protocols:
         - 3des-cbc
         - blowfish-cbc
         - cast128-cbc
+        - seed-cbc@ssh.com                              # since 2.6.0
         - arcfour256
         - arcfour128
         - arcfour
@@ -66,6 +67,10 @@ protocols:
         - ecdsa-sha2-1.3.132.0.10                       # since 1.13.1
         - rsa-sha2-256                                  # since 1.7.0
         - rsa-sha2-512                                  # since 1.7.0
+        - ssh-rsa-sha224@ssh.com                        # since 2.6.0
+        - ssh-rsa-sha256@ssh.com                        # since 2.6.0
+        - ssh-rsa-sha384@ssh.com                        # since 2.6.0
+        - ssh-rsa-sha512@ssh.com                        # since 2.6.0
         - ssh-rsa
         - ssh-dss
     kex:
@@ -100,6 +105,13 @@ protocols:
         - diffie-hellman-group18-sha512                 # since 1.7.0
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha224@ssh.com         # since 2.6.0
+        - diffie-hellman-group14-sha256@ssh.com         # since 2.6.0
+        - diffie-hellman-group15-sha256@ssh.com         # since 2.6.0
+        - diffie-hellman-group15-sha384@ssh.com         # since 2.6.0
+        - diffie-hellman-group16-sha384@ssh.com         # since 2.6.0
+        - diffie-hellman-group16-sha512@ssh.com         # since 2.6.0
+        - diffie-hellman-group18-sha512@ssh.com         # since 2.6.0
         - rsa2048-sha256                                # since 1.13.1
         - rsa1024-sha1                                  # since 1.13.1
         - ext-info-c                                    # since 1.7.0
@@ -114,6 +126,11 @@ protocols:
         - hmac-sha2-512-96-etm@openssh.com
         - hmac-sha1-96-etm@openssh.com
         - hmac-md5-96-etm@openssh.com
+        - hmac-sha224@ssh.com                           # since 2.6.0
+        - hmac-sha256@ssh.com                           # since 2.6.0
+        - hmac-sha256-2@ssh.com                         # since 2.6.0
+        - hmac-sha384@ssh.com                           # since 2.6.0
+        - hmac-sha512@ssh.com                           # since 2.6.0
         - umac-64@openssh.com                           # since 1.8.0
         - umac-128@openssh.com                          # since 1.8.0
         - hmac-sha2-256
