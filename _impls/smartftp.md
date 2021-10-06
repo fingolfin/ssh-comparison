@@ -28,7 +28,6 @@ protocols:
         - rsa-sha2-256
         - rsa-sha2-512
         - ssh-rsa
-        - ssh-rsa-sha256@ssh.com
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
