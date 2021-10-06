@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 9.0.2637
-    date: 2019-02-20
+    version: 10.0.2917
+    date: 2021-10-05
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -38,6 +38,11 @@ protocols:
         - x509v3-ecdsa-sha2-nistp384
         - x509v3-ecdsa-sha2-nistp521
         - ssh-ed25519
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
+        - ssh-rsa-cert-v01@openssh.com        
     kex:
         - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256
@@ -65,5 +70,5 @@ protocols:
         - no-flow-control
 ---
 * Windows client.
-* Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, Microsoft OneDrive, SSH, Terminal client.
+* Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, Microsoft OneDrive, Backblaze, SSH, Terminal client.
 * [Details on its SSH support](https://www.smartftp.com/client/features/ssh).
