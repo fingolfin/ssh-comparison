@@ -1,64 +1,119 @@
 ---
 title: JSch
-homepage: http://www.jcraft.com/jsch/
-#source-repository: http://git.jcraft.com/jsch.git/
-license: "[BSD style](http://www.jcraft.com/jsch/LICENSE.txt)"
+homepage: https://github.com/mwiede/jsch
+source-repository: https://github.com/mwiede/jsch
+license: "[BSD style](https://github.com/mwiede/jsch/blob/master/LICENSE.txt)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.1.53
-    date: 2015-06-05
-changelog: http://www.jcraft.com/jsch/ChangeLog
-client: true
-server: unknown
+    version: 0.1.72
+    date: 2021-12-20
+changelog: https://github.com/mwiede/jsch/blob/master/ChangeLog.md
+client: yes
+server: no
 
 protocols:
     cipher:
-        - aes128-ctr
-        - aes128-cbc
-        - 3des-ctr
         - 3des-cbc
-        - blowfish-cbc
-        - aes192-ctr
+        - 3des-ctr
+        - aes128-cbc
+        - aes128-ctr
+        - aes128-gcm@openssh.com
         - aes192-cbc
-        - aes256-ctr
+        - aes192-ctr
         - aes256-cbc
-        - arcfour           # supported, but not enabled by default
-        - arcfour128        # supported, but not enabled by default
-        - arcfour256        # supported, but not enabled by default
+        - aes256-ctr
+        - aes256-gcm@openssh.com
+        - arcfour
+        - arcfour128
+        - arcfour256
+        - blowfish-cbc
+        - blowfish-ctr
+        - cast128-cbc
+        - cast128-ctr
+        - chacha20-poly1305@openssh.com
+        - rijndael-cbc@lysator.liu.se
+        - seed-cbc@ssh.com
+        - twofish-cbc
+        - twofish128-cbc
+        - twofish128-ctr
+        - twofish192-cbc
+        - twofish192-ctr
+        - twofish256-cbc
+        - twofish256-ctr
     compression:
+        - none
         - zlib
         - zlib@openssh.com
-        - none
     hostkey:
-        - ssh-rsa
-        - ssh-dss
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - rsa-sha2-256
+        - rsa-sha2-512
+        - ssh-dss
+        - ssh-ed25519
+        - ssh-ed448
+        - ssh-rsa
+        - ssh-rsa-sha224@ssh.com
+        - ssh-rsa-sha256@ssh.com
+        - ssh-rsa-sha384@ssh.com
+        - ssh-rsa-sha512@ssh.com
     kex:
+        - curve25519-sha256
+        - curve25519-sha256@libssh.org
+        - curve448-sha512
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group-exchange-sha224@ssh.com
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha384@ssh.com
+        - diffie-hellman-group-exchange-sha512@ssh.com
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha224@ssh.com
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group14-sha256@ssh.com
+        - diffie-hellman-group15-sha256@ssh.com
+        - diffie-hellman-group15-sha384@ssh.com
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group16-sha384@ssh.com
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group16-sha512@ssh.com
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group18-sha512
+        - diffie-hellman-group18-sha512@ssh.com
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
-        - diffie-hellman-group14-sha1
-        - diffie-hellman-group-exchange-sha256 
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group1-sha1
+        - ext-info-c
     mac:
         - hmac-md5
-        - hmac-sha1
-        - hmac-sha2-256
         - hmac-md5-96
+        - hmac-md5-96-etm@openssh.com
+        - hmac-md5-etm@openssh.com
+        - hmac-ripemd160
+        - hmac-ripemd160-etm@openssh.com
+        - hmac-ripemd160@openssh.com
+        - hmac-sha1
         - hmac-sha1-96
-        #  hmac-sha2-512 implemented, but disabled in source. Quote from JSch.java:
-        #  The "hmac-sha2-512" will require the key-length 2048 for DH,
-        #   but Sun's JCE has not allowed to use such a long key.
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha2-256
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-sha224@ssh.com
+        - hmac-sha256-2@ssh.com
+        - hmac-sha256@ssh.com
+        - hmac-sha384@ssh.com
+        - hmac-sha512@ssh.com
     userauth:
+        - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
+        - keyboard-interactive
         - password
         - publickey
-        - keyboard-interactive
-        - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
+    extension:
+        - server-sig-algs
 ---
 * Pure Java implementation.
-* 2015-07-10: There is a [git repository](http://git.jcraft.com/jsch.git)
-but it contains only a single commit with an outdated version.
+* This is a fork of the original [JSch project](https://sourceforge.net/projects/jsch/)
