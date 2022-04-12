@@ -386,6 +386,8 @@ openssh:
             - umac-64-etm@openssh.com
             - umac-128-etm@openssh.com
             #- hmac-ripemd160-etm@openssh.com   # Undocumented? openssh/myproposal.h
+        kex:
+            - sntrup761x25519-sha512@openssh.com # see also https://www.openssh.com/txt/release-9.0
 
 openssh-chacha:
     name: OpenSSH
