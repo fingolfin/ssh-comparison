@@ -74,6 +74,7 @@ protocols:
         - diffie-hellman-group16-sha512     # since 7.3
         - diffie-hellman-group18-sha512     # since 7.3
         - ext-info-c                        # since 7.2
+        - sntrup761x25519-sha512@openssh.com # since 8.5
     mac:
         - umac-64-etm@openssh.com           # since 6.2
         - umac-128-etm@openssh.com          # since 6.2
