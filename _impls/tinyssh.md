@@ -9,23 +9,25 @@ first-release:
     # and http://tuxdiary.com/2014/05/11/tinyssh/
 latest-release:
     #version: X.Y
-    date: 2016-03-18
-#changelog: TODO
+    date: 2022-03-11
+changelog: https://github.com/janmojzis/tinyssh/releases
 client: no
 server: yes
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com
-        - aes128-ctr
-        - aes256-ctr
+        #- aes256-ctr                               # removed in 20190101
     compression:
         - none
     hostkey:
         - ssh-ed25519
-        - ecdsa-sha2-nistp256
+        #- ecdsa-sha2-nistp256                      # removed in 20190101
     kex:
+        - curve25519-sha256                         # added in 20180201
         - curve25519-sha256@libssh.org
-        - ecdh-sha2-nistp256
+        #- ecdh-sha2-nistp256                       # removed in 20190101
+        #- sntrup4591761x25519-sha512@tinyssh.org   # added in 20190101, removed in 20210319
+        - sntrup761x25519-sha512@openssh.com        # added in 20210319
     mac:
         #- chacha20-poly1305@openssh.com    # not an actual allowed MAC value, but implied by the choice of cipher
         - hmac-sha2-256
