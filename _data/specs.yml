@@ -321,6 +321,21 @@ rfc8731:
             - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: MAY
 
+rfc8758:
+    name: RFC 8758
+    url: https://tools.ietf.org/html/rfc8758
+    title: "Deprecating RC4 in Secure Shell (SSH)"
+
+rfc9142:
+    name: RFC 9142
+    url: https://tools.ietf.org/html/rfc9142
+    title: "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)"
+
+rfc9212:
+    name: RFC 9212
+    url: https://tools.ietf.org/html/rfc9212
+    title: "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
+
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
     url: https://tools.ietf.org/html/draft-ietf-secsh-x509-03
@@ -339,10 +354,39 @@ draft-ietf-secsh-filexfer-02:
     url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
     title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
-draft-ietf-curdle-ssh-kex-sha2:
-    name: draft-ietf-curdle-ssh-kex-sha2
-    url: https://tools.ietf.org/html/draft-ietf-curdle-ssh-kex-sha2
-    title: "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)"
+draft-kanno-secsh-camellia-02:
+    name: draft-kanno-secsh-camellia-02
+    url: https://tools.ietf.org/html/draft-kanno-secsh-camellia-02
+    title: "Camellia cipher for the Secure Shell Transport Layer Protocol [ expired 2011-08-01 ]"
+    protocols:
+        cipher:
+            - camellia128-cbc
+            - camellia192-cbc
+            - camellia256-cbc
+            - camellia128-ctr
+            - camellia192-ctr
+            - camellia256-ctr
+            - AEAD_CAMELLIA_128_GCM
+            - AEAD_CAMELLIA_256_GCM
+        mac:
+            - AEAD_CAMELLIA_128_GCM
+            - AEAD_CAMELLIA_256_GCM
+
+draft-ssh-ext-auth-info-01:
+    name: draft-ssh-ext-auth-info-01
+    url: https://tools.ietf.org/html/draft-ssh-ext-auth-info-01
+    title: "Extended authentication information in Secure Shell (SSH) [ expired 2018-09-18 ]"
+    protocols:
+        extension:
+            - ext-auth-info
+
+draft-ssh-global-requests-ok-00:
+    name: draft-ssh-global-requests-ok-00
+    url: https://tools.ietf.org/html/draft-ssh-global-requests-ok-00
+    title: "Sending and Handling of Global Requests in Secure Shell (SSH) [ expired 2019-05-18 ]"
+    protocols:
+        extension:
+            - global-requests-ok
 
 libssh:
     name: libssh
