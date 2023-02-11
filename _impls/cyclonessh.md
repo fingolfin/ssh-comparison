@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.1.6
-    date: 2022-05-31
+    version: 2.2.2
+    date: 2023-01-10
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
@@ -24,16 +24,28 @@ protocols:
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
+        - twofish128-ctr
+        - twofish192-ctr
+        - twofish256-ctr
+        - serpent128-ctr
+        - serpent192-ctr
+        - serpent256-ctr
         - camellia128-ctr
         - camellia192-ctr
         - camellia256-ctr
         - aes128-cbc
         - aes192-cbc
         - aes256-cbc
+        - twofish128-cbc
+        - twofish192-cbc
+        - twofish256-cbc
+        - twofish-cbc
+        - serpent128-cbc
+        - serpent192-cbc
+        - serpent256-cbc
         - camellia128-cbc
         - camellia192-cbc
         - camellia256-cbc
-        - seed-ctr@ssh.com
         - seed-cbc@ssh.com
         - 3des-ctr
         - 3des-cbc
@@ -41,6 +53,8 @@ protocols:
         - blowfish-cbc
         - idea-ctr
         - idea-cbc
+        - cast128-ctr
+        - cast128-cbc
         - arcfour256
         - arcfour128
     compression:
@@ -70,11 +84,20 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
-        - diffie-hellman-group16-sha512
-        - diffie-hellman-group15-sha512
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha384@ssh.com
+        - diffie-hellman-group-exchange-sha512@ssh.com
         - diffie-hellman-group14-sha256
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group18-sha512
+        - rsa2048-sha256
+        - diffie-hellman-group-exchange-sha224@ssh.com
+        - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - rsa1024-sha1
         - ext-info-c
         - ext-info-s
     mac:
