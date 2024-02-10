@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.2.2
-    date: 2023-01-10
+    version: 2.3.0
+    date: 2023-06-12
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
@@ -57,6 +57,7 @@ protocols:
         - cast128-cbc
         - arcfour256
         - arcfour128
+        - arcfour
     compression:
         - none
     hostkey:
@@ -78,6 +79,7 @@ protocols:
         - ssh-dss-cert-v01@openssh.com
         - ssh-dss
     kex:
+        - sntrup761x25519-sha512@openssh.com
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - curve448-sha512
