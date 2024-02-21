@@ -61,6 +61,8 @@ protocols:
     extension:
         - elevation
         - server-sig-algs
+        - kex-strict-c-v00@openssh.com  # since 9.33
+        - kex-strict-s-v00@openssh.com  # since 9.33
 
 # The following information was provided by denis bider.
 #

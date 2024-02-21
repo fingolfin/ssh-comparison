@@ -60,7 +60,9 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - gssapi-keyex
-
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 9.4.3
+        - kex-strict-s-v00@openssh.com  # since 9.4.3
 
 #sftp-su@vandyke.com
 #read-directory-changes@vandyke.com

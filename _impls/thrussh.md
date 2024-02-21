@@ -31,6 +31,8 @@ protocols:
         - password
         - keyboard-interactive
         - hostbased
-
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 0.35.1
+        - kex-strict-s-v00@openssh.com  # since 0.35.1
 ---
 * Multiplatform Rust library for clients and servers.

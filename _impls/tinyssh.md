@@ -33,5 +33,8 @@ protocols:
         - hmac-sha2-256
     userauth:
         - publickey
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 20240101
+        - kex-strict-s-v00@openssh.com  # since 20240101
 ---
 * Minimalistic SSH implementation, still in alpha stage.

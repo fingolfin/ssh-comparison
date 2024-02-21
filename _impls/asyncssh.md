@@ -153,6 +153,8 @@ protocols:
         - password
     extension:
         - server-sig-algs                               # since 1.7.0
+        - kex-strict-c-v00@openssh.com                  # since 2.14.2
+        - kex-strict-s-v00@openssh.com                  # since 2.14.2
 
 first_kex_packet_follows: 1
 ---

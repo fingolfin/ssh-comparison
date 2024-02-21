@@ -55,7 +55,9 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
-
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 12.11
+        - kex-strict-s-v00@openssh.com  # since 12.11
 
 # X11 forwarding, Port forwarding, sftp client, telnet client
 ---

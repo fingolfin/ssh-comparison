@@ -55,6 +55,8 @@ protocols:
     extension:
         - elevation
         - server-sig-algs
+        - kex-strict-c-v00@openssh.com  # since 9.32
+        - kex-strict-s-v00@openssh.com  # since 9.32
 ---
 * Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
 * 2015-07-10: The information provided here is based on the FlowSshC.h header file,

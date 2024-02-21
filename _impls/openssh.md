@@ -103,6 +103,8 @@ protocols:
         - hostbased
     extension:
         - server-sig-algs                   # since 7.2
+        - kex-strict-c-v00@openssh.com      # since 9.6
+        - kex-strict-s-v00@openssh.com      # since 9.6
 
 first_kex_packet_follows: 0
 ---

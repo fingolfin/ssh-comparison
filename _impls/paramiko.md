@@ -56,6 +56,9 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic       # since 1.15.0 (2014-09-18) # only OID 1.2.840.113554.1.2.2 / Kerberos
         - gssapi-keyex          # since 1.15.0 (2014-09-18)
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 3.4.0
+        - kex-strict-s-v00@openssh.com  # since 3.4.0
 ---
 * [Python](https://www.python.org/) library.
 * Built on [PyCrypto](http://pycrypto.org/), a Python C extension for low level cryptography.

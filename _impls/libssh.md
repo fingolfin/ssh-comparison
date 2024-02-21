@@ -80,6 +80,9 @@ protocols:
         - hostbased
         - keyboard-interactive
         - gssapi-with-mic
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 0.10.6 / 0.9.8
+        - kex-strict-s-v00@openssh.com  # since 0.10.6 / 0.9.8
 ---
 * Mulitplatform C library for clients and servers.
 * Not to be confused with the unrelated [libssh2](/impls/libssh2.html)

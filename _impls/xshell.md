@@ -69,6 +69,9 @@ protocols:
         - gssapi-with-mic
         - password
         - keyboard-interactive
+    extension:
+        - kex-strict-c-v00@openssh.com  # since version 0144
+        - kex-strict-s-v00@openssh.com  # since version 0144
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-nsssh2_5.0.0030 NetSarang Computer, Inc."

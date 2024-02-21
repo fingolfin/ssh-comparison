@@ -64,7 +64,7 @@ protocols:
         - hmac-md5
         - hmac-sha1
         - hmac-sha2-256
-        - hmac-sha2-512             # was brokeb before 1.1.0
+        - hmac-sha2-512                 # was brokeb before 1.1.0
         - hmac-sha1-96
         - hmac-md5-96
         - hmac-sha1-etm@openssh.com
@@ -74,6 +74,9 @@ protocols:
         - keyboard-interactive
         - password
         - publickey
-        - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
+        - gssapi-with-mic               # only OID 1.2.840.113554.1.2.2 / Kerberos
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 2.12.0
+        - kex-strict-s-v00@openssh.com  # since 2.12.0
 ---
 * Pure Java implementation.

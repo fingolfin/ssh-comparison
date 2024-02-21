@@ -47,6 +47,9 @@ protocols:
         - keyboard-interactive
         - publickey
         - password
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 24.8
+        - kex-strict-s-v00@openssh.com  # since 24.8
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-PuTTY_Release_0.63"
