@@ -67,6 +67,9 @@ protocols:
         - keyboard-interactive
     extension:
         - server-sig-algs                   # since 4.5
+    extension:
+        - kex-strict-c-v00@openssh.com      # since 26.2.1 / 25.3.2.8 / 24.3.4.15
+        - kex-strict-s-v00@openssh.com      # since 26.2.1 / 25.3.2.8 / 24.3.4.15
 ---
 * Server and client implementation (and library) for the 
   [Erlang](http://www.erlang.org/) programming language.

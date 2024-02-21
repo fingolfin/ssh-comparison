@@ -98,6 +98,9 @@ protocols:
         #- RSA SecurID       # through keyboard-interactive
         #- RADIUS            # through keyboard-interactive
         #- LAM               # through keyboard-interactive / AIX only
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 6.6.3
+        - kex-strict-s-v00@openssh.com  # since 6.6.3
 ---
 * Formerly known as just "SSH" or "ssh.com"
 * Strictly speaking, the Tectica SSH client and server are two separate

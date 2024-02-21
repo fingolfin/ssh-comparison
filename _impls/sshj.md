@@ -108,5 +108,8 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 0.38.0
+        - kex-strict-s-v00@openssh.com  # since 0.38.0
 ---
 * Pure Java implementation.

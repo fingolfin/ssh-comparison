@@ -432,6 +432,9 @@ openssh:
             #- hmac-ripemd160-etm@openssh.com   # Undocumented? openssh/myproposal.h
         kex:
             - sntrup761x25519-sha512@openssh.com # see also https://www.openssh.com/txt/release-9.0
+        extension:
+            - kex-strict-c-v00@openssh.com
+            - kex-strict-s-v00@openssh.com
 
 openssh-chacha:
     name: OpenSSH

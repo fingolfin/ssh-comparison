@@ -81,5 +81,8 @@ protocols:
         - keyboard-interactive
         - publickey
         - password
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 3.0.35 / 2.0.46 / 1.0.22
+        - kex-strict-s-v00@openssh.com  # since 3.0.35 / 2.0.46 / 1.0.22
 ---
 * Pure PHP implementation.

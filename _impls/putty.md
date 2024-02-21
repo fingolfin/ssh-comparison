@@ -76,5 +76,8 @@ protocols:
         - password
         - keyboard-interactive
         - gssapi-with-mic
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 0.80
+        - kex-strict-s-v00@openssh.com  # since 0.80
 ---
 * [Wikipedia](https://en.wikipedia.org/wiki/PuTTY)

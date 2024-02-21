@@ -62,6 +62,8 @@ protocols:
         - publickey
     extension:
         - server-sig-algs
+        - kex-strict-c-v00@openssh.com  # since 1.9.10
+        - kex-strict-s-v00@openssh.com  # since 1.9.10
 
 first_kex_packet_follows: 0
 ident: " SSH-2.0-TrileadSSH2Java_213"

@@ -72,6 +72,9 @@ protocols:
         - password
         - publickey
         - keyboard-interactive
+    extension:
+        - kex-strict-c-v00@openssh.com  # since 5.1 / 4.108
+        - kex-strict-s-v00@openssh.com  # since 5.1 / 4.108
 
 ident: "SSH-2.0-TTSSH/2.75 Win32"
 ---

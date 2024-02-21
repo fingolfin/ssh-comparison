@@ -127,6 +127,8 @@ protocols:
     extension:
         - server-sig-algs
         - global-requests-ok
+        - kex-strict-c-v00@openssh.com  # since 2.3.4
+        - kex-strict-s-v00@openssh.com  # since 2.3.4
 
 first_kex_packet_follows: 0
 ---

@@ -114,6 +114,8 @@ protocols:
         - publickey
     extension:
         - server-sig-algs
+        - kex-strict-c-v00@openssh.com  # since 0.2.15
+        - kex-strict-s-v00@openssh.com  # since 0.2.15
 ---
 * Pure Java implementation.
 * This is a fork of the original [JSch project](https://sourceforge.net/projects/jsch/)
