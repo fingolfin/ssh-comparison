@@ -6,8 +6,8 @@ license: "[BSD style](https://github.com/mwiede/jsch/blob/master/LICENSE.txt)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.2.1
-    date: 2022-04-26
+    version: 0.2.18
+    date: 2024-06-07
 changelog: https://github.com/mwiede/jsch/blob/master/ChangeLog.md
 client: yes
 server: no
@@ -86,6 +86,10 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - ext-info-c
+        - ext-info-s
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
+        - sntrup761x25519-sha512@openssh.com
     mac:
         - hmac-md5
         - hmac-md5-96
@@ -113,6 +117,7 @@ protocols:
         - password
         - publickey
     extension:
+        - ext-info-in-auth@openssh.com
         - server-sig-algs
 ---
 * Pure Java implementation.
