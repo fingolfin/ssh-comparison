@@ -7,8 +7,8 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 9.0
-    date: 2022-04-08
+    version: 9.8
+    date: 2024-07-01
 changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
@@ -60,6 +60,10 @@ protocols:
         - ssh-ed25519                       # since 6.5
         - ssh-rsa
         - ssh-dss                           # disabled by default since 7.0
+        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - sk-ssh-ed25519-cert-v01@openssh.com
+        - sk-ssh-ed25519@openssh.com
     kex:
         - curve25519-sha256                 # since 7.4
         - curve25519-sha256@libssh.org      # since 6.5
@@ -74,6 +78,9 @@ protocols:
         - diffie-hellman-group16-sha512     # since 7.3
         - diffie-hellman-group18-sha512     # since 7.3
         - ext-info-c                        # since 7.2
+        - ext-info-s                        # since 7.2
+        - kex-strict-c-v00@openssh.com      # since 9.6
+        - kex-strict-s-v00@openssh.com      # since 9.6
         - sntrup761x25519-sha512@openssh.com # since 8.5
     mac:
         - umac-64-etm@openssh.com           # since 6.2
@@ -102,6 +109,9 @@ protocols:
         - gssapi-with-mic
         - hostbased
     extension:
+        - ext-info-in-auth@openssh.com      # since 9.6
+        - ping@openssh.com                  # since 9.5
+        - publickey-hostbound@openssh.com   # since 8.9
         - server-sig-algs                   # since 7.2
 
 first_kex_packet_follows: 0

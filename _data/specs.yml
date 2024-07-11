@@ -431,7 +431,13 @@ openssh:
             - umac-128-etm@openssh.com
             #- hmac-ripemd160-etm@openssh.com   # Undocumented? openssh/myproposal.h
         kex:
+            - kex-strict-c-v00@openssh.com
+            - kex-strict-s-v00@openssh.com
             - sntrup761x25519-sha512@openssh.com # see also https://www.openssh.com/txt/release-9.0
+        extension:
+            - ext-info-in-auth@openssh.com
+            - ping@openssh.com
+            - publickey-hostbound@openssh.com
 
 openssh-chacha:
     name: OpenSSH
