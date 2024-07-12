@@ -52,6 +52,8 @@ protocols:
         - ssh-ed25519-cert-v01@openssh.com  # since 6.5
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss-cert-v01@openssh.com      # disabled by default since 7.0
+        - rsa-sha2-256-cert-v01@openssh.com
+        - rsa-sha2-512-cert-v01@openssh.com
         #- ssh-rsa-cert-v00@openssh.com      # removed in 7.0
         #- ssh-dss-cert-v00@openssh.com      # removed in 7.0
         - ecdsa-sha2-nistp256               # since 5.7
