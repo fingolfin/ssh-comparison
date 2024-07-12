@@ -268,11 +268,6 @@ rfc8268:
             - diffie-hellman-group16-sha512 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - diffie-hellman-group17-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
             - diffie-hellman-group18-sha512 # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group14-sha256-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
-            - gss-group15-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
-            - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
-            - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
 
 rfc8270:
     name: RFC 8270
@@ -320,6 +315,23 @@ rfc8731:
         kex:
             - curve25519-sha256 # draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - curve448-sha512   # draft-ietf-curdle-ssh-kex-sha2: MAY
+
+rfc8732:
+    name: RFC 8732
+    url: https://tools.ietf.org/html/rfc8732
+    title: "Generic Security Service Application Program Interface (GSS-API) Key Exchange with SHA-2"
+    protocols:
+        kex:
+            - gss-group14-sha256-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group15-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group16-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: SHOULD
+            - gss-group17-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-group18-sha512-*          # draft-ietf-curdle-ssh-kex-sha2: MAY
+            - gss-nistp256-sha256-*
+            - gss-nistp384-sha384-*
+            - gss-nistp521-sha512-*
+            - gss-curve25519-sha256-*
+            - gss-curve448-sha512-*
 
 rfc8758:
     name: RFC 8758
