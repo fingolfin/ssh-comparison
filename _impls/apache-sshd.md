@@ -83,5 +83,8 @@ protocols:
         - publickey
         - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
         - hostbased
+    extension:
+        - publickey-hostbound@openssh.com
+        - server-sig-algs
 ---
 * Pure Java implementation.
