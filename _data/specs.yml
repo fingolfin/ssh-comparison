@@ -127,6 +127,7 @@ rfc4345:
 rfc4419:
     name: RFC 4419
     url: https://tools.ietf.org/html/rfc4419
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=4419
     title: "Diffie-Hellman Group Exchange for the SSH Transport Layer Protocol"
     protocols:
         kex:
@@ -224,11 +225,13 @@ rfc6187:
 rfc6239:
     name: RFC 6239
     url: https://tools.ietf.org/html/rfc6594
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=6239
     title: "Suite B Cryptographic Suites for SSH"
 
 rfc6594:
     name: RFC 6594
     url: https://tools.ietf.org/html/rfc6594
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=6594
     title: "Use of the SHA-256 Algorithm with RSA, DSA, and ECDSA in SSHFP Resource Records"
 
 rfc6668:
@@ -301,6 +304,7 @@ rfc8332:
 rfc8709:
     name: RFC 8709
     url: https://tools.ietf.org/html/rfc8709
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=8709
     title: "Ed25519 and Ed448 Public Key Algorithms for the Secure Shell (SSH) Protocol"
     protocols:
         hostkey:
@@ -341,6 +345,7 @@ rfc8758:
 rfc9142:
     name: RFC 9142
     url: https://tools.ietf.org/html/rfc9142
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=9142
     title: "Key Exchange (KEX) Method Updates and Recommendations for Secure Shell (SSH)"
 
 rfc9212:
