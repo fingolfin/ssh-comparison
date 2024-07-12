@@ -1,6 +1,6 @@
 ---
 title: PuTTY
-homepage: http://www.chiark.greenend.org.uk/~sgtatham/putty/
+homepage: https://www.chiark.greenend.org.uk/~sgtatham/putty/
 source-repository: git://git.tartarus.org/simon/putty.git
 license: "[MIT style](http://www.chiark.greenend.org.uk/~sgtatham/putty/licence.html)"
 first-release:
@@ -15,9 +15,9 @@ first-release:
 # the development code made its first successful SSH connection 1998-05-29.
 # So, all in all, this is why I give 1998 as date of the first release.
 latest-release:
-    version: 0.67
-    date: 2016-03-05
-changelog: http://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
+    version: 0.81
+    date: 2024-04-15
+changelog: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
 platforms:
@@ -40,6 +40,8 @@ protocols:
         - arcfour256
         - blowfish-cbc
         - blowfish-ctr
+        - aes128-gcm@openssh.com
+        - aes256-gcm@openssh.com
         - chacha20-poly1305@openssh.com
     compression:
         - zlib
@@ -49,25 +51,62 @@ protocols:
         - ssh-rsa
         - ssh-dss
         - ssh-ed25519
+        - ssh-ed448
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - rsa-sha2-256
+        - rsa-sha2-512
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-dss-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - rsa-sha2-256-cert-v01@openssh.com
+        - rsa-sha2-512-cert-v01@openssh.com
     kex:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group18-sha512
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
+        - curve25519-sha256
+        - curve25519-sha256@libssh.org
+        - curve448-sha512
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - sntrup761x25519-sha512@openssh.com
         - rsa1024-sha1
         - rsa2048-sha256
+        - gss-gex-sha1-*
+        - gss-group1-sha1-*
+        - gss-group14-sha1-*
+        - gss-group14-sha256-*
+        - gss-group15-sha512-*
+        - gss-group16-sha512-*
+        - gss-group17-sha512-*
+        - gss-group18-sha512-*
+        - gss-curve25519-sha256-*
+        - gss-nistp256-sha256-*
+        - gss-nistp384-sha384-*
+        - gss-nistp521-sha512-*
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-md5
         - hmac-sha1
         - hmac-sha1-96
         - hmac-sha2-256
+        - hmac-sha2-512
         - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
         - hmac-sha1-etm@openssh.com
         - hmac-sha1-96-etm@openssh.com
         - hmac-md5-etm@openssh.com
@@ -76,5 +115,8 @@ protocols:
         - password
         - keyboard-interactive
         - gssapi-with-mic
+        - gssapi-keyex
+    extension:
+        - server-sig-algs
 ---
 * [Wikipedia](https://en.wikipedia.org/wiki/PuTTY)
