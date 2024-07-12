@@ -348,6 +348,11 @@ rfc9212:
     url: https://tools.ietf.org/html/rfc9212
     title: "Commercial National Security Algorithm (CNSA) Suite Cryptography for Secure Shell (SSH)"
 
+rfc9519:
+    name: RFC 9519
+    url: https://tools.ietf.org/html/rfc9519
+    title: "Update to the IANA SSH Protocol Parameters Registry Requirements"
+
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
     url: https://tools.ietf.org/html/draft-ietf-secsh-x509-03
