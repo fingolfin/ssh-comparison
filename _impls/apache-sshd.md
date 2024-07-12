@@ -1,13 +1,13 @@
 ---
 title: Apache SSHD
-homepage: http://mina.apache.org/sshd-project/
-source-repository: http://git-wip-us.apache.org/repos/asf/mina-sshd.git
+homepage: https://mina.apache.org/sshd-project/
+source-repository: https://github.com/apache/mina-sshd
 license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2009      # according to Wikipedia
 latest-release:
-    version: 2.4.0
-    date: 2020-01-17
+    version: 2.13.1
+    date: 2024-06-24
 changelog: "https://github.com/apache/mina-sshd/blob/master/CHANGES.md"
 client: yes
 server: yes
@@ -24,6 +24,9 @@ protocols:
         - blowfish-cbc
         - aes192-cbc
         - aes256-cbc
+        - aes128-gcm@openssh.com
+        - aes256-gcm@openssh.com
+        - chacha20-poly1305@openssh.com
     compression:
         - zlib
         - zlib@openssh.com
@@ -60,6 +63,10 @@ protocols:
         - diffie-hellman-group16-sha512
         - diffie-hellman-group17-sha512
         - diffie-hellman-group18-sha512
+        - curve25519-sha256
+        - curve25519-sha256@libssh.org
+        - curve448-sha512
+        - sntrup761x25519-sha512@openssh.com
     mac:
         - hmac-md5
         - hmac-sha1
@@ -75,5 +82,6 @@ protocols:
         - password
         - publickey
         - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
+        - hostbased
 ---
 * Pure Java implementation.
