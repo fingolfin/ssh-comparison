@@ -42,7 +42,7 @@ protocols:
         - sk-ssh-ed25519@openssh.com     # since 2022.82
         - sk-ecdsa-sha2-nistp256@openssh.com     # since 2022.82
     kex:
-        - curve25519                     # since 2018.76
+        - curve25519-sha256              # since 2018.76
         - curve25519-sha256@libssh.org   # since 2013.62
         - ecdh-sha2-nistp521
         - ecdh-sha2-nistp384
