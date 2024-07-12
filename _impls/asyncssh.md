@@ -1,14 +1,14 @@
 ---
 title: AsyncSSH
-homepage: http://asyncssh.readthedocs.io/
+homepage: https://asyncssh.readthedocs.io/
 source-repository: https://github.com/ronf/asyncssh
 license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 2.13.0
-    date: 2022-12-27
-changelog: http://asyncssh.readthedocs.io/en/latest/changes.html
+    version: 2.15.0
+    date: 2024-07-03
+changelog: https://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
 
@@ -118,6 +118,9 @@ protocols:
         - rsa2048-sha256                                # since 1.13.1
         - rsa1024-sha1                                  # since 1.13.1
         - ext-info-c                                    # since 1.7.0
+        - ext-info-s
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - umac-64-etm@openssh.com                       # since 1.8.0
         - umac-128-etm@openssh.com                      # since 1.8.0
@@ -152,6 +155,7 @@ protocols:
         - keyboard-interactive
         - password
     extension:
+        - global-requests-ok
         - server-sig-algs                               # since 1.7.0
 
 first_kex_packet_follows: 1
