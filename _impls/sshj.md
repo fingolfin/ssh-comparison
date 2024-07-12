@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.26.0
-    date: 2018-07-24
+    version: 0.38.0
+    date: 2024-01-02
 #changelog: URL
 client: no
 server: no
@@ -18,13 +18,16 @@ protocols:
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
-        - aes128-cbc 
-        - aes192-cbc 
-        - aes256-cbc 
+        - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
+        - aes128-gcm@openssh.com
+        - aes256-gcm@openssh.com
         - 3des-ctr
         - 3des-cbc
         - blowfish-ctr
         - blowfish-cbc
+        - chacha20-poly1305@openssh.com
         - twofish128-ctr
         - twofish192-ctr
         - twofish256-ctr
@@ -68,8 +71,14 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - ssh-ed25519
+        - rsa-sha2-256
+        - rsa-sha2-512
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss-cert-v01@openssh.com
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
     kex:
         - curve25519-sha256
         - curve25519-sha256@libssh.org
@@ -93,6 +102,9 @@ protocols:
         - diffie-hellman-group17-sha512
         - diffie-hellman-group18-sha512
         - diffie-hellman-group18-sha512@ssh.com
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha1
         - hmac-sha1-96
@@ -102,6 +114,13 @@ protocols:
         - hmac-sha2-512
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
+        - hmac-md5-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-ripemd160-etm@openssh.com
     userauth:
         - publickey
         - password
