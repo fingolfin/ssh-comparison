@@ -83,6 +83,7 @@ protocols:
         - publickey
         - gssapi-with-mic           # only OID 1.2.840.113554.1.2.2 / Kerberos
         - hostbased
+        - publickey-hostbound-v00@openssh.com
     extension:
         - publickey-hostbound@openssh.com
         - server-sig-algs

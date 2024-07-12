@@ -110,6 +110,7 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+        - publickey-hostbound-v00@openssh.com
     extension:
         - ext-info-in-auth@openssh.com      # since 9.6
         - ping@openssh.com                  # since 9.5

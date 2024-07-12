@@ -456,6 +456,8 @@ openssh:
             - kex-strict-c-v00@openssh.com
             - kex-strict-s-v00@openssh.com
             - sntrup761x25519-sha512@openssh.com # see also https://www.openssh.com/txt/release-9.0
+        userauth:
+            - publickey-hostbound-v00@openssh.com
         extension:
             - ext-info-in-auth@openssh.com
             - ping@openssh.com
