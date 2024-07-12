@@ -1,13 +1,13 @@
 ---
 title: Dropbear
 homepage: https://matt.ucc.asn.au/dropbear/dropbear.html
-source-repository: https://secure.ucc.asn.au/hg/dropbear/
-license: "[MIT style](https://secure.ucc.asn.au/hg/dropbear/raw-file/tip/LICENSE)"
+source-repository: https://github.com/mkj/dropbear
+license: "[MIT style](https://github.com/mkj/dropbear/blob/master/LICENSE)"
 first-release:
     date: 2003-04-06    # according to CHANGES file
 latest-release:
-    version: 2022.82
-    date: 2022-04-01
+    version: 2024.85
+    date: 2024-04-25
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
@@ -37,7 +37,7 @@ protocols:
         - ecdsa-sha2-nistp521
         - ssh-rsa
         - rsa-sha2-256                   # since 2022.82
-        - ssh-dss
+        # - ssh-dss                      # disabled by default since 2022.83
         - ssh-ed25519                    # since 2020.79
         - sk-ssh-ed25519@openssh.com     # since 2022.82
         - sk-ecdsa-sha2-nistp256@openssh.com     # since 2022.82
@@ -52,17 +52,23 @@ protocols:
         # - diffie-hellman-group16-sha512   # since 2018.76. disabled by default
         # - diffie-hellman-group1-sha1    # disabled by default
         - kexguess2@matt.ucc.asn.au     # Dropbear extension (only documented in their CHANGES file?)
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         # - hmac-sha1-96   # disabled by default
         - hmac-sha1
         - hmac-sha2-256
+        # - hmac-sha2-512  # disabled by default
     userauth:
         - publickey
         - password
         - keyboard-interactive
+    extension:
+        - server-sig-algs
 
 first_kex_packet_follows: 1
-ident: "SSH-2.0-dropbear_2022.82"
+ident: "SSH-2.0-dropbear_2024.85"
 ---
 * Server and client for POSIX-based platforms.
 * [Wikipedia](https://en.wikipedia.org/wiki/Dropbear_%28software%29)
