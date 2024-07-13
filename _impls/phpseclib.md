@@ -1,22 +1,23 @@
 ---
 title: phpseclib
-homepage: http://phpseclib.sourceforge.net/
+homepage: https://phpseclib.com/
 source-repository: https://github.com/phpseclib/phpseclib
 license: "[MIT style](https://github.com/phpseclib/phpseclib/blob/master/LICENSE)"
 first-release:
     date: 2007-09-23
 latest-release:
-    version: 3.0.2
-    date: 2020-12-24
+    version: 3.0.39
+    date: 2024-06-24
 changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
-client: unknown
-server: unknown
+client: yes
+server: no
 library: client
 
 protocols:
     cipher:
         - aes128-gcm@openssh.com
         - aes256-gcm@openssh.com
+        - arcfour
         - arcfour256
         - arcfour128
         - aes128-ctr
@@ -39,6 +40,8 @@ protocols:
         - 3des-cbc
     compression:
         - none
+        - zlib
+        - zlib@openssh.com
     hostkey:
         - ssh-ed25519
         - ecdsa-sha2-nistp256
@@ -63,6 +66,9 @@ protocols:
         - diffie-hellman-group16-sha512
         - diffie-hellman_group17-sha512
         - diffie-hellman-group18-sha512
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-256-etm@openssh.com
         - hmac-sha2-512-etm@openssh.com
@@ -81,5 +87,7 @@ protocols:
         - keyboard-interactive
         - publickey
         - password
+    extension:
+        - server-sig-algs
 ---
 * Pure PHP implementation.
