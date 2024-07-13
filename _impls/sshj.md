@@ -10,7 +10,7 @@ latest-release:
     version: 0.38.0
     date: 2024-01-02
 #changelog: URL
-client: no
+client: yes
 server: no
 library: client
 protocols:
