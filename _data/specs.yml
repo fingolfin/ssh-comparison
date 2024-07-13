@@ -376,6 +376,24 @@ draft-ietf-secsh-filexfer-02:
     url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
     title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
+draft-josefsson-ntruprime-ssh-02:
+    name: draft-josefsson-ntruprime-ssh-02
+    url: https://tools.ietf.org/html/draft-josefsson-ntruprime-ssh-02.html
+    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2024-03-22 ]"
+    protocols:
+        kex:
+            - sntrup761x25519-sha512
+
+draft-kampanakis-curdle-ssh-pq-ke-02:
+    name: draft-kampanakis-curdle-ssh-pq-ke-02
+    url: https://tools.ietf.org/html/draft-kampanakis-curdle-ssh-pq-ke-02.html
+    title: "PQ/T Hybrid Key Exchange in SSH [ expired 2024-11-11 ]"
+    protocols:
+        kex:
+            - mlkem768nistp256-sha256
+            - mlkem1024nistp384-sha384
+            - mlkem768x25519-sha256
+
 draft-kanno-secsh-camellia-02:
     name: draft-kanno-secsh-camellia-02
     url: https://tools.ietf.org/html/draft-kanno-secsh-camellia-02

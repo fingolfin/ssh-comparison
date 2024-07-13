@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.3.0
-    date: 2023-06-12
+    version: 2.4.2
+    date: 2024-05-27
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
@@ -79,7 +79,11 @@ protocols:
         - ssh-dss-cert-v01@openssh.com
         - ssh-dss
     kex:
+        - sntrup761x25519-sha512
         - sntrup761x25519-sha512@openssh.com
+        - mlkem768x25519-sha256
+        - mlkem768nistp256-sha256
+        - mlkem1024nistp384-sha384
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - curve448-sha512
@@ -102,6 +106,8 @@ protocols:
         - rsa1024-sha1
         - ext-info-c
         - ext-info-s
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-256
         - hmac-sha2-256-etm@openssh.com
@@ -111,6 +117,7 @@ protocols:
         - hmac-sha1-etm@openssh.com
         - hmac-sha1-96
         - hmac-sha1-96-etm@openssh.com
+        - hmac-ripemd160
         - hmac-ripemd160@openssh.com
         - hmac-ripemd160-etm@openssh.com
         - hmac-md5
