@@ -11,6 +11,7 @@ latest-release:
 changelog: https://github.com/mwiede/jsch/blob/master/ChangeLog.md
 client: yes
 server: no
+library: client
 
 protocols:
     cipher:
