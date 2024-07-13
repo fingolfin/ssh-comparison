@@ -1,18 +1,18 @@
 ---
 title: libssh
-homepage: http://www.libssh.org/
-source-repository: http://git.libssh.org/projects/libssh.git
+homepage: https://www.libssh.org/
+source-repository: https://git.libssh.org/projects/libssh.git
 references:
-    - http://api.libssh.org/stable/
+    - https://api.libssh.org/stable/
 license: "[LGPL 2.1](https://git.libssh.org/projects/libssh.git/tree/COPYING)"
 first-release:
     date: 2003-09-03
 # Looking at the initial commit in the git repository, it contains
 # a CHANGELOG which contains the date of the initial release.
 latest-release:
-    version: 0.9.1
-    date: 2019-10-25
-changelog: https://git.libssh.org/projects/libssh.git/tree/ChangeLog
+    version: 0.10.6
+    date: 2023-12-18
+changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG
 client: yes
 server: yes
 library: both
@@ -55,6 +55,10 @@ protocols:
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss
         - ssh-dss-cert-v01@openssh.com
+        - sk-ssh-ed25519@openssh.com                  # since 0.10.0, server side only
+        - sk-ssh-ed25519-cert-v01@openssh.com         # since 0.10.0, server side only
+        - sk-ecdsa-sha2-nistp256@openssh.com          # since 0.10.0, server side only
+        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com # since 0.10.0, server side only
     kex:
         - curve25519-sha256
         - curve25519-sha256@libssh.org
@@ -63,10 +67,14 @@ protocols:
         - ecdh-sha2-nistp256
         - diffie-hellman-group18-sha512
         - diffie-hellman-group16-sha512
+        - diffie-hellman-group14-sha256
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha2-256-etm@openssh.com
@@ -80,6 +88,8 @@ protocols:
         - hostbased
         - keyboard-interactive
         - gssapi-with-mic
+    extension:
+        - server-sig-algs
 ---
 * Mulitplatform C library for clients and servers.
 * Not to be confused with the unrelated [libssh2](/impls/libssh2.html)
