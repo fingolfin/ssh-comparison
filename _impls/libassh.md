@@ -1,13 +1,13 @@
 ---
 title: libassh
-homepage: http://libassh.org/
+homepage: https://www.nongnu.org/libassh/
 source-repository: https://hg.savannah.nongnu.org/hgweb/libassh/
 license: "[LGPL 2.1](https://www.nongnu.org/libassh/manual/Copyright_and_license.html)"
 first-release:
     date: 2020-09-28
 latest-release:
-    version: 1.0
-    date: 2021-01-03
+    version: 1.1
+    date: 2023-02-05
 #changelog: TODO available in the next release :)
 client: yes
 server: yes
@@ -19,11 +19,13 @@ protocols:
         - aes128-cbc
         - aes128-ctr
         - aes128-gcm@openssh.com
+        - aes128-ocb@libassh.org
         - aes192-cbc
         - aes192-ctr
         - aes256-cbc
         - aes256-ctr
         - aes256-gcm@openssh.com
+        - aes256-ocb@libassh.org
         - arcfour
         - arcfour128
         - arcfour256
