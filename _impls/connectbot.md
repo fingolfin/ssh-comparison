@@ -1,18 +1,18 @@
 ---
 title: ConnectBot
 homepage: https://connectbot.org/
-source-repository: https://github.com/connectbot/connectbot/
+source-repository: https://github.com/connectbot/connectbot
 developer: Kenny Root
-license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/master/LICENSE)"
+license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/main/LICENSE)"
 first-release:
     date: 2007-11   # according to Wikipedia
 latest-release:
-    version: 1.9.5
-    date: 2018-11-06
-#changelog: URL
+    version: 1.9.10
+    date: 2023-12-20
+changelog: https://github.com/connectbot/connectbot/blob/main/CHANGELOG.md
 client: yes
 server: no
-library: yes
+library: client
 platforms:
     - android
 protocols:
@@ -49,6 +49,9 @@ protocols:
         - diffie-hellman-group14-sha256
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha2-256-etm@openssh.com
