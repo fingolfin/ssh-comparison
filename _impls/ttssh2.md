@@ -1,14 +1,14 @@
 ---
 title: Tera Term
-homepage: https://ttssh2.osdn.jp/
-source-repository: https://en.osdn.jp/projects/ttssh2/scm/svn/
-license: "[BSD style](http://ttssh2.osdn.jp/manual/en/about/copyright.html)"
+homepage: https://teratermproject.github.io/index-en.html
+source-repository: https://github.com/TeraTermProject/teraterm
+license: "[BSD style](https://teratermproject.github.io/manual/5/en/about/copyright.html)"
 first-release:
     date: 2004    # according to Wikipedia
 latest-release:
-    version: 4.89
-    date: 2015-12-01
-#changelog: TODO
+    version: 5.2
+    date: 2024-02-28
+changelog: https://teratermproject.github.io/manual/5/en/about/history.html
 client: yes
 server: no
 library: no
@@ -38,6 +38,9 @@ protocols:
         - camellia128-ctr
         - camellia192-ctr
         - camellia256-ctr
+        - aes128-gcm@openssh.com
+        - aes256-gcm@openssh.com
+        - chacha20-poly1305@openssh.com
     compression:
         - zlib
         - zlib@openssh.com
@@ -49,6 +52,8 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - ssh-ed25519
+        - rsa-sha2-256
+        - rsa-sha2-512
     kex:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
@@ -60,6 +65,9 @@ protocols:
         - diffie-hellman-group14-sha256
         - diffie-hellman-group15-sha256
         - diffie-hellman-group16-sha256
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha1
         - hmac-md5
@@ -68,11 +76,20 @@ protocols:
         - hmac-ripemd160@openssh.com
         - hmac-sha2-256
         - hmac-sha2-512
+        - hmac-sha1-etm@openssh.com
+        - hmac-md5-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+        - hmac-ripemd160-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
     userauth:
         - password
         - publickey
         - keyboard-interactive
+    extension:
+        - server-sig-algs
 
-ident: "SSH-2.0-TTSSH/2.75 Win32"
+ident: "SSH-2.0-TTSSH/3.2 Win32"
 ---
 * [Wikipedia page](https://en.wikipedia.org/wiki/Tera_Term)
