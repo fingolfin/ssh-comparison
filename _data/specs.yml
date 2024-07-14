@@ -384,6 +384,17 @@ draft-josefsson-ntruprime-ssh-02:
         kex:
             - sntrup761x25519-sha512
 
+draft-kampanakis-curdle-ssh-pq-ke-01:
+    name: draft-kampanakis-curdle-ssh-pq-ke-01
+    url: https://tools.ietf.org/html/draft-kampanakis-curdle-ssh-pq-ke-01.html
+    title: "Post-quantum Hybrid Key Exchange in SSH [ expired 2023-10-12 ]"
+    protocols:
+        kex:
+            - ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org
+            - ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org
+            - ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org
+            - x25519-kyber-512r3-sha256-d00@amazon.com
+
 draft-kampanakis-curdle-ssh-pq-ke-02:
     name: draft-kampanakis-curdle-ssh-pq-ke-02
     url: https://tools.ietf.org/html/draft-kampanakis-curdle-ssh-pq-ke-02.html
