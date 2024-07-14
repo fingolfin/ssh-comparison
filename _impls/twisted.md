@@ -6,12 +6,12 @@ license: "[MIT](https://github.com/twisted/twisted/blob/trunk/LICENSE)"
 first-release:
     date: 2002-07-07    # Conch renamed from twisted.secsh
 latest-release:
-    version: 2022.10.0
-    date: 2022-10-31
+    version: 2024.3.0
+    date: 2024-03-01
 changelog: https://github.com/twisted/twisted/blob/trunk/NEWS.rst
-client: no
-server: no
-library: yes (client and server)
+client: yes
+server: yes
+library: both
 platforms:
     - linux
     - windows
@@ -56,13 +56,16 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - ext-info-c
+        - ext-info-s
     # https://github.com/twisted/twisted/blob/2a33824557ed65d2241a51d6bba07ac76521b50f/src/twisted/conch/ssh/transport.py#L110
     mac:
         - hmac-md5
         - hmac-sha1
         - hmac-sha2-256
-        - hmac-sha2-348
+        - hmac-sha2-384
         - hmac-sha2-512
+        - none
     userauth:
         - publickey
         - password
@@ -71,7 +74,7 @@ protocols:
         - server-sig-algs                   # since 22.4.0
 
 first_kex_packet_follows: 1
-ident: "SSH-2.0-Twisted_2022.10.0"
+ident: "SSH-2.0-Twisted_2024.3.0"
 ---
 * Designed as a [Python](https://www.python.org/) library.
 * Cryptograpy provided by [cryptography](https://cryptography.io/) library, that provides bindings for [OpenSSL](https://www.openssl.org/) or [LibreSSL](https://www.libressl.org/)
