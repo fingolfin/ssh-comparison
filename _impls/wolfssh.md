@@ -2,7 +2,7 @@
 title: wolfSSH
 homepage: https://www.wolfssl.com/products/wolfssh/
 source-repository: https://github.com/wolfSSL/wolfssh
-license: "[GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/LICENSING)"
+license: "Dual license: [GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/LICENSING) or [commercial](https://www.wolfssl.com/license/)"
 first-release:
     date: 2016-10-24
 latest-release:
