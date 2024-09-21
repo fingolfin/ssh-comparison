@@ -10,8 +10,8 @@ first-release:
 # Looking at the initial commit in the git repository, it contains
 # a CHANGELOG which contains the date of the initial release.
 latest-release:
-    version: 0.10.6
-    date: 2023-12-18
+    version: 0.11.1
+    date: 2024-08-30
 changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG
 client: yes
 server: yes
@@ -35,7 +35,7 @@ protocols:
         - blowfish-cbc
         - 3des-cbc
     compression:
-        - zlib
+        - zlib             # disabled by default since 0.11.0
         - zlib@openssh.com
         - none
     hostkey:
@@ -53,8 +53,8 @@ protocols:
         - rsa-sha2-256-cert-v01@openssh.com
         - ssh-rsa
         - ssh-rsa-cert-v01@openssh.com
-        - ssh-dss
-        - ssh-dss-cert-v01@openssh.com
+        #- ssh-dss                                    # removed in 0.11.0
+        #- ssh-dss-cert-v01@openssh.com               # removed in 0.11.0
         - sk-ssh-ed25519@openssh.com                  # since 0.10.0, server side only
         - sk-ssh-ed25519-cert-v01@openssh.com         # since 0.10.0, server side only
         - sk-ecdsa-sha2-nistp256@openssh.com          # since 0.10.0, server side only
