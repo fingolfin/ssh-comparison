@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.38.0
-    date: 2024-01-02
+    version: 0.39.0
+    date: 2024-09-13
 #changelog: URL
 client: yes
 server: no
