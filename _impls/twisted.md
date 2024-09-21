@@ -6,8 +6,8 @@ license: "[MIT](https://github.com/twisted/twisted/blob/trunk/LICENSE)"
 first-release:
     date: 2002-07-07    # Conch renamed from twisted.secsh
 latest-release:
-    version: 2024.3.0
-    date: 2024-03-01
+    version: 2024.7.0
+    date: 2024-08-08
 changelog: https://github.com/twisted/twisted/blob/trunk/NEWS.rst
 client: yes
 server: yes
