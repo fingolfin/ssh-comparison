@@ -6,8 +6,8 @@ license: "Dual license: [GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/L
 first-release:
     date: 2016-10-24
 latest-release:
-    version: 1.4.17
-    date: 2024-03-25
+    version: 1.4.18
+    date: 2024-07-22
 changelog: https://github.com/wolfSSL/wolfssh/blob/master/ChangeLog.md
 client: yes
 server: yes
@@ -33,6 +33,7 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - ssh-ed25519
         - x509v3-ssh-rsa
         - x509v3-ecdsa-sha2-nistp256
         - x509v3-ecdsa-sha2-nistp384
