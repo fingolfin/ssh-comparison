@@ -6,8 +6,8 @@ license: "[BSD style](https://teratermproject.github.io/manual/5/en/about/copyri
 first-release:
     date: 2004    # according to Wikipedia
 latest-release:
-    version: 5.2
-    date: 2024-02-28
+    version: 5.3
+    date: 2024-09-08
 changelog: https://teratermproject.github.io/manual/5/en/about/history.html
 client: yes
 server: no
