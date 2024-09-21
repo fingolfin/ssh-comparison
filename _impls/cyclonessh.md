@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.4.2
-    date: 2024-05-27
+    version: 2.4.4
+    date: 2024-09-02
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
