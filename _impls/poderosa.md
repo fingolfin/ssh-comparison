@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/poderosaproject/poderosa/blob/master/L
 #    date: YYYY-MM-DD
 #   version 3.0.0 on SourceForge.net ist dated 2005-04-28
 latest-release:
-    version: 4.6.0
-    date: 2024-02-12
+    version: 4.7.0
+    date: 2024-08-20
 changelog: https://github.com/poderosaproject/poderosa/blob/master/ChangeLog.txt
 client: yes
 server: no
@@ -18,6 +18,10 @@ platforms:
 
 protocols:
     cipher:
+        - aes256-gcm@openssh.coom
+        - AEAD_AES_256_GCM
+        - aes128-gcm@openssh.coom
+        - AEAD_AES_128_GCM
         - aes256-ctr
         - aes256-cbc
         - aes192-ctr
@@ -51,6 +55,8 @@ protocols:
         - curve448-sha512
         - ext-info-c
     mac:
+        - AEAD_AES_256_GCM
+        - AEAD_AES_128_GCM
         - hmac-sha1
         - hmac-sha2-256
         - hmac-sha2-512
