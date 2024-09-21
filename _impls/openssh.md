@@ -7,8 +7,8 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 9.8
-    date: 2024-07-01
+    version: 9.9
+    date: 2024-09-19
 changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
@@ -42,7 +42,7 @@ protocols:
     compression:
         - none
         - zlib@openssh.com
-        - zlib
+        #- zlib            # removed in 9.9
     hostkey:
         - rsa-sha2-256                      # since 7.1; see https://tools.ietf.org/html/draft-rsa-dsa-sha2-256-03
         - rsa-sha2-512                      # since 7.1; see https://tools.ietf.org/html/draft-rsa-dsa-sha2-256-03
@@ -84,6 +84,8 @@ protocols:
         - kex-strict-c-v00@openssh.com      # since 9.6
         - kex-strict-s-v00@openssh.com      # since 9.6
         - sntrup761x25519-sha512@openssh.com # since 8.5
+        - sntrup761x25519-sha512            # since 9.9
+        - mlkem768x25519-sha256             # since 9.9
     mac:
         - umac-64-etm@openssh.com           # since 6.2
         - umac-128-etm@openssh.com          # since 6.2
