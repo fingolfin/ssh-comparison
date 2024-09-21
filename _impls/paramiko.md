@@ -6,8 +6,8 @@ license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
 first-release:
     date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
-    version: 3.4.0
-    date: 2023-12-18
+    version: 3.5.0
+    date: 2024-09-15
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes
@@ -22,6 +22,8 @@ protocols:
         #- blowfish-cbc         # removed in 2.11.0
         - aes192-cbc            # since 1.16.0 (2015-11-04)
         - aes256-cbc
+        - aes128-gcm@openssh.com # since 3.5.0
+        - aes256-gcm@openssh.com # since 3.5.0
         - 3des-cbc
         #- arcfour128           # removed in 2.1.3
         #- arcfour256           # removed in 2.1.3
