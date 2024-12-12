@@ -6,8 +6,8 @@ license: "[EPL v2.0](https://www.eclipse.org/legal/epl-2.0/faq.php)"
 first-release:
     date: 2013-09-14
 latest-release:
-    version: 2.17.0
-    date: 2024-09-02
+    version: 2.18.0
+    date: 2024-10-26
 changelog: https://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
@@ -91,6 +91,10 @@ protocols:
         - gss-group18-sha512-*                          # since 1.9.0
         - gss-group14-sha1-*                            # since 1.9.0
         - gss-group1-sha1-*                             # since 1.9.0
+        - mlkem768x25519-sha256                         # since 2.18.0
+        - mlkem768nistp256-sha256                       # since 2.18.0
+        - mlkem1024nistp384-sha384                      # since 2.18.0
+        - sntrup761x25519-sha512                        # since 2.18.0
         - sntrup761x25519-sha512@openssh.com            # since 2.12.0
         - curve25519-sha256                             # since 1.8.0
         - curve25519-sha256@libssh.org                  # since 1.0.0
