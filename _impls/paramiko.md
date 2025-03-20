@@ -6,8 +6,8 @@ license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
 first-release:
     date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
-    version: 3.5.0
-    date: 2024-09-15
+    version: 3.5.1
+    date: 2025-02-03
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes

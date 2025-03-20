@@ -376,13 +376,23 @@ draft-ietf-secsh-filexfer-02:
     url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
     title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
 
-draft-ietf-sshm-chacha20-poly1305-00:
-    name: draft-ietf-sshm-chacha20-poly1305-00
-    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-00.html
-    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2025-07-10 ]"
+draft-ietf-sshm-chacha20-poly1305-01:
+    name: draft-ietf-sshm-chacha20-poly1305-01
+    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-01.html
+    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2025-09-18 ]"
     protocols:
         cipher:
             - chacha20-poly1305
+
+draft-ietf-sshm-mlkem-hybrid-kex-00:
+    name: draft-ietf-sshm-mlkem-hybrid-kex-00
+    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-00.html
+    title: "PQ/T Hybrid Key Exchange in SSH [ expired 2025-08-02 ]"
+    protocols:
+        kex:
+            - mlkem768nistp256-sha256
+            - mlkem1024nistp384-sha384
+            - mlkem768x25519-sha256
 
 draft-ietf-sshm-ntruprime-ssh-01:
     name: draft-ietf-sshm-ntruprime-ssh-01
@@ -391,6 +401,30 @@ draft-ietf-sshm-ntruprime-ssh-01:
     protocols:
         kex:
             - sntrup761x25519-sha512
+
+draft-josefsson-ssh-frodokem-00:
+    name: draft-josefsson-ssh-frodokem-00
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-frodokem-00.html
+    title: "Secure Shell Key Exchange Method Using Chempat Hybrid of FrodoKEM-976 and X25519 with SHA-512: frodokem976x25519-sha512 [ expired 2025-09-19 ]"
+    protocols:
+        kex:
+            - frodokem976x25519-sha512
+
+draft-josefsson-ssh-mceliece-01:
+    name: draft-josefsson-ssh-mceliece-01
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-mceliece-01.html
+    title: "Secure Shell Key Exchange Method Using Chempat Hybrid of Classic McEliece and X25519 with SHA-512: mceliece6688128x25519-sha512 [ expired 2025-09-19 ]"
+    protocols:
+        kex:
+            - mceliece6688128x25519-sha512
+
+draft-josefsson-ssh-sphincs-00:
+    name: draft-josefsson-ssh-sphincs-00
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-sphincs-00.html
+    title: "Stateless Hash-Based Signatures for the Secure Shell (SSH) Protocol [ expired 2025-08-08 ]"
+    protocols:
+        hostkey:
+            - ssh-slh-dsa-sha2-256f
 
 draft-kampanakis-curdle-ssh-pq-ke-01:
     name: draft-kampanakis-curdle-ssh-pq-ke-01
@@ -402,16 +436,6 @@ draft-kampanakis-curdle-ssh-pq-ke-01:
             - ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org
             - ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org
             - x25519-kyber-512r3-sha256-d00@amazon.com
-
-draft-kampanakis-curdle-ssh-pq-ke-05:
-    name: draft-kampanakis-curdle-ssh-pq-ke-05
-    url: https://tools.ietf.org/html/draft-kampanakis-curdle-ssh-pq-ke-05.html
-    title: "PQ/T Hybrid Key Exchange in SSH [ expired 2025-06-08 ]"
-    protocols:
-        kex:
-            - mlkem768nistp256-sha256
-            - mlkem1024nistp384-sha384
-            - mlkem768x25519-sha256
 
 draft-kanno-secsh-camellia-02:
     name: draft-kanno-secsh-camellia-02
@@ -430,6 +454,24 @@ draft-kanno-secsh-camellia-02:
         mac:
             - AEAD_CAMELLIA_128_GCM
             - AEAD_CAMELLIA_256_GCM
+
+draft-miller-sshm-aes-gcm-00:
+    name: draft-miller-sshm-aes-gcm-00
+    url: https://tools.ietf.org/html/draft-miller-sshm-aes-gcm-00.html
+    title: "Fixed AES-GCM modes for the SSH protocol [ expired 2025-09-19 ]"
+    protocols:
+        cipher:
+            - aes128-gcm
+            - aes256-gcm
+
+draft-miller-sshm-strict-kex-01:
+    name: draft-miller-sshm-strict-kex-01
+    url: https://tools.ietf.org/html/draft-miller-sshm-strict-kex-01.html
+    title: "SSH Strict KEX extension [ expired 2025-09-19 ]"
+    protocols:
+        kex:
+            - kex-strict-c
+            - kex-strict-s
 
 draft-ssh-ext-auth-info-01:
     name: draft-ssh-ext-auth-info-01
