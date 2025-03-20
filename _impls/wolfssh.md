@@ -6,8 +6,8 @@ license: "Dual license: [GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/L
 first-release:
     date: 2016-10-24
 latest-release:
-    version: 1.4.19
-    date: 2024-11-01
+    version: 1.4.20
+    date: 2025-02-20
 changelog: https://github.com/wolfSSL/wolfssh/blob/master/ChangeLog.md
 client: yes
 server: yes
@@ -42,6 +42,7 @@ protocols:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256
+        - diffie-hellman-group16-sha512
         - diffie-hellman-group-exchange-sha256
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
@@ -53,7 +54,9 @@ protocols:
         - hmac-sha1
         - hmac-sha1-96
         - hmac-sha2-256
+        - hmac-sha2-512
     userauth:
+        - keyboard-interactive
         - password
         - publickey
     extension:
