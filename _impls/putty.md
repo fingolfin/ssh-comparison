@@ -15,8 +15,8 @@ first-release:
 # the development code made its first successful SSH connection 1998-05-29.
 # So, all in all, this is why I give 1998 as date of the first release.
 latest-release:
-    version: 0.82
-    date: 2024-11-27
+    version: 0.83
+    date: 2025-02-08
 changelog: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
@@ -81,6 +81,10 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - mlkem768x25519-sha256
+        - mlkem768nistp256-sha256
+        - mlkem1024nistp384-sha384
+        - sntrup761x25519-sha512
         - sntrup761x25519-sha512@openssh.com
         - rsa1024-sha1
         - rsa2048-sha256
