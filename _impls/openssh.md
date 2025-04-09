@@ -7,8 +7,8 @@ license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 9.9
-    date: 2024-09-19
+    version: 10.0
+    date: 2025-04-09
 changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
 # perhaps http://www.openssh.com/txt/ is better changelog link?
 client: yes
@@ -51,7 +51,7 @@ protocols:
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - ssh-ed25519-cert-v01@openssh.com  # since 6.5
         - ssh-rsa-cert-v01@openssh.com
-        - ssh-dss-cert-v01@openssh.com      # disabled by default since 7.0
+        #- ssh-dss-cert-v01@openssh.com      # removed in 10.0
         - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-512-cert-v01@openssh.com
         #- ssh-rsa-cert-v00@openssh.com      # removed in 7.0
@@ -61,7 +61,7 @@ protocols:
         - ecdsa-sha2-nistp521               # since 5.7
         - ssh-ed25519                       # since 6.5
         - ssh-rsa
-        - ssh-dss                           # disabled by default since 7.0
+        #- ssh-dss                           # removed in 10.0
         - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
         - sk-ecdsa-sha2-nistp256@openssh.com
         - sk-ssh-ed25519-cert-v01@openssh.com
@@ -72,13 +72,13 @@ protocols:
         - ecdh-sha2-nistp256                # since 5.7
         - ecdh-sha2-nistp384                # since 5.7
         - ecdh-sha2-nistp521                # since 5.7
-        - diffie-hellman-group-exchange-sha256  # since 4.3
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha256  # disabled by default since 10.0
+        - diffie-hellman-group-exchange-sha1    # disabled by default since 10.0
+        - diffie-hellman-group14-sha1       # disabled by default since 10.0
         - diffie-hellman-group1-sha1        # disabled by default since 7.0; susceptible to logjam
-        - diffie-hellman-group14-sha256     # since 7.3
-        - diffie-hellman-group16-sha512     # since 7.3
-        - diffie-hellman-group18-sha512     # since 7.3
+        - diffie-hellman-group14-sha256     # disabled by default since 10.0
+        - diffie-hellman-group16-sha512     # disabled by default since 10.0
+        - diffie-hellman-group18-sha512     # disabled by default since 10.0
         - ext-info-c                        # since 7.2
         - ext-info-s                        # since 7.2
         - kex-strict-c-v00@openssh.com      # since 9.6
