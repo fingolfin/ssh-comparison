@@ -414,10 +414,10 @@ draft-ietf-sshm-mlkem-hybrid-kex-02:
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
 
-draft-ietf-sshm-ntruprime-ssh-01:
-    name: draft-ietf-sshm-ntruprime-ssh-01
-    url: https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-01.html
-    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2025-06-12 ]"
+draft-ietf-sshm-ntruprime-ssh-02:
+    name: draft-ietf-sshm-ntruprime-ssh-02
+    url: https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-02.html
+    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2025-10-26 ]"
     protocols:
         kex:
             - sntrup761x25519-sha512
@@ -451,10 +451,10 @@ draft-josefsson-ssh-sphincs-00:
         hostkey:
             - ssh-slh-dsa-sha2-256f
 
-draft-josefsson-sshsig-format-01:
-    name: draft-josefsson-sshsig-format-01
-    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-01.html
-    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2025-09-22 ]"
+draft-josefsson-sshsig-format-02:
+    name: draft-josefsson-sshsig-format-02
+    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-02.html
+    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2025-10-26 ]"
 
 draft-kampanakis-curdle-ssh-pq-ke-01:
     name: draft-kampanakis-curdle-ssh-pq-ke-01
@@ -496,10 +496,10 @@ draft-miller-secsh-umac-01:
             - umac-96
             - umac-128
 
-draft-miller-ssh-cert-00:
-    name: draft-miller-ssh-cert-00
-    url: https://tools.ietf.org/html/draft-miller-ssh-cert-00.html
-    title: "SSH Certificate Format [ expired 2025-09-20 ]"
+draft-miller-ssh-cert-01:
+    name: draft-miller-ssh-cert-01
+    url: https://tools.ietf.org/html/draft-miller-ssh-cert-01.html
+    title: "SSH Certificate Format [ expired 2025-10-25 ]"
     protocols:
         hostkey:
             - ssh-dss-cert
