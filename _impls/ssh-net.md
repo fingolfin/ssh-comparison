@@ -6,8 +6,8 @@ license: "[MIT license](https://github.com/sshnet/SSH.NET/blob/develop/LICENSE)"
 first-release:
     date: 2010-09-16
 latest-release:
-    version: 2024.2.0
-    date: 2024-11-11
+    version: 2025.0.0
+    date: 2025-04-18
 changelog: https://github.com/sshnet/SSH.NET/releases
 client: yes
 server: no
@@ -45,7 +45,7 @@ protocols:
         - rsa-sha2-512-cert-v01@openssh.com        # since 2024.2.0
         - rsa-sha2-256-cert-v01@openssh.com        # since 2024.2.0
         - ssh-rsa-cert-v01@openssh.com             # since 2024.2.0
-        - ssh-dss-cert-v01@openssh.com             # since 2024.2.0
+        #- ssh-dss-cert-v01@openssh.com            # removed in 2025.0.0
         - ssh-ed25519
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
@@ -53,7 +53,7 @@ protocols:
         - rsa-sha2-512
         - rsa-sha2-256
         - ssh-rsa
-        - ssh-dss
+        #- ssh-dss                                 # removed in 2025.0.0
     kex:
         - curve25519-sha256
         - curve25519-sha256@libssh.org
@@ -68,6 +68,9 @@ protocols:
         - diffie-hellman-group1-sha1
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
+        - mlkem768x25519-sha256                # since 2025.0.0
+        - sntrup761x25519-sha512               # since 2025.0.0
+        - sntrup761x25519-sha512@openssh.com   # since 2025.0.0
     mac:
         #- hmac-md5                      # removed in 2024.2.0
         #- hmac-md5-96                   # removed in 2024.2.0
