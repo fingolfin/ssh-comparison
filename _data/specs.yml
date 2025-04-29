@@ -358,10 +358,10 @@ rfc9519:
     url: https://tools.ietf.org/html/rfc9519
     title: "Update to the IANA SSH Protocol Parameters Registry Requirements"
 
-draft-becker-cnsa2-ssh-profile-00:
-    name: draft-becker-cnsa2-ssh-profile-00
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-00.html
-    title: "Commercial National Security Algorithm (CNSA) Suite Profile for SSH [ expired 2025-09-04 ]"
+draft-becker-cnsa2-ssh-profile-01:
+    name: draft-becker-cnsa2-ssh-profile-01
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-01.html
+    title: "Commercial National Security Algorithm (CNSA) Suite Profile for SSH [ expired 2025-10-19 ]"
 
 draft-gutmann-ssh-preauth-03:
     name: draft-gutmann-ssh-preauth-03
