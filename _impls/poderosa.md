@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/poderosaproject/poderosa/blob/master/L
 #    date: YYYY-MM-DD
 #   version 3.0.0 on SourceForge.net ist dated 2005-04-28
 latest-release:
-    version: 4.7.0
-    date: 2024-08-20
+    version: 4.8.0
+    date: 2025-05-08
 changelog: https://github.com/poderosaproject/poderosa/blob/master/ChangeLog.txt
 client: yes
 server: no
