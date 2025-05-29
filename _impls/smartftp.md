@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 10.0.3258
-    date: 2025-02-11
+    version: 10.0.3273
+    date: 2025-05-29
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -44,6 +44,9 @@ protocols:
         - ssh-ed25519-cert-v01@openssh.com
         - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-512-cert-v01@openssh.com
+        - ssh-mldsa44
+        - ssh-mldsa65
+        - ssh-mldsa87
     kex:
         - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256
