@@ -368,15 +368,15 @@ draft-gutmann-ssh-preauth-03:
     url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-03.html
     title: "A Pre-Authentication Mechanism for SSH [ expired 2025-08-21 ]"
 
-draft-harrison-mlkem-ssh-01:
-    name: draft-harrison-mlkem-ssh-01
-    url: https://tools.ietf.org/html/draft-harrison-mlkem-ssh-01.html
-    title: "Module-Lattice Key Exchange in SSH [ expired 2025-08-22 ]"
+draft-harrison-sshm-mlkem-00:
+    name: draft-harrison-sshm-mlkem-00
+    url: https://tools.ietf.org/html/draft-harrison-sshm-mlkem-00.html
+    title: "Module-Lattice Key Exchange in SSH [ expired 2025-12-07 ]"
     protocols:
         kex:
-            - ml-kem-512-sha256
-            - ml-kem-768-sha256
-            - ml-kem-1024-sha384
+            - mlkem512-sha256
+            - mlkem768-sha256
+            - mlkem1024-sha384
 
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
@@ -422,10 +422,10 @@ draft-ietf-sshm-ntruprime-ssh-03:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-02:
-    name: draft-ietf-sshm-ssh-agent-02
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-02.html
-    title: "SSH Agent Protocol [ expired 2025-09-18 ]"
+draft-ietf-sshm-ssh-agent-03:
+    name: draft-ietf-sshm-ssh-agent-03
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-03.html
+    title: "SSH Agent Protocol [ expired 2025-12-12 ]"
 
 draft-josefsson-ssh-frodokem-00:
     name: draft-josefsson-ssh-frodokem-00
