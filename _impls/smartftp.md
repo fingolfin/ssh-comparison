@@ -72,6 +72,7 @@ protocols:
     extension:
         - server-sig-algs
         - no-flow-control
+        - kex-strict-c-v00@openssh.com
 ---
 * Windows client.
 * Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, Microsoft OneDrive, Backblaze, SSH, Terminal client.
