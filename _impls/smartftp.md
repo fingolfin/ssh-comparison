@@ -59,6 +59,8 @@ protocols:
         - curve25519-sha256
         - mlkem768x25519-sha256
         - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha1
         - hmac-sha2-256
@@ -72,7 +74,6 @@ protocols:
     extension:
         - server-sig-algs
         - no-flow-control
-        - kex-strict-c-v00@openssh.com
 ---
 * Windows client.
 * Supports FTP, FTPS, SFTP, WebDAV, S3, Google Drive, Microsoft OneDrive, Backblaze, SSH, Terminal client.
