@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.5.0
-    date: 2025-02-10
+    version: 2.5.2
+    date: 2025-06-06
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
@@ -15,8 +15,11 @@ library: both
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com
+        - chacha20-poly1305
         - aes128-gcm@openssh.com
+        - aes128-gcm
         - aes256-gcm@openssh.com
+        - aes256-gcm
         - AEAD_AES_128_GCM
         - AEAD_AES_256_GCM
         - AEAD_CAMELLIA_128_GCM
