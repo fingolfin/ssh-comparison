@@ -64,7 +64,7 @@ protocols:
         - diffie-hellman-group14-sha1
         - diffie-hellman-group15-sha512
         - diffie-hellman-group16-sha512
-        - diffie-hellman_group17-sha512
+        - diffie-hellman-group17-sha512
         - diffie-hellman-group18-sha512
         - ext-info-c
         - kex-strict-c-v00@openssh.com
