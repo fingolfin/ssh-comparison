@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 5.2.11 (OTP 27.3.4)
-    date: 2025-05-08
+    version: 5.3 (OTP 28.0)
+    date: 2025-05-21
 changelog: https://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -18,14 +18,14 @@ protocols:
         - aes256-ctr                # since version 4.2
         - aes192-ctr                # since version 4.2
         - aes128-ctr
-        - aes256-cbc                # since version 4.8.1
-        - aes192-cbc                # since version 4.8.1
-        - aes128-cbc
+        - aes256-cbc                # since version 4.8.1, disabled by default since 5.3
+        - aes192-cbc                # since version 4.8.1, disabled by default since 5.3
+        - aes128-cbc                # disabled by default since 5.3
         - aes128-gcm@openssh.com    # since version 4.2
         - aes256-gcm@openssh.com    # since version 4.2
         - AEAD_AES_128_GCM          # since version 4.2, disabled by default
         - AEAD_AES_256_GCM          # since version 4.2, disabled by default
-        - 3des-cbc
+        - 3des-cbc                  # disabled by default since 5.3
         - chacha20-poly1305@openssh.com # since version 4.7.1
     compression:
         - zlib
