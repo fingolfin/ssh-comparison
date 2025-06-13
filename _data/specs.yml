@@ -422,10 +422,10 @@ draft-ietf-sshm-ntruprime-ssh-03:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-03:
-    name: draft-ietf-sshm-ssh-agent-03
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-03.html
-    title: "SSH Agent Protocol [ expired 2025-12-12 ]"
+draft-ietf-sshm-ssh-agent-04:
+    name: draft-ietf-sshm-ssh-agent-04
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-04.html
+    title: "SSH Agent Protocol [ expired 2025-12-14 ]"
 
 draft-josefsson-ssh-frodokem-00:
     name: draft-josefsson-ssh-frodokem-00
