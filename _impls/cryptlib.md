@@ -32,6 +32,7 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha256
         - diffie-hellman-group14-sha1
+        - ext-info-c
     mac:
         - hmac-sha2-256
         - hmac-sha2-256-etm@openssh.com
@@ -41,5 +42,7 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
+    extension:
+        - server-sig-algs
 ---
 * Client and server library written in C.
