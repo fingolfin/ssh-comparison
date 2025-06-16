@@ -528,10 +528,10 @@ draft-miller-sshm-strict-kex-01:
             - kex-strict-c
             - kex-strict-s
 
-draft-sfluhrer-ssh-mldsa-00:
-    name: draft-sfluhrer-ssh-mldsa-00
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-00.html
-    title: "SSH Support of ML-DSA [ expired 2025-09-17 ]"
+draft-sfluhrer-ssh-mldsa-01:
+    name: draft-sfluhrer-ssh-mldsa-01
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-01.html
+    title: "SSH Support of ML-DSA [ expired 2025-12-14 ]"
     protocols:
         hostkey:
             - ssh-mldsa44
