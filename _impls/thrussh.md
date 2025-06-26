@@ -1,6 +1,6 @@
 ---
 title: Thrussh
-homepage: http://pijul.org/thrussh
+homepage: https://pijul.org/thrussh
 source-repository: https://nest.pijul.com/pijul/thrussh
 license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
