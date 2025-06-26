@@ -1,7 +1,7 @@
 ---
 title: SSH2
-homepage: https://github.com/mscdex/ssh2.git
-source-repository: https://github.com/mscdex/ssh2.git
+homepage: https://github.com/mscdex/ssh2
+source-repository: https://github.com/mscdex/ssh2
 license: "[MIT style](https://github.com/mscdex/ssh2/blob/master/LICENSE)"
 first-release:
     date: 2012-11-11
