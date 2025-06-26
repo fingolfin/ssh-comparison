@@ -71,6 +71,9 @@ protocols:
         - mlkem1024nistp384-sha384
         - sntrup761x25519-sha512
         - sntrup761x25519-sha512@openssh.com
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-md5
         - hmac-sha1
