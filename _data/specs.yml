@@ -391,11 +391,6 @@ draft-ietf-secsh-x509-03:
             - x509v3-sign-rsa-sha1
             - x509v3-sign-dss-sha1
 
-draft-ietf-secsh-filexfer-02:
-    name: draft-ietf-secsh-filexfer-02
-    url: https://tools.ietf.org/html/draft-ietf-secsh-filexfer-02
-    title: "SSH File Transfer Protocol [ expired 2002-04-01 ]"
-
 draft-ietf-sshm-chacha20-poly1305-01:
     name: draft-ietf-sshm-chacha20-poly1305-01
     url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-01.html
@@ -542,6 +537,11 @@ draft-sgtatham-secsh-closure-race-02:
     name: draft-sgtatham-secsh-closure-race-02
     url: https://tools.ietf.org/html/draft-sgtatham-secsh-closure-race-02
     title: "Clarification to the channel closure procedure in Secure Shell (SSH) [ expired 2016-05-03 ]"
+
+draft-spaghetti-sshm-filexfer-00:
+    name: draft-spaghetti-sshm-filexfer-00
+    url: https://tools.ietf.org/html/draft-spaghetti-sshm-filexfer-00.html
+    title: "SSH File Transfer Protocol [ expired 2026-01-02 ]"
 
 draft-ssh-ext-auth-info-01:
     name: draft-ssh-ext-auth-info-01
