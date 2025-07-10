@@ -559,6 +559,19 @@ draft-ssh-global-requests-ok-00:
         extension:
             - global-requests-ok
 
+draft-sun-ssh-composite-sigs-01:
+    name: draft-sun-ssh-composite-sigs-01
+    url: https://tools.ietf.org/html/draft-sun-ssh-composite-sigs-01.html
+    title: "Composite ML-DSA Signatures for SSH [ expired 2026-01-05 ]"
+    protocols:
+        hostkey:
+            - ssh-mldsa44-es256
+            - ssh-mldsa65-es256
+            - ssh-mldsa87-es384
+            - ssh-mldsa44-ed25519
+            - ssh-mldsa65-ed25519
+            - ssh-mldsa87-ed448
+
 libssh:
     name: libssh
     url: https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
