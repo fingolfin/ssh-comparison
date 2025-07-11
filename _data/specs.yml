@@ -446,10 +446,10 @@ draft-josefsson-ssh-sphincs-00:
         hostkey:
             - ssh-slh-dsa-sha2-256f
 
-draft-josefsson-sshsig-format-02:
-    name: draft-josefsson-sshsig-format-02
-    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-02.html
-    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2025-10-26 ]"
+draft-josefsson-sshsig-format-03:
+    name: draft-josefsson-sshsig-format-03
+    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-03.html
+    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2026-01-08 ]"
 
 draft-kampanakis-curdle-ssh-pq-ke-01:
     name: draft-kampanakis-curdle-ssh-pq-ke-01
