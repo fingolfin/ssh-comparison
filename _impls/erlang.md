@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 5.3.1 (OTP 28.0.1)
-    date: 2025-06-16
+    version: 5.3.2 (OTP 28.0.2)
+    date: 2025-07-17
 changelog: https://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
