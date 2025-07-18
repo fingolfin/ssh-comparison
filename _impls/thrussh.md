@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2016-07-01
 latest-release:
-    version: 0.35.6
-    date: 2024-07-22
+    version: 0.36.1
+    date: 2025-07-10
 client: yes
 server: yes
 
