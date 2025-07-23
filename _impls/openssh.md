@@ -29,16 +29,16 @@ protocols:
         - aes256-ctr                    # since 3.7
         - aes128-gcm@openssh.com        # since 6.2
         - aes256-gcm@openssh.com        # since 6.2
-        - arcfour256                    # disabled by default since 7.2
-        - arcfour128                    # disabled by default since 7.2
+        #- arcfour256                    # removed in 7.6
+        #- arcfour128                    # removed in 7.6
         - aes128-cbc
         - 3des-cbc                      # disabled by default since 7.4
-        - blowfish-cbc                  # disabled by default since 7.2
-        - cast128-cbc                   # disabled by default since 7.2
+        #- blowfish-cbc                  # removed in 7.6
+        #- cast128-cbc                   # removed in 7.6
         - aes192-cbc
         - aes256-cbc
-        - arcfour                       # disabled by default since 7.2
-        - rijndael-cbc@lysator.liu.se   # disabled by default since 7.2
+        #- arcfour                       # removed in 7.6
+        #- rijndael-cbc@lysator.liu.se   # removed in 8.5
     compression:
         - none
         - zlib@openssh.com
@@ -98,12 +98,12 @@ protocols:
         - hmac-sha2-512                     # since 5.9
         - hmac-sha1
         - hmac-md5-etm@openssh.com          # since 6.2; disabled by default since 7.2
-        - hmac-ripemd160-etm@openssh.com    # since 6.2
+        #- hmac-ripemd160-etm@openssh.com    # removed in 7.6
         - hmac-sha1-96-etm@openssh.com      # since 6.2; disabled by default since 7.2
         - hmac-md5-96-etm@openssh.com       # since 6.2; disabled by default since 7.2
         - hmac-md5                          # disabled by default since 7.2
-        - hmac-ripemd160
-        - hmac-ripemd160@openssh.com
+        #- hmac-ripemd160                    # removed in 7.6
+        #- hmac-ripemd160@openssh.com        # removed in 7.6
         - hmac-sha1-96                      # disabled by default since 7.2
         - hmac-md5-96                       # disabled by default since 7.2
     userauth:
