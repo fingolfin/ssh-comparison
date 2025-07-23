@@ -391,10 +391,10 @@ draft-ietf-secsh-x509-03:
             - x509v3-sign-rsa-sha1
             - x509v3-sign-dss-sha1
 
-draft-ietf-sshm-chacha20-poly1305-01:
-    name: draft-ietf-sshm-chacha20-poly1305-01
-    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-01.html
-    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2025-09-18 ]"
+draft-ietf-sshm-chacha20-poly1305-02:
+    name: draft-ietf-sshm-chacha20-poly1305-02
+    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-02.html
+    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2026-01-24 ]"
     protocols:
         cipher:
             - chacha20-poly1305
