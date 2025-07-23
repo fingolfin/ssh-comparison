@@ -489,6 +489,14 @@ draft-kanno-secsh-camellia-02:
             - AEAD_CAMELLIA_128_GCM
             - AEAD_CAMELLIA_256_GCM
 
+draft-miller-secsh-compression-delayed-00:
+    name: draft-miller-secsh-compression-delayed-00
+    url: https://tools.ietf.org/html/draft-miller-secsh-compression-delayed-00.html
+    title: "Delayed compression the SSH Transport Layer Protocol [ expired 2007-05-27 ]"
+    protocols:
+        compression:
+            - zlib@openssh.com
+
 draft-miller-secsh-umac-01:
     name: draft-miller-secsh-umac-01
     url: https://tools.ietf.org/html/draft-miller-secsh-umac-01.html
@@ -593,8 +601,6 @@ openssh:
         cipher:
             - aes128-gcm@openssh.com            # see also https://www.openssh.com/txt/release-6.2
             - aes256-gcm@openssh.com            # see also https://www.openssh.com/txt/release-6.2
-        compression:
-            - zlib@openssh.com     # http://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
         hostkey:
             #- ssh-rsa-cert-v00@openssh.com     # obsolete
             #- ssh-dss-cert-v00@openssh.com     # obsolete
