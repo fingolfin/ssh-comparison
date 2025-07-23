@@ -2,7 +2,7 @@
 title: SSHJ
 homepage: https://github.com/hierynomus/sshj
 source-repository: https://github.com/hierynomus/sshj
-changelog: https://github.com/hierynomus/sshj
+changelog: https://github.com/hierynomus/sshj?tab=readme-ov-file#release-history
 license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
 #first-release:
 #    date: YYYY-MM-DD
