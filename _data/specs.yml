@@ -521,6 +521,16 @@ draft-miller-ssh-cert-01:
             - ssh-ed25519-cert
             - ssh-ed448-cert
             - ssh-rsa-cert
+            - rsa-sha2-256-cert
+            - rsa-sha2-512-cert
+            - ssh-rsa-cert-v01@openssh.com
+            - ssh-dss-cert-v01@openssh.com
+            - ecdsa-sha2-nistp256-cert-v01@openssh.com
+            - ecdsa-sha2-nistp384-cert-v01@openssh.com
+            - ecdsa-sha2-nistp521-cert-v01@openssh.com
+            - ssh-ed25519-cert-v01@openssh.com
+            - rsa-sha2-256-cert-v01@openssh.com
+            - rsa-sha2-512-cert-v01@openssh.com
 
 draft-miller-sshm-aes-gcm-00:
     name: draft-miller-sshm-aes-gcm-00
@@ -590,13 +600,8 @@ libssh:
 
 openssh:
     name: OpenSSH
-    url: https://www.openssh.com/specs.html
+    url: https://github.com/openssh/openssh-portable/blob/master/PROTOCOL
     title: "Specifications implemented by OpenSSH, including information about some of their SSH extensions"
-    # https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL?rev=HEAD&content-type=text/plain
-    # https://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/PROTOCOL.certkeys?rev=HEAD&content-type=text/plain
-    # https://www.openssh.com/txt/draft-miller-secsh-umac-01.txt
-    # https://www.openssh.com/txt/draft-miller-secsh-compression-delayed-00.txt
-    #
     protocols:
         cipher:
             - aes128-gcm@openssh.com            # see also https://www.openssh.com/txt/release-6.2
@@ -633,30 +638,15 @@ openssh:
 
 openssh-chacha:
     name: OpenSSH
-    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.chacha20poly1305?annotate=HEAD
+    url: https://github.com/openssh/openssh-portable/blob/master/PROTOCOL.chacha20poly1305
     title: "OpenSSH: chacha20poly1305"
     protocols:
         cipher:
             - chacha20-poly1305@openssh.com
 
-openssh-certkeys:
-    name: OpenSSH
-    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.certkeys?annotate=HEAD
-    title: "OpenSSH: certkeys"
-    protocols:
-        hostkey:
-            - ssh-rsa-cert-v01@openssh.com
-            - ssh-dss-cert-v01@openssh.com
-            - ecdsa-sha2-nistp256-cert-v01@openssh.com
-            - ecdsa-sha2-nistp384-cert-v01@openssh.com
-            - ecdsa-sha2-nistp521-cert-v01@openssh.com
-            - ssh-ed25519-cert-v01@openssh.com
-            - rsa-sha2-256-cert-v01@openssh.com
-            - rsa-sha2-512-cert-v01@openssh.com
-
 openssh-u2f:
     name: OpenSSH
-    url: https://cvsweb.openbsd.org/src/usr.bin/ssh/PROTOCOL.u2f?annotate=HEAD
+    url: https://github.com/openssh/openssh-portable/blob/master/PROTOCOL.u2f
     title: "OpenSSH: U2F"
     protocols:
         hostkey:
