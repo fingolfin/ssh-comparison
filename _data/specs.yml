@@ -531,10 +531,10 @@ draft-miller-sshm-aes-gcm-00:
             - aes128-gcm
             - aes256-gcm
 
-draft-sfluhrer-ssh-mldsa-01:
-    name: draft-sfluhrer-ssh-mldsa-01
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-01.html
-    title: "SSH Support of ML-DSA [ expired 2025-12-14 ]"
+draft-sfluhrer-ssh-mldsa-02:
+    name: draft-sfluhrer-ssh-mldsa-02
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-02.html
+    title: "SSH Support of ML-DSA [ expired 2026-01-22 ]"
     protocols:
         hostkey:
             - ssh-mldsa44
