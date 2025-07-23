@@ -3,8 +3,8 @@ title: HPN-SSH
 homepage: https://www.psc.edu/hpn-ssh-home/
 source-repository: https://github.com/rapier1/hpn-ssh
 license: "[BSD](https://github.com/rapier1/hpn-ssh/blob/master/LICENCE)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2004
 latest-release:
     version: 18.7.0
     date: 2025-04-10
