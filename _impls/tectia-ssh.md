@@ -6,7 +6,7 @@ first-release:
     date: 1995-07
 latest-release:
     version: 6.6.6
-    date: 2025-12-06
+    date: 2025-06-16
 
 #Sources for information:
 # * https://answers.ssh.com/questions/4164/whats-new-in-tectia-clientserverconnectsecure-6413
