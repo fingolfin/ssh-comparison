@@ -1,16 +1,14 @@
 ---
 title: OpenSSH
-homepage: http://www.openssh.com/
-source-repository: https://anongit.mindrot.org/openssh.git
-# http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/
-license: "[BSD](http://cvsweb.openbsd.org/cgi-bin/cvsweb/~checkout~/src/usr.bin/ssh/LICENCE)"
+homepage: https://www.openssh.com/
+source-repository: https://github.com/openssh/openssh-portable/
+license: "[BSD](https://github.com/openssh/openssh-portable/blob/master/LICENCE)"
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
     version: 10.0
     date: 2025-04-09
-changelog: http://lists.mindrot.org/pipermail/openssh-unix-announce/
-# perhaps http://www.openssh.com/txt/ is better changelog link?
+changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
 
@@ -123,7 +121,7 @@ first_kex_packet_follows: 0
 ---
 * Probably the most widely deployed SSH implementation.
 * There are actually two versions: Regular OpenSSH is part of OpenBSD.
-  This version is hosted in the [OpenBSD CVS repository](http://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/).
+  This version is hosted in the [OpenBSD CVS repository](https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/).
   For everybody else, there is "Portable OpenSSH". This document is
   refering to the portable version, since that is what the majority
   of OpenSSH users is using (as they are not running OpenBSD).
