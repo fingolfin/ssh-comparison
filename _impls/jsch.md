@@ -3,8 +3,8 @@ title: JSch
 homepage: https://github.com/mwiede/jsch
 source-repository: https://github.com/mwiede/jsch
 license: "[BSD style](https://github.com/mwiede/jsch/blob/master/LICENSE.txt)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2002-10-20
 latest-release:
     version: 2.27.2
     date: 2025-06-10
