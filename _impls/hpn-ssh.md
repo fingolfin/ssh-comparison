@@ -68,7 +68,6 @@ protocols:
         - sntrup761x25519-sha512
         - mlkem768x25519-sha256
     mac:
-        - none
         - umac-64-etm@openssh.com
         - umac-128-etm@openssh.com
         - hmac-sha2-256-etm@openssh.com
