@@ -103,5 +103,6 @@ protocols:
         - server-sig-algs
 
 first_kex_packet_follows: 0
+based-on: "[OpenSSH](/impls/openssh.html)"
 ---
 * Fork of OpenSSH that adds X.509v3 certificate support.
