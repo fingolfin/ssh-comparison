@@ -598,6 +598,39 @@ libssh:
         kex:
             - curve25519-sha256@libssh.org
 
+moussh:
+    name: moussh
+    url: http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/private-algs.txt
+    title: "SSH extensions implemented by moussh"
+    protocols:
+        cipher:
+            - arcfour-64k@rodents.montreal.qc.ca
+            - camellia-128-cbc@rodents.montreal.qc.ca
+            - camellia-192-cbc@rodents.montreal.qc.ca
+            - camellia-256-cbc@rodents.montreal.qc.ca
+            - camellia-128-ctr@rodents.montreal.qc.ca
+            - camellia-192-ctr@rodents.montreal.qc.ca
+            - camellia-256-ctr@rodents.montreal.qc.ca
+            - rijndael-k4b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k4b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k4b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b8-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b8-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b8-ctr@rodents.montreal.qc.ca
+            - sharc4-512@rodents.montreal.qc.ca
+
 openssh:
     name: OpenSSH
     url: https://github.com/openssh/openssh-portable/blob/master/PROTOCOL
