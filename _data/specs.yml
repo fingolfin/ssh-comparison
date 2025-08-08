@@ -541,10 +541,10 @@ draft-miller-sshm-aes-gcm-00:
             - aes128-gcm
             - aes256-gcm
 
-draft-miller-sshm-hostkey-update-00:
-    name: draft-miller-sshm-hostkey-update-00
-    url: https://tools.ietf.org/html/draft-miller-sshm-hostkey-update-00.html
-    title: "Host key update mechanism for SSH [ expired 2026-02-02 ]"
+draft-miller-sshm-hostkey-update-01:
+    name: draft-miller-sshm-hostkey-update-01
+    url: https://tools.ietf.org/html/draft-miller-sshm-hostkey-update-01.html
+    title: "Host key update mechanism for SSH [ expired 2026-02-04 ]"
     protocols:
         extension:
             - hostkeys
