@@ -6,8 +6,8 @@ license: "[BSD style](https://cs.opensource.google/go/x/crypto/+/master:LICENSE)
 first-release:
     date: 2022-10-19
 latest-release:
-    version: 0.40.0
-    date: 2025-07-10
+    version: 0.41.0
+    date: 2025-08-07
 #changelog: ?
 client: yes
 server: yes
