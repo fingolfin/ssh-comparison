@@ -6,8 +6,8 @@ license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
 first-release:
     date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
-    version: 3.5.1
-    date: 2025-02-03
+    version: 4.0.0
+    date: 2025-08-03
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes
@@ -33,7 +33,7 @@ protocols:
         - none
     hostkey:
         - ssh-rsa
-        - ssh-dss
+        #- ssh-dss              # removed in 4.0.0
         - ecdsa-sha2-nistp256   # since 1.12.0 (2013-09-27)
         - ecdsa-sha2-nistp384   # since 2.0.0 (2016-04-28)
         - ecdsa-sha2-nistp521   # since 2.0.0 (2016-04-28)
@@ -41,7 +41,7 @@ protocols:
         - rsa-sha2-512
         - ssh-ed25519
         - ssh-rsa-cert-v01@openssh.com
-        - ssh-dss-cert-v01@openssh.com
+        #- ssh-dss-cert-v01@openssh.com #removed in 4.0.0
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
