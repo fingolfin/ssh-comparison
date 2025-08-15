@@ -409,10 +409,10 @@ draft-ietf-sshm-mlkem-hybrid-kex-02:
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
 
-draft-ietf-sshm-ntruprime-ssh-04:
-    name: draft-ietf-sshm-ntruprime-ssh-04
-    url: https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-04.html
-    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2026-01-05 ]"
+draft-ietf-sshm-ntruprime-ssh-05:
+    name: draft-ietf-sshm-ntruprime-ssh-05
+    url: https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-05.html
+    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2026-02-16 ]"
     protocols:
         kex:
             - sntrup761x25519-sha512
