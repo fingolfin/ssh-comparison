@@ -549,6 +549,16 @@ draft-miller-sshm-hostkey-update-01:
         extension:
             - hostkeys
 
+draft-sfluhrer-ssh-mldsa-02:
+    name: draft-sfluhrer-ssh-mldsa-02
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-02.html
+    title: "SSH Support of ML-DSA [ expired 2026-01-22 ]"
+    protocols:
+        hostkey:
+            - ssh-mldsa44
+            - ssh-mldsa65
+            - ssh-mldsa87
+
 draft-sfluhrer-ssh-mldsa-04:
     name: draft-sfluhrer-ssh-mldsa-04
     url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-04.html
