@@ -82,14 +82,15 @@ protocols:
         - hmac-md5              # deprecated in 6.0, will be removed in 8.0
         - hmac-md5-96           # deprecated in 6.0, will be removed in 8.0
         - hmac-ripemd160        # deprecated in 6.0, will be removed in 8.0
+        - hmac-ripemd160@openssh.com # deprecated in 6.0, will be removed in 8.0
         - hmac-sha1             # for backward compatibility
         - hmac-sha1-96          # deprecated in 6.0, will be removed in 8.0
         - hmac-sha2-256
         - hmac-sha2-256-96      # deprecated in 6.0, will be removed in 8.0
-        - hmac-sha2-256-etm
+        - hmac-sha2-256-etm@openssh.com
         - hmac-sha2-512
         - hmac-sha2-512-96      # deprecated in 6.0, will be removed in 8.0
-        - hmac-sha2-512-etm
+        - hmac-sha2-512-etm@openssh.com
         #- none                 # deprecated in 6.0, will be removed in 8.0
     userauth:
         - password
