@@ -417,10 +417,10 @@ draft-ietf-sshm-ntruprime-ssh-05:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-05:
-    name: draft-ietf-sshm-ssh-agent-05
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-05.html
-    title: "SSH Agent Protocol [ expired 2026-02-02 ]"
+draft-ietf-sshm-ssh-agent-06:
+    name: draft-ietf-sshm-ssh-agent-06
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-06.html
+    title: "SSH Agent Protocol [ expired 2026-02-20 ]"
 
 draft-ietf-sshm-strict-kex-00:
     name: draft-ietf-sshm-strict-kex-00
