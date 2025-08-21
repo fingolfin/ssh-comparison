@@ -1,6 +1,6 @@
 iana:
     name: IANA
-    url: https://www.ietf.org/assignments/ssh-parameters/ssh-parameters.xml
+    url: https://www.iana.org/assignments/ssh-parameters/ssh-parameters.xhtml
     title: "IANA SSH algorithm registry"
 
 rfc4250:
