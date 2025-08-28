@@ -6,8 +6,8 @@ license: "[MIT style](https://github.com/mscdex/ssh2/blob/master/LICENSE)"
 first-release:
     date: 2012-11-11
 latest-release:
-    version: 1.16.0
-    date: 2024-09-16
+    version: 1.17.0
+    date: 2025-08-20
 #changelog: ?
 client: yes
 server: yes
