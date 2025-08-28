@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2016-07-01
 latest-release:
-    version: 0.37.0
-    date: 2025-08-09
+    version: 0.38.0
+    date: 2025-08-28
 client: yes
 server: yes
 
@@ -15,6 +15,7 @@ protocols:
     cipher:
         - chacha20-poly1305@openssh.com
         - aes256-gcm@openssh.com
+        - aes256-ctr
     compression:
         - zlib
         - zlib@openssh.com
@@ -32,6 +33,7 @@ protocols:
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
     mac:
+        - hmac-sha2-256
     userauth:
         - publickey
         - password
