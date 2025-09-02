@@ -6,8 +6,8 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 16.2.1
-    date: 2025-07-19
+    version: 17.0
+    date: 2025-08-29
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
@@ -76,6 +76,8 @@ protocols:
         - sntrup761x25519-sha512@openssh.com
         - sntrup761x25519-sha512
         - mlkem768x25519-sha256
+        - mlkem768nistp256-sha256
+        - mlkem1024nistp384-sha384
     mac:
         - umac-64-etm@openssh.com
         - umac-128-etm@openssh.com
