@@ -10,8 +10,8 @@ first-release:
 # Looking at the initial commit in the git repository, it contains
 # a CHANGELOG which contains the date of the initial release.
 latest-release:
-    version: 0.11.2
-    date: 2025-06-24
+    version: 0.11.3
+    date: 2025-09-09
 changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG?h=stable-0.11
 client: yes
 server: yes
