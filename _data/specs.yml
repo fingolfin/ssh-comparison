@@ -509,10 +509,10 @@ draft-miller-secsh-umac-01:
             - umac-96
             - umac-128
 
-draft-miller-ssh-cert-03:
-    name: draft-miller-ssh-cert-03
-    url: https://tools.ietf.org/html/draft-miller-ssh-cert-03.html
-    title: "SSH Certificate Format [ expired 2026-02-14 ]"
+draft-miller-ssh-cert-04:
+    name: draft-miller-ssh-cert-04
+    url: https://tools.ietf.org/html/draft-miller-ssh-cert-04.html
+    title: "SSH Certificate Format [ expired 2026-03-14 ]"
     protocols:
         hostkey:
             - ssh-dss-cert
