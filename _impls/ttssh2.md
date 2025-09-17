@@ -6,8 +6,8 @@ license: "[BSD style](https://teratermproject.github.io/manual/5/en/about/copyri
 first-release:
     date: 2004    # according to Wikipedia
 latest-release:
-    version: 5.4.1
-    date: 2025-08-03
+    version: 5.5.0
+    date: 2025-09-16
 changelog: https://teratermproject.github.io/manual/5/en/about/history.html
 client: yes
 server: no
@@ -42,9 +42,9 @@ protocols:
         - aes256-gcm@openssh.com
         - chacha20-poly1305@openssh.com
     compression:
+        - none
         - zlib
         - zlib@openssh.com
-        - none
     hostkey:
         - ssh-rsa
         - ssh-dss
@@ -63,8 +63,10 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - diffie-hellman-group14-sha256
-        - diffie-hellman-group15-sha256
-        - diffie-hellman-group16-sha256
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group18-sha512
+        - curve25519-sha256@libssh.org
+        - curve25519-sha256
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
