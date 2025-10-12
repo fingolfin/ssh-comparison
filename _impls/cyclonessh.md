@@ -64,21 +64,30 @@ protocols:
     compression:
         - none
     hostkey:
+        - ssh-ed25519-cert
         - ssh-ed25519-cert-v01@openssh.com
         - ssh-ed25519
+        - ssh-ed448-cert
         - ssh-ed448
+        - ecdsa-sha2-nistp256-cert
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384-cert
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521-cert
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - ecdsa-sha2-nistp521
+        - rsa-sha2-256-cert
         - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-256
+        - rsa-sha2-512-cert
         - rsa-sha2-512-cert-v01@openssh.com
         - rsa-sha2-512
+        - ssh-rsa-cert
         - ssh-rsa-cert-v01@openssh.com
         - ssh-rsa
+        - ssh-dss-cert
         - ssh-dss-cert-v01@openssh.com
         - ssh-dss
     kex:
@@ -144,3 +153,4 @@ first_kex_packet_follows: 0
 * SCP client and server implementations
 * SFTP client and server implementations
 * C programming language
+
