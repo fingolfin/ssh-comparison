@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/openssh/openssh-portable/blob/master/LICENCE)
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 10.1
-    date: 2025-10-06
+    version: 10.2
+    date: 2025-10-10
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
