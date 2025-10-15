@@ -7,7 +7,7 @@ first-release:
     date: 2004-02-12
 latest-release:
     version: 3.1.2
-    date: 2024-10-15
+    date: 2024-09-20
 changelog: "https://github.com/sshtools/maverick-synergy/blob/master/maverick-synergy-assembly/notes/CHANGES"
 client: yes
 server: yes
