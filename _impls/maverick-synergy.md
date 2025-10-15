@@ -4,11 +4,11 @@ homepage: https://jadaptive.com/java-ssh-library/
 source-repository: https://github.com/sshtools/maverick-synergy
 license: "[LGPL 3](https://github.com/sshtools/maverick-synergy/blob/master/LICENSE)"
 first-release:
-    date: 2021
+    date: 2004-02-12
 latest-release:
     version: 3.1.2
     date: 2024-10-15
-changelog: "https://github.com/sshtools/maverick-synergy/releases"
+changelog: "https://github.com/sshtools/maverick-synergy/blob/master/maverick-synergy-assembly/notes/CHANGES"
 client: yes
 server: yes
 library: both
