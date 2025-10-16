@@ -95,6 +95,7 @@ protocols:
         - hmac-sha2-512-96
         - hmac-ripemd160
         - hmac-ripemd160-etm@openssh.com
+        - hmac-sha256@ssh.com
     userauth:
         - password
         - publickey
