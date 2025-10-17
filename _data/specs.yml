@@ -418,10 +418,10 @@ draft-ietf-sshm-ntruprime-ssh-06:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-08:
-    name: draft-ietf-sshm-ssh-agent-08
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-08.html
-    title: "SSH Agent Protocol [ expired 2026-04-05 ]"
+draft-ietf-sshm-ssh-agent-09:
+    name: draft-ietf-sshm-ssh-agent-09
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-09.html
+    title: "SSH Agent Protocol [ expired 2026-04-19 ]"
 
 draft-ietf-sshm-strict-kex-00:
     name: draft-ietf-sshm-strict-kex-00
@@ -431,6 +431,14 @@ draft-ietf-sshm-strict-kex-00:
         kex:
             - kex-strict-c
             - kex-strict-s
+
+draft-josefsson-ssh-ed25519mldsa65-00:
+    name: draft-josefsson-ssh-ed25519mldsa65-00
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-ed25519mldsa65-00.html
+    title: "Hybrid Ed25519 with ML-DSA-65 for Secure Shell (SSH) [ expired 2026-04-20 ]"
+    protocols:
+        hostkey:
+            - ssh-ed25519-ml-dsa-65
 
 draft-josefsson-ssh-frodokem-00:
     name: draft-josefsson-ssh-frodokem-00
