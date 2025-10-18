@@ -558,6 +558,16 @@ draft-miller-sshm-hostkey-update-02:
         extension:
             - hostkeys
 
+draft-rpe-ssh-mldsa-01:
+    name: draft-rpe-ssh-mldsa-01
+    url: https://tools.ietf.org/html/draft-rpe-ssh-mldsa-01.html
+    title: "ML-DSA Public Key Algorithms for the Secure Shell (SSH) Protocol [ expired 2026-04-12 ]"
+    protocols:
+        hostkey:
+            - ssh-mldsa-44
+            - ssh-mldsa-65
+            - ssh-mldsa-87
+
 draft-sfluhrer-ssh-mldsa-02:
     name: draft-sfluhrer-ssh-mldsa-02
     url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-02.html
