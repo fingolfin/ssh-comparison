@@ -448,10 +448,10 @@ draft-josefsson-ssh-frodokem-00:
         kex:
             - frodokem976x25519-sha512
 
-draft-josefsson-ssh-mceliece-01:
-    name: draft-josefsson-ssh-mceliece-01
-    url: https://tools.ietf.org/html/draft-josefsson-ssh-mceliece-01.html
-    title: "Secure Shell Key Exchange Method Using Chempat Hybrid of Classic McEliece and X25519 with SHA-512: mceliece6688128x25519-sha512 [ expired 2025-09-19 ]"
+draft-josefsson-ssh-mceliece-02:
+    name: draft-josefsson-ssh-mceliece-02
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-mceliece-02.html
+    title: "Secure Shell Key Exchange Method Using Chempat Hybrid of Classic McEliece and X25519 with SHA-512: mceliece6688128x25519-sha512 [ expired 2026-04-23 ]"
     protocols:
         kex:
             - mceliece6688128x25519-sha512
