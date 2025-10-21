@@ -418,10 +418,10 @@ draft-ietf-sshm-ntruprime-ssh-06:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-09:
-    name: draft-ietf-sshm-ssh-agent-09
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-09.html
-    title: "SSH Agent Protocol [ expired 2026-04-19 ]"
+draft-ietf-sshm-ssh-agent-10:
+    name: draft-ietf-sshm-ssh-agent-10
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-10.html
+    title: "SSH Agent Protocol [ expired 2026-04-23 ]"
 
 draft-ietf-sshm-strict-kex-00:
     name: draft-ietf-sshm-strict-kex-00
@@ -528,10 +528,10 @@ draft-miller-secsh-umac-01:
             - umac-96
             - umac-128
 
-draft-miller-ssh-cert-04:
-    name: draft-miller-ssh-cert-04
-    url: https://tools.ietf.org/html/draft-miller-ssh-cert-04.html
-    title: "SSH Certificate Format [ expired 2026-03-14 ]"
+draft-miller-ssh-cert-05:
+    name: draft-miller-ssh-cert-05
+    url: https://tools.ietf.org/html/draft-miller-ssh-cert-05.html
+    title: "SSH Certificate Format [ expired 2026-04-23 ]"
     protocols:
         hostkey:
             - ssh-dss-cert
