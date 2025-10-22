@@ -85,3 +85,5 @@ protocols:
 
 * Windows client.
 * [Wikipedia](https://en.wikipedia.org/wiki/AbsoluteTelnet)
+* [AbsoluteTelnet SSH Client](https://www.celestialsoftware.net)
+* [AbsoluteTelnet/SSH Supported Algorithms](https://www.celestialsoftware.net/supported-algorithms)
