@@ -59,6 +59,9 @@ protocols:
         - diffie-hellman-group14-sha1
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group-exchange-sha256
+        - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha2-256-etm@openssh.com
@@ -78,7 +81,8 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
-
+    extension:
+        - server-sig-algs
 
 # X11 forwarding, Port forwarding, sftp client, telnet client
 ---
