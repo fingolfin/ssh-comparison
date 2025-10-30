@@ -432,10 +432,10 @@ draft-ietf-sshm-strict-kex-00:
             - kex-strict-c
             - kex-strict-s
 
-draft-josefsson-ssh-ed25519mldsa65-00:
-    name: draft-josefsson-ssh-ed25519mldsa65-00
-    url: https://tools.ietf.org/html/draft-josefsson-ssh-ed25519mldsa65-00.html
-    title: "Hybrid Ed25519 with ML-DSA-65 for Secure Shell (SSH) [ expired 2026-04-20 ]"
+draft-josefsson-ssh-ed25519mldsa65-01:
+    name: draft-josefsson-ssh-ed25519mldsa65-01
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-ed25519mldsa65-01.html
+    title: "Hybrid Ed25519 with ML-DSA-65 for Secure Shell (SSH) [ expired 2026-04-22 ]"
     protocols:
         hostkey:
             - ssh-ed25519-ml-dsa-65

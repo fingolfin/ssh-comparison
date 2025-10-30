@@ -6,8 +6,8 @@ license: "[MIT license](https://github.com/sshnet/SSH.NET/blob/develop/LICENSE)"
 first-release:
     date: 2010-09-16
 latest-release:
-    version: 2025.0.0
-    date: 2025-04-18
+    version: 2025.1.0
+    date: 2025-10-27
 changelog: https://github.com/sshnet/SSH.NET/releases
 client: yes
 server: no
@@ -62,6 +62,7 @@ protocols:
         - ecdh-sha2-nistp521
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group18-sha512        # since 2025.1.0
         - diffie-hellman-group16-sha512
         - diffie-hellman-group14-sha256
         - diffie-hellman-group14-sha1
