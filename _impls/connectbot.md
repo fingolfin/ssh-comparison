@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/main/LICENS
 first-release:
     date: 2007-11   # according to Wikipedia
 latest-release:
-    version: 1.9.12
-    date: 2025-04-21
+    version: 1.9.13
+    date: 2025-11-03
 changelog: https://github.com/connectbot/connectbot/blob/main/CHANGELOG.md
 client: yes
 server: no
@@ -17,6 +17,9 @@ platforms:
     - android
 protocols:
     cipher:
+        - chacha20-poly1305@openssh.com
+        - aes256-gcm@openssh.com
+        - aes128-gcm@openssh.com
         - aes256-ctr
         - aes128-ctr
         - blowfish-ctr
