@@ -15,6 +15,7 @@ platforms:
     - windows
 protocols:
     cipher:
+        - chacha20-poly1305@openssh.com
         - aes128-gcm@openssh.com
         - aes256-gcm@openssh.com
         - aes128-ctr
@@ -45,6 +46,8 @@ protocols:
         - rsa-sha2-256
         - ssh-rsa
         - ssh-dss
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - sk-ssh-ed25519@openssh.com
     kex:
         - mlkem768x25519-sha256
         - sntrup761x25519-sha512
