@@ -400,10 +400,10 @@ draft-ietf-sshm-chacha20-poly1305-02:
         cipher:
             - chacha20-poly1305
 
-draft-ietf-sshm-mlkem-hybrid-kex-03:
-    name: draft-ietf-sshm-mlkem-hybrid-kex-03
-    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-03.html
-    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-03-21 ]"
+draft-ietf-sshm-mlkem-hybrid-kex-04:
+    name: draft-ietf-sshm-mlkem-hybrid-kex-04
+    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-04.html
+    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-05-15 ]"
     protocols:
         kex:
             - mlkem768nistp256-sha256
@@ -418,15 +418,15 @@ draft-ietf-sshm-ntruprime-ssh-06:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-10:
-    name: draft-ietf-sshm-ssh-agent-10
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-10.html
-    title: "SSH Agent Protocol [ expired 2026-04-23 ]"
+draft-ietf-sshm-ssh-agent-11:
+    name: draft-ietf-sshm-ssh-agent-11
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-11.html
+    title: "SSH Agent Protocol [ expired 2026-05-10 ]"
 
-draft-ietf-sshm-strict-kex-00:
-    name: draft-ietf-sshm-strict-kex-00
-    url: https://tools.ietf.org/html/draft-ietf-sshm-strict-kex-00.html
-    title: "SSH Strict KEX extension [ expired 2026-01-22 ]"
+draft-ietf-sshm-strict-kex-01:
+    name: draft-ietf-sshm-strict-kex-01
+    url: https://tools.ietf.org/html/draft-ietf-sshm-strict-kex-01.html
+    title: "SSH Strict KEX extension [ expired 2026-05-14 ]"
     protocols:
         kex:
             - kex-strict-c
@@ -517,10 +517,10 @@ draft-miller-secsh-umac-01:
             - umac-96
             - umac-128
 
-draft-miller-ssh-cert-05:
-    name: draft-miller-ssh-cert-05
-    url: https://tools.ietf.org/html/draft-miller-ssh-cert-05.html
-    title: "SSH Certificate Format [ expired 2026-04-23 ]"
+draft-miller-ssh-cert-06:
+    name: draft-miller-ssh-cert-06
+    url: https://tools.ietf.org/html/draft-miller-ssh-cert-06.html
+    title: "SSH Certificate Format [ expired 2026-05-14 ]"
     protocols:
         hostkey:
             - ssh-dss-cert
@@ -541,10 +541,10 @@ draft-miller-ssh-cert-05:
             - rsa-sha2-256-cert-v01@openssh.com
             - rsa-sha2-512-cert-v01@openssh.com
 
-draft-miller-sshm-aes-gcm-00:
-    name: draft-miller-sshm-aes-gcm-00
-    url: https://tools.ietf.org/html/draft-miller-sshm-aes-gcm-00.html
-    title: "Fixed AES-GCM modes for the SSH protocol [ expired 2025-09-19 ]"
+draft-miller-sshm-aes-gcm-01:
+    name: draft-miller-sshm-aes-gcm-01
+    url: https://tools.ietf.org/html/draft-miller-sshm-aes-gcm-01.html
+    title: "Fixed AES-GCM modes for the SSH protocol [ expired 2026-05-14 ]"
     protocols:
         cipher:
             - aes128-gcm
