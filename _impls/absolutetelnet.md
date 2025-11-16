@@ -89,7 +89,6 @@ protocols:
         - password
         - keyboard-interactive
         - gssapi-with-mic
-        - hostbased
     extension:
         - server-sig-algs
 
