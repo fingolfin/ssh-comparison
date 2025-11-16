@@ -14,6 +14,10 @@ library: no
 platforms:
     - windows
 protocols:
+    compression:
+        - none
+        - zlib@openssh.com
+        - zlib
     cipher:
         - chacha20-poly1305@openssh.com
         - aes128-gcm@openssh.com
@@ -85,7 +89,6 @@ protocols:
         - password
         - keyboard-interactive
         - gssapi-with-mic
-        - hostbased
     extension:
         - server-sig-algs
 
