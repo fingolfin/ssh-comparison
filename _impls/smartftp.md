@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 10.0.3396
-    date: 2025-11-07
+    version: 10.0.3299
+    date: 2025-11-27
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -57,6 +57,7 @@ protocols:
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - curve25519-sha256
+        - curve25519-sha256@libssh.org
         - mlkem768x25519-sha256
         - ext-info-c
         - kex-strict-c-v00@openssh.com
@@ -65,6 +66,8 @@ protocols:
         - hmac-sha1
         - hmac-sha2-256
         - hmac-sha2-512
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
     userauth:
         - publickey
         - password
