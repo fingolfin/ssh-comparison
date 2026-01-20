@@ -369,10 +369,10 @@ draft-gutmann-ssh-preauth-04:
     url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-04.html
     title: "A Pre-Authentication Mechanism for SSH [ expired 2026-02-18 ]"
 
-draft-harrison-sshm-mlkem-00:
-    name: draft-harrison-sshm-mlkem-00
-    url: https://tools.ietf.org/html/draft-harrison-sshm-mlkem-00.html
-    title: "Module-Lattice Key Exchange in SSH [ expired 2025-12-07 ]"
+draft-harrison-sshm-mlkem-01:
+    name: draft-harrison-sshm-mlkem-01
+    url: https://tools.ietf.org/html/draft-harrison-sshm-mlkem-01.html
+    title: "Module-Lattice Key Exchange in SSH [ expired 2026-06-05 ]"
     protocols:
         kex:
             - mlkem512-sha256
@@ -400,10 +400,10 @@ draft-ietf-sshm-chacha20-poly1305-02:
         cipher:
             - chacha20-poly1305
 
-draft-ietf-sshm-mlkem-hybrid-kex-04:
-    name: draft-ietf-sshm-mlkem-hybrid-kex-04
-    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-04.html
-    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-05-15 ]"
+draft-ietf-sshm-mlkem-hybrid-kex-08:
+    name: draft-ietf-sshm-mlkem-hybrid-kex-08
+    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-08.html
+    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-07-10 ]"
     protocols:
         kex:
             - mlkem768nistp256-sha256
@@ -418,10 +418,10 @@ draft-ietf-sshm-ntruprime-ssh-06:
         kex:
             - sntrup761x25519-sha512
 
-draft-ietf-sshm-ssh-agent-11:
-    name: draft-ietf-sshm-ssh-agent-11
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-11.html
-    title: "SSH Agent Protocol [ expired 2026-05-10 ]"
+draft-ietf-sshm-ssh-agent-15:
+    name: draft-ietf-sshm-ssh-agent-15
+    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-15.html
+    title: "SSH Agent Protocol [ expired 2026-07-01 ]"
 
 draft-ietf-sshm-strict-kex-01:
     name: draft-ietf-sshm-strict-kex-01
@@ -568,6 +568,16 @@ draft-rpe-ssh-mldsa-02:
             - mldsa-65
             - mldsa-87
 
+draft-rpe-ssh-x509-mldsa-00:
+    name: draft-rpe-ssh-x509-mldsa-00
+    url: https://tools.ietf.org/html/draft-rpe-ssh-x509-mldsa-00.html
+    title: "X.509v3 ML-DSA Certificates for the Secure Shell (SSH) Protocoll [ expired 2026-07-06 ]"
+    protocols:
+        hostkey:
+            - x509v3-mldsa-44
+            - x509v3-mldsa-65
+            - x509v3-mldsa-87
+
 draft-sfluhrer-ssh-mldsa-02:
     name: draft-sfluhrer-ssh-mldsa-02
     url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-02.html
@@ -614,10 +624,10 @@ draft-ssh-global-requests-ok-00:
         extension:
             - global-requests-ok
 
-draft-sun-ssh-composite-sigs-01:
-    name: draft-sun-ssh-composite-sigs-01
-    url: https://tools.ietf.org/html/draft-sun-ssh-composite-sigs-01.html
-    title: "Composite ML-DSA Signatures for SSH [ expired 2026-01-05 ]"
+draft-sun-ssh-composite-sigs-02:
+    name: draft-sun-ssh-composite-sigs-02
+    url: https://tools.ietf.org/html/draft-sun-ssh-composite-sigs-02.html
+    title: "Composite ML-DSA Signatures for SSH [ expired 2026-07-09 ]"
     protocols:
         hostkey:
             - ssh-mldsa44-es256
