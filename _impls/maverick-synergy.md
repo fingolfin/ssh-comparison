@@ -6,8 +6,8 @@ license: "[LGPL 3](https://github.com/sshtools/maverick-synergy/blob/master/LICE
 first-release:
     date: 2004-02-12
 latest-release:
-    version: 3.1.2
-    date: 2024-09-20
+    version: 3.1.4
+    date: 2025-11-18
 changelog: "https://github.com/sshtools/maverick-synergy/blob/master/maverick-synergy-assembly/notes/CHANGES"
 client: yes
 server: yes
