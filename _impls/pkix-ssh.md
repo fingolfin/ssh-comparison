@@ -6,15 +6,15 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 17.1.2
-    date: 2025-10-11
+    version: 17.2.2
+    date: 2025-12-27
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
 
 protocols:
     cipher:
-        - chacha20-poly1305@openssh.com
+        - chacha20-poly1305@openssh.com     # disabled by default
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
@@ -36,8 +36,8 @@ protocols:
         - x509v3-ssh-rsa
         - x509v3-sign-rsa
         - x509v3-ssh-ed25519
-        - x509v3-ssh-dss                    # disabled by ddefault
-        - x509v3-sign-dss                   # disabled by ddefault
+        - x509v3-ssh-dss                    # disabled by default
+        - x509v3-sign-dss                   # disabled by default
         - rsa-sha2-256
         - rsa-sha2-512
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
@@ -71,27 +71,27 @@ protocols:
         - diffie-hellman-group16-sha512
         - diffie-hellman-group18-sha512
         - ext-info-c
-        - kex-strict-c-v00@openssh.com
-        - kex-strict-s-v00@openssh.com
+        - kex-strict-c-v00@openssh.com      # disabled by default
+        - kex-strict-s-v00@openssh.com      # disabled by default
         - sntrup761x25519-sha512@openssh.com
         - sntrup761x25519-sha512
         - mlkem768x25519-sha256
         - mlkem768nistp256-sha256
         - mlkem1024nistp384-sha384
     mac:
-        - umac-64-etm@openssh.com
-        - umac-128-etm@openssh.com
-        - hmac-sha2-256-etm@openssh.com
-        - hmac-sha2-512-etm@openssh.com
-        - hmac-sha1-etm@openssh.com
+        - umac-64-etm@openssh.com           # disabled by default
+        - umac-128-etm@openssh.com          # disabled by default
+        - hmac-sha2-256-etm@openssh.com     # disabled by default
+        - hmac-sha2-512-etm@openssh.com     # disabled by default
+        - hmac-sha1-etm@openssh.com         # disabled by default
         - umac-64@openssh.com
         - umac-128@openssh.com
         - hmac-sha2-256
         - hmac-sha2-512
         - hmac-sha1
-        - hmac-md5-etm@openssh.com
-        - hmac-sha1-96-etm@openssh.com
-        - hmac-md5-96-etm@openssh.com
+        - hmac-md5-etm@openssh.com          # disabled by default
+        - hmac-sha1-96-etm@openssh.com      # disabled by default
+        - hmac-md5-96-etm@openssh.com       # disabled by default
         - hmac-md5
         - hmac-sha1-96
         - hmac-md5-96
