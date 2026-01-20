@@ -6,8 +6,8 @@ license: "Dual license: [GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/L
 first-release:
     date: 2016-10-24
 latest-release:
-    version: 1.4.21
-    date: 2025-10-20
+    version: 1.4.22
+    date: 2026-01-05
 changelog: https://github.com/wolfSSL/wolfssh/blob/master/ChangeLog.md
 client: yes
 server: yes

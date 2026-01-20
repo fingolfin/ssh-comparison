@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2022-03-13
 latest-release:
-    version: 0.54.4
-    date: 2025-09-24
+    version: 0.56.0
+    date: 2025-12-22
 changelog: https://github.com/Eugeny/russh/releases
 client: yes
 server: yes
@@ -60,6 +60,7 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - mlkem768x25519-sha256
         - ext-info-c
         - ext-info-s
         - kex-strict-c-v00@openssh.com

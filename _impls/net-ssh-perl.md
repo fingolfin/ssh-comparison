@@ -6,8 +6,8 @@ license: "Dual license: [GPLv1](https://github.com/briandfoy/net-ssh-perl/blob/m
 first-release:
     date: 2001-01-10
 latest-release:
-    version: 2.143
-    date: 2025-01-04
+    version: 2.144
+    date: 2026-01-14
 changelog: https://github.com/briandfoy/net-ssh-perl/blob/master/Changes
 client: yes
 server: no

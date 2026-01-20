@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1995-07
 latest-release:
-    version: 6.6.6
-    date: 2025-06-16
+    version: 7.0.0
+    date: 2025-12-17
 
 #Sources for information:
 # * https://answers.ssh.com/questions/4164/whats-new-in-tectia-clientserverconnectsecure-6413
@@ -148,8 +148,8 @@ protocols:
 * Strictly speaking, the Tectica SSH client and server are two separate
   products.
 * The information here is based on the Tectia SSH manual, in particular the list of
-  [default and supported SSH algorithms](https://docs.ssh.com/manuals/server-admin/66/csc-algorithms.html)
+  [default and supported SSH algorithms](https://docs.ssh.com/manuals/server-admin/70/csc-algorithms.html)
   as well as the list of
-  [supported user authentication methods](https://docs.ssh.com/manuals/server-admin/66/server-auth-supported-methods.html).
-* WARNING: The data here was lasted update for release 6.6.6; changes made
+  [supported user authentication methods](https://docs.ssh.com/manuals/server-admin/70/server-auth-supported-methods.html).
+* WARNING: The data here was lasted update for release 7.0.0; changes made
   since then are not reflected by the list above.
