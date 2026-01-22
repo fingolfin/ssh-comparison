@@ -1,7 +1,7 @@
 iana:
     name: IANA
     url: https://www.iana.org/assignments/ssh-parameters/ssh-parameters.xhtml
-    title: "IANA SSH algorithm registry"
+    title: "Secure Shell (SSH) Protocol Parameters"
 
 rfc4250:
     name: RFC 4250
@@ -177,6 +177,11 @@ rfc5114:
     url: https://tools.ietf.org/html/rfc5114
     title: "Additional Diffie-Hellman Groups for Use with IETF Standards [ section 3.4 references SSH ]"
 
+rfc5592:
+    name: RFC 5592
+    url: https://tools.ietf.org/html/rfc5592
+    title: "Secure Shell Transport Model for the Simple Network Management Protocol (SNMP)"
+
 rfc5647:
     name: RFC 5647
     url: https://tools.ietf.org/html/rfc5647
@@ -228,6 +233,12 @@ rfc6239:
     errata: https://www.rfc-editor.org/errata_search.php?rfc=6239
     title: "Suite B Cryptographic Suites for SSH"
 
+rfc6242:
+    name: RFC 6242
+    url: https://tools.ietf.org/html/rfc6242
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=6242
+    title: "Using the NETCONF Protocol over Secure Shell (SSH)"
+
 rfc6594:
     name: RFC 6594
     url: https://tools.ietf.org/html/rfc6594
@@ -242,6 +253,11 @@ rfc6668:
         mac:
             - hmac-sha2-256 # RECOMMENDED
             - hmac-sha2-512 # OPTIONAL
+
+rfc7076:
+    name: RFC 7076
+    url: https://tools.ietf.org/html/rfc7076
+    title: "P6R's Secure Shell Public Key Subsystem"
 
 rfc7479:
     name: RFC 7479
@@ -358,6 +374,12 @@ rfc9519:
     url: https://tools.ietf.org/html/rfc9519
     errata: https://www.rfc-editor.org/errata_search.php?rfc=9519
     title: "Update to the IANA SSH Protocol Parameters Registry Requirements"
+
+rfc9644:
+    name: RFC 9644
+    url: https://tools.ietf.org/html/rfc9644
+    errata: https://www.rfc-editor.org/errata_search.php?rfc=9644
+    title: "YANG Groupings for SSH Clients and SSH Servers"
 
 draft-becker-cnsa2-ssh-profile-02:
     name: draft-becker-cnsa2-ssh-profile-02
