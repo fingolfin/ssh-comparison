@@ -6,8 +6,8 @@ license: "Dual license: [GPLv2](http://www.gnu.org/licenses/old-licenses/gpl-2.0
 first-release:
     date: 2019-07-19
 latest-release:
-    version: 2.5.4
-    date: 2025-09-26
+    version: 2.6.0
+    date: 2026-02-09
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
@@ -96,6 +96,9 @@ protocols:
         - mlkem768x25519-sha256
         - mlkem768nistp256-sha256
         - mlkem1024nistp384-sha384
+        - mlkem512-sha256
+        - mlkem768-sha256
+        - mlkem1024-sha384
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - curve448-sha512
@@ -153,4 +156,5 @@ first_kex_packet_follows: 0
 * SCP client and server implementations
 * SFTP client and server implementations
 * C programming language
+
 
