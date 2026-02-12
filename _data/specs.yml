@@ -386,10 +386,10 @@ draft-becker-cnsa2-ssh-profile-02:
     url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-02.html
     title: "Commercial National Security Algorithm (CNSA) Suite Profile for SSH [ expired 2026-03-02 ]"
 
-draft-gutmann-ssh-preauth-04:
-    name: draft-gutmann-ssh-preauth-04
-    url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-04.html
-    title: "A Pre-Authentication Mechanism for SSH [ expired 2026-02-18 ]"
+draft-gutmann-ssh-preauth-05:
+    name: draft-gutmann-ssh-preauth-05
+    url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-05.html
+    title: "A Pre-Authentication Mechanism for SSH [ expired 2026-08-14 ]"
 
 draft-harrison-sshm-mlkem-01:
     name: draft-harrison-sshm-mlkem-01
@@ -422,10 +422,10 @@ draft-ietf-sshm-chacha20-poly1305-02:
         cipher:
             - chacha20-poly1305
 
-draft-ietf-sshm-mlkem-hybrid-kex-08:
-    name: draft-ietf-sshm-mlkem-hybrid-kex-08
-    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-08.html
-    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-07-10 ]"
+draft-ietf-sshm-mlkem-hybrid-kex-09:
+    name: draft-ietf-sshm-mlkem-hybrid-kex-09
+    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-09.html
+    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-08-06 ]"
     protocols:
         kex:
             - mlkem768nistp256-sha256
@@ -610,10 +610,10 @@ draft-sfluhrer-ssh-mldsa-02:
             - ssh-mldsa65
             - ssh-mldsa87
 
-draft-sfluhrer-ssh-mldsa-04:
-    name: draft-sfluhrer-ssh-mldsa-04
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-04.html
-    title: "SSH Support of ML-DSA [ expired 2026-02-12 ]"
+draft-sfluhrer-ssh-mldsa-05:
+    name: draft-sfluhrer-ssh-mldsa-05
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-05.html
+    title: "SSH Support of ML-DSA [ expired 2026-08-08 ]"
     protocols:
         hostkey:
             - ssh-mldsa-44
