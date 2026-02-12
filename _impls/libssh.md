@@ -10,9 +10,9 @@ first-release:
 # Looking at the initial commit in the git repository, it contains
 # a CHANGELOG which contains the date of the initial release.
 latest-release:
-    version: 0.11.3
-    date: 2025-09-09
-changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG?h=stable-0.11
+    version: 0.12.0
+    date: 2026-02-10
+changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG?h=libssh-0.12.0
 client: yes
 server: yes
 library: both
@@ -55,10 +55,10 @@ protocols:
         - ssh-rsa-cert-v01@openssh.com
         #- ssh-dss                                    # removed in 0.11.0
         #- ssh-dss-cert-v01@openssh.com               # removed in 0.11.0
-        - sk-ssh-ed25519@openssh.com                  # since 0.10.0, server side only
-        - sk-ssh-ed25519-cert-v01@openssh.com         # since 0.10.0, server side only
-        - sk-ecdsa-sha2-nistp256@openssh.com          # since 0.10.0, server side only
-        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com # since 0.10.0, server side only
+        - sk-ssh-ed25519@openssh.com                  # since 0.10.0, server side only; since 0.12.0, client side too
+        - sk-ssh-ed25519-cert-v01@openssh.com         # since 0.10.0, server side only; since 0.12.0, client side too
+        - sk-ecdsa-sha2-nistp256@openssh.com          # since 0.10.0, server side only; since 0.12.0, client side too
+        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com # since 0.10.0, server side only; since 0.12.0, client side too
     kex:
         - curve25519-sha256
         - curve25519-sha256@libssh.org
@@ -72,6 +72,15 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
+        - gss-curve25519-sha256-*
+        - gss-group14-sha256-*
+        - gss-group16-sha512-*
+        - gss-nistp256-sha256-*
+        - mlkem768nistp256-sha256
+        - mlkem768x25519-sha256
+        - mlkem1024nistp384-sha384
+        - sntrup761x25519-sha512
+        - sntrup761x25519-sha512@openssh.com
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
@@ -88,7 +97,9 @@ protocols:
         - hostbased
         - keyboard-interactive
         - gssapi-with-mic
+        - publickey-hostbound-v00@openssh.com
     extension:
+        - publickey-hostbound@openssh.com
         - server-sig-algs
 ---
 * Mulitplatform C library for clients and servers.
