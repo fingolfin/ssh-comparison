@@ -6,8 +6,8 @@ license: "[Apache-2.0](http://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2009      # according to Wikipedia
 latest-release:
-    version: 2.17.0
-    date: 2026-01-21
+    version: 2.17.1
+    date: 2026-01-27
 changelog: "https://github.com/apache/mina-sshd/blob/master/CHANGES.md"
 client: yes
 server: yes
