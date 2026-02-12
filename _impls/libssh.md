@@ -88,14 +88,17 @@ protocols:
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha2-256-etm@openssh.com
         - hmac-sha1-etm@openssh.com
+        - hmac-md5-etm@openssh.com
         - hmac-sha2-512
         - hmac-sha2-256
         - hmac-sha1
+        - hmac-md5
     userauth:
         - password
         - publickey
         - hostbased
         - keyboard-interactive
+        - gssapi-keyex
         - gssapi-with-mic
         - publickey-hostbound-v00@openssh.com
     extension:
