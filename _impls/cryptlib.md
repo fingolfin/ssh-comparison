@@ -6,8 +6,8 @@ license: "[Dual license: Sleepycat or commercial](https://github.com/cryptlib/cr
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 3.4.8
-    date: 2025-04-30
+    version: 3.4.9
+    date: 2026-02-20
 changelog: https://github.com/cryptlib/cryptlib/releases
 client: yes
 server: yes
@@ -22,11 +22,13 @@ protocols:
     compression:
         - none
     hostkey:
+        - ssh-ed25519
         - ecdsa-sha2-nistp256
         - ssh-rsa
         - rsa-sha2-256
         - ssh-dss
     kex:
+        - curve25519-sha256
         - ecdh-sha2-nistp256
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
