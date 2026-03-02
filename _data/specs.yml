@@ -422,10 +422,10 @@ draft-ietf-sshm-chacha20-poly1305-02:
         cipher:
             - chacha20-poly1305
 
-draft-ietf-sshm-mlkem-hybrid-kex-09:
-    name: draft-ietf-sshm-mlkem-hybrid-kex-09
-    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-09.html
-    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-08-06 ]"
+draft-ietf-sshm-mlkem-hybrid-kex-10:
+    name: draft-ietf-sshm-mlkem-hybrid-kex-10
+    url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-10.html
+    title: "PQ/T Hybrid Key Exchange with ML-KEM in SSH [ expired 2026-08-30 ]"
     protocols:
         kex:
             - mlkem768nistp256-sha256
@@ -599,16 +599,6 @@ draft-rpe-ssh-x509-mldsa-00:
             - x509v3-mldsa-44
             - x509v3-mldsa-65
             - x509v3-mldsa-87
-
-draft-sfluhrer-ssh-mldsa-02:
-    name: draft-sfluhrer-ssh-mldsa-02
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-02.html
-    title: "SSH Support of ML-DSA [ expired 2026-01-22 ]"
-    protocols:
-        hostkey:
-            - ssh-mldsa44
-            - ssh-mldsa65
-            - ssh-mldsa87
 
 draft-sfluhrer-ssh-mldsa-05:
     name: draft-sfluhrer-ssh-mldsa-05
