@@ -8,8 +8,8 @@ first-release:
     # see also https://news.ycombinator.com/item?id=7727738 from May 11, 2014
     # and http://tuxdiary.com/2014/05/11/tinyssh/
 latest-release:
-    version: 20250501
-    date: 2025-05-01
+    version: 20260301
+    date: 2026-03-01
 changelog: https://github.com/janmojzis/tinyssh/releases
 client: no
 server: yes
