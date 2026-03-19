@@ -6,8 +6,8 @@ license: "[MIT style](https://github.com/net-ssh/net-ssh/blob/master/LICENSE.txt
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 7.3.0
-    date: 2024-10-02
+    version: 7.3.2
+    date: 2026-03-15
 changelog: https://github.com/net-ssh/net-ssh/blob/master/CHANGES.txt
 client: yes
 server: no
