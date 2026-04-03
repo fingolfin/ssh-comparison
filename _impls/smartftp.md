@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 10.0.3312
-    date: 2026-02-28
+    version: 10.0.3317
+    date: 2026-03-31
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
