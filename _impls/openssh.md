@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/openssh/openssh-portable/blob/master/LICENCE)
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 10.2
-    date: 2025-10-10
+    version: 10.3
+    date: 2026-04-02
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
@@ -112,6 +112,7 @@ protocols:
         - hostbased
         - publickey-hostbound-v00@openssh.com
     extension:
+        - agent-forward                     # since 10.3
         - ext-info-in-auth@openssh.com      # since 9.6
         - ping@openssh.com                  # since 9.5
         - publickey-hostbound@openssh.com   # since 8.9
