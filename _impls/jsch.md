@@ -6,8 +6,8 @@ license: "[BSD style](https://github.com/mwiede/jsch/blob/master/LICENSE.txt)"
 first-release:
     date: 2002-10-20
 latest-release:
-    version: 2.27.9
-    date: 2026-03-13
+    version: 2.28.0
+    date: 2026-03-31
 changelog: https://github.com/mwiede/jsch/releases
 client: yes
 server: no
@@ -48,14 +48,23 @@ protocols:
         - zlib@openssh.com
     hostkey:
         - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - rsa-sha2-256
+        - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-512
+        - rsa-sha2-512-cert-v01@openssh.com
         - ssh-dss
+        - ssh-dss-cert-v01@openssh.com
         - ssh-ed25519
+        - ssh-ed25519-cert-v01@openssh.com
         - ssh-ed448
+        - ssh-ed448-cert-v01@openssh.com
         - ssh-rsa
+        - ssh-rsa-cert-v01@openssh.com
         - ssh-rsa-sha224@ssh.com
         - ssh-rsa-sha256@ssh.com
         - ssh-rsa-sha384@ssh.com
