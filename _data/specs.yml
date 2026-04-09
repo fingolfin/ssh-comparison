@@ -422,6 +422,14 @@ draft-ietf-sshm-chacha20-poly1305-02:
         cipher:
             - chacha20-poly1305
 
+draft-ietf-sshm-hostkey-update-00:
+    name: draft-ietf-sshm-hostkey-update-00
+    url: https://tools.ietf.org/html/draft-ietf-sshm-hostkey-update-00.html
+    title: "Host key update mechanism for SSH [ expired 2026-10-07 ]"
+    protocols:
+        extension:
+            - hostkeys
+
 draft-ietf-sshm-mlkem-hybrid-kex-10:
     name: draft-ietf-sshm-mlkem-hybrid-kex-10
     url: https://tools.ietf.org/html/draft-ietf-sshm-mlkem-hybrid-kex-10.html
@@ -575,14 +583,6 @@ draft-miller-sshm-aes-gcm-01:
             - aes128-gcm
             - aes256-gcm
 
-draft-miller-sshm-hostkey-update-02:
-    name: draft-miller-sshm-hostkey-update-02
-    url: https://tools.ietf.org/html/draft-miller-sshm-hostkey-update-02.html
-    title: "Host key update mechanism for SSH [ expired 2026-03-01 ]"
-    protocols:
-        extension:
-            - hostkeys
-
 draft-rpe-ssh-mldsa-02:
     name: draft-rpe-ssh-mldsa-02
     url: https://tools.ietf.org/html/draft-rpe-ssh-mldsa-02.html
@@ -603,10 +603,10 @@ draft-rpe-ssh-x509-mldsa-00:
             - x509v3-mldsa-65
             - x509v3-mldsa-87
 
-draft-sfluhrer-ssh-mldsa-05:
-    name: draft-sfluhrer-ssh-mldsa-05
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-05.html
-    title: "SSH Support of ML-DSA [ expired 2026-08-08 ]"
+draft-sfluhrer-ssh-mldsa-06:
+    name: draft-sfluhrer-ssh-mldsa-06
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-06.html
+    title: "SSH Support of ML-DSA [ expired 2026-10-09 ]"
     protocols:
         hostkey:
             - ssh-mldsa-44
