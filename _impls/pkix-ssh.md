@@ -6,8 +6,8 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 17.2.2
-    date: 2025-12-27
+    version: 18.0.2
+    date: 2026-04-05
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
@@ -56,19 +56,19 @@ protocols:
         - ssh-dss                           # disabled by default
     kex:
         - curve448-sha512
-        - diffie-hellman-group17-sha512
-        - diffie-hellman-group15-sha512
+        - diffie-hellman-group17-sha512     # disabled by default
+        - diffie-hellman-group15-sha512     # disabled by default
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
-        - diffie-hellman-group-exchange-sha256
-        - diffie-hellman-group-exchange-sha1
-        - diffie-hellman-group14-sha1
-        - diffie-hellman-group1-sha1
-        - diffie-hellman-group14-sha256
-        - diffie-hellman-group16-sha512
+        - diffie-hellman-group-exchange-sha256 # disabled by default
+        - diffie-hellman-group-exchange-sha1   # disabled by default
+        - diffie-hellman-group14-sha1       # disabled by default
+        - diffie-hellman-group1-sha1        # disabled by default
+        - diffie-hellman-group14-sha256     # disabled by default
+        - diffie-hellman-group16-sha512     # disabled by default
         - diffie-hellman-group18-sha512
         - ext-info-c
         - kex-strict-c-v00@openssh.com      # disabled by default
