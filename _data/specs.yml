@@ -381,6 +381,14 @@ rfc9644:
     errata: https://www.rfc-editor.org/errata_search.php?rfc=9644
     title: "YANG Groupings for SSH Clients and SSH Servers"
 
+rfc9941:
+    name: RFC 9941
+    url: https://tools.ietf.org/html/rfc9941
+    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512"
+    protocols:
+        kex:
+            - sntrup761x25519-sha512
+
 draft-becker-cnsa2-ssh-profile-02:
     name: draft-becker-cnsa2-ssh-profile-02
     url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-02.html
@@ -439,14 +447,6 @@ draft-ietf-sshm-mlkem-hybrid-kex-10:
             - mlkem768nistp256-sha256
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
-
-draft-ietf-sshm-ntruprime-ssh-06:
-    name: draft-ietf-sshm-ntruprime-ssh-06
-    url: https://datatracker.ietf.org/doc/html/draft-ietf-sshm-ntruprime-ssh-06.html
-    title: "Secure Shell (SSH) Key Exchange Method Using Hybrid Streamlined NTRU Prime sntrup761 and X25519 with SHA-512: sntrup761x25519-sha512 [ expired 2026-04-03 ]"
-    protocols:
-        kex:
-            - sntrup761x25519-sha512
 
 draft-ietf-sshm-ssh-agent-16:
     name: draft-ietf-sshm-ssh-agent-16
