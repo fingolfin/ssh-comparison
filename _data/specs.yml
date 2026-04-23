@@ -422,6 +422,30 @@ draft-ietf-secsh-x509-03:
             - x509v3-sign-rsa-sha1
             - x509v3-sign-dss-sha1
 
+draft-ietf-sshm-cert-00:
+    name: draft-ietf-sshm-cert-00
+    url: https://tools.ietf.org/html/draft-ietf-sshm-cert-00.html
+    title: "SSH Certificate Format [ expired 2026-10-25 ]"
+    protocols:
+        hostkey:
+            - ssh-dss-cert
+            - ecdsa-sha2-nistp256-cert
+            - ecdsa-sha2-nistp384-cert
+            - ecdsa-sha2-nistp521-cert
+            - ssh-ed25519-cert
+            - ssh-ed448-cert
+            - ssh-rsa-cert
+            - rsa-sha2-256-cert
+            - rsa-sha2-512-cert
+            - ssh-rsa-cert-v01@openssh.com
+            - ssh-dss-cert-v01@openssh.com
+            - ecdsa-sha2-nistp256-cert-v01@openssh.com
+            - ecdsa-sha2-nistp384-cert-v01@openssh.com
+            - ecdsa-sha2-nistp521-cert-v01@openssh.com
+            - ssh-ed25519-cert-v01@openssh.com
+            - rsa-sha2-256-cert-v01@openssh.com
+            - rsa-sha2-512-cert-v01@openssh.com
+
 draft-ietf-sshm-chacha20-poly1305-02:
     name: draft-ietf-sshm-chacha20-poly1305-02
     url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-02.html
@@ -531,6 +555,16 @@ draft-kanno-secsh-camellia-02:
             - AEAD_CAMELLIA_128_GCM
             - AEAD_CAMELLIA_256_GCM
 
+draft-kario-gss-keyex-pqc-00:
+    name: draft-kario-gss-keyex-pqc-00
+    url: https://tools.ietf.org/html/draft-kario-gss-keyex-pqc-00.html
+    title: "GSS-API Key Exchange with hybrid ML-KEM [ expired 2026-10-24 ]"
+    protocols:
+        kex:
+            - gss-mlkem768nistp256-sha256-*
+            - gss-mlkem1024nistp384-sha384-*
+            - gss-mlkem768x25519-sha256-*
+
 draft-miller-secsh-compression-delayed-00:
     name: draft-miller-secsh-compression-delayed-00
     url: https://tools.ietf.org/html/draft-miller-secsh-compression-delayed-00.html
@@ -550,30 +584,6 @@ draft-miller-secsh-umac-01:
             - umac-96
             - umac-128
 
-draft-miller-ssh-cert-06:
-    name: draft-miller-ssh-cert-06
-    url: https://tools.ietf.org/html/draft-miller-ssh-cert-06.html
-    title: "SSH Certificate Format [ expired 2026-05-14 ]"
-    protocols:
-        hostkey:
-            - ssh-dss-cert
-            - ecdsa-sha2-nistp256-cert
-            - ecdsa-sha2-nistp384-cert
-            - ecdsa-sha2-nistp521-cert
-            - ssh-ed25519-cert
-            - ssh-ed448-cert
-            - ssh-rsa-cert
-            - rsa-sha2-256-cert
-            - rsa-sha2-512-cert
-            - ssh-rsa-cert-v01@openssh.com
-            - ssh-dss-cert-v01@openssh.com
-            - ecdsa-sha2-nistp256-cert-v01@openssh.com
-            - ecdsa-sha2-nistp384-cert-v01@openssh.com
-            - ecdsa-sha2-nistp521-cert-v01@openssh.com
-            - ssh-ed25519-cert-v01@openssh.com
-            - rsa-sha2-256-cert-v01@openssh.com
-            - rsa-sha2-512-cert-v01@openssh.com
-
 draft-miller-sshm-aes-gcm-01:
     name: draft-miller-sshm-aes-gcm-01
     url: https://tools.ietf.org/html/draft-miller-sshm-aes-gcm-01.html
@@ -583,10 +593,10 @@ draft-miller-sshm-aes-gcm-01:
             - aes128-gcm
             - aes256-gcm
 
-draft-rpe-ssh-mldsa-02:
-    name: draft-rpe-ssh-mldsa-02
-    url: https://tools.ietf.org/html/draft-rpe-ssh-mldsa-02.html
-    title: "ML-DSA Public Key Algorithms for the Secure Shell (SSH) Protocol [ expired 2026-04-22 ]"
+draft-rpe-ssh-mldsa-03:
+    name: draft-rpe-ssh-mldsa-03
+    url: https://tools.ietf.org/html/draft-rpe-ssh-mldsa-03.html
+    title: "ML-DSA Public Key Algorithms for the Secure Shell (SSH) Protocol [ expired 2026-10-18 ]"
     protocols:
         hostkey:
             - mldsa-44

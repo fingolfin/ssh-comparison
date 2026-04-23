@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/main/LICENS
 first-release:
     date: 2007-11   # according to Wikipedia
 latest-release:
-    version: 1.9.13
-    date: 2025-11-03
+    version: 1.10.5
+    date: 2026-04-23
 changelog: https://github.com/connectbot/connectbot/blob/main/CHANGELOG.md
 client: yes
 server: no
@@ -39,7 +39,10 @@ protocols:
         - rsa-sha2-512
         - ssh-ed25519
         - ssh-rsa
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - sk-ssh-ed25519@openssh.com
     kex:
+        - mlkem768x25519-sha256
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - ecdh-sha2-nistp256
