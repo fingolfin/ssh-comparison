@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/apple/swift-nio-ssh/blob/main/LICENSE.
 first-release:
     date: 2020-04-14
 latest-release:
-    version: 0.12.0
-    date: 2025-11-06
+    version: 0.13.0
+    date: 2026-04-16
 changelog: https://github.com/apple/swift-nio-ssh/releases
 client: yes
 server: yes
