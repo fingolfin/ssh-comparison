@@ -6,8 +6,8 @@ license: "[Dual license: Sleepycat or commercial](https://github.com/cryptlib/cr
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 3.4.9
-    date: 2026-02-20
+    version: 3.4.9.1
+    date: 2026-04-30
 changelog: https://github.com/cryptlib/cryptlib/releases
 client: yes
 server: yes
