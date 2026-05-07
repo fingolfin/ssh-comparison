@@ -513,10 +513,10 @@ draft-josefsson-ssh-mceliece-02:
         kex:
             - mceliece6688128x25519-sha512
 
-draft-josefsson-ssh-sphincs-01:
-    name: draft-josefsson-ssh-sphincs-01
-    url: https://tools.ietf.org/html/draft-josefsson-ssh-sphincs-01.html
-    title: "Stateless Hash-Based Signatures for Secure Shell (SSH) [ expired 2026-04-23 ]"
+draft-josefsson-ssh-sphincs-02:
+    name: draft-josefsson-ssh-sphincs-02
+    url: https://tools.ietf.org/html/draft-josefsson-ssh-sphincs-02.html
+    title: "Stateless Hash-Based Signatures for Secure Shell (SSH) [ expired 2026-11-07 ]"
     protocols:
         hostkey:
             - ssh-slh-dsa-sha2-128s
@@ -527,10 +527,20 @@ draft-josefsson-ssh-sphincs-01:
             - ssh-slh-dsa-sha2-256f
             - ssh-slh-dsa-shake-256s
             - ssh-slh-dsa-shake-256f
+            - ssh-slh-dsa-sha2-128-24
+            - ssh-slh-dsa-shake-128-24
+            - ssh-slh-dsa-sha2-192-24
+            - ssh-slh-dsa-shake-192-24
+            - ssh-slh-dsa-sha2-256-24
+            - ssh-slh-dsa-shake-256-24
             - ssh-ed25519-slh-dsa-shake-128s
             - ssh-ed25519-slh-dsa-shake-128f
             - ssh-ed448-slh-dsa-shake-256s
             - ssh-ed448-slh-dsa-shake-256f
+            - ssh-ed25519-slh-dsa-sha2-128-24
+            - ssh-ed25519-slh-dsa-shake-128-24
+            - ssh-ed448-slh-dsa-sha2-256-24
+            - ssh-ed448-slh-dsa-shake-256-24
 
 draft-josefsson-sshsig-format-03:
     name: draft-josefsson-sshsig-format-03
@@ -592,6 +602,14 @@ draft-miller-sshm-aes-gcm-01:
         cipher:
             - aes128-gcm
             - aes256-gcm
+
+draft-miller-sshm-mldsa65-ed25519-composite-sigs-00:
+    name: draft-miller-sshm-mldsa65-ed25519-composite-sigs-00
+    url: https://tools.ietf.org/html/draft-miller-sshm-mldsa65-ed25519-composite-sigs-00.html
+    title: "ML-DSA 65/Ed255192 Composite Signatures in SSH [ expired 2026-10-30 ]"
+    protocols:
+        hostkey:
+            - ssh-mldsa65-ed25519@openssh.com
 
 draft-rpe-ssh-mldsa-03:
     name: draft-rpe-ssh-mldsa-03
