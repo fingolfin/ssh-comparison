@@ -7,8 +7,8 @@ license: "[Apache-2.0](https://github.com/connectbot/connectbot/blob/main/LICENS
 first-release:
     date: 2007-11   # according to Wikipedia
 latest-release:
-    version: 1.10.5
-    date: 2026-04-23
+    version: 1.10.6
+    date: 2026-04-27
 changelog: https://github.com/connectbot/connectbot/blob/main/CHANGELOG.md
 client: yes
 server: no
