@@ -6,8 +6,8 @@ license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
 first-release:
     date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
-    version: 4.0.0
-    date: 2025-08-03
+    version: 5.0.0
+    date: 2026-05-09
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes
@@ -32,7 +32,7 @@ protocols:
         - zlib
         - none
     hostkey:
-        - ssh-rsa
+        #- ssh-rsa              # removed in 5.0.0
         #- ssh-dss              # removed in 4.0.0
         - ecdsa-sha2-nistp256   # since 1.12.0 (2013-09-27)
         - ecdsa-sha2-nistp384   # since 2.0.0 (2016-04-28)
@@ -40,7 +40,7 @@ protocols:
         - rsa-sha2-256
         - rsa-sha2-512
         - ssh-ed25519
-        - ssh-rsa-cert-v01@openssh.com
+        #- ssh-rsa-cert-v01@openssh.com #removed in 5.0.0
         #- ssh-dss-cert-v01@openssh.com #removed in 4.0.0
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
@@ -49,19 +49,19 @@ protocols:
         - rsa-sha2-512-cert-v01@openssh.com
         - ssh-ed25519-cert-v01@openssh.com
     kex:
-        - diffie-hellman-group1-sha1
-        - diffie-hellman-group14-sha1   # since 1.15.0 (2014-09-18)
+        #- diffie-hellman-group1-sha1   # removed in 5.0.0
+        #- diffie-hellman-group14-sha1  # removed in 5.0.0
         - diffie-hellman-group14-sha256
         - diffie-hellman-group16-sha512
-        - diffie-hellman-group-exchange-sha1
+        #- diffie-hellman-group-exchange-sha1   # removed in 5.0.0
         - diffie-hellman-group-exchange-sha256  # since 1.16.0 (2015-11-04)
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
         - curve25519-sha256@libssh.org
-        - gss-group1-sha1-*     # since 1.15.0 (2014-09-18)
-        - gss-group14-sha1-*    # since 1.15.0 (2014-09-18)
-        - gss-gex-sha1-*        # since 1.15.0 (2014-09-18)
+        #- gss-group1-sha1-*     # removed in 5.0.0
+        #- gss-group14-sha1-*    # removed in 5.0.0
+        #- gss-gex-sha1-*        # removed in 5.0.0
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
@@ -78,8 +78,8 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
-        - gssapi-with-mic       # since 1.15.0 (2014-09-18) # only OID 1.2.840.113554.1.2.2 / Kerberos
-        - gssapi-keyex          # since 1.15.0 (2014-09-18)
+        #- gssapi-with-mic      # removed in 5.0.0
+        #- gssapi-keyex         # removed in 5.0.0
     extension:
         - server-sig-algs
 ---

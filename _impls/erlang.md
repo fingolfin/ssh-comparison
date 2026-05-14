@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://github.com/erlang/otp/blob/maint/LICENSE.txt)"
 first-release:
     date: 2005-10-25
 latest-release:
-    version: 5.5.2 (OTP 28.4.3)
-    date: 2026-04-21
+    version: 6.0 (OTP 29.0)
+    date: 2026-05-13
 changelog: https://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
@@ -60,6 +60,8 @@ protocols:
         - ext-info-s                         # since 4.5
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
+        - kex-strict-c
+        - kex-strict-s
     mac:
         - hmac-sha2-256
         - hmac-sha2-512
