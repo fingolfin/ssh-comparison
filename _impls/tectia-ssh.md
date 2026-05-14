@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1995-07
 latest-release:
-    version: 7.0.0
-    date: 2025-12-17
+    version: 7.0.1
+    date: 2026-04-16
 
 #Sources for information:
 # * https://answers.ssh.com/questions/4164/whats-new-in-tectia-clientserverconnectsecure-6413
@@ -114,6 +114,8 @@ protocols:
         - mlkem768nistp256-sha256
         - mlkem768x25519-sha256
         - sntrup761x25519-sha512@openssh.com
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - crypticore-mac@ssh.com
         - hmac-md5
