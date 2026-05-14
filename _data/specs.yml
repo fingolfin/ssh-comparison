@@ -389,10 +389,10 @@ rfc9941:
         kex:
             - sntrup761x25519-sha512
 
-draft-becker-cnsa2-ssh-profile-02:
-    name: draft-becker-cnsa2-ssh-profile-02
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-02.html
-    title: "Commercial National Security Algorithm (CNSA) Suite Profile for SSH [ expired 2026-03-02 ]"
+draft-becker-cnsa2-ssh-profile-03:
+    name: draft-becker-cnsa2-ssh-profile-03
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-03.html
+    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2026-11-09 ]"
 
 draft-gutmann-ssh-preauth-05:
     name: draft-gutmann-ssh-preauth-05
