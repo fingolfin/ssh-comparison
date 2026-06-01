@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1996      # according to Wikipedia
 latest-release:
-    version: 13.15
-    date: 2025-11-16
+    version: 13.16
+    date: 2026-05-20
 changelog: https://www.celestialsoftware.net/version-history
 client: yes
 server: no
@@ -52,6 +52,14 @@ protocols:
         - ssh-dss
         - sk-ecdsa-sha2-nistp256@openssh.com
         - sk-ssh-ed25519@openssh.com
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com  # since 13.16
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com  # since 13.16
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com  # since 13.16
+        - ssh-ed25519-cert-v01@openssh.com          # since 13.16
+        - ssh-rsa-cert-v01@openssh.com              # since 13.16
+        - ssh-dss-cert-v01@openssh.com              # since 13.16
+        - rsa-sha2-256-cert-v01@openssh.com         # since 13.16
+        - rsa-sha2-512-cert-v01@openssh.com         # since 13.16
     kex:
         - mlkem768x25519-sha256
         - sntrup761x25519-sha512
