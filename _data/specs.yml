@@ -389,6 +389,14 @@ rfc9941:
         kex:
             - sntrup761x25519-sha512
 
+rfc9987:
+    name: RFC 9987
+    url: https://tools.ietf.org/html/rfc9987
+    title: "Secure Shell (SSH) Agent Protocol"
+    protocols:
+        extension:
+            - agent-forward
+
 draft-becker-cnsa2-ssh-profile-03:
     name: draft-becker-cnsa2-ssh-profile-03
     url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-03.html
@@ -399,10 +407,10 @@ draft-gutmann-ssh-preauth-05:
     url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-05.html
     title: "A Pre-Authentication Mechanism for SSH [ expired 2026-08-14 ]"
 
-draft-harrison-sshm-mlkem-01:
-    name: draft-harrison-sshm-mlkem-01
-    url: https://tools.ietf.org/html/draft-harrison-sshm-mlkem-01.html
-    title: "Module-Lattice Key Exchange in SSH [ expired 2026-06-05 ]"
+draft-harrison-sshm-mlkem-02:
+    name: draft-harrison-sshm-mlkem-02
+    url: https://tools.ietf.org/html/draft-harrison-sshm-mlkem-02.html
+    title: "Module-Lattice Key Exchange in SSH [ expired 2026-11-28 ]"
     protocols:
         kex:
             - mlkem512-sha256
@@ -446,10 +454,10 @@ draft-ietf-sshm-cert-00:
             - rsa-sha2-256-cert-v01@openssh.com
             - rsa-sha2-512-cert-v01@openssh.com
 
-draft-ietf-sshm-chacha20-poly1305-02:
-    name: draft-ietf-sshm-chacha20-poly1305-02
-    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-02.html
-    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2026-01-24 ]"
+draft-ietf-sshm-chacha20-poly1305-04:
+    name: draft-ietf-sshm-chacha20-poly1305-04
+    url: https://tools.ietf.org/html/draft-ietf-sshm-chacha20-poly1305-04.html
+    title: "Secure Shell (SSH) authenticated encryption cipher: chacha20-poly1305 [ expired 2026-11-27 ]"
     protocols:
         cipher:
             - chacha20-poly1305
@@ -471,14 +479,6 @@ draft-ietf-sshm-mlkem-hybrid-kex-10:
             - mlkem768nistp256-sha256
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
-
-draft-ietf-sshm-ssh-agent-16:
-    name: draft-ietf-sshm-ssh-agent-16
-    url: https://tools.ietf.org/html/draft-ietf-sshm-ssh-agent-16.html
-    title: "SSH Agent Protocol [ expired 2026-08-23 ]"
-    protocols:
-        extension:
-            - agent-forward
 
 draft-ietf-sshm-strict-kex-01:
     name: draft-ietf-sshm-strict-kex-01
@@ -603,13 +603,13 @@ draft-miller-sshm-aes-gcm-01:
             - aes128-gcm
             - aes256-gcm
 
-draft-miller-sshm-mldsa65-ed25519-composite-sigs-00:
-    name: draft-miller-sshm-mldsa65-ed25519-composite-sigs-00
-    url: https://tools.ietf.org/html/draft-miller-sshm-mldsa65-ed25519-composite-sigs-00.html
-    title: "ML-DSA 65/Ed255192 Composite Signatures in SSH [ expired 2026-10-30 ]"
+draft-miller-sshm-mldsa44-ed25519-composite-sigs-00:
+    name: draft-miller-sshm-mldsa44-ed25519-composite-sigs-00
+    url: https://tools.ietf.org/html/draft-miller-sshm-mldsa44-ed25519-composite-sigs-00.html
+    title: "ML-DSA 44/Ed255192 Composite Signatures in SSH [ expired 2026-12-04 ]"
     protocols:
         hostkey:
-            - ssh-mldsa65-ed25519@openssh.com
+            - ssh-mldsa44-ed25519@openssh.com
 
 draft-rpe-ssh-mldsa-03:
     name: draft-rpe-ssh-mldsa-03
