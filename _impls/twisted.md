@@ -7,7 +7,7 @@ first-release:
     date: 2002-07-07    # Conch renamed from twisted.secsh
 latest-release:
     version: 26.4.0
-    date: 2025-05-11
+    date: 2026-05-11
 changelog: https://github.com/twisted/twisted/blob/trunk/NEWS.rst
 client: yes
 server: yes
