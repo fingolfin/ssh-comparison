@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/rapier1/hpn-ssh/blob/master/LICENCE)"
 first-release:
     date: 2004
 latest-release:
-    version: 18.8.0
-    date: 2025-10-23
+    version: 18.9.0
+    date: 2026-06-09
 changelog: https://github.com/rapier1/hpn-ssh/releases
 client: yes
 server: yes
@@ -92,6 +92,7 @@ protocols:
         - hostbased
         - publickey-hostbound-v00@openssh.com
     extension:
+        - agent-forward
         - ext-info-in-auth@openssh.com
         - ping@openssh.com
         - publickey-hostbound@openssh.com
