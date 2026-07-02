@@ -1,13 +1,13 @@
 ---
 title: Thrussh
-homepage: https://pijul.org/thrussh
+homepage: https://crates.io/crates/thrussh
 source-repository: https://nest.pijul.com/pijul/thrussh
 license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2016-07-01
 latest-release:
-    version: 0.40.5
-    date: 2026-04-25
+    version: 0.41.0
+    date: 2026-06-20
 client: yes
 server: yes
 

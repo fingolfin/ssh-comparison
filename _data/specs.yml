@@ -430,10 +430,10 @@ draft-ietf-secsh-x509-03:
             - x509v3-sign-rsa-sha1
             - x509v3-sign-dss-sha1
 
-draft-ietf-sshm-cert-00:
-    name: draft-ietf-sshm-cert-00
-    url: https://tools.ietf.org/html/draft-ietf-sshm-cert-00.html
-    title: "SSH Certificate Format [ expired 2026-10-25 ]"
+draft-ietf-sshm-cert-01:
+    name: draft-ietf-sshm-cert-01
+    url: https://tools.ietf.org/html/draft-ietf-sshm-cert-01.html
+    title: "SSH Certificate Format [ expired 2026-12-16 ]"
     protocols:
         hostkey:
             - ssh-dss-cert
@@ -621,10 +621,10 @@ draft-rpe-ssh-mldsa-03:
             - mldsa-65
             - mldsa-87
 
-draft-rpe-ssh-x509-mldsa-00:
-    name: draft-rpe-ssh-x509-mldsa-00
-    url: https://tools.ietf.org/html/draft-rpe-ssh-x509-mldsa-00.html
-    title: "X.509v3 ML-DSA Certificates for the Secure Shell (SSH) Protocoll [ expired 2026-07-06 ]"
+draft-rpe-ssh-x509-mldsa-01:
+    name: draft-rpe-ssh-x509-mldsa-01
+    url: https://tools.ietf.org/html/draft-rpe-ssh-x509-mldsa-01.html
+    title: "X.509v3 ML-DSA Certificates for the Secure Shell (SSH) Protocoll [ expired 2027-01-03 ]"
     protocols:
         hostkey:
             - x509v3-mldsa-44
