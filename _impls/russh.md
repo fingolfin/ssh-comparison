@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2022-03-13
 latest-release:
-    version: 0.61.2
-    date: 2026-06-05
+    version: 0.62.2
+    date: 2026-07-06
 changelog: https://github.com/Eugeny/russh/releases
 client: yes
 server: yes

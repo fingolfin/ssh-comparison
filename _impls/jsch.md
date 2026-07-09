@@ -6,8 +6,8 @@ license: "[BSD style](https://github.com/mwiede/jsch/blob/master/LICENSE.txt)"
 first-release:
     date: 2002-10-20
 latest-release:
-    version: 2.28.3
-    date: 2026-06-10
+    version: 2.28.4
+    date: 2026-07-09
 changelog: https://github.com/mwiede/jsch/releases
 client: yes
 server: no
