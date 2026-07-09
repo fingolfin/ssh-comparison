@@ -6,8 +6,8 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 18.0.3
-    date: 2026-06-05
+    version: 19.0
+    date: 2026-07-08
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
@@ -32,6 +32,9 @@ protocols:
         - x509v3-ecdsa-sha2-nistp256
         - x509v3-ecdsa-sha2-nistp384
         - x509v3-ecdsa-sha2-nistp521
+        - x509v3-mldsa-44
+        - x509v3-mldsa-65
+        - x509v3-mldsa-87
         - x509v3-rsa2048-sha256
         - x509v3-ssh-rsa
         - x509v3-sign-rsa
@@ -51,6 +54,9 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
+        - mldsa-44
+        - mldsa-65
+        - mldsa-87
         - ssh-ed25519
         - ssh-rsa
         - ssh-dss                           # disabled by default
