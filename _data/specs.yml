@@ -397,10 +397,10 @@ rfc9987:
         extension:
             - agent-forward
 
-draft-becker-cnsa2-ssh-profile-03:
-    name: draft-becker-cnsa2-ssh-profile-03
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-03.html
-    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2026-11-09 ]"
+draft-becker-cnsa2-ssh-profile-04:
+    name: draft-becker-cnsa2-ssh-profile-04
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-04.html
+    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-01-07 ]"
 
 draft-gutmann-ssh-preauth-05:
     name: draft-gutmann-ssh-preauth-05
@@ -667,10 +667,10 @@ draft-ssh-global-requests-ok-00:
         extension:
             - global-requests-ok
 
-draft-sun-ssh-composite-sigs-02:
-    name: draft-sun-ssh-composite-sigs-02
-    url: https://tools.ietf.org/html/draft-sun-ssh-composite-sigs-02.html
-    title: "Composite ML-DSA Signatures for SSH [ expired 2026-07-09 ]"
+draft-sun-ssh-composite-sigs-03:
+    name: draft-sun-ssh-composite-sigs-03
+    url: https://tools.ietf.org/html/draft-sun-ssh-composite-sigs-03.html
+    title: "Composite ML-DSA Signatures for SSH [ expired 2027-01-07 ]"
     protocols:
         hostkey:
             - ssh-mldsa44-es256
