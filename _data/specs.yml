@@ -3,6 +3,11 @@ iana:
     url: https://www.iana.org/assignments/ssh-parameters/ssh-parameters.xhtml
     title: "Secure Shell (SSH) Protocol Parameters"
 
+iana_sshfp:
+    name: IANA
+    url: https://www.iana.org/assignments/dns-sshfp-rr-parameters/dns-sshfp-rr-parameters.xhtml
+    title: "DNS SSHFP Resource Record Parameters"
+
 rfc4250:
     name: RFC 4250
     url: https://tools.ietf.org/html/rfc4250
