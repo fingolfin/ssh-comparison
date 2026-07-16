@@ -229,7 +229,7 @@ rfc6187:
 
 rfc6239:
     name: RFC 6239
-    url: https://tools.ietf.org/html/rfc6594
+    url: https://tools.ietf.org/html/rfc6239
     errata: https://www.rfc-editor.org/errata_search.php?rfc=6239
     title: "Suite B Cryptographic Suites for SSH"
 
