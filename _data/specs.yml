@@ -402,10 +402,10 @@ rfc9987:
         extension:
             - agent-forward
 
-draft-becker-cnsa2-ssh-profile-04:
-    name: draft-becker-cnsa2-ssh-profile-04
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-04.html
-    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-01-07 ]"
+draft-becker-cnsa2-ssh-profile-05:
+    name: draft-becker-cnsa2-ssh-profile-05
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-05.html
+    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-01-22 ]"
 
 draft-gutmann-ssh-preauth-05:
     name: draft-gutmann-ssh-preauth-05
@@ -485,10 +485,10 @@ draft-ietf-sshm-mlkem-hybrid-kex-10:
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
 
-draft-ietf-sshm-strict-kex-01:
-    name: draft-ietf-sshm-strict-kex-01
-    url: https://tools.ietf.org/html/draft-ietf-sshm-strict-kex-01.html
-    title: "SSH Strict KEX extension [ expired 2026-05-14 ]"
+draft-ietf-sshm-strict-kex-02:
+    name: draft-ietf-sshm-strict-kex-02
+    url: https://tools.ietf.org/html/draft-ietf-sshm-strict-kex-02.html
+    title: "SSH Strict KEX extension [ expired 2027-01-23 ]"
     protocols:
         kex:
             - kex-strict-c
@@ -547,10 +547,10 @@ draft-josefsson-ssh-sphincs-02:
             - ssh-ed448-slh-dsa-sha2-256-24
             - ssh-ed448-slh-dsa-shake-256-24
 
-draft-josefsson-sshsig-format-03:
-    name: draft-josefsson-sshsig-format-03
-    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-03.html
-    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2026-01-08 ]"
+draft-josefsson-sshsig-format-04:
+    name: draft-josefsson-sshsig-format-04
+    url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-04.html
+    title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2027-01-23 ]"
 
 draft-kanno-secsh-camellia-02:
     name: draft-kanno-secsh-camellia-02
