@@ -6,9 +6,8 @@ license: "[Public Domain](http://ftp.rodents-montreal.org/mouse/git-unpacked/mou
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.9.2fe6d57aff
-    version: 0.9.20250724104234w0400.e4f5ecd6ab
-    date: 2025-07-24
+    version: 0.9.20260715151218w0400.4c6d154c8f
+    date: 2026-07-15
 #changelog: TODO
 client: yes
 server: yes

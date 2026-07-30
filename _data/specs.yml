@@ -608,6 +608,15 @@ draft-miller-sshm-aes-gcm-01:
             - aes128-gcm
             - aes256-gcm
 
+draft-miller-sshm-composite-sigs-00:
+    name: draft-miller-sshm-composite-sigs-00
+    url: https://tools.ietf.org/html/draft-miller-sshm-composite-sigs-00.html
+    title: "Post-Quantum Composite Signatures in SSH [ expired 2027-01-24 ]"
+    protocols:
+        hostkey:
+            - ssh-mldsa44-ed25519
+            - ssh-mldsa87-p384
+
 draft-miller-sshm-mldsa44-ed25519-composite-sigs-00:
     name: draft-miller-sshm-mldsa44-ed25519-composite-sigs-00
     url: https://tools.ietf.org/html/draft-miller-sshm-mldsa44-ed25519-composite-sigs-00.html
