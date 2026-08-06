@@ -6,8 +6,8 @@ license: "[Apache-2.0](https://www.apache.org/licenses/LICENSE-2.0)"
 first-release:
     date: 2016-07-01
 latest-release:
-    version: 0.42.0
-    date: 2026-07-12
+    version: 0.43.0
+    date: 2026-08-01
 client: yes
 server: yes
 
@@ -28,6 +28,7 @@ protocols:
         - ssh-ed25519
     kex:
         - curve25519-sha256@libssh.org
+        - mlkem768x25519-sha256
         - ext-info-c
         - ext-info-s
         - kex-strict-c-v00@openssh.com

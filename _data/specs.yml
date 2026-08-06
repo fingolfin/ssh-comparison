@@ -407,10 +407,10 @@ draft-becker-cnsa2-ssh-profile-05:
     url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-05.html
     title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-01-22 ]"
 
-draft-gutmann-ssh-preauth-05:
-    name: draft-gutmann-ssh-preauth-05
-    url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-05.html
-    title: "A Pre-Authentication Mechanism for SSH [ expired 2026-08-14 ]"
+draft-gutmann-ssh-preauth-06:
+    name: draft-gutmann-ssh-preauth-06
+    url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-06.html
+    title: "A Pre-Authentication Mechanism for SSH [ expired 2027-02-04 ]"
 
 draft-harrison-sshm-mlkem-02:
     name: draft-harrison-sshm-mlkem-02
