@@ -1,0 +1,187 @@
+---
+title: OQS-OpenSSH
+homepage: https://openquantumsafe.org/applications/ssh.html#oqs-openssh
+source-repository: https://github.com/open-quantum-safe/openssh/
+license: "[BSD](https://github.com/open-quantum-safe/openssh/blob/OQS-v10/LICENCE)"
+first-release:
+    date: 2018-11-13
+latest-release:
+    version: 2025-05
+    date: 2025-05-23
+changelog: https://github.com/open-quantum-safe/openssh/releases
+client: yes
+server: yes
+
+protocols:
+    cipher:
+        - chacha20-poly1305@openssh.com
+        - aes128-ctr
+        - aes192-ctr
+        - aes256-ctr
+        - aes128-gcm@openssh.com
+        - aes256-gcm@openssh.com
+        - aes128-cbc
+        - 3des-cbc
+        - aes192-cbc
+        - aes256-cbc
+    compression:
+        - none
+        - zlib@openssh.com
+        - zlib
+    hostkey:
+        - rsa-sha2-256
+        - rsa-sha2-512
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-dss-cert-v01@openssh.com
+        - rsa-sha2-256-cert-v01@openssh.com
+        - rsa-sha2-512-cert-v01@openssh.com
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
+        - ssh-ed25519
+        - ssh-rsa
+        - ssh-dss
+        - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - sk-ssh-ed25519-cert-v01@openssh.com
+        - sk-ssh-ed25519@openssh.com
+        - ssh-falcon512
+        - ssh-falcon1024
+        - ssh-mayo2
+        - ssh-mayo3
+        - ssh-mayo5
+        - ssh-mldsa44
+        - ssh-mldsa65
+        - ssh-mldsa87
+        - ssh-sphincssha2128fsimple
+        - ssh-sphincssha2256fsimple
+        - ssh-rsa3072-falcon512
+        - ssh-ecdsa-nistp256-falcon512
+        - ssh-ecdsa-nistp521-falcon1024
+        - ssh-rsa3072-sphincssha2128fsimple
+        - ssh-ecdsa-nistp256-sphincssha2128fsimple
+        - ssh-ecdsa-nistp521-sphincssha2256fsimple
+        - ssh-rsa3072-mayo2
+        - ssh-ecdsa-nistp256-mayo2
+        - ssh-ecdsa-nistp384-mayo3
+        - ssh-ecdsa-nistp521-mayo5
+        - ssh-rsa3072-mldsa44
+        - ssh-ecdsa-nistp256-mldsa44
+        - ssh-ecdsa-nistp384-mldsa65
+        - ssh-ecdsa-nistp521-mldsa87
+    kex:
+        - curve25519-sha256
+        - curve25519-sha256@libssh.org
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group18-sha512
+        - ext-info-c
+        - ext-info-s
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
+        - bike-l1-sha512
+        - bike-l3-sha512
+        - bike-l5-sha512
+        - classic-mceliece-348864-sha256
+        - classic-mceliece-348864f-sha256
+        - classic-mceliece-460896-sha512
+        - classic-mceliece-460896f-sha512
+        - classic-mceliece-6688128-sha512
+        - classic-mceliece-6688128f-sha512
+        - classic-mceliece-6960119-sha512
+        - classic-mceliece-6960119f-sha512
+        - classic-mceliece-8192128-sha512
+        - classic-mceliece-8192128f-sha512
+        - frodokem-640-aes-sha256
+        - frodokem-976-aes-sha384
+        - frodokem-1344-aes-sha512
+        - frodokem-640-shake-sha256
+        - frodokem-976-shake-sha384
+        - frodokem-1344-shake-sha512
+        - kyber-512-sha256
+        - kyber-768-sha384
+        - kyber-1024-sha512
+        - mlkem512-sha256
+        - mlkem768-sha256
+        - mlkem1024-sha384
+        - sntrup761-sha512
+        - ecdh-nistp256-bike-l1r4-sha512@openquantumsafe.org
+        - x25519-bike-l1r4-sha512@openquantumsafe.org
+        - ecdh-nistp384-bike-l3r4-sha512@openquantumsafe.org
+        - ecdh-nistp521-bike-l5r4-sha512@openquantumsafe.org
+        - ecdh-nistp256-classic-mceliece-348864r4-sha256@openquantumsafe.org
+        - x25519-classic-mceliece-348864r4-sha256@openquantumsafe.org
+        - ecdh-nistp256-classic-mceliece-348864fr4-sha256@openquantumsafe.org
+        - x25519-classic-mceliece-348864fr4-sha256@openquantumsafe.org
+        - ecdh-nistp384-classic-mceliece-460896r4-sha512@openquantumsafe.org
+        - ecdh-nistp384-classic-mceliece-460896fr4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-6688128r4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-6688128fr4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-6960119r4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-6960119fr4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-8192128r4-sha512@openquantumsafe.org
+        - ecdh-nistp521-classic-mceliece-8192128fr4-sha512@openquantumsafe.org
+        - ecdh-nistp256-frodokem-640-aesr2-sha256@openquantumsafe.org
+        - x25519-frodokem-640-aesr2-sha256@openquantumsafe.org
+        - ecdh-nistp384-frodokem-976-aesr2-sha384@openquantumsafe.org
+        - ecdh-nistp521-frodokem-1344-aesr2-sha512@openquantumsafe.org
+        - ecdh-nistp256-frodokem-640-shaker2-sha256@openquantumsafe.org
+        - x25519-frodokem-640-shaker2-sha256@openquantumsafe.org
+        - ecdh-nistp384-frodokem-976-shaker2-sha384@openquantumsafe.org
+        - ecdh-nistp521-frodokem-1344-shaker2-sha512@openquantumsafe.org
+        - ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org
+        - x25519-kyber-512r3-sha256-d00@amazon.com
+        - ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org
+        - ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org
+        - ecdh-nistp256-ml-kem-512-sha256@openquantumsafe.org
+        - x25519-ml-kem-512-sha256@openquantumsafe.org
+        - mlkem768nistp256-sha256
+        - mlkem768x25519-sha256
+        - mlkem1024nistp384-sha384
+        - sntrup761x25519-sha512@openssh.com
+    mac:
+        - umac-64-etm@openssh.com
+        - umac-128-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - umac-64@openssh.com
+        - umac-128@openssh.com
+        - hmac-sha2-256
+        - hmac-sha2-512
+        - hmac-sha1
+        - hmac-md5-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+        - hmac-md5
+        - hmac-sha1-96
+        - hmac-md5-96
+    userauth:
+        - publickey
+        - password
+        - keyboard-interactive
+        - gssapi-with-mic
+        - hostbased
+        - publickey-hostbound-v00@openssh.com
+    extension:
+        - ext-info-in-auth@openssh.com
+        - ping@openssh.com
+        - publickey-hostbound@openssh.com
+        - server-sig-algs
+
+first_kex_packet_follows: 0
+based-on: "[OpenSSH](/impls/openssh.html)"
+---
+* OQS-OpenSSH is a fork of OpenSSH that adds quantum-safe key exchange and signature algorithms using [liboqs](https://openquantumsafe.org/liboqs/) for prototyping and evaluation purposes.
+* This fork is not endorsed by the OpenSSH project.
