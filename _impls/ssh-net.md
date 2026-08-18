@@ -6,8 +6,8 @@ license: "[MIT license](https://github.com/sshnet/SSH.NET/blob/develop/LICENSE)"
 first-release:
     date: 2010-09-16
 latest-release:
-    version: 2025.1.0
-    date: 2025-10-27
+    version: 2026.0.0
+    date: 2026-08-09
 changelog: https://github.com/sshnet/SSH.NET/releases
 client: yes
 server: no

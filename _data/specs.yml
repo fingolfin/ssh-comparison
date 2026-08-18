@@ -645,10 +645,10 @@ draft-rpe-ssh-x509-mldsa-01:
             - x509v3-mldsa-65
             - x509v3-mldsa-87
 
-draft-sfluhrer-ssh-mldsa-06:
-    name: draft-sfluhrer-ssh-mldsa-06
-    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-06.html
-    title: "SSH Support of ML-DSA [ expired 2026-10-09 ]"
+draft-sfluhrer-ssh-mldsa-07:
+    name: draft-sfluhrer-ssh-mldsa-07
+    url: https://tools.ietf.org/html/draft-sfluhrer-ssh-mldsa-07.html
+    title: "SSH Support of ML-DSA [ expired 2027-02-15 ]"
     protocols:
         hostkey:
             - ssh-mldsa-44
