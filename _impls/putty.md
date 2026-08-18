@@ -15,8 +15,8 @@ first-release:
 # the development code made its first successful SSH connection 1998-05-29.
 # So, all in all, this is why I give 1998 as date of the first release.
 latest-release:
-    version: 0.84
-    date: 2026-05-22
+    version: 0.85
+    date: 2026-08-16
 changelog: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
