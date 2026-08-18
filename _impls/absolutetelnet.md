@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1996      # according to Wikipedia
 latest-release:
-    version: 13.16
-    date: 2026-05-20
+    version: 14.02
+    date: 2026-08-14
 changelog: https://www.celestialsoftware.net/version-history
 client: yes
 server: no
