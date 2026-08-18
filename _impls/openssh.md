@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/openssh/openssh-portable/blob/master/LICENCE)
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 10.4
-    date: 2026-07-06
+    version: 10.5
+    date: 2026-08-11
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
@@ -86,6 +86,7 @@ protocols:
         - sntrup761x25519-sha512@openssh.com # since 8.5
         - sntrup761x25519-sha512            # since 9.9
         - mlkem768x25519-sha256             # since 9.9
+        - mlkem768nistp256-sha256           # since 10.5
     mac:
         - umac-64-etm@openssh.com           # since 6.2
         - umac-128-etm@openssh.com          # since 6.2
