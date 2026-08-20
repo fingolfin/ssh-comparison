@@ -61,6 +61,7 @@ protocols:
         - x509v3-ssh-dss                                # since 1.11.0
         - sk-ssh-ed25519@openssh.com                    # since 2.2.0
         - sk-ecdsa-sha2-nistp256@openssh.com            # since 2.2.0
+        - webauthn-sk-ecdsa-sha2-nistp256@openssh.com   # since 2.19.0
         - ssh-ed25519                                   # since 1.0.0
         - ssh-ed448                                     # since 1.16.0
         - ecdsa-sha2-nistp521                           # since 1.0.0

@@ -47,6 +47,7 @@ protocols:
         - ssh-dss
         - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
         - sk-ecdsa-sha2-nistp256@openssh.com
+        - webauthn-sk-ecdsa-sha2-nistp256@openssh.com
         - sk-ssh-ed25519-cert-v01@openssh.com
         - sk-ssh-ed25519@openssh.com
         - ssh-falcon512
