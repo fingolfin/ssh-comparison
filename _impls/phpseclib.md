@@ -6,8 +6,8 @@ license: "[MIT style](https://github.com/phpseclib/phpseclib/blob/master/LICENSE
 first-release:
     date: 2007-09-23
 latest-release:
-    version: 3.0.56
-    date: 2026-08-02
+    version: 4.0.1
+    date: 2026-08-26
 changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
 client: yes
 server: no
@@ -17,9 +17,9 @@ protocols:
     cipher:
         - aes128-gcm@openssh.com
         - aes256-gcm@openssh.com
-        - arcfour
         - arcfour256
         - arcfour128
+        - arcfour
         - aes128-ctr
         - aes192-ctr
         - aes256-ctr
@@ -27,9 +27,9 @@ protocols:
         - twofish128-ctr
         - twofish192-ctr
         - twofish256-ctr
-        - aes256-cbc
-        - aes192-cbc
         - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
         - twofish128-cbc
         - twofish192-cbc
         - twofish256-cbc
@@ -40,8 +40,8 @@ protocols:
         - 3des-cbc
     compression:
         - none
-        - zlib
         - zlib@openssh.com
+        - zlib
     hostkey:
         - ssh-ed25519
         - ecdsa-sha2-nistp256
@@ -60,29 +60,29 @@ protocols:
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group14-sha256
-        - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group15-sha512
         - diffie-hellman-group16-sha512
         - diffie-hellman-group17-sha512
         - diffie-hellman-group18-sha512
+        - diffie-hellman-group1-sha1
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-256-etm@openssh.com
         - hmac-sha2-512-etm@openssh.com
-        - umac-64-etm@openssh.com
-        - umac-128-etm@openssh.com
         - hmac-sha1-etm@openssh.com
         - hmac-sha2-256
         - hmac-sha2-512
-        - umac-64@openssh.com
-        - umac-128@openssh.com
         - hmac-sha1-96
         - hmac-sha1
         - hmac-md5-96
         - hmac-md5
+        - umac-64@openssh.com
+        - umac-128@openssh.com
+        - umac-64-etm@openssh.com
+        - umac-128-etm@openssh.com
     userauth:
         - keyboard-interactive
         - publickey
