@@ -8,8 +8,8 @@ first-release:
     # see also https://news.ycombinator.com/item?id=7727738 from May 11, 2014
     # and http://tuxdiary.com/2014/05/11/tinyssh/
 latest-release:
-    version: 20260601
-    date: 2026-06-01
+    version: 20260906
+    date: 2026-09-06
 changelog: https://github.com/janmojzis/tinyssh/releases
 client: no
 server: yes
@@ -28,6 +28,7 @@ protocols:
         #- ecdh-sha2-nistp256                       # removed in 20190101
         #- sntrup4591761x25519-sha512@tinyssh.org   # added in 20190101, removed in 20210319
         - sntrup761x25519-sha512@openssh.com        # added in 20210319
+        - sntrup761x25519-sha512                    # added in 20260906
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
     mac:
