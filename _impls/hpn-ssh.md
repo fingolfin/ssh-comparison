@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/rapier1/hpn-ssh/blob/master/LICENCE)"
 first-release:
     date: 2004
 latest-release:
-    version: 18.9.0
-    date: 2026-06-09
+    version: 18.11.0
+    date: 2026-09-15
 changelog: https://github.com/rapier1/hpn-ssh/releases
 client: yes
 server: yes
@@ -35,6 +35,7 @@ protocols:
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - ssh-ed25519-cert-v01@openssh.com
+        - ssh-mldsa44-ed25519-cert-v01@openssh.com
         - ssh-rsa-cert-v01@openssh.com
         - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-512-cert-v01@openssh.com
@@ -42,6 +43,7 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - ssh-ed25519
+        - ssh-mldsa44-ed25519@openssh.com
         - ssh-rsa
         - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
         - sk-ecdsa-sha2-nistp256@openssh.com
@@ -69,6 +71,7 @@ protocols:
         - sntrup761x25519-sha512@openssh.com
         - sntrup761x25519-sha512
         - mlkem768x25519-sha256
+        - mlkem768nistp256-sha256
     mac:
         - umac-64-etm@openssh.com
         - umac-128-etm@openssh.com
