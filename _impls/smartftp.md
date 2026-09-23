@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1998
 latest-release:
-    version: 10.0.3326
-    date: 2026-09-04
+    version: 10.0.3330
+    date: 2026-09-23
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
@@ -21,6 +21,7 @@ protocols:
         - aes192-cbc
         - aes256-cbc
         - 3des-cbc
+        - chacha20-poly1305@openssh.com
     compression:
         - zlib@openssh.com
         - none
@@ -62,6 +63,8 @@ protocols:
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
+        - kex-strict-c
+        - kex-strict-s
     mac:
         - hmac-sha1
         - hmac-sha2-256
