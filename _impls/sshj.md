@@ -2,13 +2,13 @@
 title: SSHJ
 homepage: https://github.com/hierynomus/sshj
 source-repository: https://github.com/hierynomus/sshj
-changelog: https://github.com/hierynomus/sshj?tab=readme-ov-file#release-history
+changelog: https://github.com/hierynomus/sshj/releases
 license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 0.40.0
-    date: 2025-05-13
+    version: 0.41.1
+    date: 2026-09-21
 #changelog: URL
 client: yes
 server: no
@@ -79,6 +79,8 @@ protocols:
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - ssh-ed25519-cert-v01@openssh.com
+        - sk-ecdsa-sha2-nistp256@openssh.com
+        - sk-ssh-ed25519@openssh.com
     kex:
         - curve25519-sha256
         - curve25519-sha256@libssh.org
@@ -127,5 +129,7 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - hostbased
+    extension:
+        - server-sig-algs
 ---
 * Pure Java implementation.

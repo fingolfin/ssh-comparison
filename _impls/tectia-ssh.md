@@ -5,8 +5,8 @@ license: Proprietary
 first-release:
     date: 1995-07
 latest-release:
-    version: 7.0.1
-    date: 2026-04-16
+    version: 7.1.0
+    date: 2026-09-21
 
 #Sources for information:
 # * https://answers.ssh.com/questions/4164/whats-new-in-tectia-clientserverconnectsecure-6413
@@ -113,6 +113,7 @@ protocols:
         - mlkem1024nistp384-sha384
         - mlkem768nistp256-sha256
         - mlkem768x25519-sha256
+        - sntrup761x25519-sha512
         - sntrup761x25519-sha512@openssh.com
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
@@ -150,8 +151,8 @@ protocols:
 * Strictly speaking, the Tectica SSH client and server are two separate
   products.
 * The information here is based on the Tectia SSH manual, in particular the list of
-  [default and supported SSH algorithms](https://docs.ssh.com/manuals/server-admin/70/csc-algorithms.html)
+  [default and supported SSH algorithms](https://docs.ssh.com/manuals/server-admin/71/csc-algorithms.html)
   as well as the list of
-  [supported user authentication methods](https://docs.ssh.com/manuals/server-admin/70/server-auth-supported-methods.html).
-* WARNING: The data here was lasted update for release 7.0.0; changes made
+  [supported user authentication methods](https://docs.ssh.com/manuals/server-admin/71/server-auth-supported-methods.html).
+* WARNING: The data here was lasted update for release 7.1.0; changes made
   since then are not reflected by the list above.
