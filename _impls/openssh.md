@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/openssh/openssh-portable/blob/master/LICENCE)
 first-release:
     date: 1999-12-01    # according to Wikipedia
 latest-release:
-    version: 10.5
-    date: 2026-08-11
+    version: 10.6
+    date: 2026-10-06
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
@@ -48,7 +48,8 @@ protocols:
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
         - ssh-ed25519-cert-v01@openssh.com  # since 6.5
-        - ssh-mldsa44-ed25519-cert-v01@openssh.com # since 10.4
+        #- ssh-mldsa44-ed25519-cert-v01@openssh.com # since 10.4, removed in 10.6
+        - ssh-mldsa44-ed25519-cert          # since 10.6
         - ssh-rsa-cert-v01@openssh.com
         #- ssh-dss-cert-v01@openssh.com      # removed in 10.0
         - rsa-sha2-256-cert-v01@openssh.com
@@ -59,7 +60,8 @@ protocols:
         - ecdsa-sha2-nistp384               # since 5.7
         - ecdsa-sha2-nistp521               # since 5.7
         - ssh-ed25519                       # since 6.5
-        - ssh-mldsa44-ed25519@openssh.com   # since 10.4
+        #- ssh-mldsa44-ed25519@openssh.com  # since 10.4, removed in 10.6
+        - ssh-mldsa44-ed25519               # since 10.6
         - ssh-rsa
         #- ssh-dss                           # removed in 10.0
         - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
