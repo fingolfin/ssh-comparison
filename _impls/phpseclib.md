@@ -6,8 +6,8 @@ license: "[MIT style](https://github.com/phpseclib/phpseclib/blob/master/LICENSE
 first-release:
     date: 2007-09-23
 latest-release:
-    version: 4.0.1
-    date: 2026-08-26
+    version: 4.0.2
+    date: 2026-10-07
 changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
 client: yes
 server: no
