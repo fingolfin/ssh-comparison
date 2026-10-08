@@ -6,8 +6,8 @@ license: "Dual license: [GPLv3](https://github.com/wolfSSL/wolfssh/blob/master/L
 first-release:
     date: 2016-10-24
 latest-release:
-    version: 1.5.0
-    date: 2026-04-17
+    version: 1.6.0
+    date: 2026-10-06
 changelog: https://github.com/wolfSSL/wolfssh/blob/master/ChangeLog.md
 client: yes
 server: yes
@@ -34,10 +34,29 @@ protocols:
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
         - ssh-ed25519
+        - ssh-mldsa-44
+        - ssh-mldsa-65
+        - ssh-mldsa-87
+        - ssh-mldsa44-es256@wolfssl.com
+        - ssh-mldsa44-ed25519@openssh.com
+        - ssh-mldsa65-es256@wolfssl.com
+        - ssh-mldsa65-ed25519@wolfssl.com
+        - ssh-mldsa87-es384@wolfssl.com
+        - ssh-mldsa87-ed448@wolfssl.com
+        - ssh-rsa-cert-v01@openssh.com
+        - rsa-sha2-256-cert-v01@openssh.com
+        - rsa-sha2-512-cert-v01@openssh.com
+        - ecdsa-sha2-nistp256-cert-v01@openssh.com
+        - ecdsa-sha2-nistp384-cert-v01@openssh.com
+        - ecdsa-sha2-nistp521-cert-v01@openssh.com
+        - ssh-ed25519-cert-v01@openssh.com
         - x509v3-ssh-rsa
         - x509v3-ecdsa-sha2-nistp256
         - x509v3-ecdsa-sha2-nistp384
         - x509v3-ecdsa-sha2-nistp521
+        - x509v3-ssh-mldsa-44
+        - x509v3-ssh-mldsa-65
+        - x509v3-ssh-mldsa-87
     kex:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
@@ -53,6 +72,11 @@ protocols:
         - mlkem1024nistp384-sha384
         - mlkem768x25519-sha256
         - ext-info-c
+        - ext-info-s
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
+        - kex-strict-c
+        - kex-strict-s
     mac:
         - hmac-sha1
         - hmac-sha1-96
