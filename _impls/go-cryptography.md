@@ -6,8 +6,8 @@ license: "[BSD style](https://cs.opensource.google/go/x/crypto/+/master:LICENSE)
 first-release:
     date: 2022-10-19
 latest-release:
-    version: 0.57.0
-    date: 2026-09-08
+    version: 0.58.0
+    date: 2026-10-09
 #changelog: ?
 client: yes
 server: yes
@@ -38,6 +38,9 @@ protocols:
         - sk-ssh-ed25519@openssh.com
         - rsa-sha2-256
         - rsa-sha2-512
+        - ssh-mldsa-44
+        - ssh-mldsa-65
+        - ssh-mldsa-87
         - ssh-rsa-cert-v01@openssh.com
         - ssh-dss-cert-v01@openssh.com
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
@@ -48,6 +51,9 @@ protocols:
         - sk-ssh-ed25519-cert-v01@openssh.com
         - rsa-sha2-256-cert-v01@openssh.com
         - rsa-sha2-512-cert-v01@openssh.com
+        - ssh-mldsa-44-cert-v01@golang.org
+        - ssh-mldsa-65-cert-v01@golang.org
+        - ssh-mldsa-87-cert-v01@golang.org
     kex:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
