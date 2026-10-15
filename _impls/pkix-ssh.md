@@ -6,8 +6,8 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 19.1
-    date: 2026-08-13
+    version: 20.0.1
+    date: 2026-10-10
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
@@ -54,9 +54,9 @@ protocols:
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
-        - mldsa-44
-        - mldsa-65
-        - mldsa-87
+        - ssh-mldsa-44
+        - ssh-mldsa-65
+        - ssh-mldsa-87
         - ssh-ed25519
         - ssh-rsa
         - ssh-dss                           # disabled by default
