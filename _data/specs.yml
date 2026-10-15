@@ -626,15 +626,16 @@ draft-miller-sshm-mldsa44-ed25519-composite-sigs-00:
         hostkey:
             - ssh-mldsa44-ed25519@openssh.com
 
-draft-rpe-ssh-mldsa-03:
-    name: draft-rpe-ssh-mldsa-03
-    url: https://tools.ietf.org/html/draft-rpe-ssh-mldsa-03.html
-    title: "ML-DSA Public Key Algorithms for the Secure Shell (SSH) Protocol [ expired 2026-10-18 ]"
+draft-prabel-ssh-scloudplus-kex-00:
+    name: draft-prabel-ssh-scloudplus-kex-00
+    url: https://datatracker.ietf.org/doc/html/draft-prabel-ssh-scloudplus-kex-00.html
+    title: "Secure Shell (SSH) Post-Quantum/Traditional Hybrid Key Exchange Methods Using Scloud+ [ expired 2027-04-18 ]"
     protocols:
-        hostkey:
-            - mldsa-44
-            - mldsa-65
-            - mldsa-87
+        kex:
+            - scloudp192aesnistp384-sha384
+            - scloudp192shakenistp384-sha384
+            - scloudp256aesnistp521-sha512
+            - scloudp256shakenistp521-sha512
 
 draft-rpe-ssh-x509-mldsa-01:
     name: draft-rpe-ssh-x509-mldsa-01
