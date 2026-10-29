@@ -413,10 +413,19 @@ rfc10042:
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
 
-draft-becker-cnsa2-ssh-profile-05:
-    name: draft-becker-cnsa2-ssh-profile-05
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-05.html
-    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-01-22 ]"
+draft-becker-cnsa2-ssh-profile-06:
+    name: draft-becker-cnsa2-ssh-profile-06
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-06.html
+    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-04-30 ]"
+
+draft-bider-ssh-server-algs-00:
+    name: draft-bider-ssh-server-algs-00
+    url: https://datatracker.ietf.org/doc/html/draft-bider-ssh-server-algs-00.html
+    title: "Server-Led Algorithm Preference in the Secure Shell (SSH) Protocol [ expired 2027-04-27 ]"
+    protocols:
+        kex:
+            - server-algs-c
+            - server-algs-s
 
 draft-gutmann-ssh-preauth-06:
     name: draft-gutmann-ssh-preauth-06
@@ -589,6 +598,18 @@ draft-kario-gss-keyex-pqc-00:
             - gss-mlkem768nistp256-sha256-*
             - gss-mlkem1024nistp384-sha384-*
             - gss-mlkem768x25519-sha256-*
+
+draft-liu-sshm-kem-userauth-00:
+    name: draft-liu-sshm-kem-userauth-00
+    url: https://datatracker.ietf.org/doc/html/draft-liu-sshm-kem-userauth-00.html
+    title: "KEM-based User Authentication for SSH [ expired 2027-04-29 ]"
+    protocols:
+        hostkey:
+            - ssh-mlkem-512-hmac-sha256  # only for userauth
+            - ssh-mlkem-768-hmac-sha256  # only for userauth
+            - ssh-mlkem-1024-hmac-sha256 # only for userauth
+        userauth:
+            - publickey-kem
 
 draft-miller-secsh-compression-delayed-00:
     name: draft-miller-secsh-compression-delayed-00
