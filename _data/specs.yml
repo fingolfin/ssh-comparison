@@ -413,10 +413,10 @@ rfc10042:
             - mlkem1024nistp384-sha384
             - mlkem768x25519-sha256
 
-draft-becker-cnsa2-ssh-profile-06:
-    name: draft-becker-cnsa2-ssh-profile-06
-    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-06.html
-    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-04-30 ]"
+draft-becker-cnsa2-ssh-profile-07:
+    name: draft-becker-cnsa2-ssh-profile-07
+    url: https://tools.ietf.org/html/draft-becker-cnsa2-ssh-profile-07.html
+    title: "Commercial National Security Algorithm (CNSA) Suite 2.0 Profile for SSH [ expired 2027-05-03 ]"
 
 draft-bider-ssh-server-algs-00:
     name: draft-bider-ssh-server-algs-00
