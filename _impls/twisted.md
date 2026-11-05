@@ -6,8 +6,8 @@ license: "[MIT](https://github.com/twisted/twisted/blob/trunk/LICENSE)"
 first-release:
     date: 2002-07-07    # Conch renamed from twisted.secsh
 latest-release:
-    version: 26.4.0
-    date: 2026-05-11
+    version: 26.10.0
+    date: 2026-10-30
 changelog: https://github.com/twisted/twisted/blob/trunk/NEWS.rst
 client: yes
 server: yes
@@ -58,6 +58,7 @@ protocols:
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
+        - mlkem768x25519-sha256
         - ext-info-c
         - ext-info-s
     # https://github.com/twisted/twisted/blob/2a33824557ed65d2241a51d6bba07ac76521b50f/src/twisted/conch/ssh/transport.py#L110

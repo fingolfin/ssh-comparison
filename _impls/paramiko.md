@@ -6,8 +6,8 @@ license: "[LGPL 2.1](https://github.com/paramiko/paramiko/blob/master/LICENSE)"
 first-release:
     date: 2003-09-13    # v0.1, according to NEWS file
 latest-release:
-    version: 5.0.0
-    date: 2026-05-09
+    version: 5.1.0
+    date: 2026-10-17
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes
@@ -62,6 +62,7 @@ protocols:
         #- gss-group1-sha1-*     # removed in 5.0.0
         #- gss-group14-sha1-*    # removed in 5.0.0
         #- gss-gex-sha1-*        # removed in 5.0.0
+        - mlkem768x25519-sha256  # since 5.1.0 (2026-10-17)
         - ext-info-c
         - kex-strict-c-v00@openssh.com
         - kex-strict-s-v00@openssh.com
