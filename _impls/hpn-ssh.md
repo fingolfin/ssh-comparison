@@ -6,8 +6,8 @@ license: "[BSD](https://github.com/rapier1/hpn-ssh/blob/master/LICENCE)"
 first-release:
     date: 2004
 latest-release:
-    version: 18.12.0
-    date: 2026-10-08
+    version: 18.12.1
+    date: 2026-11-05
 changelog: https://github.com/rapier1/hpn-ssh/releases
 client: yes
 server: yes
