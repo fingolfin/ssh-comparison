@@ -6,8 +6,8 @@ license: "[BSD](https://gitlab.com/secsh/pkixssh/-/blob/master/LICENCE)"
 first-release:
     date: 2002-04-04
 latest-release:
-    version: 20.0.1
-    date: 2026-10-10
+    version: 20.1
+    date: 2026-11-07
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
