@@ -6,8 +6,8 @@ license: "[BSD style](https://cs.opensource.google/go/x/crypto/+/master:LICENSE)
 first-release:
     date: 2022-10-19
 latest-release:
-    version: 0.58.0
-    date: 2026-10-09
+    version: 0.59.0
+    date: 2026-11-11
 #changelog: ?
 client: yes
 server: yes
@@ -29,7 +29,6 @@ protocols:
         - none
     hostkey:
         - ssh-rsa
-        - ssh-dss
         - ecdsa-sha2-nistp256
         - sk-ecdsa-sha2-nistp256@openssh.com
         - ecdsa-sha2-nistp384
@@ -42,7 +41,6 @@ protocols:
         - ssh-mldsa-65
         - ssh-mldsa-87
         - ssh-rsa-cert-v01@openssh.com
-        - ssh-dss-cert-v01@openssh.com
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
