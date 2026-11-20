@@ -1,0 +1,57 @@
+# Build the site with our own Jekyll and deploy it to GitHub Pages.
+#
+#   push to gh-pages ──► build ──► upload-pages-artifact ──► deploy-pages
+#   pull request     ──► build        (no deploy: a build failure is the check)
+#
+# This replaces GitHub's legacy Pages builder, which pins the github-pages
+# gem (jekyll 3.10, Ruby Sass 3.7.4) and so cannot compile a stylesheet that
+# uses the Sass module system. Pages source must be set to "GitHub Actions".
+name: Pages
+
+on:
+  push:
+    branches: [gh-pages]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Let a running deployment finish rather than cancelling it half-way.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+          bundler-cache: true
+
+      - uses: actions/configure-pages@v5
+
+      - run: bundle exec jekyll build --trace
+        env:
+          JEKYLL_ENV: production
+
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    needs: build
+    if: github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

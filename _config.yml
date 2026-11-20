@@ -15,7 +15,9 @@ markdown: kramdown
 plugins:
   - jekyll-redirect-from
 
-exclude: [ssh-detect.py]
+# Setting `exclude` replaces Jekyll's defaults, so the bundler paths have to
+# be repeated here or they land in _site.
+exclude: [ssh-detect.py, Gemfile, Gemfile.lock, vendor, .bundle]
 
 collections:
   impls:
