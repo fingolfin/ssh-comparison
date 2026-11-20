@@ -148,3 +148,35 @@ tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 20%
     color: white;
     background-color: #4CAF50;
 }
+
+
+//
+// Credits page
+//
+
+.credits-list {
+    dt {
+        font-weight: bold;
+        margin-top: $spacing-unit * 0.5;
+    }
+
+    dd {
+        margin-left: 0;
+        color: $grey-color-dark;
+        max-width: $content-width;
+    }
+}
+
+// Multi-column so a long list of names stays a glance rather than a scroll.
+.credits-contributors {
+    columns: 3 14em;
+    column-gap: $spacing-unit;
+    list-style-position: inside;
+    margin-left: 0;
+}
+
+// Section headings must stay smaller than the page heading above them.
+h1.page-heading ~ h2 {
+    font-size: 21px;
+    margin-top: $spacing-unit;
+}
