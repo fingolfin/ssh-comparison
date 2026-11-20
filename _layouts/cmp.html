@@ -10,6 +10,8 @@ layout: default
 </ul>
 </nav>
 
+{% if site.data.rated_classes contains page.type %}{% include algo-legend.html %}{% endif %}
+
 {%- comment -%}
 The controls start hidden and cmp-table.js reveals them: without JavaScript
 the full table is still there to read, which is also what search engines and

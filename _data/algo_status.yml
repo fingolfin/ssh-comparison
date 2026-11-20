@@ -1,0 +1,1280 @@
+# Security status of individual algorithms, shown in the leftmost column of
+# the comparison tables. Statuses are secure, weak and broken; an algorithm
+# absent from this file renders without a status.
+#
+# weak:   deprecated, or attackable only in theory or at impractical cost
+# broken: practically attackable today
+
+# ---- cipher ----
+"3des-cbc":
+  status: weak
+  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+"3des-cfb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"3des-ctr":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"3des-ecb":
+  status: broken
+  note: "in ECB, equal plaintext blocks give equal ciphertext"
+"3des-ofb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"AEAD_AES_128_GCM":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"AEAD_AES_256_GCM":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"AEAD_CAMELLIA_128_GCM":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"AEAD_CAMELLIA_256_GCM":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes128-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"aes128-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"aes128-gcm":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes128-gcm@openssh.com":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes128-ocb@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes192-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"aes192-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"aes192-gcm@openssh.com":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes256-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"aes256-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"aes256-gcm":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes256-gcm@openssh.com":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"aes256-ocb@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"arcfour":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"arcfour-64k@rodents.montreal.qc.ca":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"arcfour128":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"arcfour128-draft-00@putty.projects.tartarus.org":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"arcfour256":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"arcfour256-draft-00@putty.projects.tartarus.org":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"blowfish-cbc":
+  status: weak
+  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+"blowfish-cfb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"blowfish-ctr":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"blowfish-ecb":
+  status: broken
+  note: "in ECB, equal plaintext blocks give equal ciphertext"
+"blowfish-ofb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"camellia-128-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia-128-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia-192-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia-192-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia-256-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia-256-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia128-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia128-cbc@openssh.org":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia128-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia128-ctr@openssh.org":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia192-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia192-cbc@openssh.org":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia192-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia192-ctr@openssh.org":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia256-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia256-cbc@openssh.org":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"camellia256-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"camellia256-ctr@openssh.org":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"cast128-cbc":
+  status: weak
+  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+"cast128-cfb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"cast128-ctr":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"cast128-ecb":
+  status: broken
+  note: "in ECB, equal plaintext blocks give equal ciphertext"
+"cast128-ofb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"chacha20-poly1305":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"chacha20-poly1305-mt@hpnssh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"chacha20-poly1305@openssh.com":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"chacha@rodents.montreal.qc.ca":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"des-cbc":
+  status: broken
+  note: "56-bit DES key, within brute-force reach"
+"des-cbc@ssh.com":
+  status: broken
+  note: "56-bit DES key, within brute-force reach"
+"idea-cbc":
+  status: weak
+  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+"idea-cfb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"idea-ctr":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"idea-ecb":
+  status: broken
+  note: "in ECB, equal plaintext blocks give equal ciphertext"
+"idea-ofb":
+  status: weak
+  note: "64-bit block: Sweet32 collisions after ~32 GB per key"
+"none":
+  status: broken
+  note: "no encryption or integrity protection at all"
+"rijndael-cbc@lysator.liu.se":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k4b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k4b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"rijndael-k4b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k4b6-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael-k4b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k4b8-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael-k6b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k6b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"rijndael-k6b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k6b6-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael-k6b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k6b8-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael-k8b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k8b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"rijndael-k8b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k8b6-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael-k8b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael-k8b8-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "Rijndael in counter mode at a non-AES block size"
+"rijndael128-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael192-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"rijndael256-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"seed-cbc@ssh.com":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"seed-ctr@ssh.com":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"serpent128-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"serpent128-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"serpent128-gcm@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"serpent192-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"serpent192-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"serpent256-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"serpent256-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"serpent256-gcm@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"sharc4-512@rodents.montreal.qc.ca":
+  status: broken
+  note: "RC4 keystream biases leak plaintext"
+"twofish-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"twofish-cfb":
+  status: secure
+  note: "stream mode over a 128-bit block cipher"
+"twofish-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"twofish-ecb":
+  status: broken
+  note: "in ECB, equal plaintext blocks give equal ciphertext"
+"twofish-ofb":
+  status: secure
+  note: "stream mode over a 128-bit block cipher"
+"twofish128-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"twofish128-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"twofish128-gcm@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+"twofish192-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"twofish192-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"twofish256-cbc":
+  status: weak
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+"twofish256-ctr":
+  status: secure
+  note: "counter mode over a 128-bit block cipher"
+"twofish256-gcm@libassh.org":
+  status: secure
+  note: "AEAD: encryption and integrity in one pass"
+
+# ---- kex ----
+"bike-l1-sha512":
+  status: weak
+  note: "QC-MDPC decoding failures enable reaction attacks; NIST did not select BIKE"
+"bike-l3-sha512":
+  status: weak
+  note: "QC-MDPC decoding failures enable reaction attacks; NIST did not select BIKE"
+"bike-l5-sha512":
+  status: weak
+  note: "QC-MDPC decoding failures enable reaction attacks; NIST did not select BIKE"
+"classic-mceliece-348864-sha256":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-348864f-sha256":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-460896-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-460896f-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-6688128-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-6688128f-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-6960119-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-6960119f-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-8192128-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"classic-mceliece-8192128f-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"curve25519-frodokem1344-sha512@ssh.com":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"curve25519-sha256":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"curve25519-sha256@libssh.org":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"curve448-kyber1024-sha512@ssh.com":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"curve448-sha512":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"diffie-hellman-group-exchange-sha1":
+  status: weak
+  note: "SHA-1 exchange hash, withdrawn by NIST SP 800-131A"
+"diffie-hellman-group-exchange-sha224@ssh.com":
+  status: secure
+  note: "negotiated MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group-exchange-sha256":
+  status: secure
+  note: "negotiated MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group-exchange-sha384@ssh.com":
+  status: secure
+  note: "negotiated MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group-exchange-sha512@ssh.com":
+  status: secure
+  note: "negotiated MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group1-sha1":
+  status: broken
+  note: "1024-bit MODP group; Logjam precomputation is within state budgets"
+"diffie-hellman-group14-sha1":
+  status: weak
+  note: "SHA-1 exchange hash, withdrawn by NIST SP 800-131A"
+"diffie-hellman-group14-sha224@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group14-sha256":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group14-sha256@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group15-sha256":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group15-sha256@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group15-sha384@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group15-sha512":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group16-sha256":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group16-sha384@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group16-sha512":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group16-sha512@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group17-sha512":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group18-sha512":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"diffie-hellman-group18-sha512@ssh.com":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"ecdh-nistp256-bike-l1r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "BIKE half is unstandardised; the classical half still carries the exchange"
+"ecdh-nistp256-classic-mceliece-348864fr4-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp256-classic-mceliece-348864r4-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp256-frodokem-640-aesr2-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp256-frodokem-640-shaker2-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"ecdh-nistp256-ml-kem-512-sha256@openquantumsafe.org":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"ecdh-nistp384-bike-l3r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "BIKE half is unstandardised; the classical half still carries the exchange"
+"ecdh-nistp384-classic-mceliece-460896fr4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp384-classic-mceliece-460896r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp384-frodokem-976-aesr2-sha384@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp384-frodokem-976-shaker2-sha384@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"ecdh-nistp521-bike-l5r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "BIKE half is unstandardised; the classical half still carries the exchange"
+"ecdh-nistp521-classic-mceliece-6688128fr4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-classic-mceliece-6688128r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-classic-mceliece-6960119fr4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-classic-mceliece-6960119r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-classic-mceliece-8192128fr4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-classic-mceliece-8192128r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-frodokem-1344-aesr2-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-frodokem-1344-shaker2-sha512@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"ecdh-nistp521-kyber1024-sha512@ssh.com":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"ecdh-sha2-1.3.132.0.10":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"ecdh-sha2-nistp256":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"ecdh-sha2-nistp384":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"ecdh-sha2-nistp521":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"ecmqv-sha2":
+  status: weak
+  note: "MQV without key confirmation admits unknown-key-share attacks"
+"frodokem-1344-aes-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem-1344-shake-sha512":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem-640-aes-sha256":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem-640-shake-sha256":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem-976-aes-sha384":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem-976-shake-sha384":
+  status: secure
+  note: "conservative KEM that survived to NIST round 4, but with no classical half"
+"frodokem976x25519-sha512":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"gss-13.3.132.0.10-sha256-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"gss-curve25519-sha256-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"gss-curve448-sha512-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"gss-gex-sha1-*":
+  status: weak
+  note: "SHA-1 exchange hash, withdrawn by NIST SP 800-131A"
+"gss-gex-sha256-*":
+  status: secure
+  note: "negotiated MODP group with a SHA-2 exchange hash"
+"gss-group1-sha1-*":
+  status: broken
+  note: "1024-bit MODP group; Logjam precomputation is within state budgets"
+"gss-group14-sha1-*":
+  status: weak
+  note: "SHA-1 exchange hash, withdrawn by NIST SP 800-131A"
+"gss-group14-sha256-*":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"gss-group15-sha512-*":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"gss-group16-sha512-*":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"gss-group17-sha512-*":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"gss-group18-sha512-*":
+  status: secure
+  note: "2048-bit or larger MODP group with a SHA-2 exchange hash"
+"gss-mlkem1024nistp384-sha384-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"gss-mlkem768nistp256-sha256-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"gss-mlkem768x25519-sha256-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"gss-nistp256-sha256-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"gss-nistp384-sha384-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"gss-nistp521-sha512-*":
+  status: secure
+  note: "elliptic-curve Diffie-Hellman with a SHA-2 exchange hash"
+"kyber-1024-sha512":
+  status: weak
+  note: "pre-standard Kyber parameters, superseded by ML-KEM (FIPS 203)"
+"kyber-512-sha256":
+  status: weak
+  note: "pre-standard Kyber parameters, superseded by ML-KEM (FIPS 203)"
+"kyber-768-sha384":
+  status: weak
+  note: "pre-standard Kyber parameters, superseded by ML-KEM (FIPS 203)"
+"m383-sha384@libassh.org":
+  status: secure
+  note: "Montgomery curve of 383 or 511 bits with a SHA-2 exchange hash"
+"m511-sha512@libassh.org":
+  status: secure
+  note: "Montgomery curve of 383 or 511 bits with a SHA-2 exchange hash"
+"mceliece6688128x25519-sha512":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"mlkem1024-sha384":
+  status: secure
+  note: "ML-KEM (FIPS 203), but with no classical half to fall back on"
+"mlkem1024nistp384-sha384":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"mlkem512-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203), but with no classical half to fall back on"
+"mlkem768-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203), but with no classical half to fall back on"
+"mlkem768nistp256-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"mlkem768x25519-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+"rsa1024-sha1":
+  status: broken
+  note: "1024-bit RSA key transport signed with SHA-1"
+"rsa2048-sha256":
+  status: secure
+  note: "2048-bit RSA key transport with SHA-256"
+"rsa2048-sha256-draft-01@putty.projects.tartarus.org":
+  status: secure
+  note: "2048-bit RSA key transport with SHA-256"
+"rsa2048-sha256-draft-04@putty.projects.tartarus.org":
+  status: secure
+  note: "2048-bit RSA key transport with SHA-256"
+"scloudp192aesnistp384-sha384":
+  status: secure
+  note: "sCloud+ half is unstandardised; the NIST-curve half still carries the exchange"
+"scloudp192shakenistp384-sha384":
+  status: secure
+  note: "sCloud+ half is unstandardised; the NIST-curve half still carries the exchange"
+"scloudp256aesnistp521-sha512":
+  status: secure
+  note: "sCloud+ half is unstandardised; the NIST-curve half still carries the exchange"
+"scloudp256shakenistp521-sha512":
+  status: secure
+  note: "sCloud+ half is unstandardised; the NIST-curve half still carries the exchange"
+"sntrup761-sha512":
+  status: secure
+  note: "NTRU Prime, long studied, but with no classical half to fall back on"
+"sntrup761x25519-sha512":
+  status: secure
+  note: "NTRU Prime hybridised with X25519"
+"sntrup761x25519-sha512@openssh.com":
+  status: secure
+  note: "NTRU Prime hybridised with X25519"
+"x25519-bike-l1r4-sha512@openquantumsafe.org":
+  status: secure
+  note: "BIKE half is unstandardised; the classical half still carries the exchange"
+"x25519-classic-mceliece-348864fr4-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"x25519-classic-mceliece-348864r4-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"x25519-frodokem-640-aesr2-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"x25519-frodokem-640-shaker2-sha256@openquantumsafe.org":
+  status: secure
+  note: "conservative code- or lattice-based KEM plus an elliptic-curve exchange"
+"x25519-kyber-512r3-sha256-d00@amazon.com":
+  status: secure
+  note: "pre-standard Kyber round 3, but the classical half still carries the exchange"
+"x25519-ml-kem-512-sha256@openquantumsafe.org":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with an elliptic-curve exchange"
+
+# ---- mac ----
+"hmac-md5":
+  status: weak
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+"hmac-md5-96":
+  status: weak
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+"hmac-md5-96-etm@openssh.com":
+  status: weak
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+"hmac-md5-etm@openssh.com":
+  status: weak
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+"hmac-ripemd160":
+  status: weak
+  note: "RIPEMD-160 is unbroken but absent from current standards"
+"hmac-ripemd160-96":
+  status: weak
+  note: "RIPEMD-160 is unbroken but absent from current standards"
+"hmac-ripemd160-etm@openssh.com":
+  status: weak
+  note: "RIPEMD-160 is unbroken but absent from current standards"
+"hmac-ripemd160@openssh.com":
+  status: weak
+  note: "RIPEMD-160 is unbroken but absent from current standards"
+"hmac-sha1":
+  status: weak
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+"hmac-sha1-96":
+  status: weak
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+"hmac-sha1-96-etm@openssh.com":
+  status: weak
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+"hmac-sha1-etm@openssh.com":
+  status: weak
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+"hmac-sha2-256":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-256-96":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-256-96-etm@openssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-256-etm@openssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-384":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-512":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-512-96":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-512-96-etm@openssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha2-512-etm@openssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha224@ssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha256-2@ssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha256@ssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha384@ssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-sha512@ssh.com":
+  status: secure
+  note: "HMAC over a SHA-2 hash"
+"hmac-whirlpool":
+  status: secure
+  note: "Whirlpool, attacked only in reduced-round variants"
+"umac-128":
+  status: secure
+  note: "UMAC with a 128-bit tag"
+"umac-128-etm@openssh.com":
+  status: secure
+  note: "UMAC with a 128-bit tag"
+"umac-128@openssh.com":
+  status: secure
+  note: "UMAC with a 128-bit tag"
+"umac-32":
+  status: broken
+  note: "32-bit tag: a forgery succeeds once in 4 billion tries"
+"umac-64":
+  status: weak
+  note: "64-bit tag, far below the 128-bit variant"
+"umac-64-etm@openssh.com":
+  status: weak
+  note: "64-bit tag, far below the 128-bit variant"
+"umac-64@openssh.com":
+  status: weak
+  note: "64-bit tag, far below the 128-bit variant"
+"umac-96":
+  status: secure
+  note: "UMAC with a 96-bit tag"
+
+# ---- hostkey ----
+"dsa2048-sha224@libassh.org":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"dsa2048-sha256@libassh.org":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"dsa3072-sha256@libassh.org":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"ecdsa-sha2-1.3.132.0.10":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-1.3.132.0.10-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp256":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp256-cert":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp256-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp384":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp384-cert":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp384-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp521":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp521-cert":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"ecdsa-sha2-nistp521-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"eddsa-e382-shake256@libassh.org":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"eddsa-e521-shake256@libassh.org":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"null":
+  status: broken
+  note: "no host authentication at all"
+"pgp-sign-dss":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"pgp-sign-rsa":
+  status: weak
+  note: "SHA-1 signature hash, withdrawn by NIST SP 800-131A"
+"rsa-sha2-256":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"rsa-sha2-256-cert":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"rsa-sha2-256-cert-v01@openssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"rsa-sha2-512":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"rsa-sha2-512-cert":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"rsa-sha2-512-cert-v01@openssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"sk-ecdsa-sha2-nistp256-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"sk-ecdsa-sha2-nistp256@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"sk-ssh-ed25519-cert-v01@openssh.com":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"sk-ssh-ed25519@openssh.com":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"spki-sign-dss":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"spki-sign-rsa":
+  status: weak
+  note: "SHA-1 signature hash, withdrawn by NIST SP 800-131A"
+"ssh-dss":
+  status: broken
+  note: "1024-bit DSA with SHA-1; forgery is within reach of well-funded attackers"
+"ssh-dss-cert":
+  status: broken
+  note: "1024-bit DSA with SHA-1; forgery is within reach of well-funded attackers"
+"ssh-dss-cert-v01@openssh.com":
+  status: broken
+  note: "1024-bit DSA with SHA-1; forgery is within reach of well-funded attackers"
+"ssh-dss-sha224@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"ssh-dss-sha256@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"ssh-dss-sha384@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"ssh-dss-sha512@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"ssh-ecdsa-nistp256-falcon512":
+  status: secure
+  note: "FALCON half is pre-standard, paired with a classical signature"
+"ssh-ecdsa-nistp256-mayo2":
+  status: secure
+  note: "MAYO half is unstandardised, paired with a classical signature"
+"ssh-ecdsa-nistp256-mldsa44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-ecdsa-nistp256-sphincssha2128fsimple":
+  status: secure
+  note: "pre-standard SPHINCS+ half, paired with a classical signature"
+"ssh-ecdsa-nistp384-mayo3":
+  status: secure
+  note: "MAYO half is unstandardised, paired with a classical signature"
+"ssh-ecdsa-nistp384-mldsa65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-ecdsa-nistp521-falcon1024":
+  status: secure
+  note: "FALCON half is pre-standard, paired with a classical signature"
+"ssh-ecdsa-nistp521-mayo5":
+  status: secure
+  note: "MAYO half is unstandardised, paired with a classical signature"
+"ssh-ecdsa-nistp521-mldsa87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-ecdsa-nistp521-sphincssha2256fsimple":
+  status: secure
+  note: "pre-standard SPHINCS+ half, paired with a classical signature"
+"ssh-ed25519":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed25519-cert":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed25519-cert-v01@openssh.com":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed25519-ml-dsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-ed25519-slh-dsa-sha2-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed25519-slh-dsa-shake-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed25519-slh-dsa-shake-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed25519-slh-dsa-shake-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed448":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed448-cert":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed448-cert-v01@openssh.com":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"ssh-ed448-slh-dsa-sha2-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed448-slh-dsa-shake-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed448-slh-dsa-shake-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-ed448-slh-dsa-shake-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-falcon1024":
+  status: weak
+  note: "FALCON is selected but FN-DSA is not yet specified"
+"ssh-falcon512":
+  status: weak
+  note: "FALCON is selected but FN-DSA is not yet specified"
+"ssh-mayo2":
+  status: weak
+  note: "MAYO is an unstandardised multivariate scheme still in NIST's additional round"
+"ssh-mayo3":
+  status: weak
+  note: "MAYO is an unstandardised multivariate scheme still in NIST's additional round"
+"ssh-mayo5":
+  status: weak
+  note: "MAYO is an unstandardised multivariate scheme still in NIST's additional round"
+"ssh-mldsa-44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-44-cert-v01@golang.org":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-65-cert-v01@golang.org":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-87-cert-v01@golang.org":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-ed25519":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-ed25519-cert":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-ed25519@openssh.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-es256":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-es256@wolfssl.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa65-ed25519":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa65-ed25519@wolfssl.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa65-es256":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa65-es256@wolfssl.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-ed448":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-ed448@wolfssl.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-es384":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-es384@wolfssl.com":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-p384":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa87-p384-cert":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-rsa":
+  status: weak
+  note: "RSA with a SHA-1 signature; off by default since OpenSSH 8.8"
+"ssh-rsa-cert":
+  status: weak
+  note: "RSA with a SHA-1 signature; off by default since OpenSSH 8.8"
+"ssh-rsa-cert-v01@openssh.com":
+  status: weak
+  note: "RSA with a SHA-1 signature; off by default since OpenSSH 8.8"
+"ssh-rsa-sha2-256":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa-sha2-512":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa-sha224@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa-sha256@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa-sha384@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa-sha512@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"ssh-rsa3072-falcon512":
+  status: secure
+  note: "FALCON half is pre-standard, paired with a classical signature"
+"ssh-rsa3072-mayo2":
+  status: secure
+  note: "MAYO half is unstandardised, paired with a classical signature"
+"ssh-rsa3072-mldsa44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-rsa3072-sphincssha2128fsimple":
+  status: secure
+  note: "pre-standard SPHINCS+ half, paired with a classical signature"
+"ssh-slh-dsa-sha2-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-192-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-192-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-sphincssha2128fsimple":
+  status: weak
+  note: "pre-standard SPHINCS+ parameters, superseded by SLH-DSA (FIPS 205)"
+"ssh-sphincssha2256fsimple":
+  status: weak
+  note: "pre-standard SPHINCS+ parameters, superseded by SLH-DSA (FIPS 205)"
+"webauthn-sk-ecdsa-sha2-nistp256-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"webauthn-sk-ecdsa-sha2-nistp256@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"x509v3-ecdsa-sha2-1.3.132.0.10":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"x509v3-ecdsa-sha2-nistp256":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"x509v3-ecdsa-sha2-nistp384":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"x509v3-ecdsa-sha2-nistp521":
+  status: secure
+  note: "ECDSA over a NIST or secp256k1 curve with a SHA-2 hash"
+"x509v3-mldsa-44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-mldsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-mldsa-87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-rsa2048-sha256":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"x509v3-sign-dss":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-dss-sha1":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-dss-sha224@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-dss-sha256@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-dss-sha384@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-dss-sha512@ssh.com":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-sign-rsa":
+  status: weak
+  note: "SHA-1 signature hash, withdrawn by NIST SP 800-131A"
+"x509v3-sign-rsa-sha1":
+  status: weak
+  note: "SHA-1 signature hash, withdrawn by NIST SP 800-131A"
+"x509v3-sign-rsa-sha224@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"x509v3-sign-rsa-sha256@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"x509v3-sign-rsa-sha384@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"x509v3-sign-rsa-sha512@ssh.com":
+  status: secure
+  note: "RSA with a SHA-2 signature hash"
+"x509v3-ssh-dss":
+  status: weak
+  note: "DSA, withdrawn for signing by FIPS 186-5"
+"x509v3-ssh-ed25519":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"x509v3-ssh-ed448":
+  status: secure
+  note: "Edwards-curve signature with no nonce-reuse failure mode"
+"x509v3-ssh-mldsa-44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-ssh-mldsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-ssh-mldsa-87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-ssh-rsa":
+  status: weak
+  note: "SHA-1 signature hash, withdrawn by NIST SP 800-131A"

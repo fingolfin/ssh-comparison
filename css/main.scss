@@ -121,6 +121,68 @@ tr:hover td.no { background-color: $hover-color; }
 tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%); }
 
 //
+// Algorithm security status (issue #26) on the leftmost column. A left border
+// plus border style, not a fill: the status scale shares a row with the
+// yes/no scale and the two must not be confusable.
+//
+$algo-secure-color: #2f7d32;
+$algo-weak-color:   #b26a00;
+$algo-broken-color: #b3261e;
+$algo-border-width: 5px;
+
+.impl-comparison td:nth-child(1) {
+  border-left: $algo-border-width solid transparent;
+  padding-left: 5px;
+}
+
+// The swatch repeats the exact border, so the legend reads as the table does.
+// Style doubles as a second channel for anyone who cannot tell the hues apart.
+.impl-comparison td.algo-secure, .algo-swatch.algo-secure {
+  border-left-color: $algo-secure-color;
+  border-left-style: solid;
+}
+
+.impl-comparison td.algo-weak, .algo-swatch.algo-weak {
+  border-left-color: $algo-weak-color;
+  border-left-style: dashed;
+}
+
+.impl-comparison td.algo-broken, .algo-swatch.algo-broken {
+  border-left-color: $algo-broken-color;
+  border-left-style: double;
+}
+
+// The status carries a `title` with the reason; advertise it.
+.impl-comparison td.algo-secure,
+.impl-comparison td.algo-weak,
+.impl-comparison td.algo-broken {
+  cursor: help;
+  text-decoration: underline dotted $grey-color;
+  text-underline-offset: 2px;
+}
+
+.algo-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3em $spacing-unit;
+  list-style: none;
+  margin: math.div($spacing-unit, 2) 0;
+  padding: 0;
+  font-size: $small-font-size;
+  color: $grey-color-dark;
+}
+
+.algo-swatch {
+  display: inline-block;
+  width: 0.9em;
+  height: 1em;
+  margin-right: 0.4em;
+  vertical-align: -0.1em;
+  background-color: #f5f5f5;
+  border-left: $algo-border-width solid #ccc;
+}
+
+//
 // Rotate table headers by 45 degrees.
 // Based on <https://css-tricks.com/rotated-table-column-headers/>
 

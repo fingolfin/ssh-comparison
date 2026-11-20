@@ -18,8 +18,10 @@
 <tbody>
 {% for item in namelist %}
   {% assign counter = 0 %}
+  {% assign status = nil %}
+  {% if site.data.rated_classes contains type %}{% assign status = site.data.algo_status[item] %}{% endif %}
   <tr>
-    <td>{{ item }}</td>
+    <td{% if status %} class='algo-{{ status.status }}' title='{{ status.status }}: {{ status.note | escape }}'{% endif %}>{{ item }}</td>
     <td>
     {% for spec in site.data.specs %}
       {% if spec[1].protocols[type] contains item %}
