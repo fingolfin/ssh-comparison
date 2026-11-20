@@ -1,0 +1,8 @@
+# Protocol classes whose algorithms carry a security status (_data/algo_status.yml).
+# The status lookup is keyed on the algorithm id alone, and ids are not unique
+# across classes -- "none" is both a cipher and a compression method -- so the
+# lookup has to be restricted to the classes the ratings were written for.
+- cipher
+- kex
+- mac
+- hostkey

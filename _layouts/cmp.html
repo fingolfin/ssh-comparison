@@ -11,6 +11,8 @@ scroll: true
 </ul>
 </nav>
 
+{% if site.data.rated_classes contains page.type %}{% include algo-legend.html %}{% endif %}
+
 <br>
 
 {% if layout.scroll %}
