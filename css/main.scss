@@ -42,34 +42,41 @@ strong {
 }
 
 //
-// Color for yes / no / unknown
+// Support matrix: "No" is 89% of the grid, so it carries the least ink and
+// "Yes" carries the most. All three keep their word in the cell, so the colour
+// is a second channel, never the only one.
 //
-$yes-color:     #A5C663;
-$no-color:      #D46A6A;
-$unk-color:     color.adjust(yellow, $lightness: -5%);
+$yes-color:     #7fbf5f;  // #111 on this: 8.6:1
+$no-color:      #fafafa;  // one step paler than the row stripe
+$unk-color:     #ffeaa8;
+$no-text-color: #5f6368;  // muted, to keep "No" from shouting
+$hover-color:   #e3effa;  // row under the cursor
 
-.yes .no .unknown { text-align: center; }
+.yes, .no, .unknown { text-align: center; }
 
-tr:nth-child(odd) td { background-color: color.adjust(white, $lightness: -10%); }
-tr:nth-child(even) td { background-color: color.adjust(white, $lightness: -3%); }
+tr:nth-child(odd) td { background-color: #e6e6e6; }
+tr:nth-child(even) td { background-color: #f5f5f5; }
 
-
-// via http://paletton.com/
-tr:nth-child(odd) td.yes { background-color: color.adjust($yes-color, $lightness: -15%); }
+// Odd rows get the darker variant of each tint, so the striping stays
+// readable underneath the yes/no/unknown colouring.
+tr:nth-child(odd) td.yes { background-color: color.adjust($yes-color, $lightness: -7%); }
 tr:nth-child(even) td.yes { background-color: $yes-color; }
 
-tr:nth-child(odd) td.no { background-color: color.adjust($no-color, $lightness: -15%); }
+tr:nth-child(odd) td.no { background-color: color.adjust($no-color, $lightness: -6%); }
 tr:nth-child(even) td.no { background-color: $no-color; }
+.impl-comparison td.no { color: $no-text-color; }
 
 tr:nth-child(odd) td.unknown { background-color: color.adjust($unk-color, $lightness: -5%); }
 tr:nth-child(even) td.unknown { background-color: $unk-color; }
 
 //
-// Highligth column and row the mouse is hovering over.
+// Highlight the row the mouse is hovering over. "No" is too pale to tint
+// further, so it takes the plain hover colour.
 //
-tr:hover td.yes { background-color: color.adjust($yes-color, $lightness: 20%); }
-tr:hover td.no { background-color: color.adjust($no-color, $lightness: 20%); }
-tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 20%); }
+.impl-comparison tr:hover td { background-color: $hover-color; }
+tr:hover td.yes { background-color: color.adjust($yes-color, $lightness: 8%); }
+tr:hover td.no { background-color: $hover-color; }
+tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%); }
 
 //
 // Rotate table headers by 45 degrees.
