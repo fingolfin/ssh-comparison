@@ -112,6 +112,10 @@ tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
 //
 // Rotate table headers by 45 degrees.
 // Based on <https://css-tricks.com/rotated-table-column-headers/>
+//
+// DataTables 3 wraps header cell content in .dt-column-header and
+// .dt-column-title of its own, so the rotation has to go on the innermost
+// div. Rotating an outer wrapper as well would compound the two angles.
 
 .table-header-rotated th.row-header {
   width: auto;
@@ -120,14 +124,19 @@ tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
 .table-header-rotated th.rotate {
   height: 140px;
   white-space: nowrap;
+  vertical-align: bottom;
 }
 
-.table-header-rotated th.rotate > div{
+.table-header-rotated th.rotate .dt-column-header {
+  height: 140px;
+}
+
+.table-header-rotated th.rotate .dt-column-title > div {
   transform: translate(15px, 51px) rotate(315deg);
   width: 30px;
 }
 
-.table-header-rotated th.rotate > div > span {
+.table-header-rotated th.rotate .dt-column-title > div > span {
   border-bottom: 1px solid #ccc;
   padding: 5px 0px;
 }
