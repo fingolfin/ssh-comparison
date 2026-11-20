@@ -1,0 +1,48 @@
+# Credits for the credits.md page.
+#
+# `maintainers` are listed first, with a `role` each; `contributors` follows,
+# ordered by number of commits. A `github` handle turns the name into a link;
+# omit it when the handle is not known for certain rather than guessing.
+#
+# Keep this in sync with `git shortlog -sne` (which uses .mailmap to merge the
+# several addresses some contributors used).
+
+maintainers:
+  - name: Jeremy Norris
+    github: norrisjeremy
+    role: >
+      Maintains the site: tracks new releases of all the implementations
+      covered here, keeps their protocol lists current, and adds new
+      implementations. Most of the data you see has passed through his hands.
+  - name: Max Horn
+    github: fingolfin
+    role: >
+      Started the site in January 2015, wrote the Jekyll machinery and the
+      SSH test server used to probe client capabilities.
+
+contributors:
+  - name: Mathias Berchtold
+  - name: Ron Frederick
+  - name: nklein62
+    github: nklein62
+  - name: Hans Nilsson
+  - name: Kenny Root
+  - name: Jeroen van Erp
+  - name: btpence
+    github: btpence
+  - name: Eric Light
+  - name: Pierre-Étienne Meunier
+  - name: Adi Roiban
+  - name: Alexandre Becoulet
+  - name: Andreas Schneider
+  - name: FliegenKLATSCH
+  - name: Matt Johnston
+  - name: terrafrost
+  - name: Camille Guérin
+  - name: Christian Wissel
+  - name: Gareth Halfacree
+  - name: John Newbigin
+  - name: Moritz Dietz
+    github: moritzdietz
+  - name: Viktor Szakáts
+    github: vszakats

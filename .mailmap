@@ -1,0 +1,6 @@
+# Map together the several addresses and spellings some contributors used,
+# so `git shortlog -sne` and the credits page agree.
+Jeremy Norris <norrisjeremy@users.noreply.github.com> <jeremy.norris@lbnetworks.co>
+Jeremy Norris <norrisjeremy@users.noreply.github.com> <jeremy.norris@localbackhaul.com>
+Mathias Berchtold <mberchtold@gmail.com> <mberchtold@gmail.com>
+Eric Light <eric@ericlight.com> <it@forlongs.co.nz>
