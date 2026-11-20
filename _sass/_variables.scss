@@ -1,0 +1,31 @@
+// Shared variables and mixins. Every partial pulls these in via
+// `@use "variables" as *`, so each file states its own dependencies.
+
+@use "sass:color";
+
+$base-font-family: Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: color.adjust($grey-color, $lightness: 40%);
+$grey-color-dark:  color.adjust($grey-color, $lightness: -25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}

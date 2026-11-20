@@ -3,53 +3,15 @@
 ---
 @charset "utf-8";
 
+@use "sass:color";
+@use "sass:math";
+@use "variables" as *;
 
+// Partials from `sass_dir` (defaults to `_sass`)
+@use "base";
+@use "layout";
+@use "syntax-highlighting";
 
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
-// Import partials from `sass_dir` (defaults to `_sass`)
-@import
-        "base",
-        "layout",
-        "syntax-highlighting"
-;
 
 
 // let <strong> show up as bold
@@ -84,30 +46,30 @@ strong {
 //
 $yes-color:     #A5C663;
 $no-color:      #D46A6A;
-$unk-color:     darken(yellow, 5%);
+$unk-color:     color.adjust(yellow, $lightness: -5%);
 
 .yes .no .unknown { text-align: center; }
 
-tr:nth-child(odd) td { background-color: darken(white, 10%); }
-tr:nth-child(even) td { background-color: darken(white, 3%); }
+tr:nth-child(odd) td { background-color: color.adjust(white, $lightness: -10%); }
+tr:nth-child(even) td { background-color: color.adjust(white, $lightness: -3%); }
 
 
 // via http://paletton.com/
-tr:nth-child(odd) td.yes { background-color: darken($yes-color, 15%); }
+tr:nth-child(odd) td.yes { background-color: color.adjust($yes-color, $lightness: -15%); }
 tr:nth-child(even) td.yes { background-color: $yes-color; }
 
-tr:nth-child(odd) td.no { background-color: darken($no-color, 15%); }
+tr:nth-child(odd) td.no { background-color: color.adjust($no-color, $lightness: -15%); }
 tr:nth-child(even) td.no { background-color: $no-color; }
 
-tr:nth-child(odd) td.unknown { background-color: darken($unk-color, 5%); }
+tr:nth-child(odd) td.unknown { background-color: color.adjust($unk-color, $lightness: -5%); }
 tr:nth-child(even) td.unknown { background-color: $unk-color; }
 
 //
 // Highligth column and row the mouse is hovering over.
 //
-tr:hover td.yes { background-color: lighten($yes-color, 20%); }
-tr:hover td.no { background-color: lighten($no-color, 20%); }
-tr:hover td.unknown { background-color: lighten($unk-color, 20%); }
+tr:hover td.yes { background-color: color.adjust($yes-color, $lightness: 20%); }
+tr:hover td.no { background-color: color.adjust($no-color, $lightness: 20%); }
+tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 20%); }
 
 //
 // Rotate table headers by 45 degrees.
