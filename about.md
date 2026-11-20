@@ -13,9 +13,9 @@ this is the wrong place to look at. However, it is the right place to look at
 if you want to find out which SSH implementations support modern crypto suites
 and which don't.
 
-**DISCLAIMER**: While I try to keep this page accurate and up-to-date, I make no
-guarantee about the correctness of the data presented here. Use it at your own
-risk. If you find any inaccuracies or mistakes, please report them via
+**DISCLAIMER**: While we try to keep this page accurate and up-to-date, we make
+no guarantee about the correctness of the data presented here. Use it at your
+own risk. If you find any inaccuracies or mistakes, please report them via
 [the issue tracker](https://github.com/fingolfin/ssh-comparison/issues).
 
 The data listed here is derived from various sources:
@@ -26,3 +26,6 @@ The data listed here is derived from various sources:
   reports the protocols the client claims to support (the test server does not
   verify this, however).
 * Contributions from third parties, sometimes authors of implementations.
+
+See [the credits]({{ site.baseurl }}/credits) for who keeps all of this
+up to date.
