@@ -1,0 +1,14 @@
+# Top-level site navigation, rendered by _includes/header.html.
+# `match` is a URL prefix; the link is marked active when page.url starts
+# with it. Omit `match` to match the URL exactly.
+- title: Home
+  url: /
+- title: Comparison
+  url: /comparison/cipher.html
+  match: /comparison/
+- title: Specifications
+  url: /specs.html
+- title: About
+  url: /about
+- title: Credits
+  url: /credits

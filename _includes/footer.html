@@ -7,13 +7,17 @@
     <div class="footer-col-wrapper">
       <div class="footer-col  footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
-          <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
+          <li><a href="https://github.com/fingolfin/ssh-comparison">Source on GitHub</a></li>
+          <li><a href="https://github.com/fingolfin/ssh-comparison/issues">Report an error</a></li>
+          <li><a href="{{ "/credits" | prepend: site.baseurl }}">Credits</a></li>
         </ul>
       </div>
 
       <div class="footer-col  footer-col-2">
-        
+        <ul class="contact-list">
+          <li>{{ site.impls | size }} implementations</li>
+          <li>Built {{ site.time | date: "%Y-%m-%d" }}</li>
+        </ul>
       </div>
 
       <div class="footer-col  footer-col-3">
