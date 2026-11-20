@@ -61,16 +61,12 @@ The following {{ site.impls | size }} implementations are currently covered:
 </div>
 
 <script>
-$(document).ready(function(){
-$('#impl-list').DataTable( {
-        paging:         false,
-        searching:      false,
-        info:           false,
-        heightMatch:    'none',
-        fixedColumns:   {
-            leftColumns: 1,
-            rightColumns: 1
-        }
-    } );
+// This table is not horizontally scrolled, so it needs no frozen columns.
+document.addEventListener('DOMContentLoaded', function () {
+    new DataTable('#impl-list', {
+        paging:    false,
+        searching: false,
+        info:      false
+    });
 });
 </script>

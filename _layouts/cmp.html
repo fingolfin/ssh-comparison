@@ -19,23 +19,21 @@ scroll: true
 </table>
 
 <script>
-$(document).ready(function(){ 
-$('#cmp-table-{{ page.type }}').DataTable( {
-        scrollY:        "700px",
+// Freeze the algorithm id on the left and the implementation count on the
+// right, so both stay readable while scrolling across 60-odd columns.
+document.addEventListener('DOMContentLoaded', function () {
+    new DataTable('#cmp-table-{{ page.type }}', {
+        scrollY:        '700px',
         scrollX:        true,
         scrollCollapse: true,
-        //colReorder:     true,
-        //rowReorder:     true,
-        //hover: true,
         paging:         false,
         searching:      false,
         info:           false,
-        heightMatch:    'none',
         fixedColumns:   {
-            leftColumns: 1,
-            rightColumns: 1
+            start: 1,
+            end:   1
         }
-    } );
+    });
 });
 </script>
 
