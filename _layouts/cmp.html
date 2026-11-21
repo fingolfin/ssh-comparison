@@ -1,6 +1,5 @@
 ---
 layout: default
-scroll: true
 ---
 
 <nav id="cmp-switcher">
@@ -11,38 +10,34 @@ scroll: true
 </ul>
 </nav>
 
-<br>
+{%- comment -%}
+The controls start hidden and cmp-table.js reveals them: without JavaScript
+the full table is still there to read, which is also what search engines and
+anyone linking to a row get.
+{%- endcomment -%}
+<form id="cmp-controls" class="cmp-controls" hidden>
+  <label>Algorithm
+    <input type="search" name="q" placeholder="substring" size="14" autocomplete="off">
+  </label>
 
-{% if layout.scroll %}
-<table id='cmp-table-{{ page.type }}' class='impl-comparison table-header-rotated compact'>
-{% include cmp-table-content.html type=page.type scroll=true %}
-</table>
+  <fieldset>
+    <legend>Implementations</legend>
+    <label><input type="checkbox" name="role" value="client" checked> clients</label>
+    <label><input type="checkbox" name="role" value="server" checked> servers</label>
+  </fieldset>
 
-<script>
-// Freeze the algorithm id on the left and the implementation count on the
-// right, so both stay readable while scrolling across 60-odd columns.
-document.addEventListener('DOMContentLoaded', function () {
-    new DataTable('#cmp-table-{{ page.type }}', {
-        scrollY:        '700px',
-        scrollX:        true,
-        scrollCollapse: true,
-        paging:         false,
-        searching:      false,
-        info:           false,
-        fixedColumns:   {
-            start: 1,
-            end:   1
-        }
-    });
-});
-</script>
+  <label title="Hide algorithms that no shown implementation supports">
+    <input type="checkbox" name="hide-empty"> hide unsupported
+  </label>
 
-{% else %}
+  <button type="reset">Reset</button>
+  <output id="cmp-counts"></output>
+</form>
 
-<div class='cmp-table-parent'>
-<table id='cmp-table-{{ page.type }}' class='impl-comparison table-header-rotated'>
-{% include cmp-table-content.html type=page.type scroll=false %}
+<div class="cmp-scroll">
+<table id="cmp-table-{{ page.type }}" class="impl-comparison table-header-rotated compact">
+{% include cmp-table-content.html type=page.type %}
 </table>
 </div>
 
-{% endif %}
+<script src="{{ "/js/cmp-table.js" | prepend: site.baseurl }}" defer></script>
