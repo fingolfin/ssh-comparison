@@ -5,8 +5,8 @@ license: Proprietary
 #first-release:
 #    date: TODO
 latest-release:
-    version: 2.17
-    date: 2016-04-23
+    version: 4.19
+    date: 2026-11-16
 #changelog: TODO
 client: yes
 server: no
