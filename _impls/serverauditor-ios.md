@@ -55,8 +55,7 @@ ident: "SSH-2.0-libssh2_1.7.0"
 based-on: "[libssh2](/impls/libssh2.html)"
 ---
 * Mobile client for iOS (iPhone, iPad).
-* There is also an [Android version](/impls/serverauditor-android.html)
-  and a [Google Chrome plugin](/impls/serverauditor-chrome.html).
+* There is also an [Android version](/impls/serverauditor-android.html).
 * Available on the
   [Apple App Store](https://itunes.apple.com/us/app/id549039908).
 * 2015-12-05: Version 2.2.1 for iOS identifies itself on the wire as

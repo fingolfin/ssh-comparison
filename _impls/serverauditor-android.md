@@ -55,8 +55,7 @@ ident: "SSH-2.0-JSCH-0.1.53"
 based-on: "[JSch](/impls/jsch.html)"
 ---
 * Mobile client for Android.
-* There is also an [iOS version](/impls/serverauditor-ios.html)
-  and a [Google Chrome plugin](/impls/serverauditor-chrome.html).
+* There is also an [iOS version](/impls/serverauditor-ios.html).
 * Available on
   [Google Play](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client).
 * 2015-12-05: Version 2.1 for Android identifies itself on the wire
