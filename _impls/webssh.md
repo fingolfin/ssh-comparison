@@ -34,8 +34,8 @@ protocols:
         #- arcfour128                           # no longer listed
         #- arcfour256                           # no longer listed
     compression:
-        - zlib
-        - zlib@openssh.com
+        - zlib                                  # disabled by default
+        - zlib@openssh.com                      # disabled by default
         - none
     hostkey:
         - ecdsa-sha2-nistp256                   # disabled by default
@@ -75,8 +75,8 @@ protocols:
         - password
 
 first_kex_packet_follows: 0
-ident: "SSH-2.0-PuTTY_Release_0.63"
-based-on: "[PuTTY](/impls/putty.html)"
+ident: "SSH-2.0-WebSSH_33.4"
+#based-on: "[PuTTY](/impls/putty.html)"   # no longer: 33.4 sends neither ext-info-c nor kex-strict-c, unlike PuTTY since 0.80
 ---
 * Client for Apple iOS (iPhone, iPod, iPad).
 * Available on the Apple App Store in two versions:
@@ -84,3 +84,4 @@ based-on: "[PuTTY](/impls/putty.html)"
    [WebSSH Pro](https://itunes.apple.com/us/app/id497714887)
 * 2015-07-10: Version 8.3.2 identifies itself on the wire as `SSH-2.0-PuTTY_Release_0.63`.
 * 2015-12-05: Version 13.1 identifies itself on the wire as `SSH-2.0-PuTTY_Release_0.63`.
+* 2026-11-21: Version 33.4 identifies itself on the wire as `SSH-2.0-WebSSH_33.4` and offers only the algorithms enabled by default.
