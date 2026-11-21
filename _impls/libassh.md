@@ -8,7 +8,7 @@ first-release:
 latest-release:
     version: 1.1
     date: 2023-02-05
-#changelog: TODO available in the next release :)
+changelog: https://github.com/diaxen/libassh-mirror/blob/master/ChangeLog    # author's GitHub mirror of the hg repository
 client: yes
 server: yes
 library: both
