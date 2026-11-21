@@ -2,25 +2,18 @@
 {% include namelist.html type=type %}
 <thead>
   <tr>
-    <th>id</th>
-    <th class='rotate'><div><span>Specification</span></div></th>
+    <th class='col-id' data-sort='text'>id</th>
+    <th class='rotate' data-sort='text'><div><span>Specification</span></div></th>
     {% for impl in site.impls %}
-    <th class='rotate'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
+    {%- comment -%}
+    data-client/data-server are what the column filter selects on (issue #6).
+    {%- endcomment -%}
+    <th class='rotate col-impl' data-sort='support'
+        data-client='{% if impl.client %}1{% else %}0{% endif %}'
+        data-server='{% if impl.server %}1{% else %}0{% endif %}'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
     {% endfor %}
-    {% if include.scroll %}<th class='rotate only-for-scroll'><div><span><!-- dummy -->&nbsp;</span></div></th>{% endif %}
-    <th class='rotate'><div><span># of impls</span></div></th>
+    <th class='rotate col-count' data-sort='number'><div><span># of impls</span></div></th>
   </tr>
-{% if include.scroll %}
-  <tr class="only-for-scroll"> <!-- second column for sorting -->
-    <th class="only-for-scroll"> </th> <!-- id -->
-    <th class="only-for-scroll"> </th> <!-- spe -->
-    {% for impl in site.impls %}
-    <th class="only-for-scroll">&nbsp;</th> <!-- impl -->
-    {% endfor %}
-    <th class="only-for-scroll"> </th> <!-- dummy -->
-    <th class="only-for-scroll"> </th> <!-- # of impls -->
-  </tr>
-{% endif %}
 </thead>
 <tbody>
 {% for item in namelist %}
@@ -46,8 +39,12 @@
         <td class='unknown'>?</td>
       {% endif %}
     {% endfor %}
-    {% if include.scroll %}<td class="only-for-scroll"><!-- dummy -->&nbsp;</td>{% endif %}
-    <td>{{ counter }}</td>
+    <td class='count'>{{ counter }}</td>
   </tr>
 {% endfor %}
 </tbody>
+{%- comment -%}
+Rows filtered out are moved here rather than hidden in place, so that the
+`tr:nth-child` striping of the visible rows stays alternating.
+{%- endcomment -%}
+<tbody id='cmp-filtered-out' hidden></tbody>
