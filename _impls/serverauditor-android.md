@@ -1,13 +1,13 @@
 ---
-title: Serverauditor (Android)
-homepage: https://serverauditor.com/
+title: Termius (Android)
+homepage: https://termius.com/
 license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 2.2.15
-    date: 2016-05-03
-#changelog: TODO
+    version: 8.0.2
+    date: 2026-11-19
+changelog: https://docs.termius.com/changelog/android
 client: yes
 server: no
 standalone: client
@@ -30,12 +30,16 @@ protocols:
     compression:
         - none
     hostkey:
+        - ssh-mldsa-44  # since 7.5.0, names per
+        - ssh-mldsa-65  #  https://docs.termius.com/security/post-quantum-cryptography
+        - ssh-mldsa-87
         - ssh-rsa
         - ssh-dss
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
     kex:
+        - mlkem768x25519-sha256 # since 7.2.2
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
@@ -60,5 +64,6 @@ based-on: "[JSch](/impls/jsch.html)"
 * There is also an [iOS version](/impls/serverauditor-ios.html).
 * Available on
   [Google Play](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client).
+* Formerly named Serverauditor.
 * 2015-12-05: Version 2.1 for Android identifies itself on the wire
   as `SSH-2.0-JSCH-0.1.52`
