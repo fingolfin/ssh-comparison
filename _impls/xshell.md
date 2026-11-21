@@ -1,21 +1,25 @@
 ---
-title: Xshell 5
-homepage: http://www.netsarang.com/products/xsh_overview.html
+title: Xshell
+homepage: https://www.netsarang.com/en/xshell/
 developer: NetSarang
 license: Proprietary
 first-release:
     date: 2002-11-02
 latest-release:
-    version: 0977
-    date: 2016-04-22
-changelog: http://www.netsarang.com/products/xsh_update.html
+    version: 8 Build 0120
+    date: 2026-11-11
+changelog: https://www.netsarang.com/en/xshell-update-history/
 client: yes
 server: no
 library: no
 platforms:
     - windows
+# Bare build numbers are Xshell 5 builds. Additions after 5 Build 0977 are
+# from the Xshell 5-8 update histories; these omit what each major release
+# added, so the list may be incomplete.
 protocols:
     cipher:
+        - chacha20-poly1305@openssh.com   # since 6 Build 0114
         - aes128-cbc
         - 3des-cbc
         - blowfish-cbc
@@ -37,16 +41,24 @@ protocols:
     compression:
         - none
         - zlib                      # disabled by default
+        - zlib@openssh.com          # "delayed" compression, bug fixed in 5 (2017-04)
     hostkey:
+        - ssh-ed25519               # since 5 (2017-04)
+        - rsa-sha2-256              # since 6 Build 0181
+        - rsa-sha2-512              # since 6 Build 0181
         - ssh-rsa
         - ssh-dss
         - ecdsa-sha2-nistp256       # since version 0858
+        - ecdsa-sha2-nistp384       # since 6 Build 0170
+        - ecdsa-sha2-nistp521       # since 6 Build 0170
     kex:
+        - curve25519-sha256         # since 7 Build 0111
         - ecdh-sha2-nistp256        # since version 0858
         - ecdh-sha2-nistp384        # since version 0858
         - ecdh-sha2-nistp521        # since version 0858
         - diffie-hellman-group-exchange-sha256
         - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha256 # since 6 Build 0170
         - diffie-hellman-group14-sha1
         - diffie-hellman-group1-sha1
     mac:
@@ -64,6 +76,10 @@ protocols:
         - hmac-sha1-96-etm@openssh.com  # since version 0752
         - hmac-md5-etm@openssh.com      # since version 0752
         - hmac-md5-96-etm@openssh.com   # since version 0752
+        - umac-64@openssh.com           # since 6 Build 0181
+        - umac-128@openssh.com          # since 6 Build 0181
+        - umac-64-etm@openssh.com       # since 6 Build 0181
+        - umac-128-etm@openssh.com      # since 6 Build 0181
     userauth:
         - publickey
         - gssapi-with-mic
