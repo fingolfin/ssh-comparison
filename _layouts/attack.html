@@ -1,0 +1,31 @@
+---
+layout: default
+---
+<h2>{{ page.title }}</h2>
+
+<p>{{ page.summary }}</p>
+
+<ul>
+<li>Authors: {{ page.authors }}</li>
+<li>Published: {{ page.year }}, {{ page.venue }}</li>
+<li>Paper: <a href="{{ page.paper }}">{{ page.paper }}</a></li>
+{% if page.cve %}<li>{{ page.cve }}</li>{% endif %}
+<li>Conditions: {{ page.condition }}</li>
+<li>Mitigation: {{ page.mitigation }}</li>
+</ul>
+
+{{ content }}
+
+<h3>Affected algorithms</h3>
+
+{% for class in page.affects %}
+{% assign key = class[0] %}
+<h4><a href="{{ site.baseurl }}/comparison/{{ key }}.html">{{ site.data.proto_classes[key] }}</a></h4>
+<ul>
+{% for id in class[1] %}
+  {% assign status = nil %}
+  {% if site.data.rated_classes contains key %}{% assign status = site.data.algo_status[id] %}{% endif %}
+  <li><code>{{ id }}</code>{% if status %} — {{ status.status }}: {{ status.note }}{% endif %}</li>
+{% endfor %}
+</ul>
+{% endfor %}

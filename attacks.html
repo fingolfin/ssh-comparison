@@ -1,0 +1,25 @@
+---
+layout: default
+title: Attacks
+---
+
+<h1 class="page-heading">Attacks</h1>
+
+<p>
+Published attacks on the algorithms compared here, and which algorithm ids
+each one affects. The security ratings in the comparison tables rest on the
+algorithm's specification; these pages give the evidence for why an
+algorithm is weak or broken.
+</p>
+
+<table>
+  <tr><th>Year</th><th>Attack</th><th>Affects</th></tr>
+{% assign attacks = site.attacks | sort: "year" %}
+{% for attack in attacks %}
+  <tr>
+  <td style="vertical-align: top;">{{ attack.year }}</td>
+  <td style="vertical-align: top;"><a href="{{ attack.url | prepend: site.baseurl }}">{{ attack.title }}</a><br>{{ attack.summary }}</td>
+  <td style="vertical-align: top; white-space: nowrap;">{% for class in attack.affects %}{% assign key = class[0] %}{{ site.data.proto_classes[key] }} ({{ class[1].size }}){% unless forloop.last %}<br>{% endunless %}{% endfor %}</td>
+  </tr>
+{% endfor %}
+</table>

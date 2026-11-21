@@ -22,6 +22,9 @@ exclude: [ssh-detect.py, validate-data.rb, README.md, TODO.md]
 collections:
   impls:
     output: true
+  attacks:
+    output: true
+    permalink: /attacks/:name.html
 
 defaults:
   - scope:
@@ -29,3 +32,8 @@ defaults:
       type: impls
     values:
       layout: impl
+  - scope:
+      path: ""
+      type: attacks
+    values:
+      layout: attack
