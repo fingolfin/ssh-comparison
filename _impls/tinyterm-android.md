@@ -1,13 +1,13 @@
 ---
 title: TinyTERM (Android)
-homepage: http://www.censoft.com/products/mobile/
+homepage: https://www.censoft.com/products/mobile/
 license: Proprietary
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
-    version: 1.2.9
-    date: 2015-09-16
-#changelog: TODO
+    version: 1.10.0
+    date: 2026-09-29
+changelog: https://www.censoft.com/help/android/TinyTERM_for_Android_Version_History.pdf
 client: yes
 server: no
 platforms:
@@ -50,9 +50,8 @@ based-on: "[libssh](/impls/libssh.html)"
 ---
 * There is also an [iOS version](/impls/tinyterm-ios.html),
   and also versions for Windows, Linux, Mac OS X, ...
-* There are two versions available on Google Play:
-    * [TinyTERM Lite](https://play.google.com/store/apps/details?id=com.censoft.TinyTERM.Lite)
-    * [TinyTERM Plus](https://play.google.com/store/apps/details?id=com.censoft.TinyTERM.Plus)
-* This report is based on `TinyTERM Lite`
+* Available on Google Play as
+  [TinyTERM Enterprise](https://play.google.com/store/apps/details?id=com.censoft.TinyTERM.Enterprise)
+* The protocol data is from `TinyTERM Lite`, which is no longer offered.
 
 * 2015-12-05: Version 1.2.9 identifies itself on the wire as `SSH-2.0-libssh-0.7.0`

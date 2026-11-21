@@ -1,13 +1,13 @@
 ---
 title: TinyTERM (iOS)
-homepage: http://www.censoft.com/products/mobile/
+homepage: https://www.censoft.com/products/mobile/
 license: Proprietary
 first-release:
     date: 2010-10-22
 latest-release:
-    version: 3.1.0
-    date: 2015-09-23
-changelog: http://www.censoft.com/help/ios/TinyTERM_for_iOS_Version_History.pdf
+    version: 3.9.0
+    date: 2026-01-14
+changelog: https://www.censoft.com/help/ios/TinyTERM_for_iOS_Version_History.pdf
 client: yes
 server: no
 platforms:
@@ -50,11 +50,9 @@ based-on: "[libssh](/impls/libssh.html)"
 ---
 * There is also an [Android version](/impls/tinyterm-android.html),
   and also versions for Windows, Linux, Mac OS X, ...
-* There are three versions available on the Apple app store:
-    * [TinyTERM Lite](https://itunes.apple.com/us/app/id893250564)
-    * [TinyTERM Enterprise AS](https://itunes.apple.com/us/app/id893366373)
-    * [TinyTERM Plus](https://itunes.apple.com/us/app/id912491717)
-* This report is based on `TinyTERM Lite`
+* Available on the Apple App Store as
+  [TinyTERM Enterprise AS](https://apps.apple.com/us/app/id893366373)
+* The protocol data is from `TinyTERM Lite`, which is no longer offered.
 
 * 2015-07-10: Version 2.1.5 for iOS identifies itself on the wire as `SSH-2.0-libssh-0.5.5`.
 * 2015-10-30: Version 3.1.0 for iOS identifies itself on the wire as `SSH-2.0-libssh-0.7.0`.
