@@ -1,4 +1,4 @@
-// Sorting and filtering for the comparison tables (issue #6).
+// Filtering for the comparison tables (issue #6); sorting is table-sort.js.
 //
 // The table arrives complete in the HTML; this script only reorders and hides
 // what is already there. Nothing is fetched, so the page is readable without
@@ -30,14 +30,6 @@
     return th.classList.contains('col-impl');
   });
   var countCol = headCells.length - 1;
-
-  // Liquid emits the rows sorted by id, so that is the starting state.
-  var ID_COL = 0;
-  var sort = defaultSort();
-
-  function defaultSort() {
-    return { col: ID_COL, kind: 'text', dir: 1 };
-  }
 
   // ---------------------------------------------------------------- filtering
 
@@ -84,46 +76,6 @@
     });
   }
 
-  // ------------------------------------------------------------------ sorting
-
-  function sortKey(row, col, kind) {
-    if (kind === 'number') return Number(row.cells[col].textContent);
-    if (kind === 'support') {
-      var cls = row.cells[col].className;
-      return cls === 'yes' ? 2 : cls === 'no' ? 1 : 0;
-    }
-    return row.cells[col].textContent.trim().toLowerCase();
-  }
-
-  function sorted(list) {
-    var decorated = list.map(function (row, i) {
-      return { row: row, key: sortKey(row, sort.col, sort.kind), i: i };
-    });
-    decorated.sort(function (a, b) {
-      if (a.key < b.key) return -sort.dir;
-      if (a.key > b.key) return sort.dir;
-      return a.i - b.i;                 // stable: keep id order within ties
-    });
-    return decorated.map(function (d) { return d.row; });
-  }
-
-  function setSort(col) {
-    var kind = headCells[col].dataset.sort;
-    // Yes/No and counts are most useful largest-first, names A-Z.
-    var firstDir = (kind === 'text') ? 1 : -1;
-    if (sort && sort.col === col) sort.dir = -sort.dir;
-    else sort = { col: col, kind: kind, dir: firstDir };
-
-    markSort();
-    apply();
-  }
-
-  // aria-sort is also what the CSS draws the direction arrows from.
-  function markSort() {
-    headCells.forEach(function (th) { th.removeAttribute('aria-sort'); });
-    headCells[sort.col].setAttribute('aria-sort', sort.dir === 1 ? 'ascending' : 'descending');
-  }
-
   // ------------------------------------------------------------------ applying
 
   var appliedCols = null;   // the last column set written to the DOM
@@ -155,7 +107,7 @@
     var shown = shownColumns();
     applyColumns(shown);
 
-    var keep = sorted(shownRows(shown));
+    var keep = sorter.sorted(shownRows(shown));
     var kept = new Set(keep);
     var drop = rows.filter(function (r) { return !kept.has(r); });
 
@@ -176,20 +128,11 @@
   form.addEventListener('input', apply);
   form.addEventListener('reset', function () {
     // The reset has not reached the controls yet when this fires.
-    setTimeout(function () { sort = defaultSort(); markSort(); apply(); }, 0);
+    setTimeout(function () { sorter.reset(); apply(); }, 0);
   });
 
-  headCells.forEach(function (th, col) {
-    if (!th.dataset.sort) return;
-    th.classList.add('sortable');
-    th.tabIndex = 0;
-    th.addEventListener('click', function () { setSort(col); });
-    th.addEventListener('keydown', function (e) {
-      if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setSort(col); }
-    });
-  });
+  var sorter = TableSort(table, apply);
 
   form.hidden = false;
-  markSort();
   apply();
 })();

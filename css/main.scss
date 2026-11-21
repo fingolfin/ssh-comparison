@@ -156,17 +156,18 @@ tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%)
 // Sorting and filtering controls (issue #6). Both only ever hide or reorder
 // rows that are already in the HTML.
 //
-.impl-comparison th.sortable {
+th.sortable {
   cursor: pointer;
   user-select: none;
 }
 
 // Sort arrows: a faint pair on every sortable column, the active direction in
-// full. Under a rotated label they sit unrotated at the foot of the cell, as
-// DataTables' second header row did. No background marks the active column:
-// it would paint over the label of the column to its left.
-.impl-comparison th.sortable::after {
+// full. Under a rotated label they sit unrotated at the foot of the cell. No
+// background marks the active column: it would paint over the label of the
+// column to its left.
+th.sortable::after {
   content: "\25B4\25BE";   // ▴▾
+  margin-left: 0.4em;
   color: $grey-color;
   font-size: 0.8em;
   letter-spacing: -0.1em;
@@ -174,16 +175,13 @@ tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%)
 
 .impl-comparison th.rotate.sortable::after {
   display: block;
+  margin-left: 0;
   text-align: center;
   line-height: 1.2;
 }
 
-.impl-comparison th.col-id.sortable::after {
-  margin-left: 0.4em;
-}
-
-.impl-comparison th[aria-sort="ascending"]::after  { content: "\25B4"; color: $text-color; }
-.impl-comparison th[aria-sort="descending"]::after { content: "\25BE"; color: $text-color; }
+th.sortable[aria-sort="ascending"]::after  { content: "\25B4"; color: $text-color; }
+th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-color; }
 
 .cmp-controls {
   display: flex;
