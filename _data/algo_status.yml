@@ -8,7 +8,7 @@
 # ---- cipher ----
 "3des-cbc":
   status: weak
-  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+  note: "64-bit block (Sweet32) and CBC plaintext recovery; Terrapin with an EtM MAC unless strict kex"
 "3des-cfb":
   status: weak
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
@@ -35,7 +35,7 @@
   note: "AEAD: encryption and integrity in one pass"
 "aes128-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "aes128-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -50,7 +50,7 @@
   note: "AEAD: encryption and integrity in one pass"
 "aes192-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "aes192-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -59,7 +59,7 @@
   note: "AEAD: encryption and integrity in one pass"
 "aes256-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "aes256-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -92,7 +92,7 @@
   note: "RC4 keystream biases leak plaintext"
 "blowfish-cbc":
   status: weak
-  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+  note: "64-bit block (Sweet32) and CBC plaintext recovery; Terrapin with an EtM MAC unless strict kex"
 "blowfish-cfb":
   status: weak
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
@@ -107,28 +107,28 @@
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
 "camellia-128-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia-128-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "camellia-192-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia-192-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "camellia-256-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia-256-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "camellia128-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia128-cbc@openssh.org":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia128-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -137,10 +137,10 @@
   note: "counter mode over a 128-bit block cipher"
 "camellia192-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia192-cbc@openssh.org":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia192-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -149,10 +149,10 @@
   note: "counter mode over a 128-bit block cipher"
 "camellia256-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia256-cbc@openssh.org":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "camellia256-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -161,7 +161,7 @@
   note: "counter mode over a 128-bit block cipher"
 "cast128-cbc":
   status: weak
-  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+  note: "64-bit block (Sweet32) and CBC plaintext recovery; Terrapin with an EtM MAC unless strict kex"
 "cast128-cfb":
   status: weak
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
@@ -176,16 +176,16 @@
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
 "chacha20-poly1305":
   status: secure
-  note: "AEAD: encryption and integrity in one pass"
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
 "chacha20-poly1305-mt@hpnssh.org":
   status: secure
-  note: "AEAD: encryption and integrity in one pass"
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
 "chacha20-poly1305@openssh.com":
   status: secure
-  note: "AEAD: encryption and integrity in one pass"
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
 "chacha@rodents.montreal.qc.ca":
   status: secure
-  note: "AEAD: encryption and integrity in one pass"
+  note: "ChaCha20 stream cipher; integrity comes from a separate MAC"
 "des-cbc":
   status: broken
   note: "56-bit DES key, within brute-force reach"
@@ -194,7 +194,7 @@
   note: "56-bit DES key, within brute-force reach"
 "idea-cbc":
   status: weak
-  note: "64-bit block (Sweet32) and CBC plaintext recovery"
+  note: "64-bit block (Sweet32) and CBC plaintext recovery; Terrapin with an EtM MAC unless strict kex"
 "idea-cfb":
   status: weak
   note: "64-bit block: Sweet32 collisions after ~32 GB per key"
@@ -212,79 +212,79 @@
   note: "no encryption or integrity protection at all"
 "rijndael-cbc@lysator.liu.se":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k4b4-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k4b4-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "rijndael-k4b6-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k4b6-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael-k4b8-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k4b8-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael-k6b4-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k6b4-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "rijndael-k6b6-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k6b6-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael-k6b8-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k6b8-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael-k8b4-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k8b4-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "rijndael-k8b6-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k8b6-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael-k8b8-cbc@rodents.montreal.qc.ca":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael-k8b8-ctr@rodents.montreal.qc.ca":
   status: secure
   note: "Rijndael in counter mode at a non-AES block size"
 "rijndael128-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael192-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "rijndael256-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "seed-cbc@ssh.com":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "seed-ctr@ssh.com":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "serpent128-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "serpent128-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -293,13 +293,13 @@
   note: "AEAD: encryption and integrity in one pass"
 "serpent192-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "serpent192-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "serpent256-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "serpent256-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -311,7 +311,7 @@
   note: "RC4 keystream biases leak plaintext"
 "twofish-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "twofish-cfb":
   status: secure
   note: "stream mode over a 128-bit block cipher"
@@ -326,7 +326,7 @@
   note: "stream mode over a 128-bit block cipher"
 "twofish128-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "twofish128-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -335,13 +335,13 @@
   note: "AEAD: encryption and integrity in one pass"
 "twofish192-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "twofish192-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
 "twofish256-cbc":
   status: weak
-  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field"
+  note: "CBC mode: 2008 plaintext-recovery attack on the SSH length field; Terrapin with an EtM MAC unless strict kex"
 "twofish256-ctr":
   status: secure
   note: "counter mode over a 128-bit block cipher"
@@ -729,10 +729,10 @@
   note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
 "hmac-md5-96-etm@openssh.com":
   status: weak
-  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A; Terrapin with a CBC cipher unless strict kex"
 "hmac-md5-etm@openssh.com":
   status: weak
-  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A"
+  note: "no practical HMAC-MD5 forgery, but MD5 is disallowed by NIST SP 800-131A; Terrapin with a CBC cipher unless strict kex"
 "hmac-ripemd160":
   status: weak
   note: "RIPEMD-160 is unbroken but absent from current standards"
@@ -741,7 +741,7 @@
   note: "RIPEMD-160 is unbroken but absent from current standards"
 "hmac-ripemd160-etm@openssh.com":
   status: weak
-  note: "RIPEMD-160 is unbroken but absent from current standards"
+  note: "RIPEMD-160 is unbroken but absent from current standards; Terrapin with a CBC cipher unless strict kex"
 "hmac-ripemd160@openssh.com":
   status: weak
   note: "RIPEMD-160 is unbroken but absent from current standards"
@@ -753,10 +753,10 @@
   note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
 "hmac-sha1-96-etm@openssh.com":
   status: weak
-  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha1-etm@openssh.com":
   status: weak
-  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn"
+  note: "no practical HMAC-SHA-1 forgery, but SHA-1 is withdrawn; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha2-256":
   status: secure
   note: "HMAC over a SHA-2 hash"
@@ -765,10 +765,10 @@
   note: "HMAC over a SHA-2 hash"
 "hmac-sha2-256-96-etm@openssh.com":
   status: secure
-  note: "HMAC over a SHA-2 hash"
+  note: "HMAC over a SHA-2 hash; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha2-256-etm@openssh.com":
   status: secure
-  note: "HMAC over a SHA-2 hash"
+  note: "HMAC over a SHA-2 hash; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha2-384":
   status: secure
   note: "HMAC over a SHA-2 hash"
@@ -780,10 +780,10 @@
   note: "HMAC over a SHA-2 hash"
 "hmac-sha2-512-96-etm@openssh.com":
   status: secure
-  note: "HMAC over a SHA-2 hash"
+  note: "HMAC over a SHA-2 hash; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha2-512-etm@openssh.com":
   status: secure
-  note: "HMAC over a SHA-2 hash"
+  note: "HMAC over a SHA-2 hash; Terrapin with a CBC cipher unless strict kex"
 "hmac-sha224@ssh.com":
   status: secure
   note: "HMAC over a SHA-2 hash"
@@ -807,7 +807,7 @@
   note: "UMAC with a 128-bit tag"
 "umac-128-etm@openssh.com":
   status: secure
-  note: "UMAC with a 128-bit tag"
+  note: "UMAC with a 128-bit tag; Terrapin with a CBC cipher unless strict kex"
 "umac-128@openssh.com":
   status: secure
   note: "UMAC with a 128-bit tag"
@@ -819,7 +819,7 @@
   note: "64-bit tag, far below the 128-bit variant"
 "umac-64-etm@openssh.com":
   status: weak
-  note: "64-bit tag, far below the 128-bit variant"
+  note: "64-bit tag, far below the 128-bit variant; Terrapin with a CBC cipher unless strict kex"
 "umac-64@openssh.com":
   status: weak
   note: "64-bit tag, far below the 128-bit variant"
