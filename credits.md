@@ -47,6 +47,5 @@ href="https://github.com/fingolfin/ssh-comparison/issues">say so</a>.
 
 <ul>
 <li><a href="https://jekyllrb.com/">Jekyll</a>, hosted on <a href="https://pages.github.com/">GitHub Pages</a></li>
-<li><a href="https://datatables.net/">DataTables</a> for the sortable, frozen-column tables</li>
 <li>The rotated table headers follow <a href="https://css-tricks.com/rotated-table-column-headers/">a CSS-Tricks recipe</a>; the table colours came out of <a href="https://paletton.com/">Paletton</a></li>
 </ul>

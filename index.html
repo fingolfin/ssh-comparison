@@ -26,15 +26,15 @@ See also the Wikipedia articles on
 
 The following {{ site.impls | size }} implementations are currently covered:
 
-<table id="impl-list" class="tablesorter" style="padding: 1em;">
+<table id="impl-list" style="padding: 1em;">
 <thead>
   <tr>
-    <th>Name</th>
-    <th>First release date</th>
-    <th>Last release version</th>
-    <th>Last release date</th>
-    <th>License</th>
-    <th>Based on</th>
+    <th data-sort='text'>Name</th>
+    <th data-sort='text'>First release date</th>
+    <th data-sort='text'>Last release version</th>
+    <th data-sort='text'>Last release date</th>
+    <th data-sort='text'>License</th>
+    <th data-sort='text'>Based on</th>
   </tr>
 </thead>
 <tbody>
@@ -53,13 +53,5 @@ The following {{ site.impls | size }} implementations are currently covered:
 
 </div>
 
-<script>
-// This table is not horizontally scrolled, so it needs no frozen columns.
-document.addEventListener('DOMContentLoaded', function () {
-    new DataTable('#impl-list', {
-        paging:    false,
-        searching: false,
-        info:      false
-    });
-});
-</script>
+<script src="{{ "/js/table-sort.js" | prepend: site.baseurl }}"></script>
+<script>TableSort(document.getElementById('impl-list'));</script>
