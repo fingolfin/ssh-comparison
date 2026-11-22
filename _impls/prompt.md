@@ -84,6 +84,8 @@ protocols:
         - hmac-md5-96
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
+    extension:
+        - server-sig-algs   # inferred from ext-info-c
 #    userauth:
 #        - unknown
 
