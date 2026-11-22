@@ -17,7 +17,7 @@ plugins:
 
 # Jekyll appends its own defaults (Gemfile, Gemfile.lock, vendor/bundle/, ...)
 # to this list.
-exclude: [ssh-detect.py, README.md, TODO.md]
+exclude: [ssh-detect.py, validate-data.rb, README.md, TODO.md]
 
 collections:
   impls:

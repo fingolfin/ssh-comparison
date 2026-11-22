@@ -1,0 +1,16 @@
+name: Validate data files
+
+on:
+  push:
+    branches: [gh-pages]
+  pull_request:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "4.0"
+      - run: ruby validate-data.rb
