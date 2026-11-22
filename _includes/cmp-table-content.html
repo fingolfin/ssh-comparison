@@ -29,7 +29,10 @@
     </td>
     {% for impl in site.impls %}
       {% if impl.protocols contains type %}
-        {% if impl.protocols[type] contains item %}
+        {% if impl['disabled-by-default'][type] contains item %}
+          <td class='default-off' title='supported, disabled by default'>Off</td>
+          {% assign counter = counter | plus: 1 %}
+        {% elsif impl.protocols[type] contains item %}
           <td class='yes'>Yes</td>
           {% assign counter = counter | plus: 1 %}
         {% else %}

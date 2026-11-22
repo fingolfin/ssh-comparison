@@ -85,16 +85,17 @@ $sticky-bg: #f3f3f3;
 
 //
 // Support matrix: "No" is 89% of the grid, so it carries the least ink and
-// "Yes" carries the most. All three keep their word in the cell, so the colour
+// "Yes" carries the most. Each keeps its word in the cell, so the colour
 // is a second channel, never the only one.
 //
 $yes-color:     #7fbf5f;  // #111 on this: 8.6:1
+$off-color:     #cfe6bf;  // supported but disabled: half-way to "No"
 $no-color:      #fafafa;  // one step paler than the row stripe
 $unk-color:     #ffeaa8;
 $no-text-color: #5f6368;  // muted, to keep "No" from shouting
 $hover-color:   #e3effa;  // row under the cursor
 
-.yes, .no, .unknown { text-align: center; }
+.yes, .default-off, .no, .unknown { text-align: center; }
 
 tr:nth-child(odd) td { background-color: #e6e6e6; }
 tr:nth-child(even) td { background-color: #f5f5f5; }
@@ -103,6 +104,9 @@ tr:nth-child(even) td { background-color: #f5f5f5; }
 // readable underneath the yes/no/unknown colouring.
 tr:nth-child(odd) td.yes { background-color: color.adjust($yes-color, $lightness: -7%); }
 tr:nth-child(even) td.yes { background-color: $yes-color; }
+
+tr:nth-child(odd) td.default-off { background-color: color.adjust($off-color, $lightness: -7%); }
+tr:nth-child(even) td.default-off { background-color: $off-color; }
 
 tr:nth-child(odd) td.no { background-color: color.adjust($no-color, $lightness: -6%); }
 tr:nth-child(even) td.no { background-color: $no-color; }
@@ -117,6 +121,7 @@ tr:nth-child(even) td.unknown { background-color: $unk-color; }
 //
 .impl-comparison tr:hover td { background-color: $hover-color; }
 tr:hover td.yes { background-color: color.adjust($yes-color, $lightness: 8%); }
+tr:hover td.default-off { background-color: color.adjust($off-color, $lightness: 5%); }
 tr:hover td.no { background-color: $hover-color; }
 tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%); }
 
@@ -290,3 +295,6 @@ h1.page-heading ~ h2 {
     font-size: 21px;
     margin-top: $spacing-unit;
 }
+
+// Legend above a comparison table; the sample reuses the cell colour.
+.cmp-note .default-off { background-color: $off-color; padding: 0 0.3em; }

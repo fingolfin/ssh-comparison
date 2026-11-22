@@ -20,11 +20,13 @@ window.TableSort = function (table, onChange) {
     return { col: ID_COL, kind: headCells[ID_COL].dataset.sort, dir: 1 };
   }
 
+  // Rank of a support cell by its first class; anything else is "?".
+  var SUPPORT_RANK = { 'yes': 3, 'default-off': 2, 'no': 1 };
+
   function sortKey(row, col, kind) {
     if (kind === 'number') return Number(row.cells[col].textContent);
     if (kind === 'support') {
-      var cls = row.cells[col].className;
-      return cls === 'yes' ? 2 : cls === 'no' ? 1 : 0;
+      return SUPPORT_RANK[row.cells[col].classList[0]] || 0;
     }
     return row.cells[col].textContent.trim();
   }

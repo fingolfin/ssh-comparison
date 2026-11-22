@@ -55,12 +55,16 @@
     return shown;
   }
 
-  // Number of shown implementations each row says Yes to. Also the value the
-  // count column is rewritten to, so it tracks the column filter.
+  // Cell classes that mean supported; "default-off" is supported but disabled.
+  var SUPPORTED = { 'yes': true, 'default-off': true };
+
+  // Number of shown implementations each row says Yes or Off to. Also the
+  // value the count column is rewritten to, so it tracks the column filter.
   function supportCount(row, shown) {
     var n = 0;
     for (var i = 0; i < shown.length; i++) {
-      if (row.cells[shown[i]].className === 'yes') n++;
+      var cell = row.cells[shown[i]];
+      if (SUPPORTED[cell.classList[0]]) n++;
     }
     return n;
   }
