@@ -77,6 +77,9 @@ protocols:
         - hmac-ripemd160@openssh.com
     extension:
         - server-sig-algs   # as in libssh2
+    userauth:   # per docs.la-terminal.net
+        - password
+        - publickey
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh2_1.10.1_DEV"
 based-on: "[libssh2](/impls/libssh2.html)"
