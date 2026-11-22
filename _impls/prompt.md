@@ -1,26 +1,29 @@
 ---
-title: Prompt 2
+title: Prompt 3
 homepage: https://www.panic.com/prompt/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2024-01-16
 latest-release:
-    version: 2.6.19
-    date: 2022-05-02
-changelog: https://help.panic.com/releasenotes/prompt2/
+    version: 3.5.3
+    date: 2026-10-07
+changelog: https://help.panic.com/releasenotes/prompt3/
 client: yes
 server: no
 platforms:
+    - macos
     - iphone
     - ipad
-# "since" versions are Prompt 2 releases: https://help.panic.com/releasenotes/prompt2/
+    - visionos
+
 protocols:
     cipher:
-        - chacha20-poly1305
-        - chacha20-poly1305@openssh.com # since 2.6.4
-        - aes128-ctr
-        - aes192-ctr
+        - chacha20-poly1305@openssh.com
+        - aes256-gcm@openssh.com
+        - aes128-gcm@openssh.com
         - aes256-ctr
+        - aes192-ctr
+        - aes128-ctr
         - aes256-cbc
         - rijndael-cbc@lysator.liu.se
         - aes192-cbc
@@ -35,18 +38,25 @@ protocols:
         - zlib@openssh.com
         - none
     hostkey:
-        - ecdsa-sha2-nistp256
-        - ecdsa-sha2-nistp384
-        - ecdsa-sha2-nistp521
+        - ssh-ed25519-cert-v01@openssh.com
         - ecdsa-sha2-nistp256-cert-v01@openssh.com
         - ecdsa-sha2-nistp384-cert-v01@openssh.com
         - ecdsa-sha2-nistp521-cert-v01@openssh.com
-        - ssh-ed25519   # since 2.6
+        - rsa-sha2-512-cert-v01@openssh.com
+        - rsa-sha2-256-cert-v01@openssh.com
+        - ssh-ed25519
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
         - rsa-sha2-512
         - rsa-sha2-256
         - ssh-rsa
+        - ssh-rsa-cert-v01@openssh.com
         - ssh-dss
     kex:
+        - mlkem768x25519-sha256
+        - mlkem768nistp256-sha256
+        - mlkem1024nistp384-sha384
         - curve25519-sha256
         - curve25519-sha256@libssh.org
         - ecdh-sha2-nistp256
@@ -60,12 +70,15 @@ protocols:
         - diffie-hellman-group1-sha1
         - diffie-hellman-group-exchange-sha1
         - ext-info-c
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
-        - hmac-sha2-512-etm@openssh.com
-        - hmac-sha2-512
-        - hmac-sha2-256-etm@openssh.com
         - hmac-sha2-256
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512
+        - hmac-sha2-512-etm@openssh.com
         - hmac-sha1
+        - hmac-sha1-etm@openssh.com
         - hmac-sha1-96
         - hmac-md5
         - hmac-md5-96
@@ -75,12 +88,15 @@ protocols:
 #        - unknown
 
 first_kex_packet_follows: 0
-ident: "SSH-2.0-OpenSSH_5.4"
+ident: "SSH-2.0-OpenSSH_7.4"
 based-on: "[OpenSSH](/impls/openssh.html)"
 ---
-* iOS client for Apple iPhone and iPad.
-* No longer in the App Store; its successor is [Prompt 3](/impls/prompt3.html).
-* 2015-07-10: Version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
-* 2016-02-17: Version 2.5 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
-* 2026-11-21: Version 2.6.19 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* Client for macOS, iPhone, iPad and visionOS.
+* Available on the [Apple App Store](https://apps.apple.com/us/app/id1594420480)
+* Successor of the iPhone and iPad app Prompt 2, whose last release, 2.6.19
+  from 2022-05-02, is no longer in the App Store.
+* 2015-07-10: Prompt 2 version 2.1.1 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* 2016-02-17: Prompt 2 version 2.5 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* 2026-11-21: Prompt 2 version 2.6.19 identifies itself on the wire as `SSH-2.0-OpenSSH_5.4`
+* 2026-11-21: Version 3.5.3 identifies itself on the wire as `SSH-2.0-OpenSSH_7.4`
 * Vendor provides a [list of supported protocols](https://help.panic.com/prompt/prompt-key-security/)
