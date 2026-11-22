@@ -53,8 +53,9 @@ protocols:
         - hmac-sha2-256
         - hmac-sha1-96
         - hmac-md5-96
-#    userauth:
-#        - unknown
+    userauth:   # per docs.termius.com/keychain/identities
+        - password
+        - publickey
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-JSCH-0.1.53"

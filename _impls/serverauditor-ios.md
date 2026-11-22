@@ -93,8 +93,9 @@ protocols:
         - umac-64-etm@openssh.com
         - umac-128@openssh.com
         - umac-128-etm@openssh.com
-#    userauth:
-#        - unknown
+    userauth:   # per docs.termius.com/keychain/identities
+        - password
+        - publickey
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh2_1.11.1"
