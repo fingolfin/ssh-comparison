@@ -110,6 +110,35 @@ protocols:
     extension:
         - server-sig-algs
 
+disabled-by-default:
+    cipher:
+        - chacha20-poly1305@openssh.com
+    hostkey:
+        - x509v3-ssh-dss
+        - x509v3-sign-dss
+        - ssh-dss-cert-v01@openssh.com
+        - ssh-dss
+    kex:
+        - diffie-hellman-group17-sha512
+        - diffie-hellman-group15-sha512
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group16-sha512
+        - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
+    mac:
+        - umac-64-etm@openssh.com
+        - umac-128-etm@openssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-md5-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+
 first_kex_packet_follows: 0
 based-on: "[OpenSSH](/impls/openssh.html)"
 ---

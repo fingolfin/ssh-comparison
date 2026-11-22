@@ -92,6 +92,10 @@ protocols:
     extension:
         - server-sig-algs   # by 9.7
 
+disabled-by-default:
+    kex:
+        - diffie-hellman-group1-sha1
+
 
 #sftp-su@vandyke.com
 #read-directory-changes@vandyke.com

@@ -79,6 +79,26 @@ protocols:
         - delay-compression     # since 8.15
         - no-flow-control       # by 8.35
         - global-requests-ok    # since 8.21
+
+disabled-by-default:
+    cipher:
+        - aes256-cbc
+        - aes192-cbc
+        - aes128-cbc
+        - 3des-cbc
+    compression:
+        - zlib
+    kex:
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+    mac:
+        - hmac-sha1
+        - hmac-md5
+        - hmac-sha2-256-96
+        - hmac-sha1-96
+        - hmac-md5-96
 ---
 * Bitvise FlowSshC/Cpp/Net is an SSH library for C, C++, and .NET.
 * 2015-07-10: The information provided here is based on the FlowSshC.h header file,

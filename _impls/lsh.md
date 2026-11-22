@@ -42,6 +42,13 @@ protocols:
         - hostbased
         - keyboard-interactive
 
+disabled-by-default:
+    cipher:
+        - aes256-ctr
+        - twofish-cbc
+        - cast128-cbc
+        - serpent256-cbc
+
 first_kex_packet_follows: 0
 ---
 * [Wikipedia](https://en.wikipedia.org/wiki/Lsh)

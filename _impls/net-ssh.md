@@ -100,5 +100,35 @@ protocols:
         - publickey
         - hostbased
         - keyboard-interactive
+
+disabled-by-default:
+    cipher:
+        - 3des-cbc
+        - 3des-ctr
+        - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
+        - blowfish-cbc
+        - blowfish-ctr
+        - cast128-cbc
+        - cast128-ctr
+        - idea-cbc
+        - rijndael-cbc@lysator.liu.se
+    hostkey:
+        - ssh-dss
+        - ssh-rsa
+        - ssh-rsa-cert-v01@openssh.com
+    kex:
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+    mac:
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-ripemd160
+        - hmac-ripemd160@openssh.com
+        - hmac-sha1-96
+        - hmac-sha2-256-96
+        - hmac-sha2-512-96
 ---
 * Ruby implementation of the SSH2 client protocol, based on OpenSSL

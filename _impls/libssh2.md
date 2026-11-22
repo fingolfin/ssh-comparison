@@ -89,6 +89,10 @@ protocols:
         - keyboard-interactive
     extension:
         - server-sig-algs
+
+disabled-by-default:
+    hostkey:
+        - ssh-dss
 ---
 * C library for clients.
 * Not to be confused with the unrelated [libssh](/impls/libssh.html)

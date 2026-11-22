@@ -89,6 +89,28 @@ protocols:
         - global-requests-ok    # since 8.21
         - ext-auth-info
 
+disabled-by-default:
+    cipher:
+        - chacha20-poly1305@openssh.com
+        - 3des-ctr
+        - aes256-cbc
+        - aes192-cbc
+        - aes128-cbc
+        - 3des-cbc
+    compression:
+        - zlib
+    kex:
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - gss-group1-sha1-*
+    mac:
+        - hmac-sha1
+        - hmac-md5
+        - hmac-sha2-256-96
+        - hmac-sha1-96
+        - hmac-md5-96
+
 # The following information was provided by denis bider.
 #
 # Some version history:

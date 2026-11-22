@@ -96,6 +96,20 @@ protocols:
     extension:
         - server-sig-algs
 
+disabled-by-default:
+    cipher:
+        - twofish128-cbc
+        - twofish256-cbc
+        - arcfour
+        - arcfour128
+        - arcfour256
+        - blowfish-cbc
+        - cast128-cbc
+    mac:
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-sha1-96
+
 # X11 forwarding, Port forwarding, sftp client, telnet client
 ---
 
