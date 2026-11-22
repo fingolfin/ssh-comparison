@@ -62,8 +62,9 @@ protocols:
         - hmac-md5-96
         - hmac-ripemd160
         - hmac-ripemd160@openssh.com
-#    userauth:
-#        - unknown
+    userauth:   # per the App Store description
+        - password
+        - publickey
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh2_1.10.0"
