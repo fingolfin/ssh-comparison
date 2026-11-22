@@ -74,6 +74,8 @@ protocols:
         - hmac-sha1-etm@openssh.com
         - hmac-sha1-96-etm@openssh.com
         - hmac-md5-etm@openssh.com
+    extension:
+        - server-sig-algs   # as in PuTTY
 first_kex_packet_follows: 0
 ident: "SSH-2.0-PuTTY_Release_0.78"
 based-on: "[PuTTY](/impls/putty.html)"
