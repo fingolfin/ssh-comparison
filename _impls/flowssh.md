@@ -56,6 +56,7 @@ protocols:
         - diffie-hellman-group14-sha1          # disabled by default since 9.12
         - diffie-hellman-group1-sha1           # disabled by default since 5.35
         - ext-info-c                    # since 7.12
+        - ext-info-s                    # by 8.15: the client sends its own EXT_INFO
         - kex-strict-c-v00@openssh.com  # since 9.32
         - kex-strict-s-v00@openssh.com  # since 9.32
     mac:
