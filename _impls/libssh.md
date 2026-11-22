@@ -105,5 +105,5 @@ protocols:
         - publickey-hostbound@openssh.com
         - server-sig-algs
 ---
-* Mulitplatform C library for clients and servers.
+* Multiplatform C library for clients and servers.
 * Not to be confused with the unrelated [libssh2](/impls/libssh2.html)

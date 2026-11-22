@@ -131,5 +131,5 @@ first_kex_packet_follows: 0
 * There are actually two versions: Regular OpenSSH is part of OpenBSD.
   This version is hosted in the [OpenBSD CVS repository](https://cvsweb.openbsd.org/cgi-bin/cvsweb/src/usr.bin/ssh/).
   For everybody else, there is "Portable OpenSSH". This document is
-  refering to the portable version, since that is what the majority
+  referring to the portable version, since that is what the majority
   of OpenSSH users is using (as they are not running OpenBSD).

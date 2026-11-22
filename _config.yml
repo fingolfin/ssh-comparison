@@ -3,7 +3,7 @@ title: SSH implementation comparison
 #email: your-email@domain.com
 description: > # this means to ignore newlines until "baseurl:"
   A technical comparison of various SSH implementations (clients, servers and
-  libraries), in terms of support SSH crypto protocols.
+  libraries), in terms of supported SSH crypto protocols.
 baseurl: "" # the subpath of your site, e.g. /blog/
 #url: "http://yourdomain.com" # the base hostname & protocol for your site
 #twitter_username: jekyllrb
@@ -15,9 +15,9 @@ markdown: kramdown
 plugins:
   - jekyll-redirect-from
 
-# Setting `exclude` replaces Jekyll's defaults, so the bundler paths have to
-# be repeated here or they land in _site.
-exclude: [ssh-detect.py, Gemfile, Gemfile.lock, vendor, .bundle]
+# Jekyll appends its own defaults (Gemfile, Gemfile.lock, vendor/bundle/, ...)
+# to this list.
+exclude: [ssh-detect.py, README.md, TODO.md]
 
 collections:
   impls:

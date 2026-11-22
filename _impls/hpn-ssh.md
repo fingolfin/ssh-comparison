@@ -106,4 +106,4 @@ protocols:
 first_kex_packet_follows: 0
 based-on: "[OpenSSH](/impls/openssh.html)"
 ---
-* A high performance soft fork of OpenSSH that can provide significnatly faster throughput for bulk data transfers over a wide range of network paths.
+* A high performance soft fork of OpenSSH that can provide significantly faster throughput for bulk data transfers over a wide range of network paths.

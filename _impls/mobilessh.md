@@ -59,4 +59,4 @@ based-on: "[OpenSSH](/impls/openssh.html)"
     [Google Play](https://play.google.com/store/apps/details?id=mobileSSH.feng.gao).
 * Claims to be based on OpenSSH.
 * The report given here is for the base version; a paid version exists
-  which supposedly offers support for "RSA key authenticaation feature".
+  which supposedly offers support for "RSA key authentication feature".

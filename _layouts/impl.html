@@ -32,11 +32,14 @@ layout: default
 {% endif %}
 </ul>
 
+{% assign body = content | strip %}
+{% if page.remarks or body != "" %}
 <h3>Remarks</h3>
 {% if page.remarks %}
 {{ page.remarks | markdownify }}
 {% endif %}
 {{ content }}
+{% endif %}
 
 
 <h3>Supported protocols</h3>
