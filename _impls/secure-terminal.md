@@ -69,6 +69,8 @@ protocols:
         - hmac-sha1
         - hmac-sha1-etm@openssh.com
         - hmac-sha1-96
+    extension:
+        - server-sig-algs   # as in libssh2
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh2_1.11.2_DEV"
 based-on: "[libssh2](/impls/libssh2.html)"
