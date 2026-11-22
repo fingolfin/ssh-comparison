@@ -5,11 +5,11 @@ layout: default
 <h1 class="page-heading">What is this all about?</h1>
 
 The aim of this page is to compare various implementations of the SSH v2
-protocol in terms which cryptographic protocols each implements.
+protocol in terms of which cryptographic protocols each implements.
 
 This page does *not* try to give a full comparison of all capabilities of each
 implementation. If you want to find "the best SSH client for platform XYZ",
-this is the wrong place to look at. However, it is the right place to look at
+this is the wrong place to look. However, it is the right place to look
 if you want to find out which SSH implementations support modern crypto suites
 and which don't.
 

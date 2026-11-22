@@ -82,7 +82,7 @@ protocols:
         - gss-nistp521-sha512-*                         # since 1.18.0
         - gss-nistp384-sha384-*                         # since 1.18.0
         - gss-nistp256-sha256-*                         # since 1.18.0
-        - gss-13.3.132.0.10-sha256-*                    # since 1.18.0
+        - gss-1.3.132.0.10-sha256-*                     # since 1.18.0
         - gss-gex-sha256-*                              # since 1.9.0
         - gss-gex-sha1-*                                # since 1.9.0
         - gss-group14-sha256-*                          # since 1.9.0

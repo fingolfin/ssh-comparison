@@ -56,6 +56,6 @@ protocols:
         - elevation
         - server-sig-algs
 ---
-* Bitvise FlowSshC/Cpp/Net is a SSH library for C, C++, and .NET.
+* Bitvise FlowSshC/Cpp/Net is an SSH library for C, C++, and .NET.
 * 2015-07-10: The information provided here is based on the FlowSshC.h header file,
   as well as the [FlowSsh documentation](https://www.bitvise.com/fsd-index).

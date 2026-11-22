@@ -668,7 +668,7 @@ draft-prabel-ssh-scloudplus-kex-00:
 draft-rpe-ssh-x509-mldsa-01:
     name: draft-rpe-ssh-x509-mldsa-01
     url: https://tools.ietf.org/html/draft-rpe-ssh-x509-mldsa-01.html
-    title: "X.509v3 ML-DSA Certificates for the Secure Shell (SSH) Protocoll [ expired 2027-01-03 ]"
+    title: "X.509v3 ML-DSA Certificates for the Secure Shell (SSH) Protocol [ expired 2027-01-03 ]"
     protocols:
         hostkey:
             - x509v3-mldsa-44
@@ -727,7 +727,7 @@ draft-sun-ssh-composite-sigs-03:
 libssh:
     name: libssh
     url: https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
-    title: "The key exchange methode curve25519-sha256@libssh.org"
+    title: "The key exchange method curve25519-sha256@libssh.org"
     protocols:
         kex:
             - curve25519-sha256@libssh.org

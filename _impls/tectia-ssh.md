@@ -148,11 +148,11 @@ protocols:
         #- LAM               # through keyboard-interactive / AIX only
 ---
 * Formerly known as just "SSH" or "ssh.com"
-* Strictly speaking, the Tectica SSH client and server are two separate
+* Strictly speaking, the Tectia SSH client and server are two separate
   products.
 * The information here is based on the Tectia SSH manual, in particular the list of
   [default and supported SSH algorithms](https://docs.ssh.com/manuals/server-admin/71/csc-algorithms.html)
   as well as the list of
   [supported user authentication methods](https://docs.ssh.com/manuals/server-admin/71/server-auth-supported-methods.html).
-* WARNING: The data here was lasted update for release 7.1.0; changes made
+* WARNING: The data here was last updated for release 7.1.0; changes made
   since then are not reflected by the list above.

@@ -31,7 +31,7 @@ protocols:
         - aes128-ctr
         - aes192-cbc
         - aes256-ctr
-        - none
+        #- none                         # suppressed (see issue #27)
     compression:
         - zlib
         - none
@@ -68,7 +68,7 @@ protocols:
         - hmac-sha2-256
         - hmac-sha2-384
         - hmac-sha2-512
-        - none
+        #- none                         # suppressed (see issue #27)
     userauth:
         - publickey
         - password
@@ -80,7 +80,7 @@ first_kex_packet_follows: 1
 ident: "SSH-2.0-Twisted_2024.3.0"
 ---
 * Designed as a [Python](https://www.python.org/) library.
-* Cryptograpy provided by [cryptography](https://cryptography.io/) library, that provides bindings for [OpenSSL](https://www.openssl.org/) or [LibreSSL](https://www.libressl.org/)
+* Cryptography provided by the [cryptography](https://cryptography.io/) library, which provides bindings for [OpenSSL](https://www.openssl.org/) or [LibreSSL](https://www.libressl.org/)
 * SFTP client and server.
-* Source code and documentation contains example for creating a client and a server.
+* Source code and documentation contain examples for creating a client and a server.
 * [Wikipedia](https://en.wikipedia.org/wiki/Twisted_(software))
