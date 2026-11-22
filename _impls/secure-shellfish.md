@@ -69,6 +69,8 @@ protocols:
         - hmac-sha1
         - hmac-sha1-etm@openssh.com
         - hmac-sha1-96
+    extension:
+        - server-sig-algs   # inferred from ext-info-c
 first_kex_packet_follows: 0
 ident: "SSH-2.0-SecureShellFish_2026_36"
 ---
