@@ -71,6 +71,10 @@ protocols:
         - hmac-sha1-96
     extension:
         - server-sig-algs   # inferred from ext-info-c
+    userauth:   # per secureshellfish.app/help
+        - password
+        - publickey
+        - keyboard-interactive
 first_kex_packet_follows: 0
 ident: "SSH-2.0-SecureShellFish_2026_36"
 ---
