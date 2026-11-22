@@ -9,6 +9,11 @@ This site is built with `jekyll`. Run `bundle install` once, then
 Jekyll that `.github/workflows/pages.yml` deploys with, so what builds
 locally builds in CI.
 
+Each implementation is a file in `_impls/`. The keys that say what it is
+(`client`, `server`, `standalone`, `library`, `platforms`, `languages`) are
+documented in `_data/impl_meta.yml`; `ruby validate-data.rb` checks them and
+runs in CI.
+
 ## Probing an SSH client
 
 `ssh-detect.py` is a fake SSH server that records which algorithms a

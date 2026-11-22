@@ -24,12 +24,23 @@ See also the Wikipedia articles on
 
 <h1 class="page-heading">Implementations</h1>
 
-The following {{ site.impls | size }} implementations are currently covered:
+The following {{ site.impls | size }} implementations are currently covered.
+A blank cell, or a role marked <span class="badge badge-unknown">?</span>, is not recorded yet.
+
+<form id="impl-controls" class="cmp-controls" hidden>
+{% include impl-filter.html %}
+
+  <button type="reset">Reset</button>
+  <output id="impl-counts"></output>
+</form>
 
 <table id="impl-list" style="padding: 1em;">
 <thead>
   <tr>
     <th data-sort='text'>Name</th>
+    <th data-sort='text'>Role</th>
+    <th data-sort='text'>Platforms</th>
+    <th data-sort='text'>Language</th>
     <th data-sort='text'>First release date</th>
     <th data-sort='text'>Last release version</th>
     <th data-sort='text'>Last release date</th>
@@ -39,8 +50,14 @@ The following {{ site.impls | size }} implementations are currently covered:
 </thead>
 <tbody>
 {% for impl in site.impls %}
-  <tr>
+  {%- include impl-meta.html impl=impl %}
+  <tr data-roles="{{ meta_roles }}"
+      {%- if meta_platforms.size > 0 %} data-platforms="{{ meta_platforms | join: ' ' }}"{% endif %}
+      {%- if meta_langs != "" %} data-languages="{{ meta_langs }}"{% endif %}>
     <td style="background: #ececec; font-weight: bold;"><a href="{{ impl.url }}">{{ impl.title }}</a></td>
+    <td>{{ meta_role_html }}</td>
+    <td>{{ meta_platform_text }}</td>
+    <td>{{ impl.languages | join: ", " }}</td>
     <td>{{ impl.first-release.date }}</td>
     <td>{{ impl.latest-release.version }}</td>
     <td>{{ impl.latest-release.date }}</td>
@@ -54,4 +71,29 @@ The following {{ site.impls | size }} implementations are currently covered:
 </div>
 
 <script src="{{ "/js/table-sort.js" | prepend: site.baseurl }}"></script>
-<script>TableSort(document.getElementById('impl-list'));</script>
+<script src="{{ "/js/impl-filter.js" | prepend: site.baseurl }}"></script>
+<script>
+(function () {
+  var form = document.getElementById('impl-controls');
+  var table = document.getElementById('impl-list');
+  var rows = Array.prototype.slice.call(table.tBodies[0].rows);
+  var filter = ImplFilter(form);
+  var counts = document.getElementById('impl-counts');
+
+  function apply() {
+    var snap = filter.snapshot();
+    var n = 0;
+    rows.forEach(function (row) {
+      row.hidden = !filter.matches(row, snap);
+      if (!row.hidden) n++;
+    });
+    counts.textContent = n + ' of ' + rows.length + ' implementations';
+  }
+
+  form.addEventListener('input', apply);
+  form.addEventListener('reset', function () { setTimeout(apply, 0); });
+  TableSort(table);
+  form.hidden = false;
+  apply();
+})();
+</script>

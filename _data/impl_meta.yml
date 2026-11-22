@@ -1,0 +1,73 @@
+# What each implementation is, where it runs and what it is written in: the
+# scalar keys at the top of the front matter of _impls/*.md. validate-data.rb
+# checks them against the vocabularies below.
+#
+# Every key is optional, and a missing key means "not known", never "no":
+# write `no` (or leave a platform out of a list you have verified) only when a
+# source says so. Record the source in a comment if it is not the homepage.
+#
+#   client: yes | no        implements the client side of the protocol
+#   server: yes | no        implements the server side
+#   standalone: SIDES       ships a stand-alone program or app, for which side
+#   library: SIDES          is offered as a library, for which side
+#                           SIDES is one of: client, server, both, no
+#   platforms: [...]        platforms the project ships or supports; ids below
+#   platforms-other: "..."  what `other` stands for, e.g. "FreeBSD, browser";
+#                           required exactly when `other` is listed
+#   languages: [...]        implementation language(s); names below
+#
+# A program and a library may cover different sides (a server program next to
+# a client-only library), so `standalone` and `library` are recorded apart;
+# together they must cover exactly the sides `client` and `server` claim.
+#
+# Example:
+#
+#   client: yes
+#   server: no
+#   standalone: client
+#   library: client
+#   platforms:
+#       - android
+#   languages:
+#       - Java
+#       - Kotlin
+
+# id: display name. Shown and filtered in this order.
+platforms:
+  macos: macOS
+  linux: Linux
+  windows: Windows
+  android: Android
+  ios: iOS
+  other: other
+
+# Read as the platform on the right. Older entries split iOS by device. An
+# alias for `other` needs no platforms-other note; its name here is shown.
+platform_aliases:
+  iphone: ios
+  ipad: ios
+  visionos: other
+
+alias_names:
+  visionos: visionOS
+
+# Display names, used as written in the data. Add one here before using it.
+languages:
+  - C
+  - C++
+  - C#
+  - Dart
+  - Delphi
+  - Erlang
+  - Go
+  - Java
+  - JavaScript
+  - Kotlin
+  - Objective-C
+  - Perl
+  - PHP
+  - Python
+  - Ruby
+  - Rust
+  - Swift
+  - TypeScript

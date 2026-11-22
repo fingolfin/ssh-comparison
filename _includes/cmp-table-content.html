@@ -5,12 +5,11 @@
     <th class='col-id' data-sort='text'>id</th>
     <th class='rotate' data-sort='text'><div><span>Specification</span></div></th>
     {% for impl in site.impls %}
-    {%- comment -%}
-    data-client/data-server are what the column filter selects on (issue #6).
-    {%- endcomment -%}
+    {%- include impl-meta.html impl=impl %}
     <th class='rotate col-impl' data-sort='support'
-        data-client='{% if impl.client %}1{% else %}0{% endif %}'
-        data-server='{% if impl.server %}1{% else %}0{% endif %}'><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
+        data-roles='{{ meta_roles }}'
+        {%- if meta_platforms.size > 0 %} data-platforms='{{ meta_platforms | join: " " }}'{% endif %}
+        {%- if meta_langs != "" %} data-languages='{{ meta_langs }}'{% endif %}><div><span><a href='{{ impl.url }}'>{{ impl.title }}</a></span></div></th>
     {% endfor %}
     <th class='rotate col-count' data-sort='number'><div><span># of impls</span></div></th>
   </tr>

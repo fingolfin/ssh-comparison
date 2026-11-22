@@ -2,8 +2,9 @@
 # frozen_string_literal: true
 
 # Checks the front matter of _impls/*.md for mistakes the Jekyll build
-# accepts silently: Liquid renders a misspelt key as nothing, and YAML keeps
-# only the last of two equal keys.
+# accepts silently: Liquid renders a misspelt key, platform or language as
+# nothing, and YAML keeps only the last of two equal keys. Vocabularies for the
+# implementation metadata are in _data/impl_meta.yml.
 #
 # Usage: ruby validate-data.rb     (exits non-zero if anything is wrong)
 
@@ -11,6 +12,10 @@ require 'yaml'
 require 'date'
 
 ROOT = File.dirname(File.expand_path(__FILE__))
+
+# `no` is false in YAML 1.1, which Psych follows.
+SIDES = { 'client' => %w[client], 'server' => %w[server],
+          'both' => %w[client server], false => [] }.freeze
 
 def load_yaml(path)
   YAML.safe_load_file(File.join(ROOT, path), permitted_classes: [Date])
@@ -61,7 +66,10 @@ end
 # A protocols comment that says the id is off by default.
 DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal|not default)\b/i
 
-classes = load_yaml('_data/proto_classes.yml').keys
+classes   = load_yaml('_data/proto_classes.yml').keys
+meta      = load_yaml('_data/impl_meta.yml')
+platforms = meta['platforms'].keys + meta['platform_aliases'].keys
+languages = meta['languages']
 
 errors = []
 warnings = []
@@ -77,6 +85,65 @@ Dir[File.join(ROOT, '_impls', '*.md')].sort.each do |path|
 
   duplicate_keys(YAML.parse(source).root).each do |key|
     errors << "#{name}: #{key} given twice; YAML keeps only the last"
+  end
+
+  # Sides the entry claims to implement.
+  claimed = []
+  %w[client server].each do |side|
+    next unless fm.key?(side)
+
+    value = fm[side]
+    errors << "#{name}: #{side}: #{value.inspect} is not yes or no" unless [true, false].include?(value)
+    claimed << side if value == true
+  end
+
+  # standalone and library: what each covers, and together exactly the claim.
+  covered = {}
+  %w[standalone library].each do |key|
+    next unless fm.key?(key)
+
+    value = fm[key]
+    unless SIDES.key?(value)
+      errors << "#{name}: #{key}: #{value.inspect} is not one of client, server, both, no"
+      next
+    end
+    covered[key] = SIDES[value]
+    extra = SIDES[value] - claimed
+    errors << "#{name}: #{key} covers #{extra.join(', ')}, which client/server do not claim" unless extra.empty?
+  end
+  if covered.size == 2
+    missing = claimed - covered.values.flatten
+    errors << "#{name}: neither standalone nor library covers #{missing.join(', ')}" unless missing.empty?
+  end
+
+  if fm.key?('platforms')
+    list = fm['platforms']
+    if !list.is_a?(Array) || list.empty?
+      errors << "#{name}: platforms must be a non-empty list; leave it out if unknown"
+      list = []
+    end
+    (list - platforms).each do |p|
+      errors << "#{name}: platform #{p.inspect} is not one of #{platforms.join(', ')}"
+    end
+    other = fm['platforms-other']
+    if list.include?('other') && (other.nil? || other.to_s.strip.empty?)
+      errors << "#{name}: platform other needs a platforms-other note"
+    elsif !list.include?('other') && fm.key?('platforms-other')
+      errors << "#{name}: platforms-other given without other in platforms"
+    end
+  elsif fm.key?('platforms-other')
+    errors << "#{name}: platforms-other given without platforms"
+  end
+
+  if fm.key?('languages')
+    list = fm['languages']
+    if !list.is_a?(Array) || list.empty?
+      errors << "#{name}: languages must be a non-empty list; leave it out if unknown"
+      list = []
+    end
+    (list - languages).each do |lang|
+      errors << "#{name}: language #{lang.inspect} is not in _data/impl_meta.yml"
+    end
   end
 
   # protocols: class => list of algorithm ids. A class with no list (only a

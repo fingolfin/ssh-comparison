@@ -1,0 +1,46 @@
+{%- comment -%}
+Implementation filters shared by the front page and the comparison tables;
+js/impl-filter.js reads them. Placed inside a <form>.
+
+A platform ticked under "on" keeps only implementations recorded on one of
+the ticked platforms; one ticked under "not on" drops those recorded on it.
+Implementations with no recorded platforms fail the first and pass the second.
+{%- endcomment -%}
+{%- assign used_langs = "" | split: "" -%}
+{%- for impl in site.impls -%}
+  {%- if impl.languages -%}{%- assign used_langs = used_langs | concat: impl.languages -%}{%- endif -%}
+{%- endfor -%}
+  <fieldset>
+    <legend>Role</legend>
+    <label><input type="checkbox" name="side" value="client" checked> clients</label>
+    <label><input type="checkbox" name="side" value="server" checked> servers</label>
+    <span class="sep" aria-hidden="true">as</span>
+    <label><input type="checkbox" name="kind" value="app" checked> programs</label>
+    <label><input type="checkbox" name="kind" value="lib" checked> libraries</label>
+    <label title="Neither program nor library recorded"><input type="checkbox" name="kind" value="unknown" checked> not recorded</label>
+  </fieldset>
+
+  <fieldset class="platform-filter">
+    <legend>Platform</legend>
+    {%- assign pf_rows = "on,not on" | split: "," %}
+    {%- for row in pf_rows %}
+    <div>
+      <span class="sep">{{ row }}</span>
+      {%- for p in site.data.impl_meta.platforms %}
+      <label><input type="checkbox" name="{% if forloop.parentloop.first %}on{% else %}off{% endif %}" value="{{ p[0] }}"> {{ p[1] }}</label>
+      {%- endfor %}
+    </div>
+    {%- endfor %}
+  </fieldset>
+
+  <label>Language
+    <select name="lang">
+      <option value="">any</option>
+      {%- for lang in site.data.impl_meta.languages %}
+      {%- if used_langs contains lang %}
+      <option>{{ lang }}</option>
+      {%- endif %}
+      {%- endfor %}
+      <option value="?">not recorded</option>
+    </select>
+  </label>

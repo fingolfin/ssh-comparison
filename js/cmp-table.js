@@ -33,24 +33,13 @@
 
   // ---------------------------------------------------------------- filtering
 
-  function wanted(name) {
-    var out = {};
-    Array.prototype.forEach.call(
-      form.querySelectorAll('input[name="' + name + '"]:checked'),
-      function (box) { out[box.value] = true; }
-    );
-    return out;
-  }
+  var filter = ImplFilter(form);
 
   function shownColumns() {
-    var roles = wanted('role');
+    var snap = filter.snapshot();
     var shown = [];
     implCols.forEach(function (th, i) {
-      var isClient = th.dataset.client === '1';
-      var isServer = th.dataset.server === '1';
-      if ((roles.client && isClient) || (roles.server && isServer)) {
-        shown.push(FIRST_IMPL_COL + i);
-      }
+      if (filter.matches(th, snap)) shown.push(FIRST_IMPL_COL + i);
     });
     return shown;
   }

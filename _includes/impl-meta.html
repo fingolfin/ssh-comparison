@@ -1,0 +1,74 @@
+{%- comment -%}
+Derives what the templates show and filter on from one implementation's
+metadata (schema in _data/impl_meta.yml). Outputs nothing; sets:
+
+  meta_platforms  canonical platform ids, in vocabulary order; empty = unknown
+  meta_roles      space-separated side:kind tokens, kind being app, lib or
+                  unknown. A side gets `unknown` when nothing recorded covers
+                  it and `standalone` or `library` is missing, so an entry that
+                  only says `client: yes` still matches a client filter.
+  meta_platform_text  their display names, with the `platforms-other` note
+  meta_role_html  those tokens as short labels
+  meta_langs      languages joined by "|" for data attributes
+
+`library: no` arrives from YAML as false, which is distinct from nil.
+{%- endcomment -%}
+{%- assign m = include.impl -%}
+
+{%- assign raw = "" | split: "" -%}
+{%- for p in m.platforms -%}
+  {%- assign canon = site.data.impl_meta.platform_aliases[p] | default: p -%}
+  {%- assign raw = raw | push: canon -%}
+{%- endfor -%}
+{%- assign meta_platforms = "" | split: "" -%}
+{%- for v in site.data.impl_meta.platforms -%}
+  {%- if raw contains v[0] -%}{%- assign meta_platforms = meta_platforms | push: v[0] -%}{%- endif -%}
+{%- endfor -%}
+{%- assign other_names = "" | split: "" -%}
+{%- if m.platforms-other -%}{%- assign other_names = other_names | push: m.platforms-other -%}{%- endif -%}
+{%- for p in m.platforms -%}
+  {%- if site.data.impl_meta.alias_names[p] -%}{%- assign other_names = other_names | push: site.data.impl_meta.alias_names[p] -%}{%- endif -%}
+{%- endfor -%}
+{%- assign meta_platform_names = "" | split: "" -%}
+{%- for p in meta_platforms -%}
+  {%- if p == "other" and other_names.size > 0 -%}
+    {%- assign name = other_names | join: ", " | prepend: "other (" | append: ")" -%}
+  {%- else -%}
+    {%- assign name = site.data.impl_meta.platforms[p] -%}
+  {%- endif -%}
+  {%- assign meta_platform_names = meta_platform_names | push: name -%}
+{%- endfor -%}
+{%- assign meta_platform_text = meta_platform_names | join: ", " -%}
+
+{%- assign meta_roles = "" -%}
+{%- assign meta_role_html = "" -%}
+{%- assign lib_sides = "" -%}
+{%- assign meta_sides = "client,server" | split: "," -%}
+{%- for side in meta_sides -%}
+  {%- unless m[side] -%}{%- continue -%}{%- endunless -%}
+  {%- assign covered = false -%}
+  {%- if m.standalone == side or m.standalone == "both" -%}
+    {%- assign meta_roles = meta_roles | append: " " | append: side | append: ":app" -%}
+    {%- assign meta_role_html = meta_role_html | append: "<span class='badge'>" | append: side | append: "</span> " -%}
+    {%- assign covered = true -%}
+  {%- endif -%}
+  {%- if m.library == side or m.library == "both" -%}
+    {%- assign meta_roles = meta_roles | append: " " | append: side | append: ":lib" -%}
+    {%- assign lib_sides = lib_sides | append: side -%}
+    {%- assign covered = true -%}
+  {%- endif -%}
+  {%- if covered -%}{%- continue -%}{%- endif -%}
+  {%- if m.standalone == nil or m.library == nil -%}
+    {%- assign meta_roles = meta_roles | append: " " | append: side | append: ":unknown" -%}
+    {%- assign meta_role_html = meta_role_html | append: "<span class='badge badge-unknown' title='not recorded whether a program or a library'>" | append: side | append: "?</span> " -%}
+  {%- endif -%}
+{%- endfor -%}
+{%- if lib_sides == "clientserver" -%}
+  {%- assign meta_role_html = meta_role_html | append: "<span class='badge badge-lib'>library</span>" -%}
+{%- elsif lib_sides != "" -%}
+  {%- assign meta_role_html = meta_role_html | append: "<span class='badge badge-lib'>" | append: lib_sides | append: " library</span>" -%}
+{%- endif -%}
+{%- assign meta_roles = meta_roles | strip -%}
+{%- assign meta_role_html = meta_role_html | strip -%}
+
+{%- assign meta_langs = m.languages | join: "|" -%}

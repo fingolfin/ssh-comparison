@@ -25,8 +25,16 @@ layout: default
 {% if page.license %}
 <li>License: {{ page.license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</li>
 {% endif %}
-<li>Client: {{ page.client }}</li>
-<li>Server: {{ page.server }}</li>
+{% comment %} YAML reads a bare `no` as false; nil means not recorded. {% endcomment %}
+{%- include impl-meta.html impl=page %}
+<li>Client: {% if page.client %}yes{% else %}no{% endif %}</li>
+<li>Server: {% if page.server %}yes{% else %}no{% endif %}</li>
+<li>Stand-alone program:
+    {% if page.standalone == nil %}not recorded{% elsif page.standalone == false %}none{% elsif page.standalone == "both" %}client and server{% else %}{{ page.standalone }}{% endif %}</li>
+<li>Library:
+    {% if page.library == nil %}not recorded{% elsif page.library == false %}none{% elsif page.library == "both" %}client and server{% else %}{{ page.library }}{% endif %}</li>
+<li>Platforms: {% if meta_platform_text != "" %}{{ meta_platform_text }}{% else %}not recorded{% endif %}</li>
+<li>Language: {% if page.languages %}{{ page.languages | join: ", " }}{% else %}not recorded{% endif %}</li>
 {% if page.based-on %}
 <li>Based on: {{ page.based-on | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</li>
 {% endif %}
