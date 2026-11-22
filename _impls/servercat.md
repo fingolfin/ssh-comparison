@@ -45,6 +45,9 @@ protocols:
         - hmac-sha2-256
         - hmac-sha2-512
         - hmac-sha1
+    userauth:   # per the app's host settings
+        - password
+        - publickey
 first_kex_packet_follows: 0
 ident: "SSH-2.0-SwiftNIOSSH_1.0"
 based-on: "[SwiftNIO SSH](/impls/swift-nio-ssh.html)"
