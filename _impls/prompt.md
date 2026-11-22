@@ -86,8 +86,9 @@ protocols:
         - hmac-ripemd160@openssh.com
     extension:
         - server-sig-algs   # inferred from ext-info-c
-#    userauth:
-#        - unknown
+    userauth:   # per help.panic.com
+        - password
+        - publickey
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-OpenSSH_7.4"
