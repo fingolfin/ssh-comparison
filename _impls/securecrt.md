@@ -89,6 +89,8 @@ protocols:
         - keyboard-interactive
         - gssapi-with-mic
         - gssapi-keyex
+    extension:
+        - server-sig-algs   # by 9.7
 
 
 #sftp-su@vandyke.com
