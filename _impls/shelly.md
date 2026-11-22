@@ -76,7 +76,7 @@ protocols:
         - hmac-md5-etm@openssh.com
     extension:
         - server-sig-algs   # as in PuTTY
-    userauth:   # per the App Store description, which names no other method
+    userauth:   # the App Store description and host settings offer only keys
         - publickey
 first_kex_packet_follows: 0
 ident: "SSH-2.0-PuTTY_Release_0.78"

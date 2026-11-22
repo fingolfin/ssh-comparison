@@ -59,6 +59,9 @@ protocols:
         - hmac-sha2-512-etm@openssh.com
         - hmac-sha2-256
         - hmac-sha2-512
+    userauth:   # per the app's host settings
+        - password
+        - publickey
 first_kex_packet_follows: 0
 ident: "SSH-2.0-libssh_0.12.0"
 based-on: "[libssh](/impls/libssh.html)"
