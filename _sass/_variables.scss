@@ -1,8 +1,6 @@
 // Shared variables and mixins. Every partial pulls these in via
 // `@use "variables" as *`, so each file states its own dependencies.
 
-@use "sass:color";
-
 $base-font-family: Helvetica, Arial, sans-serif;
 $base-font-size:   16px;
 $small-font-size:  $base-font-size * 0.875;
@@ -10,13 +8,14 @@ $base-line-height: 1.5;
 
 $spacing-unit:     30px;
 
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
+// Colours resolve at run time; _theme.scss holds the values.
+$text-color:       var(--text);
+$background-color: var(--bg);
+$brand-color:      var(--link);
 
-$grey-color:       #828282;
-$grey-color-light: color.adjust($grey-color, $lightness: 40%);
-$grey-color-dark:  color.adjust($grey-color, $lightness: -25%);
+$grey-color:       var(--grey);
+$grey-color-light: var(--grey-light);
+$grey-color-dark:  var(--grey-dark);
 
 // Width of the content area
 $content-width:    800px;

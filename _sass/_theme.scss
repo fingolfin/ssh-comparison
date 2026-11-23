@@ -1,0 +1,139 @@
+// Colour themes. Each key becomes a custom property `--<key>`, so every rule
+// serves both themes. Light applies by default and dark when the system asks
+// for it; `data-theme` on <html> (set by js/theme.js) overrides the system.
+
+@use "sass:color";
+@use "sass:map";
+
+$grey:  #828282;
+$brand: #2a7ae2;
+
+// Support matrix tints; the cell text is #111 in light and #e1e3e6 in dark,
+// at 4.5:1 or better on every variant.
+$yes: #7fbf5f;
+$off: #cfe6bf;  // supported but disabled: half-way to "No"
+$no:  #fafafa;  // one step paler than the row stripe
+$unk: #ffeaa8;
+
+$light: (
+    "text":                 #111,
+    "bg":                   #fdfdfd,
+    "link":                 $brand,
+    "link-visited":         color.adjust($brand, $lightness: -15%),
+    "grey":                 $grey,
+    "grey-light":           color.adjust($grey, $lightness: 40%),
+    "grey-dark":            color.adjust($grey, $lightness: -25%),
+    "text-inverse":         white,
+    "code-bg":              #eef,
+
+    "sticky-bg":            #f3f3f3,
+    "row-odd":              #e6e6e6,
+    "row-even":             #f5f5f5,
+    "hover":                #e3effa,
+    "yes":                  $yes,
+    "yes-odd":              color.adjust($yes, $lightness: -7%),
+    "yes-hover":            color.adjust($yes, $lightness: 8%),
+    "off":                  $off,
+    "off-odd":              color.adjust($off, $lightness: -7%),
+    "off-hover":            color.adjust($off, $lightness: 5%),
+    "no":                   $no,
+    "no-odd":               color.adjust($no, $lightness: -6%),
+    "no-text":              #5f6368,
+    "unknown":              $unk,
+    "unknown-odd":          color.adjust($unk, $lightness: -5%),
+    "unknown-hover":        color.adjust($unk, $lightness: 4%),
+    "header-rule":          #ccc,
+
+    "badge-bg":             #fff,
+    "badge-border":         #bbb,
+    "badge-lib":            #7a9cc6,
+    "list-bg":              #f2f2f2,
+    "list-name-bg":         #ececec,
+    "list-border":          #aaa,
+
+    "switcher-bg":          #f3f3f3,
+    "switcher-border":      #e7e7e7,
+    "switcher-text":        #666,
+    "switcher-hover":       #ddd,
+    "switcher-active":      #4caf50,
+    "switcher-active-text": white,
+
+    "notice-bg":            #fffaeb,
+    "notice-border":        #e0a800,
+);
+
+// Dark inverts the ink: odd stripes are lighter, and "No" sits closest to the
+// page.
+$dark: (
+    "text":                 #e1e3e6,
+    "bg":                   #17181a,
+    "link":                 #6ca6f4,
+    "link-visited":         #5b8ed6,
+    "grey":                 #9a9da3,
+    "grey-light":           #34373c,
+    "grey-dark":            #c3c6cb,
+    "text-inverse":         #111,
+    "code-bg":              #22253a,
+
+    "sticky-bg":            #1f2124,
+    "row-odd":              #2a2c30,
+    "row-even":             #222427,
+    "hover":                #1e3347,
+    "yes":                  #23531e,
+    "yes-odd":              #285e22,
+    "yes-hover":            #2f7027,
+    "off":                  #1e381e,
+    "off-odd":              #223f22,
+    "off-hover":            #2a4f2b,
+    "no":                   #1d1e21,
+    "no-odd":               #26282c,
+    "no-text":              #9a9ea5,
+    "unknown":              #463b14,
+    "unknown-odd":          #4f4217,
+    "unknown-hover":        #5e4f1c,
+    "header-rule":          #4a4d52,
+
+    "badge-bg":             #1f2124,
+    "badge-border":         #5c6066,
+    "badge-lib":            #5d82b3,
+    "list-bg":              #1f2124,
+    "list-name-bg":         #282a2e,
+    "list-border":          #4a4d52,
+
+    "switcher-bg":          #1f2124,
+    "switcher-border":      #2e3034,
+    "switcher-text":        #b4b7bc,
+    "switcher-hover":       #33363b,
+    "switcher-active":      #2e7d32,
+    "switcher-active-text": white,
+
+    "notice-bg":            #332c12,
+    "notice-border":        #c99700,
+);
+
+@if map.keys($light) != map.keys($dark) {
+    @error "The light and dark themes must list the same colours in the same order.";
+}
+
+@mixin theme($colors, $scheme) {
+    // Native controls and scrollbars follow too.
+    color-scheme: $scheme;
+
+    @each $name, $value in $colors {
+        --#{$name}: #{$value};
+    }
+}
+
+:root {
+    @include theme($light, light);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+        @include theme($dark, dark);
+    }
+}
+
+:root[data-theme="dark"] {
+    @include theme($dark, dark);
+}

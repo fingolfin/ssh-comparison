@@ -56,7 +56,7 @@ A blank cell, or a role marked <span class="badge badge-unknown">?</span>, is no
   <tr data-roles="{{ meta_roles }}"
       {%- if meta_platforms.size > 0 %} data-platforms="{{ meta_platforms | join: ' ' }}"{% endif %}
       {%- if meta_langs != "" %} data-languages="{{ meta_langs }}"{% endif %}>
-    <td style="background: #ececec; font-weight: bold;"><a href="{{ impl.url }}">{{ impl.title }}</a></td>
+    <td class="impl-name"><a href="{{ impl.url }}">{{ impl.title }}</a></td>
     <td>{{ meta_role_html }}</td>
     <td>{{ meta_platform_text }}</td>
     <td>{{ impl.languages | join: ", " }}</td>
