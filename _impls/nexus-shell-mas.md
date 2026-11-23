@@ -65,6 +65,7 @@ protocols:
         - diffie-hellman-group-exchange-sha1
         - ext-info-c
         - kex-strict-c-v00@openssh.com
+        - kex-strict-s-v00@openssh.com
     mac:
         - hmac-sha2-256
         - hmac-sha2-256-etm@openssh.com
