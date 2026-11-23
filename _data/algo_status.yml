@@ -359,9 +359,6 @@
 "mlkem768x25519-sha256":
   status: secure
   note: "ML-KEM (FIPS 203) hybridised with ECDH (RFC 10042)"
-"none":
-  status: broken
-  note: "no encryption (RFC 4253 \u00A76.3: NOT RECOMMENDED); no integrity protection (RFC 4253 \u00A76.4: NOT RECOMMENDED)"
 "rijndael-cbc@lysator.liu.se":
   status: weak
   note: "aes256-cbc under another name: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
