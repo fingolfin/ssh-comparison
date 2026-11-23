@@ -11,7 +11,8 @@
 #   standalone: SIDES       ships a stand-alone program or app, for which side
 #   library: SIDES          is offered as a library, for which side
 #                           SIDES is one of: client, server, both, no
-#   platforms: [...]        platforms the project ships or supports; ids below
+#   platforms: [...]        platforms the project ships or supports, or where
+#                           its unmodified source is shown to run; ids below
 #   platforms-other: "..."  what `other` stands for, e.g. "FreeBSD, browser";
 #                           required exactly when `other` is listed
 #   languages: [...]        implementation language(s); names below

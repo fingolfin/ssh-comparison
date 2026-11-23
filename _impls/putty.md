@@ -23,6 +23,7 @@ server: no
 standalone: client
 library: no
 platforms:
+    - macos
     - linux
     - windows
     - other
