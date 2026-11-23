@@ -12,6 +12,13 @@ latest-release:
 #changelog: TODO
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - other
+platforms-other: "NetBSD"
+languages:
+    - C
 
 protocols:
     cipher:
