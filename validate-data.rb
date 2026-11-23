@@ -59,7 +59,7 @@ def protocol_items(source)
 end
 
 # A protocols comment that says the id is off by default.
-DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal)\b/i
+DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal|not default)\b/i
 
 classes = load_yaml('_data/proto_classes.yml').keys
 
