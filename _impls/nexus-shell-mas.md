@@ -1,6 +1,6 @@
 ---
 title: Nexus Shell (TestFlight / Mac App Store build)
-homepage: https://nexusshell.app/
+homepage: https://nexusshell.app/en/
 developer: Nexus Shell
 license: Proprietary
 first-release:
