@@ -18,9 +18,7 @@ protocols:
     cipher:
         - aes256-gcm@openssh.com
         - aes128-gcm@openssh.com
-        - aes128-ctr
-        - aes128-ctr
-        - aes128-ctr
+        - aes128-ctr   # offered three times
     compression:
         - none
     hostkey:
