@@ -33,6 +33,10 @@ protocols:
         - arcfour256                    # disabled by default in 9.84
         - blowfish-cbc                  # disabled by default in 9.84
         - cast128-cbc                   # disabled by default in 9.84
+    compression:
+        - zlib
+        - zlib@openssh.com
+        - none
     hostkey:
         - ssh-ed25519
         - ecdsa-sha2-nistp521
