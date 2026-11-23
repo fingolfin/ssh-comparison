@@ -14,6 +14,7 @@ server: no
 standalone: no
 library: client
 platforms:
+    - macos
     - linux
     - windows
 languages:

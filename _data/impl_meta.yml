@@ -12,7 +12,10 @@
 #   library: SIDES          is offered as a library, for which side
 #                           SIDES is one of: client, server, both, no
 #   platforms: [...]        platforms the project ships or supports, or where
-#                           its unmodified source is shown to run; ids below
+#                           its unmodified source is shown to run; ids below.
+#                           A library in a portable language with no
+#                           platform-specific native code (Java, Go, Ruby,
+#                           Rust, .NET) counts as macos, linux and windows.
 #   platforms-other: "..."  what `other` stands for, e.g. "FreeBSD, browser";
 #                           required exactly when `other` is listed
 #   languages: [...]        implementation language(s); names below

@@ -14,6 +14,11 @@ client: yes
 server: no
 standalone: no
 library: client
+platforms:
+    - macos
+    - linux
+    - windows
+    - android
 languages:
     - Java
 protocols:

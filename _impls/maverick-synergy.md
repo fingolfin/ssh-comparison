@@ -14,6 +14,9 @@ server: yes
 standalone: no
 library: both
 platforms:
+    - macos
+    - linux
+    - windows
     - android
 languages:
     - Java
