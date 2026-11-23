@@ -8,7 +8,7 @@ first-release:
 latest-release:
     version: 1.6.9
     date: 2026-08-07
-changelog: https://nexusshell.app/releases
+changelog: https://nexusshell.app/en/releases
 client: yes
 server: no
 library: no
