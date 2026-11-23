@@ -55,8 +55,43 @@
         // The page the reader is currently on.
         &.active,
         &.active:visited {
-            color: white;
+            color: var(--text-inverse);
             background-color: $grey-color-dark;
+        }
+    }
+
+    // Shown by js/theme.js. The pressed button looks like the active page.
+    .theme-switch {
+        display: inline-flex;
+        vertical-align: middle;
+        margin-left: 10px;
+        border: 1px solid $grey-color-light;
+        border-radius: 3px;
+
+        &[hidden] { display: none; }
+
+        button {
+            padding: 4px 7px;
+            border: 0;
+            background: none;
+            color: $grey-color;
+            cursor: pointer;
+
+            &:hover {
+                color: $text-color;
+                background-color: $grey-color-light;
+            }
+
+            &[aria-pressed="true"] {
+                color: var(--text-inverse);
+                background-color: $grey-color-dark;
+            }
+        }
+
+        svg {
+            display: block;
+            width: 16px;
+            height: 16px;
         }
     }
 

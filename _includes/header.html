@@ -16,6 +16,17 @@
         <a class="page-link{% if active %} active{% endif %}" href="{{ item.url | prepend: site.baseurl }}">{{ item.title }}</a>
       {% endfor %}
       <a class="page-link" href="https://github.com/fingolfin/ssh-comparison">GitHub</a>
+      <span id="theme-switch" class="theme-switch" role="group" aria-label="Theme" hidden>
+        <button type="button" value="system" title="System theme" aria-label="System theme">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><rect x="1.5" y="2.5" width="13" height="8.5" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M5.5 14h5M8 11v3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" value="light" title="Light theme" aria-label="Light theme">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><circle cx="8" cy="8" r="3.2" fill="currentColor"/><path d="M8 .9v1.8M8 13.3v1.8M.9 8h1.8M13.3 8h1.8M3 3l1.3 1.3M11.7 11.7 13 13M3 13l1.3-1.3M11.7 4.3 13 3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+        </button>
+        <button type="button" value="dark" title="Dark theme" aria-label="Dark theme">
+          <svg viewBox="0 0 16 16" aria-hidden="true" focusable="false"><path d="M6.2.6a7.5 7.5 0 1 0 9.2 9.2A6 6 0 0 1 6.2.6z" fill="currentColor"/></svg>
+        </button>
+      </span>
     </nav>
 
   </div>
