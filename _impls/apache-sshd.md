@@ -14,6 +14,7 @@ server: yes
 standalone: both
 library: both
 platforms:
+    - macos
     - linux
     - windows
 languages:
