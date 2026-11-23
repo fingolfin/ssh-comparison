@@ -78,6 +78,28 @@ protocols:
         - keyboard-interactive
     extension:
         - server-sig-algs                   # since 4.5
+
+disabled-by-default:
+    cipher:
+        - aes256-cbc
+        - aes192-cbc
+        - aes128-cbc
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_GCM
+        - 3des-cbc
+    compression:
+        - zlib
+    hostkey:
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group1-sha1
+    mac:
+        - hmac-sha1-96
+        - AEAD_AES_128_GCM
+        - AEAD_AES_256_GCM
 ---
 * Server and client implementation (and library) for the 
   [Erlang](http://www.erlang.org/) programming language.

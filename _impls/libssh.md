@@ -104,6 +104,10 @@ protocols:
     extension:
         - publickey-hostbound@openssh.com
         - server-sig-algs
+
+disabled-by-default:
+    compression:
+        - zlib
 ---
 * Multiplatform C library for clients and servers.
 * Not to be confused with the unrelated [libssh2](/impls/libssh2.html)

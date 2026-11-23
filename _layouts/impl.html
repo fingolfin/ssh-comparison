@@ -47,5 +47,10 @@ layout: default
 {% for proto_class in site.data.proto_classes %}
 {% assign proto_class_id = proto_class[0] %}
 <p><strong>{{ proto_class[1] }}:</strong>
-{{ page.protocols[proto_class_id] | join: ', ' }}</p>
+{{ page.protocols[proto_class_id] | join: ', ' }}
+{% assign off = page['disabled-by-default'][proto_class_id] %}
+{% if off.size > 0 %}
+<br>Of these, disabled by default: {{ off | join: ', ' }}
+{% endif %}
+</p>
 {% endfor %}

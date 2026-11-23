@@ -67,6 +67,23 @@ protocols:
     extension:
         - server-sig-algs               # since 3.1.0
 
+disabled-by-default:
+    cipher:
+        - aes192-ctr
+        - aes256-cbc
+        - aes192-cbc
+        - aes128-cbc
+    hostkey:
+        - ssh-rsa
+    kex:
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group1-sha1
+    mac:
+        - hmac-sha2-256-96
+        - hmac-sha2-512-96
+        - hmac-md5
+
 first_kex_packet_follows: 0
 ident: "SSH-2.0-DartSSH_2.0"
 ---

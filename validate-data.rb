@@ -36,9 +36,35 @@ def duplicate_keys(node, prefix = '', out = [])
   out
 end
 
+# Active list items of the protocols block, as [class, id, comment].
+def protocol_items(source)
+  items = []
+  cls = nil
+  in_protocols = false
+  source.each_line do |line|
+    if line =~ /^\S/
+      in_protocols = line.start_with?('protocols:')
+      next
+    end
+    next unless in_protocols
+
+    if line =~ /^\s+(\w+):\s*$/
+      cls = Regexp.last_match(1)
+      next
+    end
+    m = line.match(/^\s+- (\S+)\s*(?:#(.*))?$/) or next
+    items << [cls, m[1], m[2].to_s]
+  end
+  items
+end
+
+# A protocols comment that says the id is off by default.
+DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal|not default)\b/i
+
 classes = load_yaml('_data/proto_classes.yml').keys
 
 errors = []
+warnings = []
 
 Dir[File.join(ROOT, '_impls', '*.md')].sort.each do |path|
   name = File.basename(path)
@@ -72,7 +98,39 @@ Dir[File.join(ROOT, '_impls', '*.md')].sort.each do |path|
     end
     ids.tally.each { |id, n| errors << "#{name}: protocols.#{cls}: #{id} listed #{n} times" if n > 1 }
   end
+
+  # disabled-by-default: class => ids that are supported but off unless
+  # configured, so each must also be in the matching protocols list. A
+  # comment alone only warns, so entries that predate the key still build.
+  off = fm['disabled-by-default'] || {}
+  unless off.is_a?(Hash)
+    errors << "#{name}: disabled-by-default must be a map of class to list"
+    next
+  end
+  (off.keys - classes).each do |cls|
+    errors << "#{name}: disabled-by-default: class #{cls.inspect} is not one of #{classes.join(', ')}"
+  end
+  off.each do |cls, ids|
+    unless ids.is_a?(Array) && ids.all?(String)
+      errors << "#{name}: disabled-by-default.#{cls} must be a list of ids"
+      next
+    end
+    ids.tally.each { |id, n| errors << "#{name}: disabled-by-default.#{cls}: #{id} listed #{n} times" if n > 1 }
+    (ids - (protocols[cls] || [])).each do |id|
+      errors << "#{name}: disabled-by-default.#{cls}: #{id} is not in protocols.#{cls}"
+    end
+  end
+
+  protocol_items(source).each do |cls, id, comment|
+    next unless comment =~ DEFAULT_OFF_COMMENT
+    next if Array(off[cls]).include?(id)
+
+    warnings << "#{name}: protocols.#{cls}: #{id} is commented as off by default " \
+                "but not in disabled-by-default.#{cls}"
+  end
 end
+
+warn(warnings.map { |w| "warning: #{w}" }) unless warnings.empty?
 
 if errors.empty?
   puts 'Data files OK.'

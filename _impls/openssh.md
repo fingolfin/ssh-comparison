@@ -125,6 +125,25 @@ protocols:
         - publickey-hostbound@openssh.com   # since 8.9
         - server-sig-algs                   # since 7.2
 
+disabled-by-default:
+    cipher:
+        - 3des-cbc
+    kex:
+        - diffie-hellman-group-exchange-sha256
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group16-sha512
+        - diffie-hellman-group18-sha512
+    mac:
+        - hmac-md5-etm@openssh.com
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-md5-96-etm@openssh.com
+        - hmac-md5
+        - hmac-sha1-96
+        - hmac-md5-96
+
 first_kex_packet_follows: 0
 ---
 * Probably the most widely deployed SSH implementation.

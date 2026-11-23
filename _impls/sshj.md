@@ -131,5 +131,10 @@ protocols:
         - hostbased
     extension:
         - server-sig-algs
+
+disabled-by-default:
+    compression:
+        - zlib
+        - zlib@openssh.com
 ---
 * Pure Java implementation.

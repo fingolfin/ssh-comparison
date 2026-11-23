@@ -168,6 +168,11 @@ protocols:
         - agent-forward
         - hostkeys
 
+disabled-by-default:
+    cipher:
+        - AEAD_AES_256_GCM
+        - AEAD_AES_128_GCM
+
 ---
 * Seems to implement many non-standardized protocol variations, such as umac-32 and umac-96,
   or AEAD_AES_256_CCM; and also things that once were discussed, but then dropped from

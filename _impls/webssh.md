@@ -74,6 +74,42 @@ protocols:
         - publickey
         - password
 
+disabled-by-default:
+    cipher:
+        - chacha20-poly1305@openssh.com
+        - aes192-ctr
+        - aes128-cbc
+        - aes256-cbc
+        - aes192-cbc
+        - twofish256-cbc
+        - twofish128-cbc
+        - blowfish-cbc
+    compression:
+        - zlib
+        - zlib@openssh.com
+    hostkey:
+        - ecdsa-sha2-nistp256
+        - ecdsa-sha2-nistp384
+        - ecdsa-sha2-nistp521
+        - ssh-rsa
+        - ssh-dss
+    kex:
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
+        - diffie-hellman-group14-sha256
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group-exchange-sha1
+    mac:
+        - hmac-sha2-256
+        - hmac-sha2-512
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha1
+        - hmac-ripemd160
+        - hmac-sha1-96
+        - hmac-md5
+
 first_kex_packet_follows: 0
 ident: "SSH-2.0-WebSSH_33.4"
 #based-on: "[PuTTY](/impls/putty.html)"   # no longer: 33.4 sends neither ext-info-c nor kex-strict-c, unlike PuTTY since 0.80

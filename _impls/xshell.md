@@ -86,6 +86,10 @@ protocols:
         - password
         - keyboard-interactive
 
+disabled-by-default:
+    compression:
+        - zlib
+
 first_kex_packet_follows: 0
 ident: "SSH-2.0-nsssh2_5.0.0030 NetSarang Computer, Inc."
 ---
