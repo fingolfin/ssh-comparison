@@ -12,6 +12,7 @@ changelog: https://github.com/Termphin/Termphin/releases
 client: yes
 server: no
 platforms:
+    - android
     - iphone
     - ipad
 
@@ -50,10 +51,15 @@ protocols:
     userauth:   # per the app's host settings
         - password
         - publickey
+    extension:
+        - server-sig-algs   # parsed, but RSA keys always sign with rsa-sha2-256
+
 first_kex_packet_follows: 0
 ident: "SSH-2.0-DartSSH_2.0"
 based-on: "[dartssh2](/impls/dartssh2.html)"
 ---
-* Client for Apple iOS (iPhone, iPad).
-* Available on the [Apple App Store](https://apps.apple.com/us/app/id6813191168).
+* Client for Android and Apple iOS (iPhone, iPad); macOS, Windows and Linux
+  versions are in progress.
+* Available on [Google Play](https://play.google.com/store/apps/details?id=dev.termphin.termphin)
+  and the [Apple App Store](https://apps.apple.com/us/app/id6813191168).
 * 2026-11-21: Version 1.15.1 identifies itself on the wire as `SSH-2.0-DartSSH_2.0`.
