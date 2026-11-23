@@ -55,8 +55,6 @@ protocols:
         - publickey
 
 first_kex_packet_follows: 0
-ident: "SSH-2.0-JSCH-0.1.53"
-based-on: "[JSch](/impls/jsch.html)"   # in 2016; libssh2 by 7.7.0
 ---
 * Mobile client for Android.
 * There is also an [iOS version](/impls/termius-ios.html).
@@ -65,8 +63,9 @@ based-on: "[JSch](/impls/jsch.html)"   # in 2016; libssh2 by 7.7.0
 * Formerly named Serverauditor.
 * 2015-12-05: Version 2.1 for Android identifies itself on the wire
   as `SSH-2.0-JSCH-0.1.52`
-* The protocol data and ident are from 2016, when the app was based on
-  JSch. The [changelog](https://docs.termius.com/changelog/android) of
-  7.7.0 patches libssh2, so current builds use libssh2; they have not
+* 2016-05-11: Version 2.2.15 for Android identifies itself on the wire
+  as `SSH-2.0-JSCH-0.1.53`. The protocol data is from that version.
+* The [changelog](https://docs.termius.com/changelog/android) of 7.7.0
+  patches libssh2, so current builds no longer use JSch; they have not
   been measured. Termius documents
   [ML-KEM and ML-DSA](https://docs.termius.com/security/post-quantum-cryptography).
