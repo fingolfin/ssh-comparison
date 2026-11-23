@@ -15,11 +15,16 @@ server: yes
 standalone: both
 library: no
 platforms:
+    - linux     # via the linux branch; master needs funopen()
     - other
 platforms-other: "NetBSD"
 languages:
     - C
 
+# Algorithms from moussh/alg-lists on master. Implemented but commented out
+# there, hence not built: sharc4-512@rodents.montreal.qc.ca,
+# diffie-hellman-group17-sha512, diffie-hellman-group18-sha512,
+# diffie-hellman-group-exchange-sha1.
 protocols:
     cipher:
         - 3des-cbc
@@ -63,7 +68,6 @@ protocols:
         - rijndael-k8b6-ctr@rodents.montreal.qc.ca
         - rijndael-k8b8-cbc@rodents.montreal.qc.ca
         - rijndael-k8b8-ctr@rodents.montreal.qc.ca
-        - sharc4-512@rodents.montreal.qc.ca
     compression:
         - none
         - zlib
@@ -73,14 +77,11 @@ protocols:
         - rsa-sha2-256
         - rsa-sha2-512
     kex:
-        - diffie-hellman-group-exchange-sha1
         - diffie-hellman-group1-sha1
         - diffie-hellman-group14-sha1
         - diffie-hellman-group14-sha256
         - diffie-hellman-group15-sha512
         - diffie-hellman-group16-sha512
-        - diffie-hellman-group17-sha512
-        - diffie-hellman-group18-sha512
         - rsa2048-sha256-draft-01@putty.projects.tartarus.org
         - rsa2048-sha256-draft-04@putty.projects.tartarus.org
     mac:
@@ -92,5 +93,13 @@ protocols:
         - keyboard-interactive
         - password
         - publickey
+
+disabled-by-default:
+    kex:
+        - diffie-hellman-group1-sha1
 ---
-* SSH implementation by Mouse.
+* SSH implementation by Mouse: one program with client, server, agent and
+  key-management modes.
+* Written in the GCC dialect of C; it uses nested functions, so it does not
+  build with Clang.
+* Master needs libgmp; the `bignum` branch uses moussh's own big-number code.
