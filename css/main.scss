@@ -3,11 +3,11 @@
 ---
 @charset "utf-8";
 
-@use "sass:color";
 @use "sass:math";
 @use "variables" as *;
 
 // Partials from `sass_dir` (defaults to `_sass`)
+@use "theme";
 @use "base";
 @use "layout";
 @use "syntax-highlighting";
@@ -41,8 +41,6 @@ strong {
     margin-bottom: 3em;
 }
 
-$sticky-bg: #f3f3f3;
-
 // The backdrop goes on the thead, not on each th: a rotated label is painted
 // outside its own cell, and a per-cell background would be painted over it by
 // the next column along.
@@ -50,7 +48,7 @@ $sticky-bg: #f3f3f3;
     position: sticky;
     top: 0;
     z-index: 2;
-    background-color: $sticky-bg;
+    background-color: var(--sticky-bg);
 }
 
 .impl-comparison th:first-child,
@@ -69,7 +67,7 @@ $sticky-bg: #f3f3f3;
 .impl-comparison thead th:first-child,
 .impl-comparison thead th:last-child {
     z-index: 3;
-    background-color: $sticky-bg;
+    background-color: var(--sticky-bg);
 }
 
 .col-hidden { display: none; }
@@ -86,44 +84,39 @@ $sticky-bg: #f3f3f3;
 //
 // Support matrix: "No" is 89% of the grid, so it carries the least ink and
 // "Yes" carries the most. Each keeps its word in the cell, so the colour
-// is a second channel, never the only one.
+// is a second channel, never the only one. The "No" text is muted, to keep
+// it from shouting.
 //
-$yes-color:     #7fbf5f;  // #111 on this: 8.6:1
-$off-color:     #cfe6bf;  // supported but disabled: half-way to "No"
-$no-color:      #fafafa;  // one step paler than the row stripe
-$unk-color:     #ffeaa8;
-$no-text-color: #5f6368;  // muted, to keep "No" from shouting
-$hover-color:   #e3effa;  // row under the cursor
 
 .yes, .default-off, .no, .unknown { text-align: center; }
 
-tr:nth-child(odd) td { background-color: #e6e6e6; }
-tr:nth-child(even) td { background-color: #f5f5f5; }
+tr:nth-child(odd) td { background-color: var(--row-odd); }
+tr:nth-child(even) td { background-color: var(--row-even); }
 
-// Odd rows get the darker variant of each tint, so the striping stays
+// Odd rows get the stronger variant of each tint, so the striping stays
 // readable underneath the yes/no/unknown colouring.
-tr:nth-child(odd) td.yes { background-color: color.adjust($yes-color, $lightness: -7%); }
-tr:nth-child(even) td.yes { background-color: $yes-color; }
+tr:nth-child(odd) td.yes { background-color: var(--yes-odd); }
+tr:nth-child(even) td.yes { background-color: var(--yes); }
 
-tr:nth-child(odd) td.default-off { background-color: color.adjust($off-color, $lightness: -7%); }
-tr:nth-child(even) td.default-off { background-color: $off-color; }
+tr:nth-child(odd) td.default-off { background-color: var(--off-odd); }
+tr:nth-child(even) td.default-off { background-color: var(--off); }
 
-tr:nth-child(odd) td.no { background-color: color.adjust($no-color, $lightness: -6%); }
-tr:nth-child(even) td.no { background-color: $no-color; }
-.impl-comparison td.no { color: $no-text-color; }
+tr:nth-child(odd) td.no { background-color: var(--no-odd); }
+tr:nth-child(even) td.no { background-color: var(--no); }
+.impl-comparison td.no { color: var(--no-text); }
 
-tr:nth-child(odd) td.unknown { background-color: color.adjust($unk-color, $lightness: -5%); }
-tr:nth-child(even) td.unknown { background-color: $unk-color; }
+tr:nth-child(odd) td.unknown { background-color: var(--unknown-odd); }
+tr:nth-child(even) td.unknown { background-color: var(--unknown); }
 
 //
 // Highlight the row the mouse is hovering over. "No" is too pale to tint
 // further, so it takes the plain hover colour.
 //
-.impl-comparison tr:hover td { background-color: $hover-color; }
-tr:hover td.yes { background-color: color.adjust($yes-color, $lightness: 8%); }
-tr:hover td.default-off { background-color: color.adjust($off-color, $lightness: 5%); }
-tr:hover td.no { background-color: $hover-color; }
-tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%); }
+.impl-comparison tr:hover td { background-color: var(--hover); }
+tr:hover td.yes { background-color: var(--yes-hover); }
+tr:hover td.default-off { background-color: var(--off-hover); }
+tr:hover td.no { background-color: var(--hover); }
+tr:hover td.unknown { background-color: var(--unknown-hover); }
 
 //
 // Rotate table headers by 45 degrees.
@@ -153,7 +146,7 @@ tr:hover td.unknown { background-color: color.adjust($unk-color, $lightness: 4%)
 
 .table-header-rotated th.rotate > div > span {
   display: inline-block;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--header-rule);
   padding: 5px 0px;
 }
 
@@ -235,22 +228,27 @@ th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-colo
 .badge {
   display: inline-block;
   padding: 0 0.35em;
-  border: 1px solid #bbb;
+  border: 1px solid var(--badge-border);
   border-radius: 3px;
-  background: #fff;
+  background: var(--badge-bg);
   font-size: $small-font-size;
   white-space: nowrap;
 }
 
-.badge-lib { border-color: #7a9cc6; }
+.badge-lib { border-color: var(--badge-lib); }
 .badge-unknown { color: $grey-color-dark; border-style: dashed; }
 
 #impl-list, #impl-list td, #impl-list th {
-  background-color: #F2F2F2;
+  background-color: var(--list-bg);
   padding: 0.2em 0.4em;
-  border: 1px solid #AAA;
+  border: 1px solid var(--list-border);
   text-align: left;
   vertical-align: middle;
+}
+
+#impl-list td.impl-name {
+  background-color: var(--list-name-bg);
+  font-weight: bold;
 }
 
 
@@ -264,8 +262,8 @@ th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-colo
     margin: 0;
     padding: 0;
     overflow: hidden;
-    border: 1px solid #e7e7e7;
-    background-color: #f3f3f3;
+    border: 1px solid var(--switcher-border);
+    background-color: var(--switcher-bg);
 }
 
 #cmp-switcher li {
@@ -274,19 +272,19 @@ th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-colo
 
 #cmp-switcher li a {
     display: block;
-    color: #666;
+    color: var(--switcher-text);
     text-align: center;
     padding: 4px 16px;
     text-decoration: none;
 }
 
 #cmp-switcher li a:hover:not(.active) {
-    background-color: #ddd;
+    background-color: var(--switcher-hover);
 }
 
 #cmp-switcher li a.active {
-    color: white;
-    background-color: #4CAF50;
+    color: var(--switcher-active-text);
+    background-color: var(--switcher-active);
 }
 
 
@@ -322,4 +320,4 @@ h1.page-heading ~ h2 {
 }
 
 // Legend above a comparison table; the sample reuses the cell colour.
-.cmp-note .default-off { background-color: $off-color; padding: 0 0.3em; }
+.cmp-note .default-off { background-color: var(--off); padding: 0 0.3em; }
