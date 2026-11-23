@@ -17,8 +17,7 @@ server: false
 standalone: client
 library: no
 platforms:
-    - iphone
-    - ipad
+    - ios
 
 # TODO: add more versions 
 protocols:

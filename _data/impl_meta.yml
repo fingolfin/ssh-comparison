@@ -38,18 +38,8 @@ platforms:
   linux: Linux
   windows: Windows
   android: Android
-  ios: iOS
+  ios: iOS        # includes iPadOS
   other: other
-
-# Read as the platform on the right. Older entries split iOS by device. An
-# alias for `other` needs no platforms-other note; its name here is shown.
-platform_aliases:
-  iphone: ios
-  ipad: ios
-  visionos: other
-
-alias_names:
-  visionos: visionOS
 
 # Display names, used as written in the data. Add one here before using it.
 languages:

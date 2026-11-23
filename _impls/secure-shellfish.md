@@ -12,8 +12,7 @@ server: no
 standalone: client
 library: no
 platforms:
-    - iphone
-    - ipad
+    - ios
 languages:
     - Swift
 

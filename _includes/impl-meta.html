@@ -15,24 +15,14 @@ metadata (schema in _data/impl_meta.yml). Outputs nothing; sets:
 {%- endcomment -%}
 {%- assign m = include.impl -%}
 
-{%- assign raw = "" | split: "" -%}
-{%- for p in m.platforms -%}
-  {%- assign canon = site.data.impl_meta.platform_aliases[p] | default: p -%}
-  {%- assign raw = raw | push: canon -%}
-{%- endfor -%}
 {%- assign meta_platforms = "" | split: "" -%}
 {%- for v in site.data.impl_meta.platforms -%}
-  {%- if raw contains v[0] -%}{%- assign meta_platforms = meta_platforms | push: v[0] -%}{%- endif -%}
-{%- endfor -%}
-{%- assign other_names = "" | split: "" -%}
-{%- if m.platforms-other -%}{%- assign other_names = other_names | push: m.platforms-other -%}{%- endif -%}
-{%- for p in m.platforms -%}
-  {%- if site.data.impl_meta.alias_names[p] -%}{%- assign other_names = other_names | push: site.data.impl_meta.alias_names[p] -%}{%- endif -%}
+  {%- if m.platforms contains v[0] -%}{%- assign meta_platforms = meta_platforms | push: v[0] -%}{%- endif -%}
 {%- endfor -%}
 {%- assign meta_platform_names = "" | split: "" -%}
 {%- for p in meta_platforms -%}
-  {%- if p == "other" and other_names.size > 0 -%}
-    {%- assign name = other_names | join: ", " | prepend: "other (" | append: ")" -%}
+  {%- if p == "other" and m.platforms-other -%}
+    {%- assign name = m.platforms-other | prepend: "other (" | append: ")" -%}
   {%- else -%}
     {%- assign name = site.data.impl_meta.platforms[p] -%}
   {%- endif -%}

@@ -68,7 +68,7 @@ DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal|not de
 
 classes   = load_yaml('_data/proto_classes.yml').keys
 meta      = load_yaml('_data/impl_meta.yml')
-platforms = meta['platforms'].keys + meta['platform_aliases'].keys
+platforms = meta['platforms'].keys
 languages = meta['languages']
 
 errors = []

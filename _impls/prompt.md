@@ -14,9 +14,9 @@ standalone: client
 library: no
 platforms:
     - macos
-    - iphone
-    - ipad
-    - visionos
+    - ios
+    - other
+platforms-other: "visionOS"
 
 protocols:
     cipher:

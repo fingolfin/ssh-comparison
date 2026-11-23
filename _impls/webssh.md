@@ -13,8 +13,7 @@ server: no
 standalone: client
 library: no
 platforms:
-    - iphone
-    - ipad
+    - ios
     - macos
 
 # cipher, hostkey, kex, mac: https://webssh.net/documentation/help/SSH/supported-algorithms/
