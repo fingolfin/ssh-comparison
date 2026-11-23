@@ -31,16 +31,12 @@ protocols:
     compression:
         - none
     hostkey:
-        - ssh-mldsa-44  # since 7.5.0, names per
-        - ssh-mldsa-65  #  https://docs.termius.com/security/post-quantum-cryptography
-        - ssh-mldsa-87
         - ssh-rsa
         - ssh-dss
         - ecdsa-sha2-nistp256
         - ecdsa-sha2-nistp384
         - ecdsa-sha2-nistp521
     kex:
-        - mlkem768x25519-sha256 # since 7.2.2
         - ecdh-sha2-nistp256
         - ecdh-sha2-nistp384
         - ecdh-sha2-nistp521
@@ -60,7 +56,7 @@ protocols:
 
 first_kex_packet_follows: 0
 ident: "SSH-2.0-JSCH-0.1.53"
-based-on: "[JSch](/impls/jsch.html)"
+based-on: "[JSch](/impls/jsch.html)"   # in 2016; libssh2 by 7.7.0
 ---
 * Mobile client for Android.
 * There is also an [iOS version](/impls/termius-ios.html).
@@ -69,3 +65,8 @@ based-on: "[JSch](/impls/jsch.html)"
 * Formerly named Serverauditor.
 * 2015-12-05: Version 2.1 for Android identifies itself on the wire
   as `SSH-2.0-JSCH-0.1.52`
+* The protocol data and ident are from 2016, when the app was based on
+  JSch. The [changelog](https://docs.termius.com/changelog/android) of
+  7.7.0 patches libssh2, so current builds use libssh2; they have not
+  been measured. Termius documents
+  [ML-KEM and ML-DSA](https://docs.termius.com/security/post-quantum-cryptography).
