@@ -13,8 +13,7 @@ client: yes
 server: no
 platforms:
     - android
-    - iphone
-    - ipad
+    - ios
 
 protocols:
     cipher:
