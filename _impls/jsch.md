@@ -11,7 +11,10 @@ latest-release:
 changelog: https://github.com/mwiede/jsch/releases
 client: yes
 server: no
+standalone: no
 library: client
+languages:
+    - Java
 
 protocols:
     cipher:

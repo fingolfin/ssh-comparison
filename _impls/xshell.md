@@ -11,6 +11,7 @@ latest-release:
 changelog: https://www.netsarang.com/en/xshell-update-history/
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - windows

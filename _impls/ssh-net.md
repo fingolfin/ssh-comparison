@@ -11,7 +11,13 @@ latest-release:
 changelog: https://github.com/sshnet/SSH.NET/releases
 client: yes
 server: no
+standalone: no
 library: client
+platforms:
+    - linux
+    - windows
+languages:
+    - C#
 
 protocols:
     cipher:

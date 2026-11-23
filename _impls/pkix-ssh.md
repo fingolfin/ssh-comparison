@@ -11,6 +11,16 @@ latest-release:
 changelog: https://roumenpetrov.info/secsh/#news
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - macos
+    - linux
+    - android
+    - other
+platforms-other: "Solaris, BSD, Cygwin, AIX"
+languages:
+    - C
 
 protocols:
     cipher:

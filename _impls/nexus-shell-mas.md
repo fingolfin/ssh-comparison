@@ -11,9 +11,12 @@ latest-release:
 changelog: https://nexusshell.app/en/releases
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - macos
+languages:
+    - Swift
 based-on: "[libssh2 1.11.1](/impls/libssh2.html)"
 
 protocols:

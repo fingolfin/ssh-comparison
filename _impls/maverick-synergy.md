@@ -11,7 +11,12 @@ latest-release:
 changelog: "https://github.com/sshtools/maverick-synergy/blob/master/maverick-synergy-assembly/notes/CHANGES"
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - android
+languages:
+    - Java
 protocols:
     cipher:
         - 3des-cbc

@@ -11,7 +11,16 @@ latest-release:
 changelog: https://github.com/wolfSSL/wolfssh/blob/master/ChangeLog.md
 client: yes
 server: yes
+standalone: both
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "Solaris, BSD, embedded RTOS"
+languages:
+    - C
 
 protocols:
     cipher:

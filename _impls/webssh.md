@@ -10,6 +10,8 @@ latest-release:
 changelog: https://webssh.net/documentation/changelog/33/
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - iphone
     - ipad

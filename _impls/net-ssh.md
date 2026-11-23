@@ -11,7 +11,10 @@ latest-release:
 changelog: https://github.com/net-ssh/net-ssh/blob/master/CHANGES.txt
 client: yes
 server: no
+standalone: no
 library: client
+languages:
+    - Ruby
 
 protocols:
     cipher:

@@ -14,6 +14,8 @@ latest-release:
 changelog: https://www.mochasoft.dk/iphone_telnet_release.htm
 client: true
 server: false
+standalone: client
+library: no
 platforms:
     - iphone
     - ipad

@@ -11,6 +11,15 @@ latest-release:
 changelog: https://github.com/rapier1/hpn-ssh/releases
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - macos
+    - linux
+    - other
+platforms-other: "Cygwin, other Unix"
+languages:
+    - C
 
 protocols:
     cipher:

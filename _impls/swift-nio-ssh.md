@@ -11,7 +11,16 @@ latest-release:
 changelog: https://github.com/apple/swift-nio-ssh/releases
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - ios
+    - other
+platforms-other: "watchOS, tvOS"
+languages:
+    - Swift
 
 protocols:
     cipher:

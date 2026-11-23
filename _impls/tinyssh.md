@@ -13,6 +13,14 @@ latest-release:
 changelog: https://github.com/janmojzis/tinyssh/releases
 client: no
 server: yes
+standalone: server
+library: no
+platforms:
+    - linux
+    - other
+platforms-other: "Unix, Cygwin"
+languages:
+    - C
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com

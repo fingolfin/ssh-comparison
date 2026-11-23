@@ -10,6 +10,8 @@ latest-release:
     date: 2026-11-11
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - iphone
     - ipad

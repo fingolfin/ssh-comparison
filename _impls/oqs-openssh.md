@@ -11,6 +11,12 @@ latest-release:
 changelog: https://github.com/open-quantum-safe/openssh/releases
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - linux
+languages:
+    - C
 
 protocols:
     cipher:

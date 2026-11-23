@@ -11,7 +11,14 @@ latest-release:
 #changelog: ?
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - JavaScript
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com

@@ -13,7 +13,13 @@ latest-release:
 changelog: https://www.vandyke.com/products/securecrt/history.txt
 client: yes
 server: no
+standalone: client
 library: no
+platforms:
+    - macos
+    - linux
+    - windows
+    - ios
 # Changes since 8.0.1 from the per-release histories
 # https://www.vandyke.com/download/securecrt/<8.0 ... 9.6>/history.txt and the changelog above
 protocols:

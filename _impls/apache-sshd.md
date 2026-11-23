@@ -11,7 +11,13 @@ latest-release:
 changelog: "https://github.com/apache/mina-sshd/blob/master/CHANGES.md"
 client: yes
 server: yes
+standalone: both
 library: both
+platforms:
+    - linux
+    - windows
+languages:
+    - Java
 protocols:
     cipher:
         - aes128-ctr

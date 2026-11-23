@@ -11,7 +11,14 @@ latest-release:
 changelog: https://www.paramiko.org/changelog.html
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - Python
 
 protocols:
     cipher:

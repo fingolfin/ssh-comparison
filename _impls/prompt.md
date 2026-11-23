@@ -10,6 +10,8 @@ latest-release:
 changelog: https://help.panic.com/releasenotes/prompt3/
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - macos
     - iphone

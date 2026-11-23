@@ -20,8 +20,14 @@ latest-release:
 changelog: https://www.chiark.greenend.org.uk/~sgtatham/putty/changes.html
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - windows
+    - other
+platforms-other: "Unix (source code)"
+languages:
+    - C
 
 protocols:
     cipher:

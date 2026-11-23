@@ -15,7 +15,16 @@ latest-release:
 changelog: https://git.libssh.org/projects/libssh.git/tree/CHANGELOG?h=libssh-0.12.2
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "BSD, Solaris, OS/2"
+languages:
+    - C
 
 # Note: internally, there are also ciphers des-cbc-ssh1 and 3des-cbc-ssh1.
 # But according to the authors, these are only there for SSH v1 support.

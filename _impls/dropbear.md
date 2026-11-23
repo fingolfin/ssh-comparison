@@ -11,7 +11,15 @@ latest-release:
 changelog: https://matt.ucc.asn.au/dropbear/CHANGES
 client: yes
 server: yes
+standalone: both
 library: no
+platforms:
+    - macos
+    - linux
+    - other
+platforms-other: "BSD, Solaris, AIX, HP-UX, uClinux"
+languages:
+    - C
 
 # X11 forwarding, and authentication-agent forwarding, ...
 protocols:

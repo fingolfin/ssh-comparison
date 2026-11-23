@@ -10,6 +10,8 @@ latest-release:
 #changelog: TODO
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - android
 # has cloud service for account sync

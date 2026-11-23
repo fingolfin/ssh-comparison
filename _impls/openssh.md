@@ -11,6 +11,15 @@ latest-release:
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - macos
+    - linux
+    - other
+platforms-other: "OpenBSD, other Unix, Cygwin"
+languages:
+    - C
 
 # TODO: strictly speaking, we want:
 #  ssh client, ssh server, sftp client, sftp server,

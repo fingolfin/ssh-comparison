@@ -12,9 +12,12 @@ latest-release:
 changelog: https://github.com/poderosaproject/poderosa/blob/master/ChangeLog.txt
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - windows
+languages:
+    - C#
 
 protocols:
     cipher:
