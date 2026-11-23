@@ -1,0 +1,45 @@
+name: Recording of an SSH client
+description: Share what ssh-detect.py recorded for a client.
+title: "Recording: "
+body:
+  - type: markdown
+    attributes:
+      value: >
+        How to record a client:
+        [Contributing](https://github.com/fingolfin/ssh-comparison/blob/gh-pages/README.md#contributing).
+  - type: input
+    id: client
+    attributes:
+      label: Client
+      description: Name, and the entry it updates if there is one.
+      placeholder: ConnectBot, _impls/connectbot.md
+    validations:
+      required: true
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: As the client's About screen or app store shows it.
+    validations:
+      required: true
+  - type: input
+    id: platform
+    attributes:
+      label: Platform
+      description: Operating system and version; device or emulator.
+      placeholder: Android 15 on a Pixel 8
+    validations:
+      required: true
+  - type: textarea
+    id: record
+    attributes:
+      label: Record
+      description: What ssh-detect.py printed, or the file it wrote with --out.
+      render: yaml
+    validations:
+      required: true
+  - type: textarea
+    id: notes
+    attributes:
+      label: Notes
+      description: Settings you changed from the defaults, links to release notes, anything else.

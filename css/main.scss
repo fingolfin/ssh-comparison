@@ -321,3 +321,10 @@ h1.page-heading ~ h2 {
 
 // Legend above a comparison table; the sample reuses the cell colour.
 .cmp-note .default-off { background-color: var(--off); padding: 0 0.3em; }
+
+// Notice on an entry that needs a new recording.
+.help-wanted {
+    padding: 0.5em 0.8em;
+    border-left: 4px solid var(--notice-border);
+    background-color: var(--notice-bg);
+}

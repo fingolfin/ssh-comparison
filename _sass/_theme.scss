@@ -57,6 +57,9 @@ $light: (
     "switcher-hover":       #ddd,
     "switcher-active":      #4caf50,
     "switcher-active-text": white,
+
+    "notice-bg":            #fffaeb,
+    "notice-border":        #e0a800,
 );
 
 // Dark inverts the ink: odd stripes are lighter, and "No" sits closest to the
@@ -103,6 +106,9 @@ $dark: (
     "switcher-hover":       #33363b,
     "switcher-active":      #2e7d32,
     "switcher-active-text": white,
+
+    "notice-bg":            #332c12,
+    "notice-border":        #c99700,
 );
 
 @if map.keys($light) != map.keys($dark) {
