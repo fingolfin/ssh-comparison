@@ -94,6 +94,8 @@ protocols:
         - umac-64-etm@openssh.com
         - umac-128@openssh.com
         - umac-128-etm@openssh.com
+    extension:
+        - server-sig-algs   # as in libssh2
     userauth:   # per docs.termius.com/keychain/identities
         - password
         - publickey
