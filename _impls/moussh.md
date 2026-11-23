@@ -1,8 +1,9 @@
 ---
 title: moussh
-homepage: http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/
+#homepage: http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/
 source-repository: git://git.rodents-montreal.org/moussh
-license: "[Public Domain](http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/README)"
+#license: "[Public Domain](http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/README)"
+license: Public Domain
 #first-release:
 #    date: YYYY-MM-DD
 latest-release:
