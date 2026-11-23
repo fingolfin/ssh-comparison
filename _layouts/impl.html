@@ -3,6 +3,13 @@ layout: default
 ---
 <h2>{{ page.title }}</h2>
 
+{% if page.help-wanted %}
+<p class="help-wanted"><strong>Help wanted:</strong>
+{{ page.help-wanted | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}
+If you can run this client and a Python script,
+<a href="{{ site.contributing_url }}">help us update this entry</a>.</p>
+{% endif %}
+
 <ul>
 <li>Homepage: <a href="{{ page.homepage }}">{{ page.homepage }}</a></li>
 {% if page.developer %}

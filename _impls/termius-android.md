@@ -17,6 +17,9 @@ platforms:
     - android
 # has cloud service for account sync
 
+help-wanted: The protocol data is from version 2.2.15 (2016). Current
+    builds use libssh2, not JSch, and have never been measured.
+
 protocols:
     cipher:
         - aes128-ctr

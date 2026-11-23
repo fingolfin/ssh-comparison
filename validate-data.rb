@@ -195,6 +195,15 @@ Dir[File.join(ROOT, '_impls', '*.md')].sort.each do |path|
     warnings << "#{name}: protocols.#{cls}: #{id} is commented as off by default " \
                 "but not in disabled-by-default.#{cls}"
   end
+
+  # help-wanted: the reason shown in the entry's notice. A bare `yes` would
+  # render as "true".
+  next unless fm.key?('help-wanted')
+
+  reason = fm['help-wanted']
+  next if reason.is_a?(String) && !reason.strip.empty?
+
+  errors << "#{name}: help-wanted must say what needs recording"
 end
 
 warn(warnings.map { |w| "warning: #{w}" }) unless warnings.empty?

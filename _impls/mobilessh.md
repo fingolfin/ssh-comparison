@@ -15,6 +15,9 @@ library: no
 platforms:
     - android
 
+help-wanted: The protocol data is from version 2.17 (2016). Current
+    versions have not been measured.
+
 protocols:
     cipher:
         - aes256-ctr
