@@ -17,6 +17,7 @@ library: client
 platforms:
     - android
 languages:
+    - Kotlin
     - Java
 protocols:
     cipher:

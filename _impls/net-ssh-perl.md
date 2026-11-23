@@ -19,7 +19,6 @@ platforms:
     - windows
 languages:
     - Perl
-    - C
 
 protocols:
     cipher:

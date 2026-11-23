@@ -23,9 +23,10 @@ server: no
 standalone: client
 library: no
 platforms:
+    - linux
     - windows
     - other
-platforms-other: "Unix (source code)"
+platforms-other: "other Unix"
 languages:
     - C
 
