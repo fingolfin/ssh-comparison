@@ -11,7 +11,14 @@ latest-release:
 changelog: https://github.com/phpseclib/phpseclib/blob/master/CHANGELOG.md
 client: yes
 server: no
+standalone: no
 library: client
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - PHP
 
 protocols:
     cipher:

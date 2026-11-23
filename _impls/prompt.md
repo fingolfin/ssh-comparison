@@ -10,11 +10,13 @@ latest-release:
 changelog: https://help.panic.com/releasenotes/prompt3/
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
     - macos
-    - iphone
-    - ipad
-    - visionos
+    - ios
+    - other
+platforms-other: "visionOS"
 
 protocols:
     cipher:

@@ -10,6 +10,14 @@ latest-release:
     date: 2026-08-28
 client: yes
 server: yes
+standalone: no
+library: both
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - Rust
 
 protocols:
     cipher:

@@ -11,9 +11,12 @@ latest-release:
 changelog: http://nanno.bf1.jp/softlib/man/rlogin/history.html
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - windows
+languages:
+    - C++
 remarks: |
     * Only available in Japanese.
     * The list of supported protocols is the default proposal of 2.31.9

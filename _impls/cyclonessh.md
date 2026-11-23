@@ -11,7 +11,13 @@ latest-release:
 changelog: https://www.oryx-embedded.com/download.html#changelog
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - other
+platforms-other: "embedded RTOS, bare metal"
+languages:
+    - C
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com

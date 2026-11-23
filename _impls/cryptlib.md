@@ -11,7 +11,16 @@ latest-release:
 changelog: https://github.com/cryptlib/cryptlib/releases
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "Unix variants, mainframes, embedded RTOS"
+languages:
+    - C
 protocols:
     cipher:
         - aes128-cbc

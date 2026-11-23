@@ -11,6 +11,16 @@ latest-release:
 changelog: https://www.openssh.com/releasenotes.html
 client: yes
 server: yes
+standalone: both
+library: no
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "OpenBSD, other Unix"
+languages:
+    - C
 
 # TODO: strictly speaking, we want:
 #  ssh client, ssh server, sftp client, sftp server,
@@ -152,3 +162,7 @@ first_kex_packet_follows: 0
   For everybody else, there is "Portable OpenSSH". This document is
   referring to the portable version, since that is what the majority
   of OpenSSH users is using (as they are not running OpenBSD).
+* Windows is listed for the Cygwin build, which Portable OpenSSH supports.
+  Microsoft ships its own fork with Windows, maintained by the PowerShell team at
+  [PowerShell/openssh-portable](https://github.com/PowerShell/openssh-portable);
+  its versions and algorithms may differ from those listed here.

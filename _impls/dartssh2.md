@@ -12,6 +12,17 @@ changelog: https://github.com/vicajilau/dartssh2/blob/main/CHANGELOG.md
 client: yes
 server: no
 library: client
+standalone: no
+platforms:
+    - macos
+    - linux
+    - windows
+    - android
+    - ios
+    - other
+platforms-other: "browser, over a WebSocket transport"
+languages:
+    - Dart
 
 # Default order first; "not default" names are implemented but have to be
 # requested through SSHAlgorithms. Versions from CHANGELOG.md.

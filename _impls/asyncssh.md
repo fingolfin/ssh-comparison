@@ -11,6 +11,14 @@ latest-release:
 changelog: https://asyncssh.readthedocs.io/en/latest/changes.html
 client: yes
 server: yes
+standalone: no
+library: both
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - Python
 
 protocols:
     cipher:

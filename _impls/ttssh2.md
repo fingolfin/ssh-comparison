@@ -11,9 +11,12 @@ latest-release:
 changelog: https://teratermproject.github.io/manual/5/en/about/history.html
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - windows
+languages:
+    - C
 
 protocols:
     cipher:

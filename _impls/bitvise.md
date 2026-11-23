@@ -12,6 +12,7 @@ latest-release:
 changelog: https://www.bitvise.com/ssh-server-version-history
 client: yes
 server: yes
+standalone: both
 platforms:
     - windows
 # Additions since 6.47 from the server, client and FlowSsh version histories

@@ -11,7 +11,14 @@ latest-release:
 #changelog: ?
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - Go
 protocols:
     cipher:
         - aes128-gcm@openssh.com

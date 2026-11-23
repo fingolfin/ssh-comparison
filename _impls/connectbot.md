@@ -12,9 +12,13 @@ latest-release:
 changelog: https://github.com/connectbot/connectbot/blob/branch/1.11/CHANGELOG.md
 client: yes
 server: no
+standalone: client
 library: client
 platforms:
     - android
+languages:
+    - Kotlin
+    - Java
 protocols:
     cipher:
         - chacha20-poly1305@openssh.com

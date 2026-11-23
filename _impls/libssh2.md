@@ -11,7 +11,16 @@ latest-release:
 changelog: https://libssh2.org/changes.html
 client: yes
 server: no
+standalone: no
 library: client
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "FreeBSD, NetBSD, OpenBSD"
+languages:
+    - C
 
 protocols:
     cipher:

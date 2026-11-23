@@ -12,6 +12,9 @@ changelog: https://www.georgiasoftworks.com/product/ssh-server-windows#downloads
 
 client: yes   # for multiple devices; but do they all support the same?
 server: yes
+standalone: both
+platforms:
+    - windows
 #library: unknown
 
 # TODO: http://www.georgiasoftworks.com/products/ssh/ssh_authentication_x509v3.php

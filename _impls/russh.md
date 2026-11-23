@@ -11,6 +11,16 @@ latest-release:
 changelog: https://github.com/Eugeny/russh/releases
 client: yes
 server: yes
+standalone: no
+library: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "WebAssembly (WASI)"
+languages:
+    - Rust
 
 protocols:
     cipher:

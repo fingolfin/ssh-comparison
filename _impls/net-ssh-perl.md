@@ -11,7 +11,14 @@ latest-release:
 changelog: https://github.com/briandfoy/net-ssh-perl/blob/master/Changes
 client: yes
 server: no
+standalone: no
 library: client
+platforms:
+    - macos
+    - linux
+    - windows
+languages:
+    - Perl
 
 protocols:
     cipher:

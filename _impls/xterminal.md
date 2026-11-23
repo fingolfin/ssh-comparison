@@ -10,9 +10,10 @@ latest-release:
     date: 2026-11-05
 client: yes
 server: no
+standalone: client
+library: no
 platforms:
-    - iphone
-    - ipad
+    - ios
 
 protocols:
     cipher:

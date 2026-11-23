@@ -10,6 +10,9 @@ latest-release:
 changelog: https://www.smartftp.com/changelog/1
 client: yes
 server: no
+standalone: client
+platforms:
+    - windows
 protocols:
     cipher:
         - aes128-gcm@openssh.com

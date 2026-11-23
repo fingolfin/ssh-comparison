@@ -20,11 +20,7 @@ anyone linking to a row get.
     <input type="search" name="q" placeholder="substring" size="14" autocomplete="off">
   </label>
 
-  <fieldset>
-    <legend>Implementations</legend>
-    <label><input type="checkbox" name="role" value="client" checked> clients</label>
-    <label><input type="checkbox" name="role" value="server" checked> servers</label>
-  </fieldset>
+{% include impl-filter.html %}
 
   <label title="Hide algorithms that no shown implementation supports">
     <input type="checkbox" name="hide-empty"> hide unsupported
@@ -43,4 +39,5 @@ anyone linking to a row get.
 </div>
 
 <script src="{{ "/js/table-sort.js" | prepend: site.baseurl }}" defer></script>
+<script src="{{ "/js/impl-filter.js" | prepend: site.baseurl }}" defer></script>
 <script src="{{ "/js/cmp-table.js" | prepend: site.baseurl }}" defer></script>

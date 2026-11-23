@@ -10,6 +10,7 @@ latest-release:
 changelog: https://www.celestialsoftware.net/version-history
 client: yes
 server: no
+standalone: client
 library: no
 platforms:
     - windows

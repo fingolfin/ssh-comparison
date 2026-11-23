@@ -11,7 +11,16 @@ latest-release:
 changelog: https://www.erlang.org/doc/apps/ssh/notes.html
 client: yes
 server: yes
+standalone: no
 library: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "FreeBSD, NetBSD, OpenBSD, Solaris"
+languages:
+    - Erlang
 #  SFTP Client + Server, ....
 protocols:
     cipher:

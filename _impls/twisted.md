@@ -11,11 +11,14 @@ latest-release:
 changelog: https://github.com/twisted/twisted/blob/trunk/NEWS.rst
 client: yes
 server: yes
+standalone: both
 library: both
 platforms:
     - linux
     - windows
     - macos
+languages:
+    - Python
 protocols:
     # https://github.com/twisted/twisted/blob/2a33824557ed65d2241a51d6bba07ac76521b50f/src/twisted/conch/ssh/transport.py#L95
     cipher:

@@ -212,6 +212,18 @@ th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-colo
 
   label { white-space: nowrap; }
 
+  .sep { color: $grey-color-dark; }
+
+  // One row to include platforms, one to exclude them.
+  .platform-filter {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2em;
+
+    div { display: flex; flex-wrap: wrap; gap: 0 0.6em; }
+    .sep { min-width: 3.5em; }
+  }
+
   output {
     margin-left: auto;
     color: $grey-color-dark;
@@ -219,6 +231,19 @@ th.sortable[aria-sort="descending"]::after { content: "\25BE"; color: $text-colo
 }
 
 #impl-list { border-collapse: collapse; }
+
+.badge {
+  display: inline-block;
+  padding: 0 0.35em;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  background: #fff;
+  font-size: $small-font-size;
+  white-space: nowrap;
+}
+
+.badge-lib { border-color: #7a9cc6; }
+.badge-unknown { color: $grey-color-dark; border-style: dashed; }
 
 #impl-list, #impl-list td, #impl-list th {
   background-color: #F2F2F2;

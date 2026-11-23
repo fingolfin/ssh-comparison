@@ -11,7 +11,10 @@ latest-release:
 changelog: https://www.bitvise.com/flowssh-version-history
 client: yes
 server: no
+standalone: no
 library: client
+platforms:
+    - windows
 # Additions since 5.39 from https://bitvise.com/flowssh-version-history
 protocols:
     cipher:

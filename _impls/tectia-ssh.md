@@ -19,6 +19,13 @@ latest-release:
 changelog: https://www.ssh.com/tectia-server-product-update
 client: yes
 server: yes
+standalone: both
+platforms:
+    - macos
+    - linux
+    - windows
+    - other
+platforms-other: "AIX, Solaris, z/OS"
 protocols:
     cipher:
         - 3des-cbc
