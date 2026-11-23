@@ -1,5 +1,6 @@
 ---
 title: Termius (Android)
+redirect_from: /impls/serverauditor-android.html
 homepage: https://termius.com/
 license: Proprietary
 #first-release:
@@ -62,7 +63,7 @@ ident: "SSH-2.0-JSCH-0.1.53"
 based-on: "[JSch](/impls/jsch.html)"
 ---
 * Mobile client for Android.
-* There is also an [iOS version](/impls/serverauditor-ios.html).
+* There is also an [iOS version](/impls/termius-ios.html).
 * Available on
   [Google Play](https://play.google.com/store/apps/details?id=com.server.auditor.ssh.client).
 * Formerly named Serverauditor.

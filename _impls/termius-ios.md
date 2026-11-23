@@ -1,5 +1,6 @@
 ---
 title: Termius (iOS)
+redirect_from: /impls/serverauditor-ios.html
 homepage: https://termius.com/
 license: Proprietary
 #first-release:
@@ -102,7 +103,7 @@ ident: "SSH-2.0-libssh2_1.11.1"
 based-on: "[libssh2](/impls/libssh2.html)"
 ---
 * Mobile client for iOS (iPhone, iPad).
-* There is also an [Android version](/impls/serverauditor-android.html).
+* There is also an [Android version](/impls/termius-android.html).
 * Available on the
   [Apple App Store](https://itunes.apple.com/us/app/id549039908).
 * Formerly named Serverauditor.
