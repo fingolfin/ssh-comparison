@@ -6,8 +6,8 @@ license: Proprietary
 first-release:
     date: 2026-05-07
 latest-release:
-    version: 1.6.9
-    date: 2026-08-07
+    version: 1.9.0
+    date: 2026-11-16
 changelog: https://nexusshell.app/en/releases
 client: yes
 server: no
