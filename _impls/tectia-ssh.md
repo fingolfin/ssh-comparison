@@ -153,6 +153,75 @@ protocols:
         #- RSA SecurID       # through keyboard-interactive
         #- RADIUS            # through keyboard-interactive
         #- LAM               # through keyboard-interactive / AIX only
+
+disabled-by-default:
+    cipher:
+        - 3des-cbc
+        - aes128-cbc
+        - aes192-cbc
+        - aes256-cbc
+        - arcfour
+        - blowfish-cbc
+        - crypticore128@ssh.com
+        - seed-cbc@ssh.com
+        - twofish128-cbc
+        - twofish192-cbc
+        - twofish256-cbc
+        - twofish-cbc
+    hostkey:
+        - ssh-dss
+        - ssh-dss-cert-v01@openssh.com
+        - ssh-dss-sha224@ssh.com
+        - ssh-dss-sha256@ssh.com
+        - ssh-dss-sha384@ssh.com
+        - ssh-dss-sha512@ssh.com
+        - ssh-rsa
+        - ssh-rsa-cert-v01@openssh.com
+        - ssh-rsa-sha224@ssh.com
+        - ssh-rsa-sha384@ssh.com
+        - ssh-rsa-sha512@ssh.com
+        - x509v3-sign-dss
+        - x509v3-sign-dss-sha224@ssh.com
+        - x509v3-sign-dss-sha256@ssh.com
+        - x509v3-sign-dss-sha384@ssh.com
+        - x509v3-sign-dss-sha512@ssh.com
+        - x509v3-sign-rsa
+        - x509v3-sign-rsa-sha224@ssh.com
+        - x509v3-sign-rsa-sha384@ssh.com
+        - x509v3-sign-rsa-sha512@ssh.com
+        - x509v3-ssh-dss
+        - x509v3-ssh-rsa
+    kex:
+        - curve448-kyber1024-sha512@ssh.com
+        - diffie-hellman-group14-sha1
+        - diffie-hellman-group14-sha224@ssh.com
+        - diffie-hellman-group15-sha256@ssh.com
+        - diffie-hellman-group15-sha384@ssh.com
+        - diffie-hellman-group16-sha384@ssh.com
+        - diffie-hellman-group16-sha512@ssh.com
+        - diffie-hellman-group18-sha512@ssh.com
+        - diffie-hellman-group1-sha1
+        - diffie-hellman-group-exchange-sha1
+        - diffie-hellman-group-exchange-sha224@ssh.com
+        - diffie-hellman-group-exchange-sha384@ssh.com
+        - diffie-hellman-group-exchange-sha512@ssh.com
+        - ecdh-sha2-nistp256
+        - ecdh-sha2-nistp384
+        - ecdh-sha2-nistp521
+    mac:
+        - crypticore-mac@ssh.com
+        - hmac-md5
+        - hmac-md5-96
+        - hmac-md5-96-etm@openssh.com
+        - hmac-md5-etm@openssh.com
+        - hmac-sha1-96
+        - hmac-sha1-96-etm@openssh.com
+        - hmac-sha1-etm@openssh.com
+        - hmac-sha224@ssh.com
+        - hmac-sha2-256-etm@openssh.com
+        - hmac-sha2-512-etm@openssh.com
+        - hmac-sha256@ssh.com
+        - hmac-sha384@ssh.com
 ---
 * Formerly known as just "SSH" or "ssh.com"
 * Strictly speaking, the Tectia SSH client and server are two separate
