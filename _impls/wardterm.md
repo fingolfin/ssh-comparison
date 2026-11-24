@@ -12,9 +12,9 @@ server: no
 platforms:
     - macos
     - linux
+    - windows
     - android
-    - iphone
-    - ipad
+    - ios
 
 protocols:
     cipher:
@@ -56,10 +56,12 @@ protocols:
         - publickey
         - password
         - keyboard-interactive
+    extension:
+        - server-sig-algs
 first_kex_packet_follows: 0
 ident: "SSH-2.0-russh_0.65.0"
 based-on: "[Russh](/impls/russh.html)"
 ---
-* Client for macOS, Linux, Android, iOS and iPadOS.
+* Client for macOS, Linux, Windows, Android, iOS and iPadOS.
 * Lists are in the order the client offers them by default. A per-server setting can require `mlkem768x25519-sha256` alone, or leave it out for servers that misbehave when it is offered.
 * Host key algorithms the client already knows for a server move to the front of the list.
