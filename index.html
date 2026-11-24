@@ -28,6 +28,7 @@ See also the Wikipedia articles on
 
 The following {{ site.impls | size }} implementations are currently covered.
 A blank cell, or a role marked <span class="badge badge-unknown">?</span>, is not recorded yet.
+A first release date marked &le; is the earliest release found; the first may be older.
 
 <form id="impl-controls" class="cmp-controls" hidden>
 {% include impl-filter.html %}
@@ -60,7 +61,12 @@ A blank cell, or a role marked <span class="badge badge-unknown">?</span>, is no
     <td>{{ meta_role_html }}</td>
     <td>{{ meta_platform_text }}</td>
     <td>{{ impl.languages | join: ", " }}</td>
+    {%- assign bound = impl.first-release.no-later-than %}
+    {%- if bound %}
+    <td data-sort-key="{{ bound }}" title="no later than {{ bound }}">&le;&nbsp;{{ bound }}</td>
+    {%- else %}
     <td>{{ impl.first-release.date }}</td>
+    {%- endif %}
     <td>{{ impl.latest-release.version }}</td>
     <td>{{ impl.latest-release.date }}</td>
     <td>{{ impl.license | markdownify | strip_newlines | remove:'<p>' | remove:'</p>' }}</td>

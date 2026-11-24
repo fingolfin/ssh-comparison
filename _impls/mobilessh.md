@@ -2,8 +2,8 @@
 title: Mobile SSH
 homepage: https://play.google.com/store/apps/details?id=mobileSSH.feng.gao
 license: Proprietary
-#first-release:
-#    date: TODO
+first-release:
+    no-later-than: 2015-02-28    # 2.8, "Updated 28 Feb 2015" in the oldest Play Store snapshot, 2015-03-21
 latest-release:
     version: 2.17
     date: 2016-04-23

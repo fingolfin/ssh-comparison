@@ -3,8 +3,8 @@ title: FlowSsh
 developer: Bitvise
 homepage: https://www.bitvise.com/flowssh
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    no-later-than: 2011-05-13    # "FlowSsh 1.10 is available", web.archive.org/web/20110513151835/http://www.bitvise.com/flowssh
 latest-release:
     version: 9.69
     date: 2026-11-16

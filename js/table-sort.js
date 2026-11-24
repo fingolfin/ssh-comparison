@@ -28,7 +28,10 @@ window.TableSort = function (table, onChange) {
     if (kind === 'support') {
       return SUPPORT_RANK[row.cells[col].classList[0]] || 0;
     }
-    return row.cells[col].textContent.trim();
+    // data-sort-key overrides the shown text, so "≤ 2010" sorts as 2010.
+    var cell = row.cells[col];
+    if ('sortKey' in cell.dataset) return cell.dataset.sortKey;
+    return cell.textContent.trim();
   }
 
   // Numeric runs compare as numbers, so version 10.0 sorts after 9.9.

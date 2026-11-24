@@ -3,8 +3,8 @@ title: cryptlib
 homepage: https://cryptlib.com/
 source-repository: https://github.com/cryptlib/cryptlib
 license: "[Dual license: Sleepycat or commercial](https://github.com/cryptlib/cryptlib/blob/main/COPYING)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    no-later-than: 2001-04-05    # 3.0 beta 5, with SSH; announced on the cryptlib list, 2001-April archive
 latest-release:
     version: 3.4.9.6
     date: 2026-10-09

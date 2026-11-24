@@ -63,6 +63,20 @@ def protocol_items(source)
   items
 end
 
+# first-release holds one of these: `date` of the first public release, or
+# `no-later-than` the earliest dated release when the first is not known.
+FIRST_RELEASE_KEYS = %w[date no-later-than].freeze
+
+# YAML reads YYYY as an Integer and YYYY-MM-DD as a Date; YYYY-MM stays a String.
+def release_date?(value)
+  case value
+  when Date then true
+  when Integer then value.between?(1000, 9999)
+  when String then value.match?(/\A\d{4}-(0[1-9]|1[0-2])\z/)
+  else false
+  end
+end
+
 # A protocols comment that says the id is off by default.
 DEFAULT_OFF_COMMENT = /\b(disabled by default|not in the default proposal|not default)\b/i
 
@@ -143,6 +157,16 @@ Dir[File.join(ROOT, '_impls', '*.md')].sort.each do |path|
     end
     (list - languages).each do |lang|
       errors << "#{name}: language #{lang.inspect} is not in _data/impl_meta.yml"
+    end
+  end
+
+  if fm.key?('first-release')
+    release = fm['first-release']
+    keys = release.is_a?(Hash) ? release.keys : []
+    if keys.size != 1 || !FIRST_RELEASE_KEYS.include?(keys[0])
+      errors << "#{name}: first-release needs exactly one of #{FIRST_RELEASE_KEYS.join(', ')}"
+    elsif !release_date?(release[keys[0]])
+      errors << "#{name}: first-release.#{keys[0]}: #{release[keys[0]].inspect} is not YYYY, YYYY-MM or YYYY-MM-DD"
     end
   end
 

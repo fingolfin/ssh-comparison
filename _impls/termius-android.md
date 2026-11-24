@@ -3,8 +3,8 @@ title: Termius (Android)
 redirect_from: /impls/serverauditor-android.html
 homepage: https://termius.com/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    no-later-than: 2012-11-21    # serverauditor.com links to the Play listing, web.archive.org/web/20121121190830/http://www.serverauditor.com/
 latest-release:
     version: 8.0.2
     date: 2026-11-19
