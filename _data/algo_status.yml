@@ -1,0 +1,715 @@
+# Security status of individual algorithms, shown in the id column of the
+# comparison tables. Statuses are secure, weak and broken; an id absent
+# from this file is unrated.
+#
+# weak:   deprecated, or attackable only in theory or at impractical cost
+# broken: practically attackable today
+#
+# An id is rated only when its defining document (see specs.yml) states
+# the construction. Ids defined only by name, or only in source code, are
+# left out.
+"3des-cbc":
+  status: weak
+  note: "8-byte block in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks and \u00A73.2 birthday bound; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"3des-ctr":
+  status: weak
+  note: "8-byte block: RFC 4344 \u00A73.2 birthday bound needs rekeying far more often than every GB"
+"AEAD_AES_128_GCM":
+  status: secure
+  note: "AES-GCM; RFC 5647's negotiation rule can break interoperability, not confidentiality"
+"AEAD_AES_256_GCM":
+  status: secure
+  note: "AES-GCM; RFC 5647's negotiation rule can break interoperability, not confidentiality"
+"AEAD_CAMELLIA_128_GCM":
+  status: secure
+  note: "Camellia-GCM with RFC 5647 negotiation"
+"AEAD_CAMELLIA_256_GCM":
+  status: secure
+  note: "Camellia-GCM with RFC 5647 negotiation"
+"aes128-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"aes128-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"aes128-gcm":
+  status: secure
+  note: "AES-GCM; immune to Terrapin per draft-ietf-sshm-strict-kex"
+"aes128-gcm@openssh.com":
+  status: secure
+  note: "AES-GCM; immune to Terrapin per draft-ietf-sshm-strict-kex"
+"aes192-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"aes192-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"aes256-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"aes256-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"aes256-gcm":
+  status: secure
+  note: "AES-GCM; immune to Terrapin per draft-ietf-sshm-strict-kex"
+"aes256-gcm@openssh.com":
+  status: secure
+  note: "AES-GCM; immune to Terrapin per draft-ietf-sshm-strict-kex"
+"arcfour":
+  status: broken
+  note: "RC4; RFC 8758: MUST NOT be used"
+"arcfour-64k@rodents.montreal.qc.ca":
+  status: broken
+  note: "RC4 with the first 64 KiB of keystream dropped; RC4's long-term keystream biases remain"
+"arcfour128":
+  status: broken
+  note: "RC4; RFC 8758: MUST NOT be used"
+"arcfour128-draft-00@putty.projects.tartarus.org":
+  status: broken
+  note: "draft-era name for an RFC 4345 RC4 mode; RFC 8758: RC4 MUST NOT be used"
+"arcfour256":
+  status: broken
+  note: "RC4; RFC 8758: MUST NOT be used"
+"arcfour256-draft-00@putty.projects.tartarus.org":
+  status: broken
+  note: "draft-era name for an RFC 4345 RC4 mode; RFC 8758: RC4 MUST NOT be used"
+"blowfish-cbc":
+  status: weak
+  note: "8-byte block in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks and \u00A73.2 birthday bound; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"blowfish-ctr":
+  status: weak
+  note: "8-byte block: RFC 4344 \u00A73.2 birthday bound needs rekeying far more often than every GB"
+"camellia128-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"camellia128-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"camellia192-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"camellia192-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"camellia256-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"camellia256-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"cast128-cbc":
+  status: weak
+  note: "8-byte block in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks and \u00A73.2 birthday bound; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"cast128-ctr":
+  status: weak
+  note: "8-byte block: RFC 4344 \u00A73.2 birthday bound needs rekeying far more often than every GB"
+"chacha20-poly1305":
+  status: secure
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
+"chacha20-poly1305-mt@hpnssh.org":
+  status: secure
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
+"chacha20-poly1305@openssh.com":
+  status: secure
+  note: "AEAD, but open to Terrapin prefix truncation unless strict kex is negotiated"
+"curve25519-sha256":
+  status: secure
+  note: "X25519 (RFC 8731), 128-bit strength"
+"curve25519-sha256@libssh.org":
+  status: secure
+  note: "X25519 (RFC 8731), 128-bit strength"
+"curve448-sha512":
+  status: secure
+  note: "X448 (RFC 8731), 224-bit strength"
+"des-cbc":
+  status: broken
+  note: "56-bit DES key; RFC 4250 lists it as HISTORIC"
+"diffie-hellman-group-exchange-sha1":
+  status: weak
+  note: "SHA-1 exchange hash; RFC 9142: SHOULD NOT"
+"diffie-hellman-group-exchange-sha256":
+  status: secure
+  note: "server-chosen MODP group of at least 2048 bits (RFC 8270) with SHA-256"
+"diffie-hellman-group1-sha1":
+  status: broken
+  note: "1024-bit MODP group, about 80-bit strength; RFC 9142: too weak to be retained"
+"diffie-hellman-group14-sha1":
+  status: weak
+  note: "2048-bit group with a SHA-1 exchange hash; RFC 9142: legacy only, to be phased out"
+"diffie-hellman-group14-sha256":
+  status: secure
+  note: "2048-bit MODP group with SHA-256, 112-bit strength (RFC 9142)"
+"diffie-hellman-group15-sha512":
+  status: secure
+  note: "3072-bit MODP group with SHA-512, 128-bit strength (RFC 9142)"
+"diffie-hellman-group16-sha512":
+  status: secure
+  note: "4096-bit MODP group with SHA-512, 152-bit strength (RFC 9142)"
+"diffie-hellman-group17-sha512":
+  status: secure
+  note: "6144-bit MODP group with SHA-512, 176-bit strength (RFC 9142)"
+"diffie-hellman-group18-sha512":
+  status: secure
+  note: "8192-bit MODP group with SHA-512, 200-bit strength (RFC 9142)"
+"dsa2048-sha224@libassh.org":
+  status: weak
+  note: "DSA of at least 2048 bits; FIPS 186-5 withdrew DSA for signing"
+"dsa2048-sha256@libassh.org":
+  status: weak
+  note: "DSA of at least 2048 bits; FIPS 186-5 withdrew DSA for signing"
+"dsa3072-sha256@libassh.org":
+  status: weak
+  note: "DSA of at least 2048 bits; FIPS 186-5 withdrew DSA for signing"
+"ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3 hybridised with ECDH, K = HASH(K_PQ || K_CL)"
+"ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3 hybridised with ECDH, K = HASH(K_PQ || K_CL)"
+"ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org":
+  status: secure
+  note: "pre-standard Kyber round 3 hybridised with ECDH, K = HASH(K_PQ || K_CL)"
+"ecdh-sha2-1.3.132.0.10":
+  status: secure
+  note: "ECDH over secp256k1, named by OID per RFC 5656 \u00A76.1"
+"ecdh-sha2-nistp256":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"ecdh-sha2-nistp384":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"ecdh-sha2-nistp521":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"ecdsa-sha2-1.3.132.0.10":
+  status: secure
+  note: "ECDSA over secp256k1, named by OID per RFC 5656 \u00A76.1"
+"ecdsa-sha2-nistp256":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp256-cert":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp256-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp384":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp384-cert":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp384-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp521":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp521-cert":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"ecdsa-sha2-nistp521-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"eddsa-e382-shake256@libassh.org":
+  status: secure
+  note: "EdDSA over the E-382 or E-521 curve with SHAKE256 (libassh)"
+"eddsa-e521-shake256@libassh.org":
+  status: secure
+  note: "EdDSA over the E-382 or E-521 curve with SHAKE256 (libassh)"
+"frodokem976x25519-sha512":
+  status: secure
+  note: "FrodoKEM-976 combined with X25519 via Chempat"
+"gss-curve25519-sha256-*":
+  status: secure
+  note: "X25519 (RFC 8731), 128-bit strength"
+"gss-curve448-sha512-*":
+  status: secure
+  note: "X448 (RFC 8731), 224-bit strength"
+"gss-gex-sha1-*":
+  status: weak
+  note: "SHA-1 exchange hash; RFC 9142: SHOULD NOT"
+"gss-group1-sha1-*":
+  status: broken
+  note: "1024-bit MODP group, about 80-bit strength; RFC 9142: too weak to be retained"
+"gss-group14-sha1-*":
+  status: weak
+  note: "2048-bit group with a SHA-1 exchange hash; RFC 9142: legacy only, to be phased out"
+"gss-group14-sha256-*":
+  status: secure
+  note: "2048-bit MODP group with SHA-256, 112-bit strength (RFC 9142)"
+"gss-group15-sha512-*":
+  status: secure
+  note: "3072-bit MODP group with SHA-512, 128-bit strength (RFC 9142)"
+"gss-group16-sha512-*":
+  status: secure
+  note: "4096-bit MODP group with SHA-512, 152-bit strength (RFC 9142)"
+"gss-group17-sha512-*":
+  status: secure
+  note: "6144-bit MODP group with SHA-512, 176-bit strength (RFC 9142)"
+"gss-group18-sha512-*":
+  status: secure
+  note: "8192-bit MODP group with SHA-512, 200-bit strength (RFC 9142)"
+"gss-mlkem1024nistp384-sha384-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH, inside GSS-API key exchange"
+"gss-mlkem768nistp256-sha256-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH, inside GSS-API key exchange"
+"gss-mlkem768x25519-sha256-*":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH, inside GSS-API key exchange"
+"gss-nistp256-sha256-*":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"gss-nistp384-sha384-*":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"gss-nistp521-sha512-*":
+  status: secure
+  note: "ECDH over a NIST curve (RFC 5656)"
+"hmac-md5":
+  status: weak
+  note: "HMAC-MD5; RFC 6151: no practical attack yet, but new designs should not use it"
+"hmac-md5-96":
+  status: weak
+  note: "HMAC-MD5; RFC 6151: no practical attack yet, but new designs should not use it"
+"hmac-md5-96-etm@openssh.com":
+  status: weak
+  note: "HMAC-MD5; RFC 6151: new designs should not use it; with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-md5-etm@openssh.com":
+  status: weak
+  note: "HMAC-MD5; RFC 6151: new designs should not use it; with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-sha1":
+  status: weak
+  note: "HMAC-SHA-1; RFC 6194 finds HMAC unaffected by SHA-1 collisions, but SHA-1 is being phased out"
+"hmac-sha1-96":
+  status: weak
+  note: "HMAC-SHA-1; RFC 6194 finds HMAC unaffected by SHA-1 collisions, but SHA-1 is being phased out"
+"hmac-sha1-96-etm@openssh.com":
+  status: weak
+  note: "HMAC-SHA-1, SHA-1 being phased out (RFC 6194); with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-sha1-etm@openssh.com":
+  status: weak
+  note: "HMAC-SHA-1, SHA-1 being phased out (RFC 6194); with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-sha2-256":
+  status: secure
+  note: "HMAC-SHA-2 (RFC 6668)"
+"hmac-sha2-256-96":
+  status: secure
+  note: "HMAC-SHA-2 truncated to 96 bits (draft-dbider-sha2-mac-for-ssh)"
+"hmac-sha2-256-etm@openssh.com":
+  status: secure
+  note: "HMAC-SHA-2; with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-sha2-512":
+  status: secure
+  note: "HMAC-SHA-2 (RFC 6668)"
+"hmac-sha2-512-96":
+  status: secure
+  note: "HMAC-SHA-2 truncated to 96 bits (draft-dbider-sha2-mac-for-ssh)"
+"hmac-sha2-512-etm@openssh.com":
+  status: secure
+  note: "HMAC-SHA-2; with a CBC cipher, Terrapin applies unless strict kex"
+"hmac-sha224@ssh.com":
+  status: secure
+  note: "HMAC-SHA-2 per FIPS 198 with a 16- to 64-byte key (Tectia)"
+"hmac-sha256-2@ssh.com":
+  status: secure
+  note: "HMAC-SHA-2 per FIPS 198 with a 16- to 64-byte key (Tectia)"
+"hmac-sha256@ssh.com":
+  status: secure
+  note: "HMAC-SHA-2 per FIPS 198 with a 16- to 64-byte key (Tectia)"
+"hmac-sha384@ssh.com":
+  status: secure
+  note: "HMAC-SHA-2 per FIPS 198 with a 16- to 64-byte key (Tectia)"
+"hmac-sha512@ssh.com":
+  status: secure
+  note: "HMAC-SHA-2 per FIPS 198 with a 16- to 64-byte key (Tectia)"
+"idea-cbc":
+  status: weak
+  note: "8-byte block in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks and \u00A73.2 birthday bound; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"idea-ctr":
+  status: weak
+  note: "8-byte block: RFC 4344 \u00A73.2 birthday bound needs rekeying far more often than every GB"
+"m383-sha384@libassh.org":
+  status: secure
+  note: "X25519-style exchange over the 383- or 511-bit Montgomery curves M-383 and M-511 (libassh)"
+"m511-sha512@libassh.org":
+  status: secure
+  note: "X25519-style exchange over the 383- or 511-bit Montgomery curves M-383 and M-511 (libassh)"
+"mceliece6688128x25519-sha512":
+  status: secure
+  note: "Classic McEliece combined with X25519 via Chempat"
+"mlkem1024-sha384":
+  status: secure
+  note: "ML-KEM (FIPS 203) alone, with no classical half (draft-harrison-sshm-mlkem)"
+"mlkem1024nistp384-sha384":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH (RFC 10042)"
+"mlkem512-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) alone, with no classical half (draft-harrison-sshm-mlkem)"
+"mlkem768-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) alone, with no classical half (draft-harrison-sshm-mlkem)"
+"mlkem768nistp256-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH (RFC 10042)"
+"mlkem768x25519-sha256":
+  status: secure
+  note: "ML-KEM (FIPS 203) hybridised with ECDH (RFC 10042)"
+"rijndael-cbc@lysator.liu.se":
+  status: weak
+  note: "aes256-cbc under another name: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k4b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k4b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "aes*-ctr under another name (moussh: k*b4 equals AES)"
+"rijndael-k4b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k4b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k6b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k6b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "aes*-ctr under another name (moussh: k*b4 equals AES)"
+"rijndael-k6b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k6b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k8b4-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k8b4-ctr@rodents.montreal.qc.ca":
+  status: secure
+  note: "aes*-ctr under another name (moussh: k*b4 equals AES)"
+"rijndael-k8b6-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rijndael-k8b8-cbc@rodents.montreal.qc.ca":
+  status: weak
+  note: "Rijndael in CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"rsa-sha2-256":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa-sha2-256-cert":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa-sha2-256-cert-v01@openssh.com":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa-sha2-512":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa-sha2-512-cert":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa-sha2-512-cert-v01@openssh.com":
+  status: secure
+  note: "RSA with SHA-2 (RFC 8332)"
+"rsa1024-sha1":
+  status: broken
+  note: "1024-bit RSA with SHA-1; RFC 9142: MUST NOT, does not meet security requirements"
+"rsa2048-sha256":
+  status: secure
+  note: "2048-bit RSA key transport with SHA-256, 112-bit strength (RFC 9142)"
+"scloudp192aesnistp384-sha384":
+  status: secure
+  note: "unstandardised Scloud+ KEM, but hybridised with ECDH over P-384 or P-521"
+"scloudp192shakenistp384-sha384":
+  status: secure
+  note: "unstandardised Scloud+ KEM, but hybridised with ECDH over P-384 or P-521"
+"scloudp256aesnistp521-sha512":
+  status: secure
+  note: "unstandardised Scloud+ KEM, but hybridised with ECDH over P-384 or P-521"
+"scloudp256shakenistp521-sha512":
+  status: secure
+  note: "unstandardised Scloud+ KEM, but hybridised with ECDH over P-384 or P-521"
+"serpent128-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"serpent128-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"serpent128-gcm@libassh.org":
+  status: secure
+  note: "GCM over a 16-byte-block cipher with the RFC 5647 packet format (libassh)"
+"serpent192-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"serpent192-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"serpent256-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"serpent256-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"serpent256-gcm@libassh.org":
+  status: secure
+  note: "GCM over a 16-byte-block cipher with the RFC 5647 packet format (libassh)"
+"sharc4-512@rodents.montreal.qc.ca":
+  status: broken
+  note: "RC4 with modified key setup; RC4's long-term keystream biases remain"
+"sk-ecdsa-sha2-nistp256-cert-v01@openssh.com":
+  status: secure
+  note: "ECDSA P-256 on a FIDO authenticator (PROTOCOL.u2f)"
+"sk-ecdsa-sha2-nistp256@openssh.com":
+  status: secure
+  note: "ECDSA P-256 on a FIDO authenticator (PROTOCOL.u2f)"
+"sk-ssh-ed25519-cert-v01@openssh.com":
+  status: secure
+  note: "Ed25519 on a FIDO authenticator (PROTOCOL.u2f)"
+"sk-ssh-ed25519@openssh.com":
+  status: secure
+  note: "Ed25519 on a FIDO authenticator (PROTOCOL.u2f)"
+"sntrup761x25519-sha512":
+  status: secure
+  note: "sntrup761 hybridised with X25519 (RFC 9941)"
+"sntrup761x25519-sha512@openssh.com":
+  status: secure
+  note: "sntrup761 hybridised with X25519 (RFC 9941)"
+"ssh-dss":
+  status: broken
+  note: "DSA per FIPS 186-2, hence 1024-bit, with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-dss-cert":
+  status: broken
+  note: "DSA per FIPS 186-2, hence 1024-bit, with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-dss-cert-v01@openssh.com":
+  status: broken
+  note: "DSA per FIPS 186-2, hence 1024-bit, with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-ed25519":
+  status: secure
+  note: "EdDSA (RFC 8709)"
+"ssh-ed25519-cert":
+  status: secure
+  note: "EdDSA (RFC 8709)"
+"ssh-ed25519-cert-v01@openssh.com":
+  status: secure
+  note: "EdDSA (RFC 8709)"
+"ssh-ed25519-ml-dsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-ed25519-slh-dsa-sha2-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed25519-slh-dsa-shake-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed25519-slh-dsa-shake-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed25519-slh-dsa-shake-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed448":
+  status: secure
+  note: "EdDSA (RFC 8709)"
+"ssh-ed448-cert":
+  status: secure
+  note: "EdDSA (RFC 8709)"
+"ssh-ed448-slh-dsa-sha2-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed448-slh-dsa-shake-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed448-slh-dsa-shake-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-ed448-slh-dsa-shake-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205) composed with EdDSA"
+"ssh-mldsa-44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa-87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"ssh-mldsa44-ed25519":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa44-ed25519-cert":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa44-ed25519@openssh.com":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa44-es256":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa65-ed25519":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa65-es256":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa87-ed448":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa87-es384":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa87-p384":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-mldsa87-p384-cert":
+  status: secure
+  note: "ML-DSA (FIPS 204) composed with a classical signature"
+"ssh-rsa":
+  status: weak
+  note: "RSA PKCS#1 v1.5 with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-rsa-cert":
+  status: weak
+  note: "RSA PKCS#1 v1.5 with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-rsa-cert-v01@openssh.com":
+  status: weak
+  note: "RSA PKCS#1 v1.5 with SHA-1 (RFC 4253 \u00A76.6)"
+"ssh-slh-dsa-sha2-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-192-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-sha2-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-128s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-192-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256-24":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256f":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"ssh-slh-dsa-shake-256s":
+  status: secure
+  note: "SLH-DSA (FIPS 205), hash-based"
+"twofish-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"twofish128-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"twofish128-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"twofish128-gcm@libassh.org":
+  status: secure
+  note: "GCM over a 16-byte-block cipher with the RFC 5647 packet format (libassh)"
+"twofish192-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"twofish192-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"twofish256-cbc":
+  status: weak
+  note: "CBC mode: RFC 4344 \u00A76.2 chosen-plaintext attacks; with an EtM MAC, Terrapin applies unless strict kex is negotiated"
+"twofish256-ctr":
+  status: secure
+  note: "16-byte block in SDCTR mode (RFC 4344)"
+"twofish256-gcm@libassh.org":
+  status: secure
+  note: "GCM over a 16-byte-block cipher with the RFC 5647 packet format (libassh)"
+"umac-128":
+  status: secure
+  note: "128-bit tag: forgery probability 1/2^120 per attempt (RFC 4418)"
+"umac-128-etm@openssh.com":
+  status: secure
+  note: "128-bit UMAC tag; with a CBC cipher, Terrapin applies unless strict kex"
+"umac-128@openssh.com":
+  status: secure
+  note: "128-bit tag: forgery probability 1/2^120 per attempt (RFC 4418)"
+"umac-32":
+  status: weak
+  note: "32-bit tag: each forgery attempt succeeds with probability 1/2^30 (RFC 4418)"
+"umac-64":
+  status: secure
+  note: "64-bit tag: forgery probability 1/2^60 per attempt (RFC 4418)"
+"umac-64-etm@openssh.com":
+  status: secure
+  note: "64-bit UMAC tag; with a CBC cipher, Terrapin applies unless strict kex"
+"umac-64@openssh.com":
+  status: secure
+  note: "64-bit tag: forgery probability 1/2^60 per attempt (RFC 4418)"
+"umac-96":
+  status: secure
+  note: "96-bit tag: forgery probability 1/2^90 per attempt (RFC 4418)"
+"webauthn-sk-ecdsa-sha2-nistp256@openssh.com":
+  status: secure
+  note: "ECDSA P-256 on a FIDO authenticator (PROTOCOL.u2f)"
+"x25519-kyber-512r3-sha256-d00@amazon.com":
+  status: secure
+  note: "pre-standard Kyber round 3 hybridised with ECDH, K = HASH(K_PQ || K_CL)"
+"x509v3-ecdsa-sha2-1.3.132.0.10":
+  status: secure
+  note: "ECDSA over secp256k1, named by OID per RFC 5656 \u00A76.1"
+"x509v3-ecdsa-sha2-nistp256":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"x509v3-ecdsa-sha2-nistp384":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"x509v3-ecdsa-sha2-nistp521":
+  status: secure
+  note: "ECDSA over a NIST curve with SHA-2 (RFC 5656)"
+"x509v3-mldsa-44":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-mldsa-65":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-mldsa-87":
+  status: secure
+  note: "ML-DSA (FIPS 204)"
+"x509v3-rsa2048-sha256":
+  status: secure
+  note: "RSA of at least 2048 bits with SHA-256 (RFC 6187 \u00A73.3)"
+"x509v3-sign-dss-sha1":
+  status: weak
+  note: "DSA with SHA-1 inside an X.509 certificate"
+"x509v3-sign-rsa-sha1":
+  status: weak
+  note: "RSA PKCS#1 v1.5 with SHA-1 inside an X.509 certificate"
+"x509v3-ssh-dss":
+  status: weak
+  note: "DSA with SHA-1 inside an X.509 certificate (RFC 6187 \u00A73.1)"
+"x509v3-ssh-rsa":
+  status: weak
+  note: "RSA with SHA-1 inside an X.509 certificate (RFC 6187 \u00A73.2)"

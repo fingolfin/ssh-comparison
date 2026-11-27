@@ -8,6 +8,9 @@
   match: /comparison/
 - title: Specifications
   url: /specs.html
+- title: Attacks
+  url: /attacks.html
+  match: /attacks
 - title: About
   url: /about
 - title: Credits

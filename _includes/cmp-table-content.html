@@ -1,5 +1,6 @@
 {% assign type = include.type  %}
 {% include namelist.html type=type %}
+{% assign attacks_by_year = site.attacks | sort: "year" %}
 <thead>
   <tr>
     <th class='col-id' data-sort='text'>id</th>
@@ -17,8 +18,14 @@
 <tbody>
 {% for item in namelist %}
   {% assign counter = 0 %}
+  {% assign status = nil %}
+  {% if site.data.rated_classes contains type %}{% assign status = site.data.algo_status[item] %}{% endif %}
+  {% assign attacks = "" %}
+  {% for attack in attacks_by_year %}{% if attack.affects[type] contains item %}{% assign attacks = attacks | append: ", " | append: attack.title %}{% endif %}{% endfor %}
+  {% assign attacks = attacks | remove_first: ", " %}
+  {% capture title %}{% if status %}{{ status.status }}: {{ status.note }}{% endif %}{% if status and attacks != "" %}. {% endif %}{% if attacks != "" %}Attacks: {{ attacks }}{% endif %}{% endcapture %}
   <tr>
-    <td>{{ item }}</td>
+    <td{% if status %} class='algo-{{ status.status }}'{% endif %}{% if title != "" %} title='{{ title | escape }}'{% endif %}>{{ item }}</td>
     <td>
     {% for spec in site.data.specs %}
       {% if spec[1].protocols[type] contains item %}

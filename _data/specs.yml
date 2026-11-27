@@ -212,11 +212,13 @@ rfc5656:
             - ecdsa-sha2-nistp256   # REQUIRED
             - ecdsa-sha2-nistp384   # REQUIRED
             - ecdsa-sha2-nistp521   # REQUIRED
+            - ecdsa-sha2-1.3.132.0.10    # OID form, section 6.1
         kex:
             - ecdh-sha2-nistp256    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - ecdh-sha2-nistp384    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: SHOULD
             - ecdh-sha2-nistp521    # REQUIRED / draft-ietf-curdle-ssh-kex-sha2: MAY [not recommended]
             - ecmqv-sha2            # OPTIONAL
+            - ecdh-sha2-1.3.132.0.10    # OID form, section 6.1
 
 rfc6187:
     name: RFC 6187
@@ -231,6 +233,7 @@ rfc6187:
             - x509v3-ecdsa-sha2-nistp256
             - x509v3-ecdsa-sha2-nistp384
             - x509v3-ecdsa-sha2-nistp521
+            - x509v3-ecdsa-sha2-1.3.132.0.10    # x509v3-ecdsa-sha2-* family
 
 rfc6239:
     name: RFC 6239
@@ -427,6 +430,16 @@ draft-bider-ssh-server-algs-00:
             - server-algs-c
             - server-algs-s
 
+draft-dbider-sha2-mac-for-ssh-05:
+    name: draft-dbider-sha2-mac-for-ssh-05
+    url: https://tools.ietf.org/html/draft-dbider-sha2-mac-for-ssh-05
+    title: "SHA-2 Data Integrity Verification for the Secure Shell (SSH) Transport Layer Protocol [ expired 2012-07-26 ]"
+    # The -96 variants were dropped before publication as RFC 6668.
+    protocols:
+        mac:
+            - hmac-sha2-256-96
+            - hmac-sha2-512-96
+
 draft-gutmann-ssh-preauth-06:
     name: draft-gutmann-ssh-preauth-06
     url: https://tools.ietf.org/html/draft-gutmann-ssh-preauth-06.html
@@ -441,6 +454,20 @@ draft-harrison-sshm-mlkem-02:
             - mlkem512-sha256
             - mlkem768-sha256
             - mlkem1024-sha384
+
+draft-ietf-secsh-transport-19:
+    name: draft-ietf-secsh-transport-19
+    url: https://tools.ietf.org/html/draft-ietf-secsh-transport-19
+    title: "SSH Transport Layer Protocol [ expired 2005-04-24 ]"
+    # Names listed in the public key table only, without a signature
+    # definition; dropped before publication as RFC 4253. IANA cites RFC 4253
+    # for spki-sign-*, which does not mention them.
+    protocols:
+        hostkey:
+            - x509v3-sign-rsa
+            - x509v3-sign-dss
+            - spki-sign-rsa
+            - spki-sign-dss
 
 draft-ietf-secsh-x509-03:
     name: draft-ietf-secsh-x509-03
@@ -577,6 +604,17 @@ draft-josefsson-sshsig-format-04:
     name: draft-josefsson-sshsig-format-04
     url: https://tools.ietf.org/html/draft-josefsson-sshsig-format-04.html
     title: "Lightweight Secure Shell (SSH) Signature Format [ expired 2027-01-23 ]"
+
+draft-kampanakis-curdle-ssh-pq-ke-01:
+    name: draft-kampanakis-curdle-ssh-pq-ke-01
+    url: https://tools.ietf.org/html/draft-kampanakis-curdle-ssh-pq-ke-01
+    title: "Post-quantum Hybrid Key Exchange in SSH [ expired 2023-10-12 ]"
+    protocols:
+        kex:
+            - ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org
+            - ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org
+            - ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org
+            - x25519-kyber-512r3-sha256-d00@amazon.com
 
 draft-kanno-secsh-camellia-02:
     name: draft-kanno-secsh-camellia-02
@@ -724,6 +762,46 @@ draft-sun-ssh-composite-sigs-03:
             - ssh-mldsa65-ed25519
             - ssh-mldsa87-ed448
 
+hpnssh:
+    name: HPN-SSH
+    url: https://github.com/rapier1/hpn-ssh/blob/master/HPN-README
+    title: "HPN-SSH: multi-threaded ChaCha20-Poly1305"
+    protocols:
+        cipher:
+            - chacha20-poly1305-mt@hpnssh.org
+
+libassh-auth:
+    name: libassh
+    url: https://www.nongnu.org/libassh/manual/Authentication_algorithms.html
+    title: "libassh manual: Authentication algorithms"
+    protocols:
+        hostkey:
+            - dsa2048-sha224@libassh.org
+            - dsa2048-sha256@libassh.org
+            - dsa3072-sha256@libassh.org
+            - eddsa-e382-shake256@libassh.org
+            - eddsa-e521-shake256@libassh.org
+
+libassh-cipher:
+    name: libassh
+    url: https://www.nongnu.org/libassh/manual/Cipher_algorithms.html
+    title: "libassh manual: Cipher algorithms"
+    protocols:
+        cipher:
+            - serpent128-gcm@libassh.org
+            - serpent256-gcm@libassh.org
+            - twofish128-gcm@libassh.org
+            - twofish256-gcm@libassh.org
+
+libassh-kex:
+    name: libassh
+    url: https://www.nongnu.org/libassh/manual/Key_exchange_algorithms.html
+    title: "libassh manual: Key-exchange algorithms"
+    protocols:
+        kex:
+            - m383-sha384@libassh.org
+            - m511-sha512@libassh.org
+
 libssh:
     name: libssh
     url: https://git.libssh.org/projects/libssh.git/tree/doc/curve25519-sha256@libssh.org.txt
@@ -731,6 +809,41 @@ libssh:
     protocols:
         kex:
             - curve25519-sha256@libssh.org
+
+lysator:
+    name: Lysator
+    url: https://lysator.liu.se/rijndael
+    title: "About rijndael-cbc@lysator.liu.se"
+    protocols:
+        cipher:
+            - rijndael-cbc@lysator.liu.se
+
+moussh:
+    name: moussh
+    url: https://web.archive.org/web/20260809231716/http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/private-algs.txt
+    title: "SSH extensions implemented by moussh"
+    protocols:
+        cipher:
+            - arcfour-64k@rodents.montreal.qc.ca
+            - rijndael-k4b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k4b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k4b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k4b8-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k6b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k6b8-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b4-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b4-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b6-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b6-ctr@rodents.montreal.qc.ca
+            - rijndael-k8b8-cbc@rodents.montreal.qc.ca
+            - rijndael-k8b8-ctr@rodents.montreal.qc.ca
+            - sharc4-512@rodents.montreal.qc.ca
 
 openssh:
     name: OpenSSH
@@ -772,7 +885,7 @@ openssh:
 
 openssh-chacha:
     name: OpenSSH
-    url: https://github.com/openssh/openssh-portable/blob/master/PROTOCOL.chacha20poly1305
+    url: https://github.com/openssh/openssh-portable/blob/6ebd472c39%5E/PROTOCOL.chacha20poly1305
     title: "OpenSSH: chacha20poly1305"
     protocols:
         cipher:
@@ -788,3 +901,166 @@ openssh-u2f:
             - sk-ecdsa-sha2-nistp256-cert-v01@openssh.com
             - sk-ssh-ed25519@openssh.com
             - sk-ssh-ed25519-cert-v01@openssh.com
+            - webauthn-sk-ecdsa-sha2-nistp256@openssh.com
+
+oqs-openssh:
+    name: OQS-OpenSSH
+    url: https://github.com/open-quantum-safe/openssh/blob/OQS-v9/README.md
+    title: "OQS-OpenSSH: supported algorithms (OQS-v9)"
+    # Signature names follow the README rule ssh-<SIG>, ssh-rsa3072-<SIG>, ssh-ecdsa-nistpNNN-<SIG>.
+    protocols:
+        hostkey:
+            - ssh-falcon512
+            - ssh-falcon1024
+            - ssh-mayo2
+            - ssh-mayo3
+            - ssh-mayo5
+            - ssh-mldsa44
+            - ssh-mldsa65
+            - ssh-mldsa87
+            - ssh-sphincssha2128fsimple
+            - ssh-sphincssha2256fsimple
+            - ssh-ecdsa-nistp256-falcon512
+            - ssh-ecdsa-nistp256-mayo2
+            - ssh-ecdsa-nistp256-mldsa44
+            - ssh-ecdsa-nistp256-sphincssha2128fsimple
+            - ssh-ecdsa-nistp384-mayo3
+            - ssh-ecdsa-nistp384-mldsa65
+            - ssh-ecdsa-nistp521-falcon1024
+            - ssh-ecdsa-nistp521-mayo5
+            - ssh-ecdsa-nistp521-mldsa87
+            - ssh-ecdsa-nistp521-sphincssha2256fsimple
+            - ssh-rsa3072-falcon512
+            - ssh-rsa3072-mayo2
+            - ssh-rsa3072-mldsa44
+            - ssh-rsa3072-sphincssha2128fsimple
+        kex:
+            - bike-l1-sha512
+            - bike-l3-sha512
+            - bike-l5-sha512
+            - classic-mceliece-348864-sha256
+            - classic-mceliece-348864f-sha256
+            - classic-mceliece-460896-sha512
+            - classic-mceliece-460896f-sha512
+            - classic-mceliece-6688128-sha512
+            - classic-mceliece-6688128f-sha512
+            - classic-mceliece-6960119-sha512
+            - classic-mceliece-6960119f-sha512
+            - classic-mceliece-8192128-sha512
+            - classic-mceliece-8192128f-sha512
+            - ecdh-nistp256-bike-l1r4-sha512@openquantumsafe.org
+            - ecdh-nistp256-classic-mceliece-348864fr4-sha256@openquantumsafe.org
+            - ecdh-nistp256-classic-mceliece-348864r4-sha256@openquantumsafe.org
+            - ecdh-nistp256-frodokem-640-aesr2-sha256@openquantumsafe.org
+            - ecdh-nistp256-frodokem-640-shaker2-sha256@openquantumsafe.org
+            - ecdh-nistp256-kyber-512r3-sha256-d00@openquantumsafe.org
+            - ecdh-nistp256-ml-kem-512-sha256@openquantumsafe.org
+            - ecdh-nistp384-bike-l3r4-sha512@openquantumsafe.org
+            - ecdh-nistp384-classic-mceliece-460896fr4-sha512@openquantumsafe.org
+            - ecdh-nistp384-classic-mceliece-460896r4-sha512@openquantumsafe.org
+            - ecdh-nistp384-frodokem-976-aesr2-sha384@openquantumsafe.org
+            - ecdh-nistp384-frodokem-976-shaker2-sha384@openquantumsafe.org
+            - ecdh-nistp384-kyber-768r3-sha384-d00@openquantumsafe.org
+            - ecdh-nistp521-bike-l5r4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-6688128fr4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-6688128r4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-6960119fr4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-6960119r4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-8192128fr4-sha512@openquantumsafe.org
+            - ecdh-nistp521-classic-mceliece-8192128r4-sha512@openquantumsafe.org
+            - ecdh-nistp521-frodokem-1344-aesr2-sha512@openquantumsafe.org
+            - ecdh-nistp521-frodokem-1344-shaker2-sha512@openquantumsafe.org
+            - ecdh-nistp521-kyber-1024r3-sha512-d00@openquantumsafe.org
+            - frodokem-1344-aes-sha512
+            - frodokem-1344-shake-sha512
+            - frodokem-640-aes-sha256
+            - frodokem-640-shake-sha256
+            - frodokem-976-aes-sha384
+            - frodokem-976-shake-sha384
+            - kyber-1024-sha512
+            - kyber-512-sha256
+            - kyber-768-sha384
+            - x25519-bike-l1r4-sha512@openquantumsafe.org
+            - x25519-classic-mceliece-348864fr4-sha256@openquantumsafe.org
+            - x25519-classic-mceliece-348864r4-sha256@openquantumsafe.org
+            - x25519-frodokem-640-aesr2-sha256@openquantumsafe.org
+            - x25519-frodokem-640-shaker2-sha256@openquantumsafe.org
+            - x25519-kyber-512r3-sha256-d00@amazon.com
+            - x25519-ml-kem-512-sha256@openquantumsafe.org
+
+putty:
+    name: PuTTY
+    url: https://the.earth.li/~sgtatham/putty/0.85/htmldoc/AppendixG.html
+    title: "PuTTY: SSH-2 names specified for PuTTY"
+    protocols:
+        cipher:
+            - arcfour128-draft-00@putty.projects.tartarus.org
+            - arcfour256-draft-00@putty.projects.tartarus.org
+        kex:
+            - rsa2048-sha256-draft-01@putty.projects.tartarus.org
+            - rsa2048-sha256-draft-04@putty.projects.tartarus.org
+
+tectia-cipher:
+    name: Tectia
+    url: https://docs.ssh.com/manuals/client-user/70/csc-algorithms-ciphers.html
+    title: "Tectia Client 7.0: Ciphers"
+    protocols:
+        cipher:
+            - crypticore128@ssh.com
+            - seed-cbc@ssh.com
+
+tectia-kex:
+    name: Tectia
+    url: https://docs.ssh.com/manuals/client-user/70/csc-algorithms-kexs.html
+    title: "Tectia Client 7.0: KEX algorithms"
+    protocols:
+        kex:
+            - curve25519-frodokem1344-sha512@ssh.com
+            - curve448-kyber1024-sha512@ssh.com
+            - diffie-hellman-group-exchange-sha224@ssh.com
+            - diffie-hellman-group-exchange-sha384@ssh.com
+            - diffie-hellman-group-exchange-sha512@ssh.com
+            - diffie-hellman-group14-sha224@ssh.com
+            - diffie-hellman-group14-sha256@ssh.com
+            - diffie-hellman-group15-sha256@ssh.com
+            - diffie-hellman-group15-sha384@ssh.com
+            - diffie-hellman-group16-sha384@ssh.com
+            - diffie-hellman-group16-sha512@ssh.com
+            - diffie-hellman-group18-sha512@ssh.com
+            - ecdh-nistp521-kyber1024-sha512@ssh.com
+
+tectia-mac:
+    name: Tectia
+    url: https://docs.ssh.com/manuals/clientserver-product/65/cs-standards.html
+    title: "Tectia 6.5: Supported Cryptographic Algorithms, Protocols, and Standards"
+    protocols:
+        mac:
+            - crypticore-mac@ssh.com
+            - hmac-sha224@ssh.com
+            - hmac-sha256-2@ssh.com
+            - hmac-sha256@ssh.com
+            - hmac-sha384@ssh.com
+            - hmac-sha512@ssh.com
+
+tectia-publickey:
+    name: Tectia
+    url: https://docs.ssh.com/manuals/client-user/70/csc-algorithms-publickeyalgorithms.html
+    title: "Tectia Client 7.0: Public-key algorithms"
+    protocols:
+        hostkey:
+            - ssh-dss-sha224@ssh.com
+            - ssh-dss-sha256@ssh.com
+            - ssh-dss-sha384@ssh.com
+            - ssh-dss-sha512@ssh.com
+            - ssh-rsa-sha224@ssh.com
+            - ssh-rsa-sha256@ssh.com
+            - ssh-rsa-sha384@ssh.com
+            - ssh-rsa-sha512@ssh.com
+            - x509v3-sign-dss-sha224@ssh.com
+            - x509v3-sign-dss-sha256@ssh.com
+            - x509v3-sign-dss-sha384@ssh.com
+            - x509v3-sign-dss-sha512@ssh.com
+            - x509v3-sign-rsa-sha224@ssh.com
+            - x509v3-sign-rsa-sha256@ssh.com
+            - x509v3-sign-rsa-sha384@ssh.com
+            - x509v3-sign-rsa-sha512@ssh.com
