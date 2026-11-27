@@ -3,8 +3,8 @@ title: Net::SSH
 homepage: https://net-ssh.github.io/net-ssh/
 source-repository: https://github.com/net-ssh/net-ssh
 license: "[MIT style](https://github.com/net-ssh/net-ssh/blob/master/LICENSE.txt)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2004-06-20    # 0.0.1, rubytalk.org/t/ann-net-ssh-0-0-1/12220
 latest-release:
     version: 8.1.2
     date: 2026-11-08

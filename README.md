@@ -13,7 +13,8 @@ locally builds in CI.
 Each implementation is a file in `_impls/`. The keys that say what it is
 (`client`, `server`, `standalone`, `library`, `platforms`, `languages`) are
 documented in `_data/impl_meta.yml`; `ruby validate-data.rb` checks them and
-runs in CI.
+runs in CI. `first-release` holds the `date` of the first public release or,
+when that is not known, `no-later-than` the date of the earliest release found.
 
 ## Contributing
 

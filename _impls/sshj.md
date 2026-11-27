@@ -4,8 +4,8 @@ homepage: https://github.com/hierynomus/sshj
 source-repository: https://github.com/hierynomus/sshj
 changelog: https://github.com/hierynomus/sshj/releases
 license: "[Apache-2.0](https://github.com/hierynomus/sshj/blob/master/LICENSE)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2010-03-11    # 0.1.0 on Maven Central, net.schmizz:sshj
 latest-release:
     version: 0.41.2
     date: 2026-10-12

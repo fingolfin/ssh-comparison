@@ -2,8 +2,8 @@
 title: WebSSH
 homepage: https://webssh.net/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2012-03-08    # 1.0, webssh.net/documentation/changelog/history/previous-releases/
 latest-release:
     version: 33.4
     date: 2026-11-18

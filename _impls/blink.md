@@ -4,8 +4,8 @@ homepage: https://blink.sh/
 developer: Blink Shell, Inc
 source-repository: https://github.com/blinksh/blink
 license: "[GPL-3.0](https://github.com/blinksh/blink/blob/raw/LICENSE)"
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    no-later-than: 2016-09-27    # README of commit d79dcea: "available on the AppStore"
 latest-release:
     version: 18.7.3
     date: 2026-11-16

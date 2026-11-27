@@ -4,8 +4,8 @@ title: moussh
 source-repository: git://git.rodents-montreal.org/moussh
 #license: "[Public Domain](http://ftp.rodents-montreal.org/mouse/git-unpacked/moussh/branch-link/master/tree/moussh/README)"
 license: Public Domain
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    no-later-than: 2005-09-13    # "moussh updated", ftp.rodents-montreal.org/mouse/mouseware/list-archive/2005/09
 latest-release:
     version: 0.9.20260715151218w0400.4c6d154c8f
     date: 2026-07-15

@@ -16,8 +16,10 @@ If you can run this client and a Python script,
 <li>Developer: {{ page.developer }}</li>
 {% endif %}
 <li>First release:
-    {% if page.first-release %}
+    {% if page.first-release.date %}
       {{ page.first-release.date }}
+    {% elsif page.first-release.no-later-than %}
+      no later than {{ page.first-release.no-later-than }}
     {% else %}
       ?
     {% endif %}

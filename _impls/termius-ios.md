@@ -3,8 +3,8 @@ title: Termius (iOS)
 redirect_from: /impls/serverauditor-ios.html
 homepage: https://termius.com/
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2012-08-07    # as Server Auditor; App Store releaseDate, itunes.apple.com/lookup?id=549039908
 latest-release:
     version: 8.2.0
     date: 2026-11-11

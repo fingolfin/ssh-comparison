@@ -2,8 +2,8 @@
 title: iTerminal
 homepage: http://www.comcsoft.com/Portfolio/our_apps/iTerminal/iTerminal_overview.php
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2013-01-07    # App Store releaseDate, itunes.apple.com/lookup?id=581455211
 latest-release:
     version: 10.0
     date: 2025-10-22

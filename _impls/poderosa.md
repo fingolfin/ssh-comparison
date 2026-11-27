@@ -3,9 +3,9 @@ title: Poderosa
 homepage: https://poderosa.sourceforge.net/
 source-repository: https://github.com/poderosaproject/poderosa
 license: "[Apache-2.0](https://github.com/poderosaproject/poderosa/blob/master/LICENSE.txt)"
-#first-release:
-#    date: YYYY-MM-DD
-#   version 3.0.0 on SourceForge.net ist dated 2005-04-28
+first-release:
+    no-later-than: 2005-04-08    # 3.0.0 pre-release, zone.maple4ever.net/blog/archives/137/; 3.0.0 final 2005-04-28
+    # Its shareware predecessor VaraTerm, with SSH, was sold from 2004-01.
 latest-release:
     version: 4.8.1
     date: 2025-05-11

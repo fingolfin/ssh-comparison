@@ -6,8 +6,8 @@ redirect_from: /impls/moccha-telnet.html
 # I tested "Mocca Telnet Lite"
 homepage: http://www.mochasoft.dk/iphone_telnet.htm
 license: Proprietary
-#first-release:
-#    date: YYYY-MM-DD
+first-release:
+    date: 2013-06-12    # 2.2 added SSH2; telnet-only 1.0 was 2008-08-03
 latest-release:
     version: 5.8
     date: 2026-10-20
